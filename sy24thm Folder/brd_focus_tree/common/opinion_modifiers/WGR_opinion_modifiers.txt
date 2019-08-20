@@ -1,0 +1,156 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	
+	WGR_test_om = {
+		value = -10
+		min_trust = -10
+	#	days = 10
+		decay = 1
+		months = 12
+		trade = yes
+		max_trust = 100
+	}
+	
+	WGR_reestablished_diplomatic_relations = {
+		value = 10
+		months = 6
+	}
+	
+	WGR_ger_tries_to_befriend = {
+		value = 15
+	}
+	
+	WGR_friendship = {
+		value = 25
+	}
+	
+	WGR_historical_alliance = {
+		value = 50
+	}
+	
+	WGR_westintegration_pos = {
+		value = 25
+	}
+	
+	WGR_westintegration_neg = {
+		value = -25
+	}
+	
+	WGR_eastintegration_pos = {
+		value = 25
+	}
+	
+	WGR_eastintegration_neg = {
+		value = -25
+	}
+	
+	WGR_wgr_abandons_the_saar = {
+		value = 25
+		decay = 1
+		years = 2
+	}
+	
+	WGR_wgr_pressures_to_anschluss_the_saar = {
+		value = -25
+	}
+	
+	WGR_france_allows_germany_to_join = {
+		value = 10
+	}
+	
+	WGR_france_denies_germany_to_join = {
+		value = -15
+	}
+	
+	WGR_the_bonn_paris_convention = {
+		value = 5
+	}
+	
+	WGR_gentle_behaviour = {
+		value = 5
+		decay = 1
+	}
+	
+	WGR_recognition_of_the_ddr = {
+		value = -100
+	}
+	
+	WGR_accepted_invitation = {
+		value = 10
+	}
+	
+	WGR_refused_invitation = {
+		value = 15
+	}
+	
+	WGR_berlin_wall = {
+		value = -30
+	}
+	
+	WGR_reconciliation_with_sov_om = {
+		value = 15
+	}
+	
+	WGR_sov_betrayed_us = {
+		value = -100
+	}
+	
+	WGR_sov_backs_us_om = {
+		value = 100
+	}
+	
+	WGR_nuclear_weapons_om = {
+		value = -50
+	}
+	
+	WGR_auschwitz_trials_killed_nazis_low = {
+		value = 10
+		months = 6
+	}
+	
+	WGR_auschwitz_trials_pardoned_nazis_low = {
+		value = -10
+		months = 6
+	}
+	
+	WGR_auschwitz_trials_killed_nazis_heavy = {
+		value = 25
+		months = 12
+	}
+	
+	WGR_auschwitz_trials_pardoned_nazis_heavy = {
+		value = -25
+		months = 12
+	}
+	
+	WGR_state_visit = {
+		value = 10
+		years = 1
+	}
+	
+	WGR_state_visit_failed = {
+		value = -10
+		years = 1
+	}
+	
+	WGR_german_german_summit_om = {
+		value = 10
+	}
+	
+	WGR_german_german_summit_om_heavy = {
+		value = 20
+	}
+	
+	WGR_kneefall_of_warsaw_om = {
+		value = 20
+	}
+}	

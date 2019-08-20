@@ -1,0 +1,165 @@
+###						###
+###			WGR			###
+###						###
+
+WGR_yearly_budget_spending_category = {
+#	icon = 
+#	picture = 
+	
+	allowed = {
+		tag = WGR
+	}
+	
+	visible = {
+		OR = {
+			AND = {					### this trigger should have been removed, but what if Nazi Germany loses the
+				date > 1935.11.31	### war before 1945? Then WGR is establoshed earlier, then you need this decision
+				date < 1936.2.1		### earlier --> this decision category must be available from the moment the
+			}						### the game starts, in case of a possible German capitulation
+			AND = {
+				date > 1936.11.31
+				date < 1937.2.1
+			}
+			AND = {
+				date > 1937.11.31
+				date < 1938.2.1
+			}
+			AND = {
+				date > 1938.11.31
+				date < 1939.2.1
+			}
+			AND = {
+				date > 1939.11.31
+				date < 1940.2.1
+			}
+			AND = {
+				date > 1940.11.31
+				date < 1941.2.1
+			}
+			AND = {
+				date > 1941.11.31
+				date < 1942.2.1
+			}
+			AND = {
+				date > 1942.11.31
+				date < 1943.2.1
+			}
+			AND = {
+				date > 1943.11.31
+				date < 1944.2.1
+			}
+			AND = {
+				date > 1944.11.31
+				date < 1945.2.1
+			}
+			AND = {
+				date > 1945.11.31
+				date < 1946.2.1
+			}
+			AND = {
+				date > 1946.11.31
+				date < 1947.2.1
+			}
+			AND = {
+				date > 1947.11.31
+				date < 1948.2.1
+			}
+			AND = {
+				date > 1948.11.31
+				date < 1949.2.1
+			}
+			AND = {
+				date > 1949.11.31
+				date < 1950.2.1
+			}
+			AND = {
+				date > 1950.11.31
+				date < 1951.2.1
+			}
+			AND = {
+				date > 1951.11.31
+				date < 1952.2.1
+			}
+			AND = {
+				date > 1952.11.31
+				date < 1953.2.1
+			}
+			AND = {
+				date > 1953.11.31
+				date < 1954.2.1
+			}
+			AND = {
+				date > 1954.11.31
+				date < 1955.2.1
+			}
+			AND = {
+				date > 1955.11.31
+				date < 1956.2.1
+			}
+			AND = {
+				date > 1956.11.31
+				date < 1957.2.1
+			}
+			AND = {
+				date > 1957.11.31
+				date < 1958.2.1
+			}
+			AND = {
+				date > 1958.11.31
+				date < 1959.2.1
+			}
+			AND = {
+				date > 1959.11.31
+				date < 1960.2.1
+			}
+		}
+	}
+}
+
+WGR_relocate_the_capital_category = {
+	allowed = {
+		tag = WGR
+	}
+	
+	visible = {
+		always = yes
+	}
+}
+
+WGR_trade_alliance_category = {
+	allowed = {
+		
+	}
+	
+	visible = {
+		WGR = {
+			has_completed_focus = WGR_trade_alliance
+		}
+		is_in_faction = no
+	}
+}
+
+WGR_european_union_category = {
+	allowed = {
+		
+	}
+	
+	visible = {
+		WGR = {
+			has_completed_focus = WGR_the_montanunion
+		}
+		is_in_faction = no
+	}
+}
+
+WGR_foreign_german_societies_category = {
+	allowed = {
+		tag = WGR
+	}
+	
+	visible = {
+		WGR = {
+			has_completed_focus = WGR_german_brotherhood
+		}
+	}
+}

@@ -1,0 +1,114 @@
+﻿division_template = {
+	name = "Grenzschutzgruppen"
+
+	division_names_group = WGR_GSG_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	
+	support = {
+        military_police = { x = 0 y = 0 }
+		engineer = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Grenzschutzgruppen See"
+
+	division_names_group = WGR_GSG_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+	}
+	
+	support = {
+		signal_company = { x = 0 y = 0 }
+	}
+}
+
+### historically inaccurate: one Grenzschutzgruppen-Division was made out of 3 Departments, one Department was made out of 4 Hundertschaften, one Hundertschaft equals 100 men
+### so, QUICK MATHS: 3 * 4 * 100 = 12 * 100 = 1200
+### in Paradox' Game 1200 men equals about 1 infantry regiment
+### WOW :D
+### so i decided to use 3 regiments equals 3 * 1000 + support  = >3000
+
+units = {
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 692
+		division_template = "Grenzschutzgruppen"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 692
+		division_template = "Grenzschutzgruppen"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6488
+		division_template = "Grenzschutzgruppen"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 6488
+		division_template = "Grenzschutzgruppen"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 6377
+		division_template = "Grenzschutzgruppen"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 6377
+		division_template = "Grenzschutzgruppen"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 9347
+		division_template = "Grenzschutzgruppen"
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 9347
+		division_template = "Grenzschutzgruppen See"
+		start_experience_factor = 0.2
+	}
+}
