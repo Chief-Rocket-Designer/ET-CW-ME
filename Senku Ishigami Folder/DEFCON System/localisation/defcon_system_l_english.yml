@@ -1,0 +1,32 @@
+﻿l_english:
+
+### Ideas ###
+dv_penalty_defcon5:0 "§RDEFCON 5 Penalty - Too many divisions!§!"
+dv_penalty_defcon4:0 "§RDEFCON 4 Penalty - Too many divisions!§!"
+dv_penalty_defcon3:0 "§RDEFCON 3 Penalty - Too many divisions!§!"
+dv_penalty_defcon2:0 "§RDEFCON 2 Penalty - Too many divisions!§!"
+defcon_5:0 "DEFCON 5"
+defcon_4:0 "DEFCON 4"
+defcon_3:0 "DEFCON 3"
+defcon_2:0 "DEFCON 2"
+defcon_1:0 "DEFCON 1"
+
+### Decisions ###
+div_penalty:0 "Penalties For Too Many Divisions"
+div_remove_penalty_defcon5:0 "Remove DEFCON 5 Penalty"
+div_add_penalty_defcon5:0 "§RDEFCON 5 Penalty - Too many divisions!§!"
+div_add_penalty_defcon5_desc:0 "Number of divisions must be less than [?division_factor]!"
+div_remove_penalty_defcon4:0 "Remove DEFCON 4 Penalty"
+div_add_penalty_defcon4:0 "§RDEFCON 4 Penalty - Too many divisions!§!"
+div_add_penalty_defcon4_desc:0 "Number of divisions must be less than [?division_factor]!"
+div_remove_penalty_defcon3:0 "Remove DEFCON 3 Penalty"
+div_add_penalty_defcon3:0 "§RDEFCON 3 Penalty - Too many divisions!§!"
+div_add_penalty_defcon3_desc:0 "Number of divisions must be less than [?division_factor]!"
+div_remove_penalty_defcon2:0 "Remove DEFCON 2 Penalty"
+div_add_penalty_defcon2:0 "§RDEFCON 2 Penalty - Too many divisions!§!"
+div_add_penalty_defcon2_desc:0 "Number of divisions must be less than [?division_factor]!"
+defcon_system:0 "You should not be seeing this"
+
+### World Threats ###
+defcon_system_threat_up:0 "Major Country escalates to DEFCON 4"
+defcon_system_threat_down:0 "Major Country de-escalates to DEFCON 5"

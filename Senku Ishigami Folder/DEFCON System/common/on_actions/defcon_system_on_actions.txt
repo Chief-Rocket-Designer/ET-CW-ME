@@ -1,0 +1,39 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				## base ##
+				set_temp_variable = {
+					temp_dv = max_manpower_k
+				}
+				divide_temp_variable = { 
+					temp_dv = 1000
+				}
+				set_variable = {
+					division_factor = temp_dv
+				}
+				round_variable = division_factor
+				add_ideas = defcon_5
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			every_country = {
+				## base ##
+				set_temp_variable = {
+					temp_dv = max_manpower_k
+				}
+				divide_temp_variable = { 
+					temp_dv = 1000
+				}
+				set_variable = {
+					division_factor = temp_dv
+				}
+				round_variable = division_factor
+			}
+		}
+	}
+}
+					
+					

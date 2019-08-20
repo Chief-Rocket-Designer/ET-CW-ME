@@ -1,0 +1,7 @@
+defcon_system = {
+	icon = generic_propaganda
+	
+	visible = {
+		is_ai = yes
+	}
+}

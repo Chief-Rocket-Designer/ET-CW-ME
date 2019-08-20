@@ -1,0 +1,22 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_idea_pic_defcon5"
+		texturefile = "gfx/interface/ideas/defcon5.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_pic_defcon4"
+		texturefile = "gfx/interface/ideas/defcon4.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_pic_defcon3"
+		texturefile = "gfx/interface/ideas/defcon3.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_pic_defcon2"
+		texturefile = "gfx/interface/ideas/defcon2.dds"	
+	}
+	SpriteType = {
+		name = "GFX_idea_pic_defcon1"
+		texturefile = "gfx/interface/ideas/defcon1.dds"	
+	}
+}

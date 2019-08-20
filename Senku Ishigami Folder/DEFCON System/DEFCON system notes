@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+Note. Each country has their own defcon it is not a global defcon level.
+
+
+Guide ---> effect_div will only happen if there are > than 1 division per 100,000 population
+		   effect_stand = is a standard effect that will always happen to that nation regardless of division number
+
+DEFCON system
+
+Note if a wargoal is being justfied against "your" nation or a faction member you automatically go to defcon 2. If it is being justified against a country that "you"
+guranteed it will automatically go to defcon 3. If you are already at defcon 3 you go to defcon 2. 
+
+
+
+#--------------escalation
+
+Defcon 5: Normal - World Tension =<15 
+	effect_div: can have greater than 1 divisions per 100,000 civilians only if player = yes, downsides are weekly stablity -15% weekly and -50% consumer goods
+	effect_stand: +10% Consumer Goods
+	#Will go to Defcon 4 if World Tension is >= 15
+Defcon 4: Small Threat - World Tension =< 25
+	effect_div: can have greater than 1 divisions per 100,000 civilians only if player = yes, downsides are weekly stablity -8% weekly and -33% consumer goods 
+	effect_stand: +5% Consumer Goods and if Major Power = yes AND +2% tension upon transition form DEFCON 5 ---> DEFCON 4
+	#Will go to Defcon 3 if world tension is >=25
+	
+Defcon 3 Large Threat - World Tension <= 50
+	effect_div: can have greater than 1 divisions per 100,000 civilians only if player = yes, downsides are weekly stablity -5% weekly and -25% consumer goods
+	#Will go to Defcon 2 if a guranteed nation, faction member, or your nation is being justifed against
+	effect_stand = +10% patriotism +5% recuitment
+	
+Defcon 2 Prepare War
+	effect_div: can have greater than 1 divisions per 100,000 civilians with the downside of weekly stablity -1% and -20% consumer goods production
+	# Will go to Defcon 1 if at war only
+	effect_stand = +25% patriotism +10% recuitment
+	
+Defcon 1: ALLOWED ONLY IF AT WAR-Automatically goes to defcon 1 if at war.
+
+	effect_div: can have greater than 1 division per 100,000 civilians with no downsides (As the downsides will be war)
+	effect_stand = + 30% patriotism +15% recuitment - 10% stability
+	
+#----------------de-esclation
+
+If War's result = victory then reset to Defcon 4 
+
+If war's result = defeat then reset to Defcon 3
+#----------
+
+Will automatically move up a tier if the requirements are not met
+

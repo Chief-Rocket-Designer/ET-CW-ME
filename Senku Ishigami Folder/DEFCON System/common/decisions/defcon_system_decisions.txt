@@ -1,0 +1,234 @@
+defcon_system = {
+	defcon_system_down5 = {
+		visible = {
+			always = no
+		}
+		activation = {
+			threat < 0.16
+			has_idea = defcon_4
+		}
+		available = { 
+			always = no
+		}
+		timeout_effect = {
+			IF = { 
+				limit = {
+					is_major = yes
+				}
+				add_named_threat = { 
+					threat = -2
+					name = defcon_system_threat_down
+				}
+			}
+			swap_ideas = {
+				remove_idea = defcon_4
+				add_idea = defcon_5
+			}
+		}
+		days_mission_timeout = 1
+		complete_effect = {
+
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	defcon_system_up4 = {
+		visible = {
+			always = no
+		}
+		activation = {
+			threat > 0.15
+			has_idea = defcon_5
+		}
+		available = { 
+			always = no
+		}
+		timeout_effect = {
+			IF = { 
+				limit = {
+					is_major = yes
+				}
+				add_named_threat = { 
+					threat = 2
+					name = defcon_system_threat_up
+				}
+			}
+			swap_ideas = {
+				remove_idea = defcon_5
+				add_idea = defcon_4
+			}
+		}
+		days_mission_timeout = 1
+		complete_effect = {
+		
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	defcon_system_down4 = {
+		visible = {
+			always = no
+		}
+		activation = {
+			threat < 0.26
+			has_idea = defcon_3
+		}
+		available = { 
+			always = no
+		}
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = defcon_3
+				add_idea = defcon_4
+			}
+		}
+		days_mission_timeout = 1
+		complete_effect = {
+
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	defcon_system_up3 = {
+		visible = {
+			always = no
+		}
+		activation = {
+			threat > 0.25
+			has_idea = defcon_4
+		}
+		available = { 
+			always = no
+		}
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = defcon_4
+				add_idea = defcon_3
+			}
+		}
+		days_mission_timeout = 1
+		complete_effect = {
+		
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	defcon_system_down3 = {
+		visible = {
+			always = no
+		}
+		activation = {
+			NOT = {
+				has_wargoal_against = any_country
+				is_justifying_wargoal_against = any_country
+				any_country = {
+					has_wargoal_against = var:country 
+					is_justifying_wargoal_against = var:country
+				}
+			}
+			has_idea = defcon_2
+		}
+		available = { 
+			always = no
+		}
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = defcon_2
+				add_idea = defcon_3
+			}
+		}
+		days_mission_timeout = 1
+		complete_effect = {
+
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	defcon_system_up2 = {
+		visible = {
+			always = no
+		}
+		activation = {
+			OR = {
+				has_wargoal_against = any_country
+				is_justifying_wargoal_against = any_country
+				any_country = {
+					has_wargoal_against = var:country 
+					is_justifying_wargoal_against = var:country
+				}
+			}
+			has_idea = defcon_3
+		}
+		available = { 
+			always = no
+		}
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = defcon_3
+				add_idea = defcon_2
+			}
+		}
+		days_mission_timeout = 1
+		complete_effect = {
+
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	defcon_system_down2 = {
+		visible = {
+			always = no
+		}
+		activation = {
+			has_war = no
+			has_idea = defcon_1
+		}
+		available = { 
+			always = no
+		}
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = defcon_1
+				add_idea = defcon_2
+			}
+		}
+		days_mission_timeout = 1
+		complete_effect = {
+
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	defcon_system_up1 = {
+		visible = {
+			always = no
+		}
+		activation = {
+			has_war = yes
+			has_idea = defcon_2
+		}
+		available = { 
+			always = no
+		}
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = defcon_2
+				add_idea = defcon_1
+			}
+		}
+		days_mission_timeout = 1
+		complete_effect = {
+
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

@@ -1,0 +1,32 @@
+scripted_gui = {
+    spy_stuff_script = {
+        window_name = "spy_stuff_top_bar_container"
+        context_type = player_context
+        parent_window_token = top_bar
+         
+        visible = {
+            is_ai = no
+        }
+        
+        effects = {
+			open_spy_stuff_click = {
+				if = {
+					limit = { NOT = { has_global_flag = spy_stuff_opened } }
+					set_global_flag = spy_stuff_opened
+				}
+				else = {
+					clr_global_flag = spy_stuff_opened
+				}
+			}
+		}
+	}
+	spy_stuff_main = {
+		context_type = selected_country_context
+		
+		window_name = "spy_stuff_menu_container"
+		
+		visible = {
+			has_global_flag = spy_stuff_opened
+		}
+	}
+}

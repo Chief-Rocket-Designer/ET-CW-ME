@@ -1,0 +1,47 @@
+ideas = {
+	country = {
+		defcon_5 = {
+			removal_cost = -1
+			picture = pic_defcon5
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+			}			
+		}		
+		defcon_4 = {
+			removal_cost = -1
+			picture = pic_defcon4
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}			
+		}	
+		defcon_3 = {
+			removal_cost = -1
+			picture = pic_defcon3
+			
+			modifier = {
+				war_support_factor = 0.10
+				conscription = 0.05
+			}			
+		}		
+		defcon_2 = {
+			removal_cost = -1
+			picture = pic_defcon2
+			
+			modifier = {
+				war_support_factor = 0.25
+				conscription = 0.10
+			}			
+		}
+		defcon_1 = {
+			removal_cost = -1
+			picture = pic_defcon1
+			
+			modifier = {
+				war_support_factor = 0.30 
+				conscription = 0.15
+			}			
+		}
+	}
+}

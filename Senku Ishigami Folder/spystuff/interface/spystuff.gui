@@ -1,0 +1,45 @@
+
+guiTypes = {
+	containerWindowType = {
+		name = "spy_stuff_top_bar_container"
+		position = { x = 0 y = 0 }
+		size = { width=100%% height=100%% }
+
+		buttonType = {
+			name = "open_spy_stuff"
+			spriteType = "GFX_sort_button_100x29_2"
+			frame = 2
+			position = { x = -350 y = 8}
+			clicksound = click_ok
+			oversound = ui_menu_over
+			Orientation = "UPPER_RIGHT"
+		}
+
+	}
+
+	containerWindowType = {
+		name = "spy_stuff_menu_container"
+		position = {x=950 y=50}
+		size = { width=270 height=300 }
+
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+
+		instantTextboxType = {
+			name = "spy_stuff_headline"
+			position = {x=14 y=6}
+			font = "hoi_18mbs"
+			text = "stability = [?stability]"
+
+			maxWidth = 270
+			maxHeight = 23
+			format = left
+		}
+	}
+}

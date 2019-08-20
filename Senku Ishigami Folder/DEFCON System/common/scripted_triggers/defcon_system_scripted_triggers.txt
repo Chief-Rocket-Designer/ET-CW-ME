@@ -1,0 +1,6 @@
+is_exempt_from_division_limit = {
+	OR = {		
+		has_idea = defcon_2
+		has_idea = defcon_1
+	}
+}

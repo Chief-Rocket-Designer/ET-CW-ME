@@ -1,0 +1,6 @@
+div_penalty = {
+	icon = generic_propaganda
+	
+	visible = {
+	}
+}

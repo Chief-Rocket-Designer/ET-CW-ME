@@ -1,0 +1,211 @@
+div_penalty = {
+
+	div_remove_penalty_defcon5 = { 
+		icon = generic_civil_support
+		visible = {
+			has_idea = dv_penalty_defcon5
+		}	
+		available = { 
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = "Number of divisions less than [?<division_factor>]"
+					check_variable = { division_factor > num_divisions }
+				}
+				has_idea = defcon_4
+			}
+			has_idea = dv_penalty_defcon5
+		}	
+		complete_effect = {
+			remove_ideas = dv_penalty_defcon5
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	div_add_penalty_defcon5 = { #too many divisions
+		icon = generic_civil_support
+		activation = {
+			has_idea = defcon_5
+			check_variable = { 
+				division_factor < num_divisions 
+			}
+			NOT = {
+				has_idea = dv_penalty_defcon5
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Number of divisions less than [?<division_factor>]"
+				check_variable = { division_factor > num_divisions }
+			}
+		}
+		timeout_effect = {
+			add_ideas = dv_penalty_defcon5
+		}
+		days_mission_timeout = 5
+		complete_effect = {
+		
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	div_remove_penalty_defcon4 = { 
+		icon = generic_civil_support
+		visible = {
+			has_idea = dv_penalty_defcon4
+		}	
+		available = { 
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = "Number of divisions less than [?<division_factor>]"
+					check_variable = { division_factor > num_divisions }
+				}
+				has_idea = defcon_3
+			}
+			has_idea = dv_penalty_defcon4
+		}	
+		complete_effect = {
+			remove_ideas = dv_penalty_defcon4
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	div_add_penalty_defcon4 = { #too many divisions
+		icon = generic_civil_support
+		activation = {
+			has_idea = defcon_4
+			check_variable = { 
+				division_factor < num_divisions 
+			}
+			NOT = {
+				has_idea = dv_penalty_defcon4
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Number of divisions less than [?<division_factor>]"
+				check_variable = { division_factor > num_divisions }
+			}
+		}
+		timeout_effect = {
+			add_ideas = dv_penalty_defcon4
+		}
+		days_mission_timeout = 5
+		complete_effect = {
+		
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+	
+	div_remove_penalty_defcon3 = { 
+		icon = generic_civil_support
+		visible = {
+			has_idea = dv_penalty_defcon3
+		}	
+		available = { 
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = "Number of divisions less than [?<division_factor>]"
+					check_variable = { division_factor > num_divisions }
+				}
+				has_idea = defcon_2
+			}
+			has_idea = dv_penalty_defcon3
+		}	
+		complete_effect = {
+			remove_ideas = dv_penalty_defcon3
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	div_add_penalty_defcon3= { #too many divisions
+		icon = generic_civil_support
+		activation = {
+			has_idea = defcon_3
+			check_variable = { 
+				division_factor < num_divisions 
+			}
+			NOT = {
+				has_idea = dv_penalty_defcon3
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Number of divisions less than [?<division_factor>]"
+				check_variable = { division_factor > num_divisions }
+			}
+		}
+		timeout_effect = {
+			add_ideas = dv_penalty_defcon3
+		}
+		days_mission_timeout = 5
+		complete_effect = {
+		
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+	
+	div_remove_penalty_defcon2 = { 
+		icon = generic_civil_support
+		visible = {
+			has_idea = dv_penalty_defcon2
+		}	
+		available = { 
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = "Number of divisions less than [?<division_factor>]"
+					check_variable = { division_factor > num_divisions }
+				}
+				has_idea = defcon_1
+			}
+			has_idea = dv_penalty_defcon2
+		}	
+		complete_effect = {
+			remove_ideas = dv_penalty_defcon2
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+	div_add_penalty_defcon2 = { #too many divisions
+		icon = generic_civil_support
+		activation = {
+			has_idea = defcon_2
+			check_variable = { 
+				division_factor < num_divisions 
+			}
+			NOT = {
+				has_idea = dv_penalty_defcon2
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = "Number of divisions less than [?<division_factor>]"
+				check_variable = { division_factor > num_divisions }
+			}
+		}
+		timeout_effect = {
+			add_ideas = dv_penalty_defcon2
+		}
+		days_mission_timeout = 5
+		complete_effect = {
+		
+		}
+		ai_will_do = {
+			factor = 10000
+		}
+	}
+
+}
