@@ -1,0 +1,33 @@
+state={
+	id=798
+	name="Suez"
+	provinces={
+		1155 4073 9947 12049 
+	}
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 5
+			12049 = {
+				naval_base = 2
+
+			}
+		}
+		victory_points = {
+			4073 3 
+		}
+		victory_points = {
+			12049 5 
+		}
+		add_core_of = EGY
+		add_core_of = ENG
+		1960.1.1 = {
+			owner = EGY
+		}
+	}
+	manpower=980231
+	buildings_max_level_factor=1.000
+	state_category=town
+}
