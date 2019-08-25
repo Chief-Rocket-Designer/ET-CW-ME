@@ -3,7 +3,7 @@ id = Austria
 country = { 
 factor = 0 
 modifier = { 
-add = 10 
+add = 200
 tag = AUS 
 } 
 } 

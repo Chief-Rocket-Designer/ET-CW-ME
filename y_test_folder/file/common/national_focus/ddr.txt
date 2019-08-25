@@ -4,7 +4,7 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 10
+			add = 200
 			tag = ddr
 		}
 	}
@@ -13,10 +13,30 @@ focus_tree = {
 	reset_on_civilwar = no
 	
 	focus = {
+		id = Creation_Of_DDR
+		text = "Creation of DDR"
+		icon = GFX_DDR_shield
+		x = 0
+		y = 0
+		cost = 0
+
+		available_if_capitulated = yes
+		available = {
+			NOT = { date < 1949.10.7 }
+		}
+		
+		completion_reward = {
+			add_political_power = 1000
+			army_experience = 100
+		}
+	}
+	
+	focus = {
 		id = DDR_Soviet_Assistance_In_Military
 		text = "Soviet Assistance In Military"
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = Creation_Of_DDR }
+		relative_position_id = Creation_Of_DDR
 		x = 0
 		y = 1
 		cost = 10
@@ -30,15 +50,18 @@ focus_tree = {
 				bonus = 100.0
 				uses = 5
 				category = land_doctrine
-				
+			}
 			add_tech_bonus = {
 				name = USA_tank_experiments
 				uses = 1
 				bonus = 100.0
 				category = armor
-			
+			}
 			add_research_slot = 4
-			add_building_construction = {
+			60 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
 						type = bunker
 						level = 3
 						province = 9497
@@ -59,6 +82,23 @@ focus_tree = {
 					add_building_construction = {
 						type = bunker
 						level = 3
+						province = 482
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3561
+						instant_build = yes
+					}
+				}
+			}
+			792 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 3
 						province = 3522
 						instant_build = yes
 					}
@@ -68,6 +108,17 @@ focus_tree = {
 						province = 11219
 						instant_build = yes
 					}
+					add_building_construction = {
+						type = bunker
+						level = 8
+						province = 11359
+						instant_build = yes
+					}
+				}
+			}
+			61 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 3
@@ -81,23 +132,22 @@ focus_tree = {
 						instant_build = yes
 					}
 					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 482
+						type = coastal_bunker
+						level = 5
+						province = 321
 						instant_build = yes
 					}
 					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3561
+						type = coastal_bunker
+						level = 10
+						province = 11305
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = bunker
-						level = 8
-						province = 11359
-						instant_build = yes
-					}
+				}
+			}
+			62 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = coastal_bunker
 						level = 8
@@ -115,24 +165,6 @@ focus_tree = {
 						level = 3
 						province = 9388
 						instant_build = yes
-					}	
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 5
-						province = 321
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 10
-						province = 11305
-						instant_build = yes
 					}
 				}
 			}
@@ -140,13 +172,37 @@ focus_tree = {
 	}
 
 	focus = {
+		id = Rebuild_The_Land_From_World_War_II
+		text = "Rebuild East Germany"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = DDR_Soviet_Assistance_In_Military }
+		x = 0
+		y = 2
+		cost = 5
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 25
+			every_owned_state = {
+		        add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = DDR_Soviet_Military_Shipments
 		text = " Soviet Military Shipments "
 		icon = GFX_soviet
 		prerequisite = { focus = DDR_Soviet_Assistance_In_Military }
-		x = 1
-		y = 2
-		relative_position_id = army_effort
+		x = 2
+		y = 1
+		relative_position_id = DDR_Soviet_Assistance_In_Military
 		cost = 7
 
 		available_if_capitulated = yes
@@ -158,33 +214,31 @@ focus_tree = {
 				uses = 2
 				category = infantry_weapons
 				category = artillery
-			
-
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 2500
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 250
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 300
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = motorized_equipment
 				amount = 100
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = fighter_equipment
 				amount = 150
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = CAS_equipment
 				amount = 200
-				}
+			}
 		}
 	}
 	focus = {
@@ -197,7 +251,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		availalbe_if_capituated = no
+		available_if_capitulated = no
 		
 		completion_reward = {
 			army_experience = 10
@@ -207,142 +261,119 @@ focus_tree = {
 					type = arms_factory
 					level = 4
 					instant_build = yes
-					
-
-					
-					}
-			
+				}
 			}
 		}
-
-	
 	}
+	
 	focus = {
-	id = DDR_Military_Industry_Act_1955
-	text = " DDR Military Industry Act 1955 "
-	icon = GFX_goal_generic_construct_mil_factory
-	prerequisite = { focus = DDR_Soviet_Military_Industry }
-	prerequisite = { focus = Warsaw_Pact }
-	available = {
+		id = DDR_Military_Industry_Act_1955
+		text = " DDR Military Industry Act 1955 "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DDR_Soviet_Military_Industry }
+		prerequisite = { focus = Warsaw_Pact }
+		available = {
 			NOT = { date < 1955.1.1 }
-			
-			}
-	x = 0
-	y = 4
-	cost = 5
+		}
+		x = 0
+		y = 4
+		cost = 5
 
-	availalbe_if_capituated = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 25
-			add_extra_state_shared_building_slots = 5
 			every_owned_state = {
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
-						}
+				}
+			}
 			add_tech_bonus = {
 				name = infantry_bonus
 				bonus = 3.0
 				uses = 3
 				category = infantry_weapons
-					}
-			
-						
 			}
 		}
 	}
+	
 	focus = {
-	id = DDR_Military_Industry_Act_1970
-	text = "DDR MIlitary Indsutry Act 1970"
-	icon = GFX_goal_generic_construct_mil_factory
-	prerequisite = { focus = DDR_Military_Industry_Act_1955 }
-	available = {
+		id = DDR_Military_Industry_Act_1970
+		text = "DDR MIlitary Indsutry Act 1970"
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DDR_Military_Industry_Act_1955 }
+		available = {
 			NOT = { date < 1970.1.1 }
-			
-			}
-	x = 0
-	y = 5
-	cost = 5
+		}
+		x = 0
+		y = 5
+		cost = 5
 
-	availalbe_if_capituated = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 25
-			add_extra_state_shared_building_slots = 5
 			every_owned_state = {
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
-					}
+				}
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 3.0
+				uses = 3
+				category = infantry_weapons	
+			}
+		}
+	}
+	
+	focus = {
+		id = DDR_Military_Industry_Act_1985
+		text = "Military Industry Act 1985"
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DDR_Military_Industry_Act_1970 }
+		available = {
+			NOT = { date < 1985.1.1 }
+		}
+		x = 0
+		y = 6
+		cost = 5
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 25
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 3.0
 				uses = 3
 				category = infantry_weapons
-					
-
-					
-					}
-			
 			}
 		}
 	}
-	focus = {
-	id = DDR_Military_Industry_Act_1985
-	text = "Military Industry Act 1985"
-	icon = GFX_goal_generic_construct_mil_factory
-	prerequisite = { focus = DDR_Military_Industry_Act_1970 }
-	available = {
-			NOT = { date < 1985.1.1 }
-			
-			}
-	x = 0
-	y = 6
-	cost = 5
-
-	availalbe_if_capituated = no
-
-		completion_reward = {
-			army_experience = 25
-			add_extra_state_shared_building_slots = 5
-			every_owned_state = {
-				add_building_construction = {
-					type = arms_factory
-					level = 5
-					instant_build = yes
-					}
-				add_tech_bonus = {
-					name = infantry_artillery_bonus
-					bonus = 3.0
-					uses = 3
-					category = infantry_weapons
-					
-
-					
-					}
-			
-			}
-		}
-	}
-
-	
-
-
-
-
-
 
 	focus = {
 		id = Warsaw_Pact
 		text = "Warsaw Pact"
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = DDR_Soviet_Military_Shipments }
-		x = 1
-		y = 3
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = DDR_Soviet_Military_Shipments
 		cost = 0
 
 		available_if_capitulated = yes
@@ -351,23 +382,18 @@ focus_tree = {
 			army_experience = 100
 			navy_experience = 100
 			air_experience = 100
-			add_idea = nkvd
-			
-		
-			}
+			add_ideas = nkvd
 		}
-		
+	}
 
-
-	
 	focus = {
 		id = Secure_Government
 		text = "Secure Government"
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = Warsaw_Pact }
-		x = 1
-		y = 4
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = Warsaw_Pact
 		cost = 3
 
 		available_if_capitulated = yes
@@ -375,24 +401,20 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 100
 			set_politics = {
-                                    ruling_party = communism
-                                        elections_allowed = no
-						}
-				
-					
-			
+				ruling_party = communism
+				elections_allowed = no
+			}
 		}
 	}
-
 
 	focus = {
 		id = Fully_Integrate_With_Warsaw_Pact
 		text = "Full Integration With Warsaw Pact"
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = Secure_Government }
-		x = 1
-		y = 5
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = Secure_Government
 		cost = 3
 
 		available_if_capitulated = yes
@@ -401,7 +423,7 @@ focus_tree = {
 			NOT = { has_war_with = SOV }
 			is_subject = yes
 			is_in_faction = yes
-			}
+		}
 
 		completion_reward = {
 			army_experience = 500
@@ -414,45 +436,13 @@ focus_tree = {
 			add_ideas = peoples_commissariat_focus
 			add_ideas = idea_political_correctness
 			add_ideas = political_commissars_focus
-			add_idea = internationalism
-			add_autonomy FIN 1000
-			add_manpower 50000
+			add_ideas = internationalism
+		#	add_autonomy FIN 1000
+			add_manpower = 50000
 			add_ideas = militarism_focus
-
-		
-			
-			}
-		}
-		
-	focus = {
-		id = Rebuild_The_Land_From_World_War_II
-		text = "Rebuild East Germany"
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = DDR_Soviet_Assistance_In_Military }
-		x = 0
-		y = 2
-		cost = 5
-		
-		available_if_capituated = no
-
-		completion_reward = {
-			army_experience = 25
-
-		
-			every_owned_state = {
-		        add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 4
-					instant_build = yes
-					
-
-					
-					}
-			
-			}
 		}
 	}
+	
 	focus = {
 		id = Emergency_War_Defence_Act
 		text = "Emergency War Defence Act"
@@ -461,7 +451,7 @@ focus_tree = {
 		y = 0
 		cost = 5
 		
-		available_if_capituated = no
+		available_if_capitulated = no
 
 		available = {
 			has_war = yes 
@@ -471,22 +461,17 @@ focus_tree = {
 			army_experience = 25
 			
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
-					}
-
-			
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
-
-					
-					}
-			
+				}
 			}
 			add_war_support = 0.50
 		}
@@ -500,7 +485,7 @@ focus_tree = {
 		y = 1
 		cost = 40
 		
-		available_if_capituated = no
+		available_if_capitulated = no
 
 		available = {
 			has_war = yes 
@@ -508,63 +493,54 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 25
-			
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 8
+				add_extra_state_shared_building_slots = 8
 				add_building_construction = {
 					type = industrial_complex
 					level = 4
 					instant_build = yes
-					}
-
-			
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 4
 					instant_build = yes
-
-					
-					}
-			
+				}
 			}
 			add_war_support = 0.50
 			add_manpower = 1000000
-			
 			add_research_slot = 4
-			
 		}
 	}
+	
 	focus = {
 		id = DDR_Moscow_Economic_Pact
 		text = "Moscow Economic Pact"
 		icon = GFX_goal_generic_soviet_construction
 		prerequisite = { focus = Fully_Integrate_With_Warsaw_Pact }
 
-		x = 1
-		y = 6
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = Fully_Integrate_With_Warsaw_Pact
 		cost = 3
 
 		available_if_capitulated = yes
 
-		available = 
-
 		completion_reward = {
 			
 			every_owned_state = {
-				add_building_slots = 4
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 4
 					instant_build = yes
-					}
 				}
+			}
 			add_ideas = {
-					SOV_comecon
-				}
+				SOV_comecon
 			}
 		}
 	}
+	
 #-------------------------------------------------------------------------Stasi
 	focus = {
 		id = Ministry_For_State_Security
@@ -578,12 +554,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			has_idea =nkvd
-			
+			has_idea = nkvd
 			NOT = { date < 1950.2.8 }
-			
-			
-			}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -593,12 +566,12 @@ focus_tree = {
 				bonus = 10.0
 				uses = 1
 				category = special_forces
-				
 			}
-			add_idea= NVA
+			add_ideas= NVA
 		}
 	}
 #-----------------------Ministry_For_State_Security_Internal
+
 	focus = {
 		id = Stasi_Internal_Affairs
 		text = "Stasi Internal Affairs"
@@ -612,7 +585,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1950.4.8 }
-			}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -630,6 +603,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = DDR_Re_Education
 		text = "Re-Education"
@@ -642,7 +616,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1950.8.0 }
-			}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -672,8 +646,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1951.1.14 }
-			}
-
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -691,6 +664,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = DDR_Recruit_More_Informants
 		text = "Recuit More Informants"
@@ -703,9 +677,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1951.1.21 }
-			}
-
-
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -723,6 +695,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Recruit_Former_Gestapo
 		text = "Recruit Former Gestapo and NKVD"
@@ -735,8 +708,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1954.1.0 }
-			}
-
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -755,6 +727,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Create_Stasi_Archives_on_DDR_Citizens
 		text = "Creation of Stasi Archives"
@@ -767,8 +740,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1956.1.0 }
-			}
-
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -786,6 +758,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 #-----------------------Ministry_For_State_Security_Foreign
 	focus = {
 		id = Stasi_Foreign_Affairs
@@ -800,7 +773,7 @@ focus_tree = {
 		
 		available = {
 			NOT = { date < 1951.1.0 }
-			}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -812,6 +785,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = DDR_Spy_on_West_German_Politicans
 		text = "Spy on West Germany Politicans"
@@ -824,7 +798,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1952.1.0 }
-			}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -848,7 +822,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1954.7.0 }
-			}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -860,6 +834,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Extradite_DDR_Turncoats_for_Trial
 		text = "Extradite DDR Turncoat for"
@@ -872,8 +847,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1955.1.0 }
-			}
-
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -885,6 +859,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Infiltrate_Industry_In_The_West
 		text = "Infiltrate Industry In the West"
@@ -897,9 +872,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1962.1.0 }
-			}
-
-
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -911,6 +884,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Share_Infitration_Data_with_KGB
 		text = "Share Infiltration Data with KGB"
@@ -923,7 +897,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 			NOT = { date < 1962.7.0 }
-			}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -935,30 +909,6 @@ focus_tree = {
 			}
 		}
 	}
-	
-#--------------------------------------------------
-	focus = {
-		id = Creation_Of_DDR
-		text = "Creation of DDR"
-		icon = GFX_DDR_shield
-		x = 0
-		y = 0
-		cost = 0
-
-		available_if_capitulated = yes
-		available = {
-			NOT = { date < 1949.10.7 }
-				}
-		completion_reward = {
-			
-			add_political_power = 1000
-			army_experience = 100
-			
-		
-
-			}
-		}
-	
 	
 #---------------Five_Year_Plans
 	focus = {
@@ -973,7 +923,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1953.12.1 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
@@ -983,15 +933,11 @@ focus_tree = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
-
-					
-					}
-			
+				}
 			}
-			
-					
 		}
 	}
+	
 	focus = {
 		id = DDR_Five_Year_Plan_2
 		text = "Five Year Plan 2"
@@ -1005,7 +951,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1959.1.1 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
@@ -1015,15 +961,11 @@ focus_tree = {
 					type = industrial_complex
 					level = 4
 					instant_build = yes
-
-					
-					}
-			
-			}
-			
-					
+				}
+			}	
 		}
 	}
+	
 	focus = {
 		id = DDR_Manufacture_Cars
 		text = "Manufacture Motor Vehicles"
@@ -1037,13 +979,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1965.12.1 }
-				}
+		}
 
 		completion_reward = {
-			
-					
+				
 		}
 	}
+	
 	focus = {
 		id = DDR_Manufacture_Consumer_Goods
 		text = "Order Consumer Goods"
@@ -1057,14 +999,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1967.12.1 }
-				}
+		}
 
 		completion_reward = {
 			
-			
-					
 		}
 	}
+	
 	focus = {
 		id = DDR_SOV_Integration
 		text = "Integrate with Soviet Economy"
@@ -1078,15 +1019,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1968.12.1 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-			
-			
-					
 		}
 	}
+	
 	focus = {
 		id = DDR_Integrate_Economies_Warsaw
 		text = "Integrate With Warsaw Pact Countries"
@@ -1100,14 +1039,10 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1968.7.1 }
-				}
+		}
 
 		completion_reward = {
-			army_experience = 10
-			
-			
-			
-					
+			army_experience = 10		
 		}
 	}
 
@@ -1125,7 +1060,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1953.12.1 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 2
@@ -1139,6 +1074,7 @@ focus_tree = {
 			}		
 		}
 	}
+	
 	focus = {
 		id = DDR_Infrastructure_2
 		text = "Autobahn"
@@ -1161,14 +1097,11 @@ focus_tree = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
-			
 				}
-			}		
-			
-			
-					
+			}	
 		}
 	}
+	
 	focus = {
 		id = DDR_Infrastructure_3
 		text = "Rail Network"
@@ -1182,7 +1115,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1960.7.1 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
@@ -1193,12 +1126,10 @@ focus_tree = {
 					instant_build = yes
 			
 				}
-			}		
-			
-			
-					
+			}
 		}
 	}
+	
 	focus = {
 		id = DDR_Infrastructure_4
 		text = " More Train and Road to the West"
@@ -1220,14 +1151,9 @@ focus_tree = {
 					instant_build = yes
 			
 				}
-			}		
-			
-			
-					
+			}
 		}
 	}
-
-
 
 #---------------------------------Central Planning Comittees
 	focus = {
@@ -1244,83 +1170,76 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 10
-			
-			
-			
-					
 		}
 	}
+	
 	focus = {
-	id = DDR_Integrate_MfS_and_NVA
-	text = " Integrate MfS and NVA "
-	icon = GFX_DDR_shield
-	prerequisite = { focus = Global_Intervention_Force }
-	prerequisite = { focus = Create_Stasi_Archives_on_DDR_Citizens }
-	available = {
+		id = DDR_Integrate_MfS_and_NVA
+		text = " Integrate MfS and NVA "
+		icon = GFX_DDR_shield
+		prerequisite = { focus = Global_Intervention_Force }
+		prerequisite = { focus = Create_Stasi_Archives_on_DDR_Citizens }
+		available = {
 			NOT = { date < 1990.1.1 }
-			
-			}
-	x = 8
-	y = 7
-	cost = 5
+		}
+		x = 8
+		y = 7
+		cost = 5
 
-	availalbe_if_capituated = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 25
-			add_extra_state_shared_building_slots = 5
 			every_owned_state = {
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
-						}
+				}
+			}
 			add_tech_bonus = {
 				name = infantry_bonus
 				bonus = 3.0
 				uses = 3
 				category = infantry_weapons
-					}
-			
-						
 			}
 		}
 	}
+	
 	focus = {
-	id = DDR_Integrate_NVA+MfS_with_Socialist
-	text = " DDR Forces Re-Integrate with Warsaw Pact "
-	icon = GFX_DDR_shield
-	prerequisite = { focus = DDR_Integrate_MfS_and_NVA }
-	available = {
+		id = DDR_Integrate_NVA+MfS_with_Socialist
+		text = " DDR Forces Re-Integrate with Warsaw Pact "
+		icon = GFX_DDR_shield
+		prerequisite = { focus = DDR_Integrate_MfS_and_NVA }
+		available = {
 			NOT = { date < 1991.1.1 }
-			
-			}
-	x = 8
-	y = 8
-	cost = 5
+		}
+		x = 8
+		y = 8
+		cost = 5
 
-	availalbe_if_capituated = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 25
-			add_extra_state_shared_building_slots = 5
 			every_owned_state = {
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
-						}
+				}
+			}
 			add_tech_bonus = {
 				name = infantry_bonus
 				bonus = 3.0
 				uses = 3
-				category = infantry_weapons
-					}
-			
-						
+				category = infantry_weapons	
 			}
 		}
 	}
+	
 	focus = {
 		id = DDR_Sell_Goods_Int
 		text = "Sell Goods Internationally"
@@ -1333,8 +1252,6 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		
-
 		completion_reward = {
 			every_owned_state = {
 				add_extra_state_shared_building_slots = 1
@@ -1342,19 +1259,16 @@ focus_tree = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-
-					
-					}
-				modify_building_resources = {
-        	  			 building = synthetic_refinery
-        	  			 resource = rubber
-        	  			 amount = 20
-        					}
-				
-				
-			}		
+				}
+			}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+        	  	amount = 20
+        	}		
 		}
 	}
+	
 #------------Diplomacy
 	focus = {
 		id = DDR_Diplomatic_Office
@@ -1368,13 +1282,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1949.11.7 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-					
 		}
 	}
+	
 	focus = {
 		id = DDR_Diplomacy_Warsaw
 		text = "Diplomacy toward Warsaw Pact"
@@ -1388,16 +1302,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1949.12.7 }
-				}
+		}
 
 		completion_reward = {
-			army_experience = 10
-			
-			
-			
-					
+			army_experience = 10	
 		}
 	}
+	
 	focus = {
 		id = DDR_Diplomacy_NATO
 		text = "Diplomacy Toward NATO"
@@ -1411,16 +1322,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1950.1.0 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-			
-			
-			
-					
 		}
 	}
+	
 	focus = {
 		id = DDR_Diplomacy_Non_Aligned
 		text = "Diplomacy Toward Non-Aligned Countries"
@@ -1434,16 +1342,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1950.1.0 }
-				}
+		}
 
 		completion_reward = {
-			army_experience = 10
-			
-			
-			
-					
+			army_experience = 10	
 		}
 	}
+	
 	focus = {
 		id = DDR_Diplomacy_Treaty_Finland_West
 		text = "Sign Treaties with the West in Helsinki"
@@ -1457,7 +1362,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1975.8.1 }
-				}
+		}
 
 		completion_reward = {
 			WGR = {
@@ -1496,16 +1401,6 @@ focus_tree = {
 					modifier = large_increase
 				}
 			}
-
-
-
-
-
-
-
-
-
-
 		}
 	}
 
@@ -1522,7 +1417,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1946.12.1 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
@@ -1534,12 +1429,10 @@ focus_tree = {
 			}
 			add_manpower = 20000
 			load_oob = "DDR_1949_BG"
-			add_idea = NVA
-					
+			add_ideas = NVA
 		}
 	}
-		
-	
+
 	focus = {
 		id = Create_Nationale_Volkesarmee
 		text = "Create Nationale Volkesarmee "
@@ -1552,11 +1445,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			
-			NOT = { date < 1956.3.1 
-			has_war = no
-				}
-				}
+			NOT = {
+				date < 1956.3.1 
+				has_war = no
+			}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -1567,9 +1460,9 @@ focus_tree = {
 				category = land_doctrine
 			}
 			load_oob = "DDR_1949_NVA_MT"
-	
 		}
 	}
+	
 	focus = {
 		id = Berlin_Wall
 		text = " Berlin Wall "
@@ -1583,14 +1476,14 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1961.8.13 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 5
 			add_ideas = FRA_fortification_focus
-			
 		}
 	}
+	
 	focus = {
 		id = Import_Soviet_Jets
 		text = "Import Soviet Jets"
@@ -1604,7 +1497,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1965.1.1 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -1617,14 +1510,14 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = fighter_equipment
 				amount = 750
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = CAS_equipment
 				amount = 200
-				}
-			
+			}
 		}
 	}
+	
 	focus = {
 		id = Prauge_Spring_Intervention
 		text = "Prauge Spring Intervention"
@@ -1638,7 +1531,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1968.1.5 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -1650,6 +1543,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Congo_Military_Advisors
 		text = "Congo Military Advisors"
@@ -1663,7 +1557,7 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1973.1.1 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 5
@@ -1687,6 +1581,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Global_Intervention_Force
 		text = "Global Intervention Force"
@@ -1700,8 +1595,8 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1975.1.1 }
-				}
-
+		}
+		
 		completion_reward = {
 			army_experience = 5
 			add_tech_bonus = {
@@ -1710,30 +1605,28 @@ focus_tree = {
 				uses = 5
 				category = naval_equipment
 			}
-			
 		}
-		
 	}
+	
 #-----------------Disolve_DDR
 focus = {
 	id = DDR_fall_berlin_wall
 	text = " Fall of the Berlin Wall "
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1989.11.8 }
-			
-			}
+		NOT = { date < 1989.11.8 }
+	}
 	x = 20
 	y = 0
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = -200
-			add_stablity = -200
-			}
-		}
+	completion_reward = {
+		army_experience = -200
+		add_stability = -200
+	}
+}
 #---------------------Violent_Reaction
 focus = {
 	id = DDR_Declare_Martial_1989_Crisis
@@ -1742,21 +1635,21 @@ focus = {
 	text = " Delcare Martial Law in East Germany "
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1989.11.10 }
-			
-			}
+		NOT = { date < 1989.11.10 }
+	}
 		
 	x = 18
 	y = 1
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = -200
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		army_experience = -200
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_Martial_Law_Works
 	prerequisite = { focus = DDR_Declare_Martial_1989_Crisis }
@@ -1764,22 +1657,21 @@ focus = {
 	text = " Martial Law Works "
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1989.11.12 }
-			
-			}
-	
+		NOT = { date < 1989.11.12 }
+	}
 
 	x = 16
 	y = 2
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = -200
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		army_experience = -200
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_Martial_Law_Fails
 	prerequisite = { focus = DDR_Declare_Martial_1989_Crisis }
@@ -1787,29 +1679,28 @@ focus = {
 	text = " Coup in Progress Against DDR Government"
 	icon = GFX_goal_generic_major_war
 	available = {
-			NOT = { date < 1989.11.12 }
-			
-			}
+		NOT = { date < 1989.11.12 }
+	}
+	
 	ai_will_do = {
-       		 factor = 3000
-
-        	modifier = {
-     	        factor = 40
-    
-       		 }
-        }
+        factor = 3000
+        modifier = {
+     	    factor = 40
+		}
+    }
 
 	x = 19
 	y = 2
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = -200
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		army_experience = -200
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_Coup_Success
 	prerequisite = { focus = DDR_Martial_Law_Fails }
@@ -1817,29 +1708,26 @@ focus = {
 	text = " Coup in DDR Successful "
 	icon = GFX_goal_support_democracy
 	available = {
-			NOT = { date < 1989.11.14 }
-			
-			}
-	
+		NOT = { date < 1989.11.14 }
+	}
 	ai_will_do = {
-       		 factor = 3000
-
-        	modifier = {
-     	        factor = 40
-    
-       		 }
-        }
+		factor = 3000
+		modifier = {
+			factor = 40
+		}
+	}
 	x = 19
 	y = 3
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = -200
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		army_experience = -200
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_Coup_Failure
 	prerequisite = { focus = DDR_Martial_Law_Fails }
@@ -1848,80 +1736,68 @@ focus = {
 	icon = GFX_DDR_shield
 	available = {
 			NOT = { date < 1989.11.14 }
-			
-			}
-	
-
+	}
 	x = 17
 	y = 3
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = -200
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		army_experience = -200
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_Restore_Order
-	prerequisite = {
-			focus = DDR_Coup_Failure
-			focus = DDR_Martial_Law_Works
-		}
+	prerequisite = { focus = DDR_Coup_Failure focus = DDR_Martial_Law_Works }
 	text = " DDR Government Regains Control of Country "
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1989.11.16 }
-			
-			}
-	
-
+		NOT = { date < 1989.11.16 }
+	}
 	x = 16
 	y = 5
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = -200
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		army_experience = -200
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_Temp_Government
-	prerequisite = {
-			focus = DDR_Coup_Success
-			focus = DDR_Reject_Results
-		}
+	prerequisite = { focus = DDR_Coup_Success focus = DDR_Reject_Results }
 	text = " Provisional Government Takes Over East Germany "
 	icon = GFX_goal_support_democracy
 	available = {
-			NOT = { date < 1989.11.16 }
-			
-			}
-	
-
+		NOT = { date < 1989.11.16 }
+	}
 	x = 19
 	y = 4
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = -200
-			add_stablity = 100
-			set_politics = {
-                                    ruling_party = neutrality
-                                        elections_allowed = yes
-						}
-			set_popularities = {
-	neutrality = 0.60
-	democratic = 0.15
-	communism = 0.25
-}
-			}
+	completion_reward = {
+		army_experience = -200
+		add_stability = 1
+		set_politics = {
+			ruling_party = neutrality
+            elections_allowed = yes
 		}
+		set_popularities = {
+			neutrality = 0.60
+			democratic = 0.15
+			communism = 0.25
+		}
+	}
+}
+
 #-----------------Peaceful Actions
 focus = {
 	id = DDR_Realise_reality
@@ -1930,61 +1806,55 @@ focus = {
 	text = " Write Memo Telling Everyone to Realise Reality"
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1989.11.10 }
-			
-			}
+		NOT = { date < 1989.11.10 }
+	}
 	ai_will_do = {
-       		 factor = 200
-
-        	modifier = {
-     	        factor = 40
-    
-       		 }
-        }
+		factor = 200
+        modifier = {
+     	    factor = 40
+		}
+    }
 		
 	x = 22
 	y = 1
 	cost = 1
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			army_experience = 10
-			add_stablity = -20
-			}
-		}
+	completion_reward = {
+		army_experience = 10
+		add_stability = -20
+	}
+}
+
 focus = {
 	id = DDR_Initiate_Discussions
 	prerequisite = { focus = DDR_Realise_reality }
 	text = " SED Organizes National Free Elections "
 	icon = GFX_focus_generic_treaty
 	available = {
-			NOT = { date < 1989.11.17 }
-			
-			}
-	
-	
-
+		NOT = { date < 1989.11.17 }
+	}
 	x = 22
 	y = 2
 	cost = 1
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			add_stablity = 5
-			set_politics = {
-                                    ruling_party = communism
-                                        elections_allowed = yes
-						}
-			set_popularities = {
-	neutrality = 0.33
-	democratic = 0.33
-	communism = 0.33
-	fascism = 0.01
-}
-			}
+	completion_reward = {
+		add_stability = 5
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
 		}
+		set_popularities = {
+			neutrality = 0.33
+			democratic = 0.33
+			communism = 0.33
+			fascism = 0.01
+		}
+	}
+}
 
 focus = {
 	id = DDR_CDU_Wins
@@ -1993,46 +1863,35 @@ focus = {
 	text = " CDU East Germany Wins Upset Elections "
 	icon = GFX_goal_support_democracy
 	available = {
-			NOT = { date < 1990.3.1 }
-			
-			}
+		NOT = { date < 1990.3.1 }
+	}
 	ai_will_do = {
-       		 factor = 180
-
-        	modifier = {
-     	        factor = 40
-    
-       		 }
-        }
-	ai_will_do = {
-       		 factor = 75
-
-        	modifier = {
-     	        factor = 40
-    
-       		 }
-        }
+		factor = 180
+		modifier = {
+     	    factor = 40
+		}
+    }
 	
-
 	x = 23
 	y = 4
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			set_politics = {
-                                    ruling_party = democratic
-                                        elections_allowed = yes
-						}
-			set_popularities = {
-	neutrality = 0.5
-	democratic = 0.80
-	communism = 0.15
-}
-			add_stablity = 100
-			}
+	completion_reward = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
 		}
+		set_popularities = {
+			neutrality = 0.5
+			democratic = 0.80
+			communism = 0.15
+		}
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_SED_WIN
 	prerequisite = { focus = DDR_Initiate_Discussions}
@@ -2040,56 +1899,49 @@ focus = {
 	text = " In Election SED Retains Control of DDR "
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1990.3.1 }
-			
-			}
+		NOT = { date < 1990.3.1 }
+	}
 	
-
 	x = 25
 	y = 5
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			set_politics = {
-                                    ruling_party = communism
-                                        elections_allowed = no
-						}
-			set_popularities = {
-	neutrality = 0.5
-	democratic = 0.45
-	communism = 0.55
-}
-			
-			add_stablity = 100
-			}
+	completion_reward = {
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
 		}
-#-------------------------Aftermath Focus
-	focus = {
-	id = DDR_1990_Aftermath
-	prerequisite = { focus = DDR_SED_WIN
-			focus = DDR_Restore_Order
+		set_popularities = {
+			neutrality = 0.5
+			democratic = 0.45
+			communism = 0.55
+		}
+		add_stability = 1
+	}
 }
+
+#-------------------------Aftermath Focus
+focus = {
+	id = DDR_1990_Aftermath
+	prerequisite = { focus = DDR_SED_WIN focus = DDR_Restore_Order }
 	text = " Aftermath of Chaos In DDR "
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1990.3.1 }
-			
-			}
-	
-
+		NOT = { date < 1990.3.1 }
+	}
 	x = 20
 	y = 6
 	cost = 0
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_Internal_Debates
 	prerequisite = { focus = DDR_1990_Aftermath }
@@ -2097,25 +1949,19 @@ focus = {
 	text = " DDR Politburo Debates the Future of the DDR "
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1990.3.1 }
-			
-			}
-	
-
+		NOT = { date < 1990.3.1 }
+	}
 	x = 20
 	y = 7
 	cost = 1
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		add_stability = 1
+	}
+}
 
-
-		
 focus = {
 	id = DDR_CDU_Explain_to_World_II
 	prerequisite = { focus = DDR_CDU_No_Reunification }
@@ -2123,52 +1969,45 @@ focus = {
 	text = " Re-Unification but not yet "
 	icon = GFX_goal_support_democracy
 	available = {
-			NOT = { date < 1990.3.1 }
-			
-			}
+		NOT = { date < 1990.3.1 }
+	}
 	
 	ai_will_do = {
-       		 factor = 2000
-
-        	modifier = {
-     	        factor = 40
-    
-       		 }
+       	factor = 2000
+		modifier = {
+			factor = 40
         }
+	}
 
 	x = 24
 	y = 6
 	cost = 1
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_CDU_Negotiate_Better_Treaty_with_WGR
 	prerequisite = { focus = DDR_CDU_No_Reunification }
 	text = " Negotiate better treaty with West Germany "
 	icon = GFX_goal_support_democracy
 	available = {
-			NOT = { date < 1990.6.1 }
-			
-			}
-	
-
+		NOT = { date < 1990.6.1 }
+	}
 	x = 24
 	y = 7
 	cost = 30
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
+	completion_reward = {
+		add_stability = 1
+	}
+}
 
-		completion_reward = {
-			
-			add_stablity = 100
-			}
-		}
 focus = {
 	id = DDR_CDU_Explain_to_World
 	prerequisite = { focus = DDR_CDU_No_Reunification}
@@ -2176,72 +2015,63 @@ focus = {
 	text = " Speech Explaining why their will be no Re-Unification "
 	icon = GFX_goal_support_democracy
 	available = {
-			NOT = { date < 1990.3.1 }
-			
-			}
+		NOT = { date < 1990.3.1 }
+	}
 	
-
 	x = 22
 	y = 6
 	cost = 1
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		add_stability = 1
+	}
+}
+
 focus = {
 	id = DDR_CDU_Ensure_Support
 	prerequisite = { focus = DDR_CDU_Explain_to_World }
 	text = " Ensure Support from People in East Germany "
 	icon = GFX_goal_support_democracy
 	available = {
-			NOT = { date < 1990.3.8 }
-			
-			}
+		NOT = { date < 1990.3.8 }
+	}
 	
-
 	x = 22
 	y = 7
 	cost = 1
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		add_stability = 1
+	}
+}
+
 #----------------------------------------------Announcements
 focus = {
 	id = DDR_Future_of
-	prerequisite = { focus = DDR_Internal_Debates
-			 focus = DDR_CDU_Ensure_Support
- }
+	prerequisite = { focus = DDR_Internal_Debates focus = DDR_CDU_Ensure_Support }
 	text = " Announce the Future of the DDR "
 	icon = GFX_DDR_shield
 	available = {
-			NOT = { date < 1990.3.1 }
-			
-			}
-	
+		NOT = { date < 1990.3.1 }
+	}
 
 	x = 21
 	y = 8
 	cost = 1
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			
-			add_stablity = 100
-			}
-		}
+	completion_reward = {
+		add_stability = 1
+	}
+}
 
 #-------------Dissolve and do not disolve focuss
-		
+
 focus = {
 	id = DDR_CDU_No_Reunification
 	prerequisite = { focus = DDR_CDU_Wins}
@@ -2249,25 +2079,18 @@ focus = {
 	text = " CDU East Germany Decides against Re-Unification "
 	icon = GFX_goal_support_democracy
 	available = {
-			NOT = { date < 1990.3.1 }
-			
-			}
-	
-
+		NOT = { date < 1990.3.1 }
+	}
 	x = 22
 	y = 5
 	cost = 1
 
-	availalbe_if_capituated = no
+	available_if_capitulated = no
 
-		completion_reward = {
-			
-			add_stablity = 100
-			}
-		}
-
-
-
+	completion_reward = {
+		add_stability = 1
+	}
+}
 
 #------------------------Dissolve Secondary
 	focus = {
@@ -2284,77 +2107,82 @@ focus = {
 
 		available = {
 			NOT = { date < 1990.10.3 }
-				}
+		}
 		
 
 		completion_reward = {
-			WGR = { pp 2000
+			DDR = {
+				every_unit_leader = {
+					set_nationality = WGR
 				}
-			
-			WGR = {
-				if = {
-					limit = {
-						DDR = {
-							controls_state = 60
-					}
-				}
-				transfer_state = 60
 			}
-		}
-			WGR = {
-			if = {
-				limit = {
-					DDR = {
-					controls_state = 792
-					}
-				}
-				transfer_state = 792
-			}
-		}
-		WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 61
-					}
-				}
-				transfer_state = 61
-			}
-		}
-		WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 65
-					}
-				}
-				transfer_state = 65
-			}
-		}	
-		WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 62
-					}
-				}
-				transfer_state = 62
-			}
-		}
-		WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 64
-					}
-				}
-				transfer_state = 64
-				add_political_power = 2000
-				set_capital = 795
-			}
+			WGR = { annex_country = { target = DDR transfer_troops = yes } }
 		
+	#		WGR = {
+	#			add_political_power = 2000
+	#			if = {
+	#				limit = {
+	#					DDR = {
+	#						controls_state = 60
+	#					}
+	#				}
+	#				transfer_state = 60
+	#			}
+	#		}
+	#		WGR = {
+	#		if = {
+	#			limit = {
+	#				DDR = {
+	#				controls_state = 792
+	#				}
+	#			}
+	#			transfer_state = 792
+	#		}
+	#	}
+	#	WGR = {
+	#		if = {
+	#			limit = {
+	#				DDR = {
+	#					controls_state = 61
+	#				}
+	#			}
+	#			transfer_state = 61
+	#		}
+	#	}
+	#	WGR = {
+	#		if = {
+	#			limit = {
+	#				DDR = {
+	#					controls_state = 65
+	#				}
+	#			}
+	#			transfer_state = 65
+	#		}
+	#	}	
+	#	WGR = {
+	#		if = {
+	#			limit = {
+	#				DDR = {
+	#					controls_state = 62
+	#				}
+	#			}
+	#			transfer_state = 62
+	#		}
+	#	}
+	#	WGR = {
+	#		if = {
+	#			limit = {
+	#				DDR = {
+	#					controls_state = 64
+	#				}
+	#			}
+	#			transfer_state = 64
+	#			add_political_power = 2000
+	#			set_capital = 795
+	#		}
+	#	
+	#	}
 		}
-	}
 	}
 
 
@@ -2364,10 +2192,7 @@ focus = {
 		id = Dissolve_DRR
 		text = " Dissolve DDR "
 		icon = GFX_DDR_shield
-		prerequisite = {
-			focus = DDR_Temp_Government
-			focus = DDR_CDU_Wins
-		}
+		prerequisite = { focus = DDR_Temp_Government focus = DDR_CDU_Wins }
 		mutually_exclusive = { focus = DDR_CDU_No_Reunification}
 		x = 20
 		y = 5
@@ -2377,85 +2202,79 @@ focus = {
 
 		available = {
 			NOT = { date < 1990.10.3 }
-				}
+		}
 		ai_will_do = {
-       			 factor = 3000
-
-        		modifier = {
-     	        	factor = 40
-    
-       		 	}
-       		}
+			factor = 3000
+			modifier = {
+     	        factor = 40
+			}
+       	}
 		
 
 		completion_reward = {
-			WGR = {change_tag_from =  DDR}
-			WGR = { pp 2000
+			WGR = { change_tag_from =  DDR }
+			DDR = {
+				every_unit_leader = {
+					set_nationality = WGR
 				}
+			}
+			WGR = { annex_country = { target = DDR transfer_troops = yes } }
 			
-			WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 60
-					}
-				}
-				transfer_state = 60
-			}
-			WGR = {
-			if = {
-				limit = {
-					DDR = {
-					controls_state = 792
-					}
-				}
-				transfer_state = 792
-			}
-			WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 61
-					}
-				}
-				transfer_state = 61
-			}
-			WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 65
-					}
-				}
-				transfer_state = 65
-			}
-			WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 62
-					}
-				}
-				transfer_state = 62
-			}
-			WGR = {
-			if = {
-				limit = {
-					DDR = {
-						controls_state = 64
-					}
-				}
-				transfer_state = 64
-				add_political_power = 2000
-				set_capital = 795
-			}
-			
-
-
-
-
+		#	WGR = { pp 2000
+		#		}
+		#	
+		#	if = {
+		#		limit = {
+		#			DDR = {
+		#				controls_state = 60
+		#			}
+		#		}
+		#		transfer_state = 60
+		#	}
+		#	if = {
+		#		limit = {
+		#			DDR = {
+		#			controls_state = 792
+		#			}
+		#		}
+		#		transfer_state = 792
+		#	}
+		#	if = {
+		#		limit = {
+		#			DDR = {
+		#				controls_state = 61
+		#			}
+		#		}
+		#		transfer_state = 61
+		#	}
+		#	if = {
+		#		limit = {
+		#			DDR = {
+		#				controls_state = 65
+		#			}
+		#		}
+		#		transfer_state = 65
+		#	}
+		#	if = {
+		#		limit = {
+		#			DDR = {
+		#				controls_state = 62
+		#			}
+		#		}
+		#		transfer_state = 62
+		#	}
+		#	if = {
+		#		limit = {
+		#			DDR = {
+		#				controls_state = 64
+		#			}
+		#		}
+		#		transfer_state = 64
+		#		add_political_power = 2000
+		#		set_capital = 795
+		#	}
 		}
-	
+	}
 
 #-------------------Stuff
 	focus = {
@@ -2470,11 +2289,11 @@ focus = {
 
 		available = {
 			NOT = { date < 1949.11.7 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
+		}
+	}
 	
-
-	
-	
+}
