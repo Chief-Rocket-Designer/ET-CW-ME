@@ -1,0 +1,28 @@
+state={
+	id=826 #### EVERY NEW STATE NEEDS TO HAVE GOT AN ID WHICH IS HIGHER THAN 787 (currently), you can use every id which hasnt been used yet by Paradox, the used can be found in "history/states/..." --> each file shows a number --> these numbers cannot be used again, but i think you are smart enough to get this
+	name="Central California Coast" #### --> is responsible for the state name, you can write that down in any file; SYNTAX: STATE_[ID]:0 "name"
+	resources={
+	}
+	
+	state_category = megalopolis
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 8
+			arms_factory = 1
+			industrial_complex = 8
+			dockyard = 0
+			air_base = 10
+		}
+		add_core_of = USA
+		
+
+	}
+
+	provinces={ ### just remove all unwanted provinces from the other file (if you have copied this)
+		11859 6881 986 3840 9637
+	}
+	manpower = 260000
+	buildings_max_level_factor=1.000
+}

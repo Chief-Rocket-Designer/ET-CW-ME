@@ -1,0 +1,179 @@
+ideas = {
+    country = {
+#commmunism
+        recent_collectivization = {
+            removal_cost = -1
+			picture = market_down
+
+            modifier = {
+                production_speed_buildings_factor = -0.20
+                stability_weekly = -0.01
+            } 
+        }
+		
+#Superpower
+		military_superpower = {
+            removal_cost = -1
+			picture = market_down
+
+            modifier = {
+                send_volunteers_tension = -0.20
+                send_volunteer_size = 50
+				trade_opinion_factor = 0.10
+				surrender_limit = 0.50
+				TENSION_VOLUNTEER_FORCE_DIVISION = 0.05
+				VOLUNTEERS_TRANSFER_SPEED = 3
+            } 
+        }
+#Country Specific
+		usa_saudi_business_ties = {
+            removal_cost = -1
+			picture = market_down
+
+            modifier = {
+                local_building_slots_factor = 0.15
+				ai_get_ally_desire_factor = 10
+				trade_opinion_factor = 0.20
+				local_resources_factor  = 0.05
+				production_oil_factor = 0.15
+            } 
+        }
+
+#Gen econ
+
+
+
+
+
+
+
+		poor_nation = {
+			removal_cost = -1
+			picture = poverty
+		
+			modifier = {
+				stability_factor = -0.05
+				economy_cost_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				global_building_slots_factor = -0.05
+				nuclear_production_factor = -9999
+				trade_opinion_factor = 0.05
+				min_export = 0.40
+				autonomy_gain_global_factor = -0.10
+				license_subject_master_purchase_cost = 0.15
+				fuel_gain_factor = -0.15
+				theorist_cost_factor = 0.10
+			}
+
+		}
+		
+		emergent_economy = {
+			removal_cost = -1
+			picture = emergent
+		
+			modifier = {
+				stability_factor = 0.10
+				economy_cost_factor = 0.5
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.10
+				nuclear_production_factor = -0.50
+				trade_opinion_factor = 0.25
+				min_export = 0.15
+				autonomy_gain_global_factor = 0.10
+				license_subject_master_purchase_cost = -0.50
+				fuel_gain_factor = 0.15
+				theorist_cost_factor = -0.10
+			}
+
+		}
+		
+		large_economy = {
+			removal_cost = -1
+			picture = large_econ
+		
+			modifier = {
+				stability_factor = 0.15
+				economy_cost_factor = 0.25
+				production_factory_max_efficiency_factor = 0.15
+				global_building_slots_factor = 0.15
+				nuclear_production_factor = -0.25
+				trade_opinion_factor = 0.30
+				min_export = 0.20
+				autonomy_gain_global_factor = 0.15
+				license_subject_master_purchase_cost = -0.75
+				fuel_gain_factor = 0.20
+				theorist_cost_factor = -0.15
+				production_speed_buildings_factor = 0.05
+			}
+
+		}
+		
+		expansive_economy = {
+			removal_cost = -1
+			picture = expan_econ
+		
+			modifier = {
+				stability_factor = 0.20
+				
+				production_factory_max_efficiency_factor = 0.20
+				global_building_slots_factor = 0.20
+				trade_opinion_factor = 0.35
+				min_export = 0.20
+				autonomy_gain_global_factor = 0.30
+				license_subject_master_purchase_cost = -0.75
+				fuel_gain_factor = 0.20
+				theorist_cost_factor = -0.15
+				production_speed_buildings_factor = 0.15
+			}
+
+		}
+		
+		economic_superpower = {
+			removal_cost = -1
+			picture = super_econ
+		
+			modifier = {
+				stability_factor = 0.25
+				economy_cost_factor = -0.25
+				production_factory_max_efficiency_factor = 0.25
+				global_building_slots_factor = 0.25
+				nuclear_production_factor = 0.25
+				trade_opinion_factor = 0.45
+				min_export = 0.35
+				autonomy_gain_global_factor = 0.50
+				license_subject_master_purchase_cost = -1.00
+				fuel_gain_factor = 0.40
+				local_resources_factor = 0.40
+				extra_trade_to_overlord_factor = 0.25
+				legitimacy_daily = 1
+				production_speed_buildings_factor = 0.25
+			}
+
+		}
+		
+		
+		
+		
+		
+#Politics
+	NATO_Ally = {
+			removal_cost = -1
+			picture = NATO_idea
+			
+				modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.10
+				join_faction_tension = -0.50
+				send_volunteer_factor = 2
+				faction_trade_opinion_factor = 0.10
+				democratic_acceptance = 40
+				democratic_drift = 0.05
+				neutrality_acceptance = 25
+			}
+
+		}	
+
+
+		
+    }
+}
