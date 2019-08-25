@@ -1,0 +1,30 @@
+state={
+	id=788
+	name="San Francisco"
+	provinces={
+		9671 
+	}
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 6
+			Urban_Center = 4
+			dockyard = 2
+			9671 = {
+				naval_base = 4
+
+			}
+
+		}
+		add_core_of = USA
+		victory_points = {
+			9671 25 
+		}
+
+	}
+	manpower=600000
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

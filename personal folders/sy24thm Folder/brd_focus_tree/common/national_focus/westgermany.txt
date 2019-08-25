@@ -1,0 +1,7672 @@
+focus_tree = {
+	id = westgerman_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = WGR
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 20000 y = 1000 }
+	
+	######################################################################################################
+	###																								   ###
+	###											FOUNDATION											   ###
+	###																								   ###
+	######################################################################################################
+	
+	
+	focus = {
+		id = WGR_a_new_capital
+		icon = GFX_focus_generic_self_management
+		x = 17
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_war = no
+			has_full_control_of_state = 50
+			has_full_control_of_state = 51
+			has_full_control_of_state = 55
+		}
+		
+		bypass = {
+		
+		}
+		
+	#	select_effect = {
+	#		country_event = { id = west_germany.1 days = 3 }
+	#	}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.1 }
+		}
+	}
+	
+	focus = {
+		id = WGR_a_new_constitution
+		icon = GFX_focus_generic_treaty
+		x = 23
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = WGR_an_own_government
+		icon = GFX_focus_generic_support_the_left_right
+		x = 28
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_again_an_own_government
+		}
+	}
+	
+	focus = {
+		id = WGR_foundation_of_the_brd
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_a_new_capital }
+		prerequisite = { focus = WGR_a_new_constitution }
+		prerequisite = { focus = WGR_an_own_government }
+		x = 0
+		y = 1
+		relative_position_id = WGR_a_new_constitution
+		cost = 20
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_war = no
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_cosmetic_tag = WGR_federal_republic_of_germany
+			if = {
+				limit = {
+					has_country_flag = WGR_chooses_bonn
+				}
+				set_capital = 51
+				clr_country_flag = WGR_chooses_bonn
+			}
+			else_if = {
+				limit = {
+					has_country_flag = WGR_chooses_frankfurt_am_main
+				}
+				set_capital = 55
+				clr_country_flag = WGR_chooses_frankfurt_am_main
+			}
+			else_if = {
+				limit = {
+					has_country_flag = WGR_chooses_kassel
+				}
+				set_capital = 55
+				clr_country_flag = WGR_chooses_kassel
+			}
+			else_if = {
+				limit = {
+					has_country_flag = WGR_chooses_stuttgart
+				}
+				set_capital = 50
+				clr_country_flag = WGR_chooses_stuttgart
+			}
+			remove_ideas = WGR_divided_into_occupation_zones
+			add_political_power = 150
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = WGR_again_an_own_government
+					add_idea = WGR_stable_own_government
+				}
+				add_ideas = WGR_german_refugees
+			}
+		}
+	}
+	
+	
+	######################################################################################################
+	###																								   ###
+	###											 MINISTERIES										   ###
+	###																								   ###
+	######################################################################################################
+	
+	
+	focus = {
+		id = WGR_the_foreign_office
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = WGR_foundation_of_the_brd }
+		x = 0
+		y = 1
+		relative_position_id = WGR_foundation_of_the_brd
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = WGR_no_foreign_office
+				add_idea = WGR_foreign_office_again
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_amt_blank
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_foundation_of_the_brd }
+		x = 7
+		y = 1
+		relative_position_id = WGR_foundation_of_the_brd
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WGR_german_pacifism
+				add_idea = WGR_german_pacifism_lowered
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_the_federal_border_guard
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_amt_blank }
+		x = -2
+		y = 1
+		relative_position_id = WGR_amt_blank
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_loads_the_federal_border_guard_oob_tt
+			hidden_effect = {
+				load_oob = "WGR_federal_border_guard_units_1951"
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_remilitarization_of_germany
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_amt_blank }
+		x = 0
+		y = 1
+		relative_position_id = WGR_amt_blank
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = volunteer_only }
+					NOT = { has_idea = limited_conscription }
+					NOT = { has_idea = extensive_conscription }
+					NOT = { has_idea = service_by_requirement }
+					NOT = { has_idea = all_adults_serve }
+					NOT = { has_idea = scraping_the_barrel }
+				}
+				add_ideas = volunteer_only
+				add_named_threat = { threat = 1 name = WGR_remilitarization_of_germany }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_national_defense_ministry
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_remilitarization_of_germany }
+		x = 0
+		y = 1
+		relative_position_id = WGR_remilitarization_of_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_national_defense_ministry_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_military_serice
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_national_defense_ministry }
+		x = 0
+		y = 1
+		relative_position_id = WGR_national_defense_ministry
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = limited_conscription }
+					NOT = { has_idea = extensive_conscription }
+					NOT = { has_idea = service_by_requirement }
+					NOT = { has_idea = all_adults_serve }
+					NOT = { has_idea = scraping_the_barrel }
+				}
+				add_ideas = limited_conscription
+				add_named_threat = { threat = 1 name = WGR_military_serice }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_integrate_nuclear_missiles
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = WGR_military_serice }
+		x = 0
+		y = 1
+		relative_position_id = WGR_military_serice
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.47 days = 1 }
+		}
+	}
+	
+#	focus = {
+#		id = WGR_multiple_ministeries
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = WGR_foundation_of_the_brd }
+#		x = -4
+#		y = 1
+#		relative_position_id = WGR_foundation_of_the_brd
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 2
+#		}
+#		
+#		available = {
+#		
+#		}
+#		
+#		bypass = {
+#		
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#	}
+#	
+#	focus = {
+#		id = WGR_new_ministeries
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = WGR_multiple_ministeries }
+#		x = 0
+#		y = 10
+#		relative_position_id = WGR_multiple_ministeries
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 2
+#		}
+#		
+#		available = {
+#		
+#		}
+#		
+#		bypass = {
+#		
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#	}
+#	
+#	focus = {
+#		id = WGR_reform_the_ministeries
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = WGR_new_ministeries }
+#	#	prerequisite = { focus = WGR_the_foreign_office }
+#	#	prerequisite = { focus = WGR_national_defense_ministry }
+#		x = 0
+#		y = 15
+#		relative_position_id = WGR_foundation_of_the_brd
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 2
+#		}
+#		
+#		available = {
+#		
+#		}
+#		
+#		bypass = {
+#		
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#	}
+	
+	#####################################
+	### DIPLOMATIC RELATIONS SUB-TREE ###
+	#####################################
+	
+	focus = {
+		id = WGR_diplomatic_relations
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_foreign_office }
+		x = 0
+		y = 1
+		relative_position_id = WGR_the_foreign_office
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = WGR }
+					}
+				}
+				USA = {
+					add_opinion_modifier = {
+						target = WGR
+						modifier = WGR_reestablished_diplomatic_relations
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = {
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = WGR }
+					}
+				}
+				FRA = {
+					add_opinion_modifier = {
+						target = WGR
+						modifier = WGR_reestablished_diplomatic_relations
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ENG = {
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = WGR }
+					}
+				}
+				ENG = {
+					add_opinion_modifier = {
+						target = WGR
+						modifier = WGR_reestablished_diplomatic_relations
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SOV = {
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = WGR }
+					}
+				}
+				SOV = {
+					add_opinion_modifier = {
+						target = WGR
+						modifier = WGR_reestablished_diplomatic_relations
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_the_west
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_diplomatic_relations }
+		x = -4
+		y = 1
+		relative_position_id = WGR_diplomatic_relations
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = ENG
+				has_war_with = IRE
+				has_war_with = FRA
+				has_war_with = LUX
+				has_war_with = BEL
+				has_war_with = HOL
+				has_war_with = AUS
+			}
+		}
+		
+		bypass = {
+		#	custom_effect_tooltip = WGR_cef_no_western_european_country_alive
+		#	hidden_trigger = {
+		#		ENG = { exists = no }
+		#		IRE = { exists = no }
+		#		FRA = { exists = no }
+		#		SPR = { exists = no }
+		#		POR = { exists = no }
+		#		LUX = { exists = no }
+		#		BEL = { exists = no }
+		#		ITA = { exists = no }
+		#		HOL = { exists = no }
+		#		AUS = { exists = no }
+		#	}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							exists = yes
+							capital_scope = {
+								is_on_continent = europe
+							}
+							is_neighbor_of = WGR
+							NOT = {
+								tag = DEN
+								tag = DDR
+								tag = SWI
+							}
+						}
+						tag = ENG
+						tag = IRE
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_ger_tries_to_befriend
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_the_east
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_diplomatic_relations }
+		x = 4
+		y = 1
+		relative_position_id = WGR_diplomatic_relations
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = DDR
+				has_war_with = POL
+				has_war_with = CZE
+				has_war_with = ROM
+				has_war_with = HUN
+				has_war_with = BUL
+				has_war_with = SOV
+			}
+		}
+		
+		bypass = {
+	#		DDR = { exists = no }
+	#		POL = { exists = no }
+	#		CZE = { exists = no }
+	#		ROM = { exists = no }
+	#		HUN = { exists = no }
+	#		BUL = { exists = no }
+	#		SOV = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = POL
+						tag = CZE
+						tag = BUL
+						tag = HUN
+						tag = ROM
+						tag = SOV
+						tag = DDR
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_ger_tries_to_befriend
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_france
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_the_west }
+		mutually_exclusive = { focus = WGR_closer_to_britain }
+		x = -1
+		y = 1
+		relative_position_id = WGR_befriend_the_west
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = FRA }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_britain
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_the_west }
+		mutually_exclusive = { focus = WGR_closer_to_france }
+		x = 1
+		y = 1
+		relative_position_id = WGR_befriend_the_west
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = ENG }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_russia
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_the_east }
+		mutually_exclusive = { focus = WGR_closer_to_china }
+		x = -1
+		y = 1
+		relative_position_id = WGR_befriend_the_east
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = SOV }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_china
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_the_east }
+		mutually_exclusive = { focus = WGR_closer_to_russia }
+		x = 1
+		y = 1
+		relative_position_id = WGR_befriend_the_east
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			CHI = {
+				has_war = no
+			}
+			PRC = {
+				has_war = no
+			}
+			NOT = {
+				has_war_with = CHI
+				has_war_with = PRC
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					CHI = {
+						exists = yes
+					}
+				}
+				CHI = {
+					add_opinion_modifier = {
+						target = WGR
+						modifier = WGR_friendship
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					PRC = {
+						exists = yes
+					}
+				}
+				PRC = {
+					add_opinion_modifier = {
+						target = WGR
+						modifier = WGR_friendship
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_the_north
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_diplomatic_relations }
+		x = -2
+		y = 3
+		relative_position_id = WGR_diplomatic_relations
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = DEN
+				has_war_with = SWE
+				has_war_with = NOR
+				has_war_with = FIN
+				has_war_with = ICE
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = DEN
+						tag = SWE
+						tag = NOR
+						tag = FIN
+						tag = ICE
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_ger_tries_to_befriend
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_sweden
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_the_north }
+		mutually_exclusive = { focus = WGR_closer_to_finland }
+		x = -1
+		y = 1
+		relative_position_id = WGR_befriend_the_north
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = SWE }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SWE = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_finland
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_the_north }
+		mutually_exclusive = { focus = WGR_closer_to_sweden }
+		x = 1
+		y = 1
+		relative_position_id = WGR_befriend_the_north
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = SWE }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FIN = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_the_south
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_diplomatic_relations }
+		x = 2
+		y = 3
+		relative_position_id = WGR_diplomatic_relations
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = ITA
+				has_war_with = YUG
+				has_war_with = SPR
+				has_war_with = POR
+				has_war_with = GRE
+				has_war_with = TUR
+				has_war_with = ALB
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = ITA
+						tag = YUG
+						tag = SPR
+						tag = POR
+						tag = GRE
+						tag = TUR
+						tag = ALB
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_ger_tries_to_befriend
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_italy
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_the_south }
+		mutually_exclusive = { focus = WGR_closer_to_turkey	}
+		x = 1
+		y = 1
+		relative_position_id = WGR_befriend_the_south
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = ITA }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_historical_relationship_ita
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_closer_to_italy }
+		x = 0
+		y = 1
+		relative_position_id = WGR_closer_to_italy
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = ITA
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_historical_alliance
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_turkey
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_the_south }
+		mutually_exclusive = { focus = WGR_closer_to_italy }
+		x = -1
+		y = 1
+		relative_position_id = WGR_befriend_the_south
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = TUR }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			TUR = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_across_the_seas
+		icon = GFX_goal_unknown
+		x = 0
+		y = 5
+		relative_position_id = WGR_diplomatic_relations
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			count_triggers = {
+				amount = 3
+				has_completed_focus = WGR_befriend_the_west
+				has_completed_focus = WGR_befriend_the_east
+				has_completed_focus = WGR_befriend_the_north
+				has_completed_focus = WGR_befriend_the_south
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_north_america
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_across_the_seas }
+		x = -2
+		y = 1
+		relative_position_id = WGR_across_the_seas
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = CAN
+				has_war_with = USA
+				has_war_with = MEX
+			}
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					exists = yes
+					NOT = { has_war_with = WGR }
+					capital_scope = {
+						is_on_continent = north_america
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_ger_tries_to_befriend
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_usa
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_north_america }
+		mutually_exclusive = { focus = WGR_closer_to_canada }
+		x = -1
+		y = 1
+		relative_position_id = WGR_befriend_north_america
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = USA }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_canada
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_north_america }
+		mutually_exclusive = { focus = WGR_closer_to_usa }
+		x = 1
+		y = 1
+		relative_position_id = WGR_befriend_north_america
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = CAN }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CAN = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_africa
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_across_the_seas }
+		x = 0
+		y = 3
+		relative_position_id = WGR_across_the_seas
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = CMR
+				has_war_with = TOG
+				has_war_with = NMB
+				has_war_with = TZN
+				has_war_with = RWA
+				has_war_with = BRD
+			}
+			count_triggers = {
+				amount = 1
+				CMR = { exists = yes }
+				TOG = { exists = yes }
+				NMB = { exists = yes }
+				TZN = { exists = yes }
+				RWA = { exists = yes }
+				BRD = { exists = yes }
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = CMR
+						tag = TOG
+						tag = NMB
+						tag = TZN
+						tag = RWA
+						tag = BRD
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_ger_tries_to_befriend
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_nations_in_the_pacific
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_across_the_seas }
+		x = 2
+		y = 1
+		relative_position_id = WGR_across_the_seas
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = JAP
+				has_war_with = CHI
+				has_war_with = PHI
+				has_war_with = PNG
+				has_war_with = INS
+				has_war_with = AST
+				has_war_with = NZL
+			}
+			count_triggers = {
+				amount = 1
+				JAP = { exists = yes }
+				CHI = { exists = yes }
+				PHI = { exists = yes }
+				PNG = { exists = yes }
+				INS = { exists = yes }
+				AST = { exists = yes }
+				NZL = { exists = yes }
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = JAP
+						tag = CHI
+						tag = PHI
+						tag = PNG
+						tag = INS
+						tag = AST
+						tag = NZL
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_ger_tries_to_befriend
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_australia
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_nations_in_the_pacific }
+		mutually_exclusive = { focus = WGR_closer_to_japan }
+		x = -1
+		y = 1
+		relative_position_id = WGR_nations_in_the_pacific
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = AST }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			AST = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_to_japan
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_nations_in_the_pacific }
+		mutually_exclusive = { focus = WGR_closer_to_australia }
+		x = 1
+		y = 1
+		relative_position_id = WGR_nations_in_the_pacific
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_historical_relationship_jap
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_closer_to_japan }
+		x = 0
+		y = 1
+		relative_position_id = WGR_closer_to_japan
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_historical_alliance
+				}
+			}
+		}
+	}
+	
+	######################################################################################################
+	###																								   ###
+	###										GEOPOLITICAL FUTURE										   ###
+	###																								   ###
+	######################################################################################################
+	
+	focus = {
+		id = WGR_geopolitical_future
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_foundation_of_the_brd }
+		x = -14
+		y = 1
+		relative_position_id = WGR_foundation_of_the_brd
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+	
+	focus = {
+		id = WGR_westintegration
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_geopolitical_future }
+		mutually_exclusive = { focus = WGR_neutrality_act focus = WGR_eastintegration }
+		x = -6
+		y = 1
+		relative_position_id = WGR_geopolitical_future
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			USA = { exists = yes }
+			ENG = { exists = yes }
+			FRA = { exists = yes }
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_westintegration_pos
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_westintegration_pos
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_westintegration_pos
+				}
+			}
+			DDR = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_westintegration_neg
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_westintegration_neg
+				}
+			}
+			add_ideas = WGR_westintegration_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_neutrality_act
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_geopolitical_future }
+		mutually_exclusive = { focus = WGR_westintegration focus = WGR_eastintegration }
+		x = 0
+		y = 1
+		relative_position_id = WGR_geopolitical_future
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_neutrality_act_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_eastintegration
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_geopolitical_future }
+		mutually_exclusive = { focus = WGR_westintegration focus = WGR_neutrality_act }
+		x = 6
+		y = 1
+		relative_position_id = WGR_geopolitical_future
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_eastintegration_neg
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_eastintegration_neg
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_eastintegration_neg
+				}
+			}
+			DDR = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_eastintegration_pos
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_eastintegration_pos
+				}
+			}
+			add_ideas = WGR_eastintegration_idea
+		}
+	}
+	
+	################################
+	### WESTINTEGRATION SUB-TREE ###
+	################################
+	
+	focus = {
+		id = WGR_the_saar_issue
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_westintegration }
+		x = 0
+		y = 1
+		relative_position_id = WGR_westintegration
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.2 }
+		}
+	}
+	
+	focus = {
+		id = WGR_membership_of_the_council_of_europe
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_saar_issue }
+		x = 0
+		y = 1
+		relative_position_id = WGR_the_saar_issue
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = { country_event = { id = west_germany.3 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_bonn_paris_convention
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_membership_of_the_council_of_europe }
+		x = 0
+		y = 1
+		relative_position_id = WGR_membership_of_the_council_of_europe
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = WGR_the_way_to_sovereignty
+			add_opinion_modifier = {
+				target = USA
+				modifier = WGR_the_bonn_paris_convention		
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = WGR_the_bonn_paris_convention		
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = WGR_the_bonn_paris_convention		
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_the_montanunion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_bonn_paris_convention }
+		x = 0
+		y = 1
+		relative_position_id = WGR_bonn_paris_convention
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+			FRA = { exists = no }
+			ITA = { exists = no }
+			BEL = { exists = no }
+			LUX = { exists = no }
+			HOL = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					FRA = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				FRA = { country_event = { id = west_germany.4 days = 1 } }
+			}
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				ITA = { country_event = { id = west_germany.4 days = 1 } }
+			}
+			if = {
+				limit = {
+					BEL = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				BEL = { country_event = { id = west_germany.4 days = 1 } }
+			}
+			if = {
+				limit = {
+					LUX = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				LUX = { country_event = { id = west_germany.4 days = 1 } }
+			}
+			if = {
+				limit = {
+					HOL = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				HOL = { country_event = { id = west_germany.4 days = 1 } }
+			}
+			if = {
+				limit = {
+					WGR = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				WGR = { country_event = { id = west_germany.4 days = 1 } }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_reparations_agreement_between_israel_and_west_germany
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_montanunion }
+		x = 0
+		y = 1
+		relative_position_id = WGR_the_montanunion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			NOT = { has_war_with = ISR }
+			if = {
+				limit = {
+					ISR = {
+						is_subject = yes
+					}
+				}
+				ISR = {
+					OVERLORD = {
+						NOT = {
+							has_war_with = GER
+						}
+					}
+				}
+			}
+		}
+		
+		bypass = {
+			ISR = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ISR = { country_event = { id = west_germany.5 days = 3 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_foundation_of_the_weu
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reparations_agreement_between_israel_and_west_germany }
+		x = 1
+		y = 1
+		relative_position_id = WGR_reparations_agreement_between_israel_and_west_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					FRA = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				FRA = { country_event = { id = west_germany.8 days = 1 } }
+			}
+			if = {
+				limit = {
+					ENG = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				ENG = { country_event = { id = west_germany.8 days = 1 } }
+			}
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				ITA = { country_event = { id = west_germany.8 days = 1 } }
+			}
+			if = {
+				limit = {
+					LUX = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				LUX = { country_event = { id = west_germany.8 days = 1 } }
+			}
+			if = {
+				limit = {
+					BEL = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				BEL = { country_event = { id = west_germany.8 days = 1 } }
+			}
+			if = {
+				limit = {
+					HOL = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				HOL = { country_event = { id = west_germany.8 days = 1 } }
+			}
+			if = {
+				limit = {
+					WGR = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				WGR = { country_event = { id = west_germany.8 days = 1 } }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_residence_treaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reparations_agreement_between_israel_and_west_germany }
+		x = -3
+		y = 1
+		relative_position_id = WGR_reparations_agreement_between_israel_and_west_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			give_military_access = USA
+			diplomatic_relation = {
+				country = USA
+				relation = non_aggression_pact
+				active = yes
+			}
+			
+			give_military_access = ENG
+			diplomatic_relation = {
+				country = ENG
+				relation = non_aggression_pact
+				active = yes
+			}
+			
+			give_military_access = FRA
+			diplomatic_relation = {
+				country = FRA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_join_the_nato
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reparations_agreement_between_israel_and_west_germany }
+		x = 3
+		y = 1
+		relative_position_id = WGR_reparations_agreement_between_israel_and_west_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = { country_event = { id = west_germany.11 days = 7 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_eden_plan
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reparations_agreement_between_israel_and_west_germany }
+		x = -1
+		y = 1
+		relative_position_id = WGR_reparations_agreement_between_israel_and_west_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.12 days = 1 }
+		}
+	}
+
+	focus = {
+		id = WGR_reconciliation_with_sov
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_eden_plan }
+		prerequisite = { focus = WGR_foundation_of_the_weu }
+		prerequisite = { focus = WGR_join_the_nato }
+		prerequisite = { focus = WGR_residence_treaty }
+		x = 0
+		y = 2
+		relative_position_id = WGR_reparations_agreement_between_israel_and_west_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_truce = {
+				target = SOV
+				days = 360
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = WGR_gentle_behaviour		
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = WGR_gentle_behaviour		
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = WGR_sovereignty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reconciliation_with_sov }
+		x = 0
+		y = 1
+		relative_position_id = WGR_reconciliation_with_sov
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WGR_the_way_to_sovereignty
+				add_idea = WGR_sovereignty_for_inner_and_foreign_business
+			}
+			remove_ideas = WGR_plundering_of_the_industry
+		}
+	}
+	
+	focus = {
+		id = WGR_recall_the_residence_treaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_residence_treaty }
+		x = 0
+		y = 1
+		relative_position_id = WGR_residence_treaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+		
+		available = {
+			has_completed_focus = WGR_full_sovereignty
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_sole_right_of_representation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_sovereignty }
+		x = 0
+		y = 1
+		relative_position_id = WGR_sovereignty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_the_brd_is_the_real_germany
+			if = {
+				limit = {
+					60 = { NOT = { is_core_of = WGR} }
+				}
+				WGR = { add_state_core = 60 }
+			}
+			if = {
+				limit = {
+					61 = { NOT = { is_core_of = WGR} }
+				}
+				WGR = { add_state_core = 61 }
+			}
+			if = {
+				limit = {
+					62 = { NOT = { is_core_of = WGR} }
+				}
+				WGR = { add_state_core = 62 }
+			}
+			if = {
+				limit = {
+					64 = { NOT = { is_core_of = WGR} }
+				}
+				WGR = { add_state_core = 64 }
+			}
+			if = {
+				limit = {
+					65 = { NOT = { is_core_of = WGR} }
+				}
+				WGR = { add_state_core = 65 }
+			}
+			
+			if = {
+				limit = {
+					NOT = { controls_state = 5 }
+				}
+				WGR = { add_state_claim = 5 }
+			}
+			if = {
+				limit = {
+					NOT = { controls_state = 63 }
+				}
+				WGR = { add_state_claim = 63 }
+			}
+			if = {
+				limit = {
+					NOT = { controls_state = 66 }
+				}
+				WGR = { add_state_claim = 66 }
+			}
+			if = {
+				limit = {
+					NOT = { controls_state = 67 }
+				}
+				WGR = { add_state_claim = 67 }
+			}
+			if = {
+				limit = {
+					NOT = { controls_state = 68 }
+				}
+				WGR = { add_state_claim = 68 }
+			}
+			if = {
+				limit = {
+					NOT = { controls_state = 763 }
+				}
+				WGR = { add_state_claim = 763 }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_saar_issue_solved
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_sole_right_of_representation }
+		x = 0
+		y = 1
+		relative_position_id = WGR_sole_right_of_representation
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = WGR_abandon_the_saar
+							has_idea = WGR_pressure_france
+						}
+					}
+				}
+				custom_effect_tooltip = WGR_saar_issue_solved_tt
+			}
+			if = {
+				limit = {
+					has_idea = WGR_abandon_the_saar
+				}
+				remove_ideas = WGR_abandon_the_saar
+			}
+			else_if = {
+				limit = {
+					has_idea = WGR_pressure_france
+				}
+				remove_ideas = WGR_pressure_france
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_foundation_of_the_federal_armed_forces
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_sole_right_of_representation }
+		x = -3
+		y = 1
+		relative_position_id = WGR_sole_right_of_representation
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_the_bundeswehr
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+	}
+	
+	focus = {
+		id = WGR_the_hallstein_doctrine
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_sole_right_of_representation }
+		x = 2
+		y = 1
+		relative_position_id = WGR_sole_right_of_representation
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_the_hallstein_doctrine_tt
+			if = {
+				limit = {
+					DDR = { exists = yes }
+				}
+				every_country = {
+					limit = {
+						OR = {
+							is_in_faction_with = DDR
+							has_guaranteed = DDR
+							has_opinion = {
+								target = DDR
+								value > 49
+							}
+						}
+					}
+					add_opinion_modifier = {
+						target = WGR
+						modifier = WGR_recognition_of_the_ddr		
+					}
+					WGR = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = WGR_recognition_of_the_ddr		
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_federal_intelligence_service
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_foundation_of_the_federal_armed_forces }
+		x = 0
+		y = 1
+		relative_position_id = WGR_foundation_of_the_federal_armed_forces
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_the_bundesnachrichtendiens
+		}
+	}
+	
+	focus = {
+		id = WGR_invitation_to_greece
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_saar_issue_solved }
+		x = 1
+		y = 1
+		relative_position_id = WGR_saar_issue_solved
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.14 days = 1 }
+		}
+	}
+	
+	focus = {
+		id = WGR_invitation_to_turkey
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_invitation_to_greece }
+		x = 0
+		y = 1
+		relative_position_id = WGR_invitation_to_greece
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.15 days = 1 }
+		}
+	}
+	
+	focus = {
+		id = WGR_european_economic_community
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_saar_issue_solved }
+		x = -1
+		y = 1
+		relative_position_id = WGR_saar_issue_solved
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = WGR_the_montanunion
+					}
+				}
+				custom_effect_tooltip = WGR_complete_montanunion_first_tt
+			}
+			else = {
+				every_country = {
+					limit = {
+						has_idea = WGR_montanunion_idea
+					}
+					country_event = { id = west_germany.16 days = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_elysee_treaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_european_economic_community }
+		x = 0
+		y = 1
+		relative_position_id = WGR_european_economic_community
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			GER = {
+				OR = {
+					has_war = no
+					exists = yes
+					is_subject = no
+				}
+			}
+			FRA = {
+				OR = {
+					has_war = no
+					exists = yes
+					is_subject = no
+				}
+			}
+		}
+		
+		bypass = {
+			FRA = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = {
+				country_event = { id = west_germany.17 days = 1 }
+			}
+			GER = {
+				country_event = { id = west_germany.17 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_nato_warsaw_pact_buffer
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_federal_intelligence_service }
+		x = 0
+		y = 1
+		relative_position_id = WGR_federal_intelligence_service
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_remilitarization_of_germany
+			has_completed_focus = WGR_the_hallstein_doctrine
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_buffer_for_the_west_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_the_berlin_wall
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_nato_warsaw_pact_buffer }
+		x = 0
+		y = 1
+		relative_position_id = WGR_nato_warsaw_pact_buffer
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { country_event = { id = west_germany.18 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_john_f_kennedys_speech
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_berlin_wall }
+		prerequisite = { focus = WGR_elysee_treaty }
+		x = 1
+		y = 1
+		relative_position_id = WGR_the_berlin_wall
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			WGR = {
+				has_war = no
+			}
+			USA = {
+				NOT = {
+					has_war_with = WGR
+				}
+				is_subject = no
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = { country_event = { id = west_germany.20 days = 7 } }
+		}
+	}
+	
+	##############################################################################################################
+	### NEW ###
+	##############################################################################################################
+	
+	focus = {
+		id = WGR_the_frankfurt_auschwitz_trials
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_john_f_kennedys_speech }
+		x = 0
+		y = 1
+		relative_position_id = WGR_john_f_kennedys_speech
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.51 }
+		}
+	}
+	
+	focus = {
+		id = WGR_remain_with_coal
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_frankfurt_auschwitz_trials }
+		mutually_exclusive = { focus = WGR_believe_in_oil }
+		x = -1
+		y = 1
+		relative_position_id = WGR_the_frankfurt_auschwitz_trials
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 10
+				USA = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_remain_with_coal_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_believe_in_oil
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_frankfurt_auschwitz_trials }
+		mutually_exclusive = { focus = WGR_remain_with_coal }
+		x = 1
+		y = 1
+		relative_position_id = WGR_the_frankfurt_auschwitz_trials
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_believe_in_oil_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_child_killer_jurgen_bartsch
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_remain_with_coal focus = WGR_believe_in_oil }
+		x = 1
+		y = 1
+		relative_position_id = WGR_remain_with_coal
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.52 }
+		}
+	}
+	
+	focus = {
+		id = WGR_give_up_the_hallstein_doctrine
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_hallstein_doctrine }
+		x = 0
+		y = 5
+		relative_position_id = WGR_the_hallstein_doctrine
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_unlimited_period_of_limitation_for_genocide
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { ## PREV is working, IM SO SMART, HURRAY
+			every_country = {
+				limit = {
+					has_opinion_modifier = WGR_recognition_of_the_ddr
+				}
+				remove_opinion_modifier = {
+					target = WGR
+					modifier = WGR_recognition_of_the_ddr
+				}
+				WGR = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = WGR_recognition_of_the_ddr
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_wgr_visited_by_iranian_schah
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_invitation_to_turkey }
+		x = 0
+		y = 2
+		relative_position_id = WGR_invitation_to_turkey
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.55 }
+		}
+	}
+	
+	focus = {
+		id = WGR_unlimited_period_of_limitation_for_genocide
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_child_killer_jurgen_bartsch }
+		x = 1
+		y = 1
+		relative_position_id = WGR_child_killer_jurgen_bartsch
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_wgr_visited_by_iranian_schah
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_unlimited_period_of_limitation_for_genocide_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_german_german_summit
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_give_up_the_hallstein_doctrine }
+		x = -1
+		y = 1
+		relative_position_id = WGR_give_up_the_hallstein_doctrine
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_give_up_the_hallstein_doctrine
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			WGR = { country_event = { id = west_germany.56 } }
+			DDR = { country_event = { id = west_germany.56 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_kneefall_of_warsaw
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_give_up_the_hallstein_doctrine }
+		x = 1
+		y = 1
+		relative_position_id = WGR_give_up_the_hallstein_doctrine
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						capital_scope = {
+							is_on_continent = europe
+						}
+						capital_scope = {
+							is_on_continent = north_america
+						}
+						OVERLORD = {
+							ROOT = {
+								OR = {
+									capital_scope = {
+										is_on_continent = europe
+									}
+									capital_scope = {
+										is_on_continent = north_america
+									}
+								}
+							}
+						}
+					}
+				}
+				WGR = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = WGR_kneefall_of_warsaw_om
+					}
+				}
+			}
+			add_named_threat = { threat = -1 name = WGR_kneefall_of_warsaw }
+			add_political_power = -50
+		}
+	}
+	
+	focus = {
+		id = WGR_new_east_treaties
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_german_summit }
+		prerequisite = { focus = WGR_kneefall_of_warsaw }
+		x = 0
+		y = 2
+		relative_position_id = WGR_give_up_the_hallstein_doctrine
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = SOV
+						is_subject_of = SOV
+						is_in_faction_with = DDR
+						is_subject_of = DDR
+						tag = SOV
+						tag = DDR
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_reestablished_diplomatic_relations
+				}
+				WGR = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = WGR_reestablished_diplomatic_relations
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_reforms_for_the_educational_sector
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_unlimited_period_of_limitation_for_genocide }
+		x = 0
+		y = 1
+		relative_position_id = WGR_unlimited_period_of_limitation_for_genocide
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_education_reforms
+		}
+	}
+	
+	focus = {
+		id = WGR_brd_and_ddr_join_the_un
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_unlimited_period_of_limitation_for_genocide }
+		prerequisite = { focus = WGR_new_east_treaties }
+		x = 0
+		y = 2
+		relative_position_id = WGR_new_east_treaties
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			WGR = { country_event = { id = west_germany.57 } }
+			DDR = { country_event = { id = west_germany.57 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_unlimited_period_of_limitation_for_murder
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_child_killer_jurgen_bartsch }
+		x = -1
+		y = 1
+		relative_position_id = WGR_child_killer_jurgen_bartsch
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_unlimited_period_of_limitation_for_murder_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_schengener_deal
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_brd_and_ddr_join_the_un }
+		x = -1
+		y = 1
+		relative_position_id = WGR_brd_and_ddr_join_the_un
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = europe
+					}
+					has_government = democratic
+				}
+				country_event = { id = west_germany.58 }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_move_southwards
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_brd_and_ddr_join_the_un }
+		x = 1
+		y = 1
+		relative_position_id = WGR_brd_and_ddr_join_the_un
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			count_triggers = {
+				amount = 1
+				SPR = { has_government = democratic }
+				POR = { has_government = democratic }
+				GRE = { has_government = democratic }
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					SPR = {
+						has_government = democratic
+					}
+				}
+				country_event = { id = west_germany.59 }
+			}
+			if = {
+				limit = {
+					POR = {
+						has_government = democratic
+					}
+				}
+				country_event = { id = west_germany.59 }
+			}
+			if = {
+				limit = {
+					GRE = {
+						has_government = democratic
+					}
+				}
+				country_event = { id = west_germany.59 }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_united_european_act
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_move_southwards }
+		x = 0
+		y = 1
+		relative_position_id = WGR_move_southwards
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_idea = WGR_montanunion_idea
+					has_idea = WGR_ewg_idea_01
+					has_idea = WGR_weu_mutual_assistance_league
+					has_idea = WGR_schengener_agreement_idea
+				}
+				country_event = { id = west_germany.60 }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_fall_of_the_wall_of_berlin
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_schengener_deal }
+		x = 0
+		y = 1
+		relative_position_id = WGR_schengener_deal
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			date > 1989.11.8
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			DDR = { country_event = { id = west_germany.61 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_ten_points_program
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_fall_of_the_wall_of_berlin }
+		x = 0
+		y = 1
+		relative_position_id = WGR_fall_of_the_wall_of_berlin
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			DDR = { country_event = { id = west_germany.62 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_two_plus_four_treaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_ten_points_program }
+		x = 0
+		y = 1
+		relative_position_id = WGR_ten_points_program
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { country_event = { id = west_germany.66 } }
+			USA = { country_event = { id = west_germany.66 } }
+			ENG = { country_event = { id = west_germany.66 } }
+			FRA = { country_event = { id = west_germany.66 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_german_unification_westintegration
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_two_plus_four_treaty }
+		x = 0
+		y = 1
+		relative_position_id = WGR_two_plus_four_treaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			OR = {
+				SOV = { has_country_flag = WGR_sov_supports_reunification }
+				USA = { has_country_flag = WGR_usa_supports_reunification }
+				AND = {
+					ENG = { has_country_flag = WGR_eng_supports_reunification }
+					FRA = { has_country_flag = WGR_fra_supports_reunification }
+				}
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.28 }
+		}
+	}
+	
+	focus = {
+		id = WGR_fight_the_raf_terror
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		relative_position_id = WGR_unlimited_period_of_limitation_for_genocide
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_country_flag = WGR_raf_terror_started
+			date > 1970.5.14
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_establish_the_gsg_9
+		icon = GFX_goal_unknown
+		prerequisite = { focus =  WGR_fight_the_raf_terror }
+		x = 0
+		y = 4
+		relative_position_id = WGR_fight_the_raf_terror
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_improve_the_manhunt
+		icon = GFX_goal_unknown
+		prerequisite = { focus =  WGR_fight_the_raf_terror }
+		x = -1
+		y = 1
+		relative_position_id = WGR_fight_the_raf_terror
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_establish_the_rasterfahndung
+		icon = GFX_goal_unknown
+		prerequisite = { focus =  WGR_improve_the_manhunt }
+		x = 0
+		y = 1
+		relative_position_id = WGR_improve_the_manhunt
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_strengthen_the_police
+		icon = GFX_goal_unknown
+		prerequisite = { focus =  WGR_establish_the_rasterfahndung }
+		x = 0
+		y = 1
+		relative_position_id = WGR_establish_the_rasterfahndung
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_state_of_emergency
+		icon = GFX_goal_unknown
+		prerequisite = { focus =  WGR_fight_the_raf_terror }
+		x = 1
+		y = 1
+		relative_position_id = WGR_fight_the_raf_terror
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_new_anti_terror_laws
+		icon = GFX_goal_unknown
+		prerequisite = { focus =  WGR_state_of_emergency }
+		x = 0
+		y = 1
+		relative_position_id = WGR_state_of_emergency
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_emergency_act
+		icon = GFX_goal_unknown
+		prerequisite = { focus =  WGR_new_anti_terror_laws }
+		x = 0
+		y = 1
+		relative_position_id = WGR_new_anti_terror_laws
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_convict_the_terrorists
+		icon = GFX_goal_unknown
+		prerequisite = { focus =  WGR_unlimited_period_of_limitation_for_murder }
+		x = 0
+		y = 1
+		relative_position_id = WGR_unlimited_period_of_limitation_for_murder
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_fight_the_raf_terror
+			NOT = {
+				has_country_flag = WGR_raf_terror_started
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_german_polish_neighbourtreaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_unification_westintegration }
+		x = -1
+		y = 1
+		relative_position_id = WGR_german_unification_westintegration
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_german_czech_neighbourtreaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_polish_neighbourtreaty }
+		x = 0
+		y = 1
+		relative_position_id = WGR_german_polish_neighbourtreaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_german_russian_friendship
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_czech_neighbourtreaty }
+		x = 1
+		y = 1
+		relative_position_id = WGR_german_czech_neighbourtreaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_full_sovereignty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_unification_westintegration }
+		x = 1
+		y = 1
+		relative_position_id = WGR_german_unification_westintegration
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_atomausstieg
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_full_sovereignty }
+		x = 0
+		y = 1
+		relative_position_id = WGR_full_sovereignty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_franco_german_cooperation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_elysee_treaty }
+		prerequisite = { focus = WGR_invitation_to_turkey }
+		x = 1
+		y = 1
+		relative_position_id = WGR_elysee_treaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_1st_north_expansion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_franco_german_cooperation }
+		x = 0
+		y = 4
+		relative_position_id = WGR_franco_german_cooperation
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	##############################################################################################################
+	### END of NEW ###
+	##############################################################################################################
+	
+	
+	focus = {
+		id = WGR_ban_far_right_parties
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_westintegration focus = WGR_neutrality_act }
+		x = 2
+		y = 1
+		relative_position_id = WGR_westintegration
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		#	country_event = { id = west_germany.21 }
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_denazification
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_ban_far_right_parties }
+		x = 0
+		y = 1
+		relative_position_id = WGR_ban_far_right_parties
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_stability = 0.02
+		}
+	}
+	
+	focus = {
+		id = WGR_ban_far_left_parties
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_westintegration focus = WGR_neutrality_act }
+		x = 4
+		y = 1
+		relative_position_id = WGR_westintegration
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		#	country_event = { id = west_germany.22 }
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
+	}
+	
+	###############################
+	### NEUTRALITY ACT SUB-TREE ###
+	###############################
+	
+	focus = {
+		id = WGR_integrate_the_saar
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_neutrality_act }
+		x = 0
+		y = 1
+		relative_position_id = WGR_neutrality_act
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+			add_stability = 0.02
+			add_political_power = 25
+		}
+		
+		completion_reward = {
+			FRA = { country_event = { id = west_germany.24 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_formation_of_a_new_parliament
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_integrate_the_saar }
+		x = 0
+		y = 1
+		relative_position_id = WGR_integrate_the_saar
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = WGR_new_public_elections_in_whole_germany
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_formation_of_a_new_parliament focus = WGR_ask_for_former_german_territory }
+		x = 0
+		y = 2
+		relative_position_id = WGR_formation_of_a_new_parliament
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			DDR = { country_event = { id = west_germany.25 days = 1 } }
+			WGR = { country_event = { id = west_germany.25 days = 1} }
+		}
+	}
+	
+	focus = {
+		id = WGR_german_unification
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_new_public_elections_in_whole_germany }
+		x = 0
+		y = 1
+		relative_position_id = WGR_new_public_elections_in_whole_germany
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.28 }
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_swiss
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_unification }
+		x = -1
+		y = 1
+		relative_position_id = WGR_german_unification
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			if = {
+				limit = {
+					SWI = { has_government = fascism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_right_parties
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					SWI = { has_government = communism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_left_parties
+					}
+				}
+			}
+		}
+		
+		bypass = {
+			SWI = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SWI = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_sweden
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_unification }
+		x = 1
+		y = 1
+		relative_position_id = WGR_german_unification
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			if = {
+				limit = {
+					SWE = { has_government = fascism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_right_parties
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					SWE = { has_government = communism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_left_parties
+					}
+				}
+			}
+		}
+		
+		bypass = {
+			SWE = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SWE = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_european_friendship
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_swiss }
+		prerequisite = { focus = WGR_befriend_sweden }
+		x = 0
+		y = 2
+		relative_position_id = WGR_german_unification
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					NOT = {
+						OR = {
+							is_in_faction_with = USA
+							is_in_faction_with = SOV
+						}
+						has_opinion_modifier = WGR_friendship
+					}
+					capital_scope =  {
+						is_on_continent = europe
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_ger_tries_to_befriend		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_reparations_for_ns_victims
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_european_friendship }
+		x = 0
+		y = 1
+		relative_position_id = WGR_european_friendship
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.29 }
+			country_event = { id = west_germany.30 }
+			country_event = { id = west_germany.31 }
+		}
+	}
+	
+	focus = {
+		id = WGR_a_new_wehrmacht
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reparations_for_ns_victims }
+		x = -2
+		y = 1
+		relative_position_id = WGR_reparations_for_ns_victims
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_the_new_wehrmacht
+		}
+	}
+	
+	focus = {
+		id = WGR_verdeckte_ermittler
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_a_new_wehrmacht }
+		x = 0
+		y = 1
+		relative_position_id = WGR_a_new_wehrmacht
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_the_verdeckte_ermittler
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_finland
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reparations_for_ns_victims }
+		x = 0
+		y = 1
+		relative_position_id = WGR_reparations_for_ns_victims
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			if = {
+				limit = {
+					FIN = { has_government = fascism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_right_parties
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FIN = { has_government = communism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_left_parties
+					}
+				}
+			}
+		}
+		
+		bypass = {
+			FIN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FIN = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_austria
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_finland }
+		x = 0
+		y = 1
+		relative_position_id = WGR_befriend_finland
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			if = {
+				limit = {
+					AUS = { has_government = fascism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_right_parties
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					AUS = { has_government = communism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_left_parties
+					}
+				}
+			}
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			AUS = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_trade_alliance
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_verdeckte_ermittler }
+		prerequisite = { focus = WGR_befriend_austria }
+		x = 1
+		y = 1
+		relative_position_id = WGR_verdeckte_ermittler
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_in_faction = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				country_event = { id = west_germany.32 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_better_cooperation_between_the_members
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_trade_alliance }
+		x = 0
+		y = 1
+		relative_position_id = WGR_trade_alliance
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_trade_alliance_better_coop_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = WGR_trade_alliance_focus_idea
+					}
+					country_event = { id = west_germany.33 days = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_exchanges_between_the_members
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_better_cooperation_between_the_members }
+		x = -1
+		y = 1
+		relative_position_id = WGR_better_cooperation_between_the_members
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_trade_alliance_exchanges_between_members_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = WGR_trade_alliance_focus_idea
+					}
+					add_political_power = 100
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_safety_of_ours
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_better_cooperation_between_the_members }
+		x = 1
+		y = 1
+		relative_position_id = WGR_better_cooperation_between_the_members
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_trade_alliance_safety_of_ours_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = WGR_trade_alliance_focus_idea
+					}
+					add_stability = 0.05
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_a_better_world_for_our_children
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_exchanges_between_the_members }
+		prerequisite = { focus = WGR_safety_of_ours }
+		x = 0
+		y = 2
+		relative_position_id = WGR_better_cooperation_between_the_members
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_trade_alliance_children_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = WGR_trade_alliance_focus_idea
+					}
+					add_ideas = WGR_the_world_after_idea
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_formalize_the_defensive_pact
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_a_better_world_for_our_children }
+		x = 0
+		y = 1
+		relative_position_id = WGR_a_better_world_for_our_children
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_faction = WGR_trade_alliance_pact
+			custom_effect_tooltip = WGR_every_member_of_the_trade_alliance_gets_an_invitation_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_idea = WGR_trade_alliance_focus_idea
+					}
+					country_event = { id = west_germany.41 days = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_alliance_expansion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_befriend_austria }
+		x = 2
+		y = 1
+		relative_position_id = WGR_befriend_austria
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_alliance_expansion_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_yugoslavia
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_alliance_expansion }
+		mutually_exclusive = { focus = WGR_befriend_spain }
+		x = 1
+		y = 1
+		relative_position_id = WGR_alliance_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			if = {
+				limit = {
+					YUG = { has_government = fascism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_right_parties
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					YUG = { has_government = communism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_left_parties
+					}
+				}
+			}
+			YUG = {
+				exists = yes
+				NOT = {
+					has_war_with = WGR
+				}
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			YUG = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_spain
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_alliance_expansion }
+		mutually_exclusive = { focus = WGR_befriend_yugoslavia }
+		x = -1
+		y = 1
+		relative_position_id = WGR_alliance_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			if = {
+				limit = {
+					SPR = { has_government = fascism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_right_parties
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					SPR = { has_government = communism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_left_parties
+					}
+				}
+			}
+			SPR = {
+				exists = yes
+				NOT = {
+					has_war_with = WGR
+				}
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SPR = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_ireland
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_alliance_expansion }
+		x = 0
+		y = 2
+		relative_position_id = WGR_alliance_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			if = {
+				limit = {
+					IRE = { has_government = fascism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_right_parties
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					IRE = { has_government = communism }
+				}
+				WGR = {
+					NOT = {
+						has_completed_focus = WGR_ban_far_left_parties
+					}
+				}
+			}
+			IRE = {
+				exists = yes
+				NOT = {
+					has_war_with = WGR
+				}
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			IRE = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+		}
+	}
+	
+	###########################################
+	### NEUTRALITY-EASTINEGRATION SUB-TREE  ###
+	###########################################
+	
+	
+	focus = {
+		id = WGR_ask_for_former_german_territory
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_formation_of_a_new_parliament focus = WGR_ask_SOV_to_handle_out_konigsberg }
+		prerequisite = { focus = WGR_formation_of_a_new_parliament focus = WGR_befriend_the_peoples_republics_of_pol_and_cze }
+		x = 3
+		y = 1
+		relative_position_id = WGR_formation_of_a_new_parliament
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.34 }
+		}
+	}
+	
+	focus = {
+		id = WGR_german_brotherhood
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_unification focus = WGR_ask_for_former_german_territory }
+		x = 0
+		y = 3
+		relative_position_id = WGR_ask_for_former_german_territory
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			if = {
+				limit = {
+					has_completed_focus = WGR_neutrality_act
+				}
+				has_completed_focus = WGR_german_unification
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_german_brotherhood_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_german_east_prussian_society
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_brotherhood }
+		x = -1
+		y = 1
+		relative_position_id = WGR_german_brotherhood
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_east_prussian_integration_tt
+			set_country_flag = WGR_east_prussian_integration_tier_1
+		}
+	}
+	
+	focus = {
+		id = WGR_german_pomeranian_society
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_brotherhood }
+		x = 1
+		y = 1
+		relative_position_id = WGR_german_brotherhood
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_pomeranian_integration_tt
+			set_country_flag = WGR_pomeranian_integration_tier_1
+		}
+	}
+	
+	focus = {
+		id = WGR_german_silesian_society
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_brotherhood }
+		x = 0
+		y = 2
+		relative_position_id = WGR_german_brotherhood
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_silesian_integration_tt
+			set_country_flag = WGR_silesian_integration_tier_1
+		}
+	}
+	
+	focus = {
+		id = WGR_german_sudetenland_society
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_silesian_society }
+		x = 0
+		y = 1
+		relative_position_id = WGR_german_silesian_society
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_sudetenland_integration_tt
+			set_country_flag = WGR_sudetenland_integration_tier_1
+		}
+	}
+	
+	focus = {
+		id = WGR_german_austrian_society
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_sudetenland_society }
+		x = 0
+		y = 1
+		relative_position_id = WGR_german_sudetenland_society
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_austrian_integration_tt
+			set_country_flag = WGR_austrian_integration_tier_1
+		}
+	}
+	
+	#	There need to be decisions which will INCREASE the tier of the integration
+	#	if you have reached a specific level, you may annex these lands
+	#
+	#	--> DECISIONS ARENT DONE YET
+	
+	################################
+	### EASTINEGRATION SUB-TREE  ###
+	################################
+	
+	
+	focus = {
+		id = WGR_reconciliation_with_soviet_union
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_eastintegration }
+		x = 0
+		y = 1
+		relative_position_id = WGR_eastintegration
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			SOV = {
+				exists = yes
+				NOT = {
+					has_war_with = WGR
+				}
+			}
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			WGR = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = WGR_reconciliation_with_sov_om		
+				}
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_reconciliation_with_sov_om		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_ask_SOV_to_handle_out_konigsberg
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reconciliation_with_soviet_union }
+		x = -1
+		y = 1
+		relative_position_id = WGR_reconciliation_with_soviet_union
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { country_event = { id = west_germany.43 days = 2 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_befriend_the_peoples_republics_of_pol_and_cze
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_reconciliation_with_soviet_union }
+		x = 1
+		y = 1
+		relative_position_id = WGR_reconciliation_with_soviet_union
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			POL = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+			CZE = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+			HUN = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_visit_the_ddr
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_ask_SOV_to_handle_out_konigsberg }
+		prerequisite = { focus = WGR_befriend_the_peoples_republics_of_pol_and_cze }
+		x = 1
+		y = 1
+		relative_position_id = WGR_ask_SOV_to_handle_out_konigsberg
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			DDR = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+				add_stability = 0.05
+			}
+			WGR = {
+				add_opinion_modifier = {
+					target = DDR
+					modifier = WGR_friendship		
+				}
+				add_stability = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_border_reform
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_visit_the_ddr }
+		x = 0
+		y = 1
+		relative_position_id = WGR_visit_the_ddr
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_broder_reform_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_state_visit_to_moscow
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_border_reform }
+		x = 1
+		y = 1
+		relative_position_id = WGR_border_reform
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { country_event = { id = west_germany.44 days = 2 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_recognize_maos_china
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_border_reform }
+		x = -1
+		y = 1
+		relative_position_id = WGR_border_reform
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			PRC = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		
+		bypass = {
+	#		PRC = {
+	#			OR = {
+	#				exists = no
+	#				is_subject = yes
+	#			}
+	#		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			WGR = {
+				add_opinion_modifier = {
+					target = PRC
+					modifier = WGR_ger_tries_to_befriend		
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_state_visit_to_peking
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_recognize_maos_china }
+		x = 0
+		y = 1
+		relative_position_id = WGR_recognize_maos_china
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					PRC = {
+						exists = yes
+						has_war = no
+						is_subject = no
+						has_government = communism
+					}
+				}
+				AND = {
+					CHI = {
+						exists = yes
+						has_war = no
+						is_subject = no
+						has_government = communism
+					}
+				}
+			}
+		}
+		
+		bypass = {
+	#		OR = {
+	#			AND = {
+	#				PRC = {
+	#					exists = yes
+	#					has_war = no
+	#					NOT = { has_government = communism }
+	#				}
+	#			}
+	#			AND = {
+	#				CHI = {
+	#					exists = yes
+	#					has_war = no
+	#					NOT = { has_government = communism }
+	#				}
+	#			}
+	#			AND = {
+	#				PRC = { exists = no }
+	#				CHI = { exists = no }
+	#			}
+	#			AND = {
+	#				PRC = { is_subject = yes }
+	#				CHI = { is_subject = yes }
+	#			}
+	#		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					PRC = {
+						exists = yes
+						has_war = no
+						is_subject = no
+						has_government = communism
+					}
+				}
+				WGR = {
+					add_opinion_modifier = {
+						target = PRC
+						modifier = WGR_friendship		
+					}
+				}
+			}
+			if = {
+				limit = {
+					CHI = {
+						exists = yes
+						has_war = no
+						is_subject = no
+						has_government = communism
+					}
+				}
+				WGR = {
+					add_opinion_modifier = {
+						target = CHI
+						modifier = WGR_friendship		
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_berlin_moscow_railway
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_state_visit_to_moscow }
+		x = 0
+		y = 1
+		relative_position_id = WGR_state_visit_to_moscow
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = WGR_berlin_warsaw_minsk_moscow_railway_tt
+			hidden_effect = {
+				64 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				68 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				86 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				87 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				10 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				97 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				95 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				206 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				207 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				242 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				219 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_gain_moscows_trust_and_support
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_berlin_moscow_railway }
+		x = 0
+		y = 1
+		relative_position_id = WGR_berlin_moscow_railway
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { country_event = { id = west_germany.45 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_german_reunification
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_gain_moscows_trust_and_support }
+		x = 0
+		y = 1
+		relative_position_id = WGR_gain_moscows_trust_and_support
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = west_germany.28 }
+#			SOV = { add_to_faction = WGR }					##################### IMPORTANT
+		}
+	}
+	
+	focus = {
+		id = WGR_guided_by_moscow
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_reunification }
+		mutually_exclusive = { focus = WGR_maintain_our_nationality }
+		x = 1
+		y = 1
+		relative_position_id = WGR_german_reunification
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { puppet = WGR }
+			add_ideas = WGR_guided_by_moscow_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_maintain_our_nationality
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_reunification }
+		mutually_exclusive = { focus = WGR_guided_by_moscow }
+		x = -1
+		y = 1
+		relative_position_id = WGR_german_reunification
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = WGR_maintain_our_nationality_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_adopt_russian_in_our_school_classes
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_guided_by_moscow focus = WGR_maintain_our_nationality }
+		x = -1
+		y = 1
+		relative_position_id = WGR_guided_by_moscow
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_russian_language_area
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+	
+	focus = {
+		id = WGR_german_soviet_information_exchanges
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_adopt_russian_in_our_school_classes }
+		x = 0
+		y = 1
+		relative_position_id = WGR_adopt_russian_in_our_school_classes
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { country_event = { id = west_germany.46 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = WGR_german_soviet_military_cooperation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_soviet_information_exchanges }
+		x = 0
+		y = 1
+		relative_position_id = WGR_german_soviet_information_exchanges
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = WGR_import_soviet_technologies
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_soviet_military_cooperation }
+		x = -1
+		y = 1
+		relative_position_id = WGR_german_soviet_military_cooperation
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			### New Advisors / Designers
+		}
+	}
+	
+	focus = {
+		id = WGR_export_german_knowlegde_into_the_east
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_soviet_military_cooperation }
+		x = 1
+		y = 1
+		relative_position_id = WGR_german_soviet_military_cooperation
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			### New Advisors / Designers
+		}
+	}
+	
+	focus = {
+		id = WGR_protect_nobles
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_maintain_our_nationality }
+		x = -1
+		y = 1
+		relative_position_id = WGR_maintain_our_nationality
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_protect_nobles_idea
+		}
+	}
+	
+	focus = {
+		id = WGR_closer_ties_to_austria
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_protect_nobles }
+		prerequisite = { focus = WGR_german_austrian_society }
+		x = -1
+		y = 1
+		relative_position_id = WGR_protect_nobles
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			WGR = {
+				add_opinion_modifier = {
+					target = AUS
+					modifier = WGR_friendship		
+				}
+			}
+			AUS = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+			}
+			### unlock decisions to integrate Austria as new Federal State
+		}
+	}
+	
+	focus = {
+		id = WGR_communization
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_guided_by_moscow }
+		x = 1
+		y = 1
+		relative_position_id = WGR_guided_by_moscow
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = WGR_communization_idea
+		}
+	}
+	
+	
+	######################################################################################################
+	###																								   ###
+	###											GERMAN IDEOLOGY										   ###
+	###																								   ###
+	######################################################################################################
+	
+	focus = {
+		id = WGR_german_ideology
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_foundation_of_the_brd }
+		x = 19
+		y = 1
+		relative_position_id = WGR_foundation_of_the_brd
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			WGR_wgr_is_independent = yes
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_back_to_the_roots
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_ideology }
+		mutually_exclusive = { focus = WGR_the_german_kaiserreich focus = WGR_hitlers_legacy focus = WGR_empower_the_people }
+		x = -3
+		y = 1
+		relative_position_id = WGR_german_ideology
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_german_social_democracy
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_back_to_the_roots }
+		x = 1
+		y = 1
+		relative_position_id = WGR_back_to_the_roots
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_the_german_kaiserreich
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_ideology }
+		mutually_exclusive = { focus = WGR_back_to_the_roots focus = WGR_hitlers_legacy focus = WGR_empower_the_people }
+		x = -1
+		y = 1
+		relative_position_id = WGR_german_ideology
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_hitlers_legacy
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_ideology }
+		mutually_exclusive = { focus = WGR_back_to_the_roots focus = WGR_the_german_kaiserreich focus = WGR_empower_the_people }
+		x = 1
+		y = 1
+		relative_position_id = WGR_german_ideology
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_empower_the_people
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_german_ideology }
+		mutually_exclusive = { focus = WGR_back_to_the_roots focus = WGR_the_german_kaiserreich focus = WGR_hitlers_legacy }
+		x = 3
+		y = 1
+		relative_position_id = WGR_german_ideology
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	######################################################################################################
+	###																								   ###
+	###										EUROPEAN UNION											   ###
+	###																								   ###
+	######################################################################################################
+	
+	
+	focus = {
+		id = WGR_invite_members_history_recap
+		icon = GFX_goal_unknown
+		x = -5
+		y = 0
+		relative_position_id = WGR_full_sovereignty
+		cost = 2
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			count_triggers = {
+				amount = 1
+				ENG = {
+					exists = yes
+				}
+				IRE = {
+					exists = yes
+				}
+				SPR = {
+					exists = yes
+				}
+				POR = {
+					exists = yes
+				}
+				FRA = {
+					exists = yes
+				}
+			}
+		}
+		
+		bypass = {
+			ENG = {
+				exists = yes
+			}
+			IRE = {
+				exists = yes
+			}
+			SPR = {
+				exists = yes
+			}
+			POR = {
+				exists = yes
+			}
+			FRA = {
+				exists = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_maastricht_treaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_invite_members_history_recap }
+		x = -4
+		y = 1
+		relative_position_id = WGR_full_sovereignty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_full_sovereignty
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_amsterdam_treaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_maastricht_treaty }
+		x = -1
+		y = 1
+		relative_position_id = WGR_maastricht_treaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_full_sovereignty
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_nizza_treaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_amsterdam_treaty }
+		x = 0
+		y = 1
+		relative_position_id = WGR_amsterdam_treaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_full_sovereignty
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_adaption_of_the_euro
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_nizza_treaty }
+		x = 0
+		y = 1
+		relative_position_id = WGR_nizza_treaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_lissabon_treaty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_adaption_of_the_euro }
+		x = 0
+		y = 1
+		relative_position_id = WGR_adaption_of_the_euro
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_a_constitution_for_europe
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_lissabon_treaty }
+		x = 1
+		y = 1
+		relative_position_id = WGR_lissabon_treaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_inner_eu_problems
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_a_constitution_for_europe }
+		x = 0
+		y = 1
+		relative_position_id = WGR_a_constitution_for_europe
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_refugee_crisis_of_europe
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_a_constitution_for_europe }
+		x = 0
+		y = 1
+		relative_position_id = WGR_a_constitution_for_europe
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_finalitaetsdebatte
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_refugee_crisis_of_europe }
+		x = 0
+		y = 1
+		relative_position_id = WGR_refugee_crisis_of_europe
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_the_united_states_of_europe_like_churchill_proposed
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_finalitaetsdebatte }
+		mutually_exclusive = { focus = WGR_a_europe_made_out_of_homelands_like_de_gaulle_proposed }
+		x = -1
+		y = 1
+		relative_position_id = WGR_finalitaetsdebatte
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_invest_in_other_eu_members
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_united_states_of_europe_like_churchill_proposed }
+		x = 0
+		y = 1
+		relative_position_id = WGR_the_united_states_of_europe_like_churchill_proposed
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_seek_extensive_cooperation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_invest_in_other_eu_members }
+		x = 0
+		y = 1
+		relative_position_id = WGR_invest_in_other_eu_members
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_realize_the_unification
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_invest_in_other_eu_members }
+		x = 0
+		y = 1
+		relative_position_id = WGR_invest_in_other_eu_members
+		cost = 25
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_a_europe_made_out_of_homelands_like_de_gaulle_proposed
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_finalitaetsdebatte }
+		mutually_exclusive = { focus = WGR_the_united_states_of_europe_like_churchill_proposed }
+		x = 1
+		y = 1
+		relative_position_id = WGR_finalitaetsdebatte
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_strengthen_the_european_cooperation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_a_europe_made_out_of_homelands_like_de_gaulle_proposed }
+		x = 0
+		y = 1
+		relative_position_id = WGR_a_europe_made_out_of_homelands_like_de_gaulle_proposed
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_e_pluribus_unum
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_strengthen_the_european_cooperation }
+		x = 0
+		y = 1
+		relative_position_id = WGR_strengthen_the_european_cooperation
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_2nd_north_expansion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_maastricht_treaty }
+		x = 1
+		y = 1
+		relative_position_id = WGR_maastricht_treaty
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_3rd_north_expansion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_2nd_north_expansion }
+		x = 0
+		y = 1
+		relative_position_id = WGR_2nd_north_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_alpine_and_minor_nations
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_3rd_north_expansion }
+		x = 0
+		y = 1
+		relative_position_id = WGR_3rd_north_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_east_expansion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_2nd_north_expansion }
+		x = 3
+		y = 1
+		relative_position_id = WGR_2nd_north_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_invite_romania
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_east_expansion }
+		x = -1
+		y = 1
+		relative_position_id = WGR_east_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_invite_bulgaria
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_east_expansion }
+		x = 1
+		y = 1
+		relative_position_id = WGR_east_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_prepare_2nd_east_expansion
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		relative_position_id = WGR_east_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			has_completed_focus = WGR_east_expansion
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_back_ukraine
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_prepare_2nd_east_expansion }
+		mutually_exclusive = { focus = WGR_back_russia }
+		x = -1
+		y = 1
+		relative_position_id = WGR_prepare_2nd_east_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_back_russia
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_prepare_2nd_east_expansion }
+		mutually_exclusive = { focus = WGR_back_ukraine }
+		x = 1
+		y = 1
+		relative_position_id = WGR_prepare_2nd_east_expansion
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_mediate_the_crimea_crisis
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_back_ukraine focus = WGR_back_russia }
+		x = 1
+		y = 1
+		relative_position_id = WGR_back_ukraine
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_kaliningrad_solution
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_back_russia }
+		x = 1
+		y = 1
+		relative_position_id = WGR_back_russia
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_the_balkan_expansion_parti
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_invite_romania }
+		prerequisite = { focus = WGR_invite_bulgaria }
+		x = -1
+		y = 1
+		relative_position_id = WGR_invite_bulgaria
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_the_balkan_expansion_partii
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_balkan_expansion_parti }
+		x = 0
+		y = 1
+		relative_position_id = WGR_the_balkan_expansion_parti
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_the_mediterranean_expansion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_the_balkan_expansion_parti }
+		x = 0
+		y = 1
+		relative_position_id = WGR_the_balkan_expansion_parti
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	######################################################################################################
+	###																								   ###
+	###										INDEPENDENT OF ANYTHING									   ###
+	###																								   ###
+	######################################################################################################
+	
+	focus = {
+		id = WGR_the_dawn_of_baden_wurttemberg
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_foundation_of_the_brd }
+		x = 13
+		y = 1
+		relative_position_id = WGR_foundation_of_the_brd
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			50 = {
+				add_manpower = 10000
+			}
+		}
+	}
+	
+#	focus = {
+#		id = WGR_secure_personal_rights
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = WGR_foundation_of_the_brd }
+#		mutually_exclusive = { focus = WGR_safety_first }
+#		x = 9
+#		y = 1
+#		relative_position_id = WGR_foundation_of_the_brd
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 2
+#		}
+#		
+#		available = {
+#		
+#		}
+#		
+#		bypass = {
+#		
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#	}
+#	
+#	focus = {
+#		id = WGR_safety_first
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = WGR_foundation_of_the_brd }
+#		mutually_exclusive = { focus = WGR_secure_personal_rights }
+#		x = 11
+#		y = 1
+#		relative_position_id = WGR_foundation_of_the_brd
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 2
+#		}
+#		
+#		available = {
+#		
+#		}
+#		
+#		bypass = {
+#		
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#	}
+#	
+#	focus = {
+#		id = WGR_legalize_intoxicants
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = WGR_secure_personal_rights focus = WGR_safety_first }
+#		mutually_exclusive = { focus = WGR_health_care }
+#		x = 0
+#		y = 1
+#		relative_position_id = WGR_secure_personal_rights
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 2
+#		}
+#		
+#		available = {
+#		
+#		}
+#		
+#		bypass = {
+#		
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#	}
+#	
+#	focus = {
+#		id = WGR_health_care
+#		icon = GFX_goal_unknown
+#		prerequisite = { focus = WGR_secure_personal_rights focus = WGR_safety_first }
+#		mutually_exclusive = { focus = WGR_legalize_intoxicants }
+#		x = 0
+#		y = 1
+#		relative_position_id = WGR_safety_first
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 2
+#		}
+#		
+#		available = {
+#		
+#		}
+#		
+#		bypass = {
+#		
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = {
+#			
+#		}
+#	}
+
+
+	
+	######################################################################################################
+	###																								   ###
+	###										MILITARY OPERATIONS										   ###
+	###																								   ###
+	######################################################################################################
+	
+	
+	focus = {
+		id = WGR_military_operations
+		icon = GFX_goal_unknown
+		x = 3
+		y = 1
+		relative_position_id = WGR_integrate_nuclear_missiles
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			WGR_wgr_is_independent = yes
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_military_operations_afg
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_military_operations }
+		x = -3
+		y = 1
+		relative_position_id = WGR_military_operations
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = WGR_military_operations_irq
+		icon = GFX_goal_unknown
+		prerequisite = { focus = WGR_military_operations }
+		x = -1
+		y = 1
+		relative_position_id = WGR_military_operations
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+	
+}

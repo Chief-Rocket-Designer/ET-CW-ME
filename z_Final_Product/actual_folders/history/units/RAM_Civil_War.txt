@@ -1,0 +1,4616 @@
+﻿division_template = {
+    name = "Revolutionary-Militia"
+    division_names_group = USA_INF_01
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        
+    }
+	regiments = {
+        infantry = { x = 1 y = 0 }
+        
+    }
+	regiments = {
+        infantry = { x = 2 y = 0 }
+        
+    }
+	regiments = {
+        infantry = { x = 0 y = 1 }
+        
+    }
+	regiments = {
+        infantry = { x = 1 y = 1 }
+        
+    }
+	regiments = {
+        infantry = { x = 2 y = 1 }
+        
+    }
+	regiments = {
+        infantry = { x = 0 y = 2 }
+        
+    }
+	regiments = {
+        infantry = { x = 1 y = 2 }
+        
+    }
+	regiments = {
+        infantry = { x = 2 y = 2 }
+        
+    }
+	
+	regiments = {
+        artillery = { x = 3 y = 2=0 }
+        
+    }
+	
+    support = {
+        recon = { x = 0 y = 0 }
+    }
+}
+
+units = {
+    #Ushtria Shqipëtarë
+    division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9814
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }    
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11859
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6881
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 986
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 3840
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9637
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9637
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9637
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9637
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9637
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9814
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9814
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9814
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9814
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9814
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4569
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4569
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4569
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4569
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11589
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 1719
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9880
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6752
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4807
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11731
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7646
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 3975
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6850
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6855
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6855
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6855
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6855
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6855
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6855
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 827
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9775
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4442
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 882
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11637
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11791
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11888
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11888
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11888
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4508
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6710
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9786
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11776
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11776
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9760
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9760
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6874
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11776
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11776
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11776
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11776
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12501
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12501
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12501
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12501
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12501
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12501
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7831
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 954
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 1604
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12365
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4590
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10393
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 1560
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4664
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7536
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12577
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12501
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 1867
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10719
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12597
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 11667
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 9450
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6958
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6958
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6958
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6958
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6958
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6958
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6958
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6958
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6778
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6778
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6778
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6778
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6778
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 6778
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7845
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7552
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7552
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7552
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7552
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7552
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12697
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10341
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 10618
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 751
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 7315
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	division = { # "Revolutionary-Militia"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 12305
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	division = { # "International Comrades"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 4601
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "International Comrades"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 905
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "International Comrades"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 905
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	division = { # "International Comrades"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+        location = 905
+        division_template = "Revolutionary-Militia"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.7
+
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

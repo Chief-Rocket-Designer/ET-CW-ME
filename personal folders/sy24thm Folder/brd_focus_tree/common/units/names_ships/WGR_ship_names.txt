@@ -1,0 +1,184 @@
+﻿WGR_DES_01 = {
+	name = WGR_DES_01_ship_names
+
+	for_countries = { WGR }
+
+	can_use = {
+		always = yes
+	}
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+	
+	fallback_name = "Z %d"
+
+	ordered = {
+		1 = { "Z %d" }
+		2 = { "Z %d" }
+		3 = { "Z %d" }
+		4 = { "Z %d" }
+		5 = { "Z %d" }
+		6 = { "Z %d" }
+		7 = { "Z %d" }
+		8 = { "Z %d" }
+		9 = { "Z %d" }
+		10 = { "Z %d" }
+		11 = { "Z %d" }
+		12 = { "Z %d" }
+		13 = { "Z %d" }
+		14 = { "Z %d" }
+		15 = { "Z %d" }
+		16 = { "Z %d" }
+		17 = { "Z %d" }
+		18 = { "Z %d" }
+		19 = { "Z %d" }
+	}
+}
+
+WGR_BUNDESLANDER_01 = {
+	name = WGR_BUNDESLANDER_01_ship_names
+
+	for_countries = { WGR }
+
+	can_use = {
+		always = yes
+	}
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+	
+	fallback_name = "Z %d"
+
+	ordered = {
+		1 = { "Hamburg" }
+		2 = { "Schleswig-Holstein" }
+		3 = { "Bayern" }
+		4 = { "Hessen" }
+		5 = { "Nordrhein-Westfalen" }
+		6 = { "Niedersachsen" }
+		7 = { "Bremen" }
+		8 = { "Mecklenburg-Vorpommern" }
+		9 = { "Berlin" }
+		10 = { "Sachsen" }
+		11 = { "Baden-Württemberg" }
+		12 = { "Rheinland-Pfalz" }
+		13 = { "Saarland" }
+		14 = { "Thüringen" }
+		15 = { "Brandenburg" }
+		16 = { "Sachsen-Anhalt" }
+	}
+}
+
+WGR_HELDEN_01 = {
+	name = WGR_HELDEN_01_ship_names
+
+	for_countries = { WGR }
+
+	can_use = {
+		always = yes
+	}
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+	
+	fallback_name = "Z %d"
+
+	ordered = {
+		1 = { "Lütjens" }
+		2 = { "Mölders" }
+		3 = { "Rommel" }
+		4 = { "Stauffenberg" }
+		5 = { "Bismarck" }
+		6 = { "Adenauer" }
+		7 = { "Guttenberg" }
+		8 = { "Witzleben" }
+		9 = { "Beck" }
+		10 = { "Bonhoeffer" }
+		11 = { "Canaris" }
+		12 = { "Falkenhausen" }
+		13 = { "Fellgiebel" }
+		14 = { "Fromm" }
+		15 = { "Gersdorff" }
+		16 = { "Hase" }
+		17 = { "Heusinger" }
+		18 = { "Oster" }
+		19 = { "Tresckow" }
+	}
+}
+
+WGR_STAEDTE_01 = {
+	name = WGR_STAEDTE_01_ship_names
+
+	for_countries = { WGR }
+
+	can_use = {
+		always = yes
+	}
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+	
+	fallback_name = "Z %d"
+
+	ordered = {
+		1 = { "Köln" }
+		2 = { "Emden" }
+		3 = { "Augsburg" }
+		4 = { "Karlsruhe" }
+		5 = { "Lübeck" }
+		6 = { "Braunschweig" }
+		7 = { "Bremen" }
+		8 = { "Halle" }
+		9 = { "Rostock" }
+		10 = { "Hamburg" }
+		11 = { "Berlin" }
+		12 = { "Düsseldorf" }
+		13 = { "Bonn" }
+		14 = { "Mönchengladbach" }
+		15 = { "Kiel" }
+		16 = { "Hannover" }
+		17 = { "Frankfurt" }
+		18 = { "München" }
+		19 = { "Stuttgart" }
+		20 = { "Aachen" }
+		21 = { "Krefeld" }
+		22 = { "Wiesbaden" }
+		23 = { "Saarbrücken" }
+		24 = { "Kassel" }
+		25 = { "Magdeburg" }
+		26 = { "Dresden" }
+		27 = { "Potsdam" }
+		28 = { "Schwerin" }
+		29 = { "Nürnberg" }
+		30 = { "Mainz" }
+		31 = { "Duisburg" }
+		32 = { "Paderborn" }
+		33 = { "Dortmund" }
+		34 = { "Essen" }
+		35 = { "Leipzig" }
+		36 = { "Gelsenkirchen" }
+		37 = { "Bochum" }
+		38 = { "Nürnberg" }
+		39 = { "Wuppertal" }
+		40 = { "Bielefeld" }
+		41 = { "Münster" }
+		42 = { "Mannheim" }
+		43 = { "Chemnitz" }
+		44 = { "Oberhausen" }
+		45 = { "Hagen" }
+		46 = { "Hamm" }
+		47 = { "Oldenburg" }
+		48 = { "Osnabrück" }
+		49 = { "Leverkusen" }
+		50 = { "Heidelberg" }
+		51 = { "Solingen" }
+		52 = { "Darmstadt" }
+		53 = { "Herne" }
+		54 = { "Neuss" }
+		55 = { "Regensburg" }
+		56 = { "Ingolstadt" }
+		57 = { "Offenbach" }
+		58 = { "Würzburg" }
+		59 = { "Fürth" }
+	}
+}

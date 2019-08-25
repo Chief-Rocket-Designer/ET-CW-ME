@@ -1,0 +1,3001 @@
+﻿###########################
+# West German Events
+###########################
+
+add_namespace = west_germany
+
+# Choose a new Capital
+country_event = {
+	id = west_germany.1
+	title = west_germany.1.t
+	desc = west_germany.1.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #choose bonn
+		name = west_germany.1.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		hidden_effect = {
+			set_country_flag = WGR_chooses_bonn
+		}
+	}
+	option = { #choose frankfurt am main
+		name = west_germany.1.b
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
+		hidden_effect = {
+			set_country_flag = WGR_chooses_frankfurt_am_main
+		}
+	}
+	option = { #choose kassel
+		name = west_germany.1.c
+		add_timed_idea = {
+			idea = WGR_rebuild_kassel
+			days = 360
+		}
+		hidden_effect = {
+			set_country_flag = WGR_chooses_kassel
+		}
+	}
+	option = { #choose stuttgart
+		name = west_germany.1.d
+		add_timed_idea = {
+			idea = WGR_stuttgart_gets_financial_aid
+			days = 360
+		}
+		hidden_effect = {
+			set_country_flag = WGR_chooses_stuttgart
+		}
+	}
+}
+
+# The Saar-Issue (Westintegration)
+country_event = {
+	id = west_germany.2
+	title = west_germany.2.t
+	desc = west_germany.2.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #support France
+		name = west_germany.2.a
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = WGR_abandon_the_saar
+		FRA = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_wgr_abandons_the_saar
+			}
+		}
+	}
+	option = { #pressure for Anschluss the Saar
+		name = west_germany.2.b
+		ai_chance = {
+			factor = 1
+		}
+		add_ideas = WGR_pressure_france
+		FRA = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_wgr_pressures_to_anschluss_the_saar
+			}
+		}
+	}
+}
+
+# Member of the European Council
+country_event = {
+	id = west_germany.3
+	title = west_germany.3.t
+	desc = west_germany.3.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #allow Germany membership
+		name = west_germany.3.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				WGR = { has_war = yes }
+			}
+			modifier = {
+				factor = 1
+				WGR = { has_idea = WGR_pressure_france }
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = WGR
+					value > 49
+				}
+			}
+			modifier = {
+				factor = 100
+				WGR = { has_idea = WGR_abandon_the_saar }
+			}
+			modifier = {
+				factor = 250
+				WGR = { has_completed_focus = WGR_closer_to_france }
+			}
+		}
+		add_political_power = 10
+		WGR = {
+			add_political_power = 20
+			add_opinion_modifier = {
+				target = FRA
+				modifier = WGR_france_allows_germany_to_join
+			}
+		}
+	}
+	option = { #forbid Germany membership
+		name = west_germany.3.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 250
+				WGR = { has_war = yes }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					WGR = { has_idea = WGR_pressure_france }
+					FRA = {
+						has_opinion = {
+							target = WGR
+							value < 49
+						}
+					}
+				}
+			}
+		}
+		add_political_power = 50
+		add_stability = 0.01
+		WGR = {
+			add_political_power = -20
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.03
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = WGR_france_denies_germany_to_join
+			}
+		}
+	}
+}
+
+# found the Montanunion
+country_event = {
+	id = west_germany.4
+	title = west_germany.4.t
+	desc = west_germany.4.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept Montanunion
+		name = west_germany.4.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -20
+		add_ideas = WGR_montanunion_idea
+	}
+	option = { #deny Montanunion
+		name = west_germany.4.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 30
+	}
+}
+
+# reparations_ for Israel
+country_event = {
+	id = west_germany.5
+	title = west_germany.5.t
+	desc = west_germany.5.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept Reparations
+		name = west_germany.5.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 50
+		add_ideas = WGR_reparations_for_israel_tier1
+	}
+	option = { #request even more
+		name = west_germany.5.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -10
+		country_event = { id = west_germany.6 days = 1 }
+		add_named_threat = { threat = 1.5 name = west_germany.5.t }
+	}
+}
+
+# reparations_ for Israel II
+country_event = {
+	id = west_germany.6
+	title = west_germany.6.t
+	desc = west_germany.6.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept Reparations
+		name = west_germany.6.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 75
+		add_ideas = WGR_reparations_for_israel_tier2
+	}
+	option = { #request even more
+		name = west_germany.6.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -10
+		country_event = { id = west_germany.7 days = 1 }
+		add_named_threat = { threat = 1.5 name = west_germany.6.t }
+	}
+}
+
+# reparations_ for Israel III
+country_event = {
+	id = west_germany.7
+	title = west_germany.7.t
+	desc = west_germany.7.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept Reparations
+		name = west_germany.7.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 100
+		add_ideas = WGR_reparations_for_israel_tier3
+	}
+#	option = { #back to the beginning
+#		name = west_germany.7.b
+#		ai_chance = {
+#			factor = 1
+#		}
+#		add_political_power = -10
+#		country_event = { id = west_germany.7 days = 1 }
+#	}
+}
+
+# WEU - mutual assistance in case of war
+country_event = {
+	id = west_germany.8
+	title = west_germany.8.t
+	desc = west_germany.8.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #join the WEU
+		name = west_germany.8.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					tag = FRA
+					tag = ENG
+					tag = ITA
+					tag = WGR
+					tag = LUX
+					tag = BEL
+					tag = HOL
+				}
+			}
+		}
+		add_ideas = WGR_weu_mutual_assistance_league
+	}
+	option = { #dont join the WEU
+		name = west_germany.8.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# WEU - call to war
+country_event = {
+	id = west_germany.9
+	title = west_germany.9.t
+	desc = west_germany.9.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #call the other members
+		name = west_germany.9.a
+		ai_chance = {
+			factor = 10
+		}
+		every_other_country = {
+			limit = {
+				has_idea = WGR_weu_mutual_assistance_league
+				is_subject = no
+			}
+			country_event = { id = west_germany.10 days = 1 }
+		}
+	}
+	option = { #on our own?!
+		name = west_germany.9.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# WEU - members, join or refuse?
+country_event = {
+	id = west_germany.10
+	title = west_germany.10.t
+	desc = west_germany.10.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #join
+		name = west_germany.10.a
+		ai_chance = {
+			factor = 10
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				SOV = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = SOV
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				ENG = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = ENG
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				FRA = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = FRA
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				ITA = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = ITA
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				GER = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = GER
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				WGR = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = WGR
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				DDR = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = DDR
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				USA = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = USA
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				CAN = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = CAN
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				JAP = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = JAP
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				PRC = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = PRC
+				hostility_reason = ally
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_idea = WGR_weu_mutual_assistance_league
+					has_defensive_war = yes
+				}
+				CHI = {
+					has_offensive_war_with = FROM
+				}
+			}
+			add_to_war = {
+				targeted_alliance = FROM
+				enemy = CHI
+				hostility_reason = ally
+			}
+		}
+	}
+	option = { #dont join
+		name = west_germany.10.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# WGR in the NATO???
+country_event = {
+	id = west_germany.11
+	title = west_germany.11.t
+	desc = west_germany.11.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.11.a
+		ai_chance = {
+			factor = 10
+		}
+		USA = { add_to_faction = WGR }
+	}
+	option = { #refuse
+		name = west_germany.11.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# the Eden-Plan (WGR) Part I
+country_event = {
+	id = west_germany.12
+	title = west_germany.12.t
+	desc = west_germany.12.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #interesting
+		name = west_germany.12.a
+		ai_chance = {
+			factor = 10
+		}
+		country_event = { id = west_germany.13 days = 3 }
+	}
+	option = { #why should not provoke SOV
+		name = west_germany.12.b
+		ai_chance = {
+			factor = 1
+		}
+		SOV = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_gentle_behaviour		
+			}
+		}
+	}
+}
+
+# the Eden-Plan (WGR) Part II
+country_event = {
+	id = west_germany.13
+	title = west_germany.13.t
+	desc = west_germany.13.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #screw you
+		name = west_germany.13.a
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = 0.01
+		add_war_support = 0.05
+	}
+	option = { #abandon the ddr
+		name = west_germany.13.b
+		ai_chance = {
+			factor = 1
+		}
+		WGR = {
+			annex_country = { target = DDR transfer_troops = yes }
+		}
+		WGR = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = WGR_gentle_behaviour		
+			}
+		}
+	}
+}
+
+# invitation to Greece
+country_event = {
+	id = west_germany.14
+	title = west_germany.14.t
+	desc = west_germany.14.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.14.a
+		ai_chance = {
+			factor = 10
+		}
+		GRE = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_accepted_invitation		
+			}
+		}
+	}
+	option = { #refuse
+		name = west_germany.14.b
+		ai_chance = {
+			factor = 1
+		}
+		GRE = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_refused_invitation		
+			}
+		}
+	}
+}
+
+# invitation to Turkey
+country_event = {
+	id = west_germany.15
+	title = west_germany.15.t
+	desc = west_germany.15.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.15.a
+		ai_chance = {
+			factor = 10
+		}
+		TUR = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_accepted_invitation		
+			}
+		}
+	}
+	option = { #refuse
+		name = west_germany.15.b
+		ai_chance = {
+			factor = 1
+		}
+		TUR = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_refused_invitation		
+			}
+		}
+	}
+}
+
+# EWG, enter yes/no?
+country_event = {
+	id = west_germany.16
+	title = west_germany.16.t
+	desc = west_germany.16.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.16.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 20
+		add_stability = 0.01
+		add_ideas = WGR_ewg_idea_01
+	}
+	option = { #refuse
+		name = west_germany.16.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -20
+		add_stability = -0.01
+	}
+}
+
+# Elysée Treaty
+country_event = {
+	id = west_germany.17
+	title = west_germany.17.t
+	desc = west_germany.17.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.17.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 50
+		add_stability = 0.01
+		if = {
+			limit = {
+				tag = WGR
+			}
+			WGR = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = WGR_friendship		
+				}
+				diplomatic_relation = {
+					country = FRA
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				tag = FRA
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_friendship		
+				}
+				diplomatic_relation = {
+					country = WGR
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+		}
+	}
+	option = { #refuse
+		name = west_germany.17.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -25
+		add_stability = -0.01
+	}
+}
+
+# the Anti-Capitalist Safety Wall or nothing or under Soviet EXTRA protection?
+country_event = {
+	id = west_germany.18
+	title = west_germany.18.t
+	desc = west_germany.18.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #Anti-Capitalist Safety Wall
+		name = west_germany.18.a
+		ai_chance = {
+			factor = 10
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = WGR
+					is_in_faction_with = WGR
+					is_subject_of = WGR
+				}
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = WGR_berlin_wall		
+			}
+		}
+		WGR = {
+			add_stability = -50
+			add_stability = -0.1
+		}
+		add_stability = 0.01
+		add_political_power = -20
+	}
+	option = { #Nothing
+		name = west_germany.18.b
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = -0.01
+		add_political_power = 20
+	}
+	option = { #XTRA protection
+		name = west_germany.18.c
+		ai_chance = {
+			factor = 1
+		}
+		DDR = { country_event = { id = west_germany.19 days = 1 } }
+	}
+}
+
+# votum for DDR-Anschluss to the SOV
+country_event = {
+	id = west_germany.19
+	title = west_germany.19.t
+	desc = west_germany.19.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #refuse
+		name = west_germany.19.a
+		ai_chance = {
+			factor = 1
+		}
+		SOV = {
+			create_wargoal = {
+				type = annex_everything
+				target = DDR
+			}
+		}
+	}
+	option = { #accept
+		name = west_germany.19.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				tag = DDR
+				OR = {
+					is_subject_of = Soviet
+					is_in_faction_with = SOV
+				}
+			}
+		}
+		SOV = { annex_country = { target = DDR transfer_troops = yes } }
+	}
+}
+
+# USA sends Kennedy to West-Berlin
+country_event = {
+	id = west_germany.20
+	title = west_germany.20.t
+	desc = west_germany.20.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.20.a
+		ai_chance = {
+			factor = 10
+		}
+		WGR = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+	option = { #refuse
+		name = west_germany.20.b
+		ai_chance = {
+			factor = 1
+		}
+		WGR = {
+			add_political_power = -50
+			add_stability = -0.1
+		}
+	}
+}
+
+# Ban Far-Right Parties
+country_event = {
+	id = west_germany.21
+	title = west_germany.21.t
+	desc = west_germany.21.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #ban the Sozialistische Reichspartei
+		name = west_germany.21.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+	}
+	option = { #why should we ban a party? everybody may say whatever they want to...
+		name = west_germany.21.b
+		ai_chance = {
+			factor = 1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+}
+
+# Ban Far-Left Parties
+country_event = {
+	id = west_germany.22
+	title = west_germany.22.t
+	desc = west_germany.22.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #ban the Kommunistische Partei Deutschlands
+		name = west_germany.22.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+	}
+	option = { #why should we ban a party? everybody may say whatever they want to...
+		name = west_germany.22.b
+		ai_chance = {
+			factor = 1
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+# foundation of the SS-Veteranenbund
+country_event = {
+	id = west_germany.23
+	title = west_germany.23.t
+	desc = west_germany.23.desc
+	picture = GFX_report_event_german_speech
+	
+	trigger = {
+		date > 1950.12.31
+	}
+	
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.4
+			date > 1951.1.1 
+		}
+	}
+
+	option = { #alright, move on
+		name = west_germany.23.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+	option = { #we have to take a look at them
+		name = west_germany.23.b
+		ai_chance = {
+			factor = 1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.02
+		}
+		add_political_power = -10
+	}
+	option = { #EXCUSE ME, WHAT THE ....
+		name = west_germany.23.c
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -150
+		add_stability = 0.01
+	}
+}
+
+# Integration of the Saar
+country_event = {
+	id = west_germany.24
+	title = west_germany.24.t
+	desc = west_germany.24.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #let the Germans integrate this territory
+		name = west_germany.24.a
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -0.01
+		hidden_effect = {
+			WGR = {
+				add_stability = 0.02
+				add_political_power = 25
+			}
+		}
+	}
+	option = { #ehm nope
+		name = west_germany.24.b
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.01
+		add_war_support = 0.02
+		hidden_effect = {
+			WGR = { add_stability = -0.02 }
+		}
+	}
+}
+
+# Formation of a new Parliament I - demand
+country_event = {
+	id = west_germany.25
+	title = west_germany.25.t
+	desc = west_germany.25.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #democratic - conservative
+		name = west_germany.25.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				tag = WGR
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = WGR
+				}
+				DDR = { country_event = { id = west_germany.26 days = 1 } }
+				set_global_flag = WGR_wgr_elected_conservative
+			}
+			if = {
+				limit = {
+					tag = DDR
+				}
+				WGR = { country_event = { id = west_germany.26 days = 1 } }
+				set_global_flag = WGR_ddr_elected_conservative
+			}
+		}
+	}
+	option = { #democratic - socialist
+		name = west_germany.25.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				tag = DDR
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = WGR
+				}
+				DDR = { country_event = { id = west_germany.26 } }
+				set_global_flag = WGR_wgr_elected_socialist
+			}
+			if = {
+				limit = {
+					tag = DDR
+				}
+				WGR = { country_event = { id = west_germany.26 } }
+				set_global_flag = WGR_ddr_elected_socialist
+			}
+		}
+	}
+}
+
+# Formation of a new Parliament II - question
+country_event = {
+	id = west_germany.26
+	title = west_germany.26.t
+	desc = west_germany.26.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept the governemt
+		name = west_germany.26.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 50
+				OR = {
+					AND = {
+						has_global_flag = WGR_wgr_elected_conservative
+						has_global_flag = WGR_ddr_elected_conservative
+					}
+					AND = {
+						has_global_flag = WGR_wgr_elected_socialist
+						has_global_flag = WGR_ddr_elected_socialist
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = WGR_wgr_elected_conservative
+					has_global_flag = WGR_ddr_elected_conservative
+				}
+				WGR = {
+					set_country_flag = WGR_new_government_will_be_conservative
+				}
+				clr_global_flag = WGR_wgr_elected_conservative
+				clr_global_flag = WGR_ddr_elected_conservative
+			}
+			if = {
+				limit = {
+					has_global_flag = WGR_wgr_elected_socialist
+					has_global_flag = WGR_ddr_elected_socialist
+				}
+				WGR = {
+					set_country_flag = WGR_new_government_will_be_socialist
+				}
+				clr_global_flag = WGR_wgr_elected_socialist
+				clr_global_flag = WGR_ddr_elected_socialist
+			}
+		}
+	}
+	option = { #refuse the elections
+		name = west_germany.26.b
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = -0.05
+		add_political_power = -100
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = WGR
+				}
+				DDR = { country_event = { id = west_germany.27 days = 1 } }
+			}
+			if = {
+				limit = {
+					tag = DDR
+				}
+				WGR = { country_event = { id = west_germany.27 days = 1 } }
+			}
+		}
+	}
+}
+
+# Formation of a new Parliament III - negotiations
+country_event = {
+	id = west_germany.27
+	title = west_germany.27.t
+	desc = west_germany.27.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.27.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.03
+		add_political_power = 50
+	}
+#	option = { #refuse ### MAYBE this option will be added later on, so if you refuse, maybe you will get wargoals or somehting like this
+#		name = west_germany.27.b
+#		ai_chance = {
+#			factor = 1
+#		}
+#	}
+}
+
+# unification - neutrality act // eastintegration // westintegration
+country_event = {
+	id = west_germany.28
+	title = west_germany.28.t
+	desc = west_germany.28.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #ezi, just some years after the last world war *laughs in german*
+		name = west_germany.28.a
+		ai_chance = {
+			factor = 1
+		}
+		DDR = { every_unit_leader = { set_nationality = WGR } }
+		every_state = {
+			limit = {
+				is_core_of = DDR
+				NOT = {
+					is_core_of = WGR
+				}
+			}
+			add_core_of = WGR
+		}
+		drop_cosmetic_tag = yes
+		annex_country = { target = DDR transfer_troops = yes }
+		set_cosmetic_tag = WGR_federal_republic_of_germany		### or maybe another cosmetc tag???
+		remove_ideas = WGR_plundering_of_the_industry
+	}
+}
+
+# reparations for ns victims in the west
+country_event = {
+	id = west_germany.29
+	title = west_germany.29.t
+	desc = west_germany.29.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.29.a
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = WGR_reparations_for_the_west_tt
+		add_ideas = WGR_pays_reparations_in_the_west
+		hidden_effect = {
+			USA = { add_ideas = WGR_reparations_for_allies_idea }
+			FRA = { add_ideas = WGR_reparations_for_allies_idea }
+			ENG = { add_ideas = WGR_reparations_for_allies_idea }
+		}
+	}
+	option = { #refuse
+		name = west_germany.29.b
+		ai_chance = {
+			factor = 1
+		}
+		add_named_threat = { 
+			threat = 2.5
+			name = WGR_wgr_denied_reparations_for_the_west_tt
+		}
+	}
+}
+
+# reparations for ns victims in the east
+country_event = {
+	id = west_germany.30
+	title = west_germany.30.t
+	desc = west_germany.30.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.30.a
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = WGR_reparations_for_the_east_tt
+		add_ideas = WGR_pays_reparations_in_the_east
+		hidden_effect = {
+			SOV = { add_ideas = WGR_reparations_for_allies_idea }
+			POL = { add_ideas = WGR_reparations_for_allies_idea }
+		}
+	}
+	option = { #refuse
+		name = west_germany.30.b
+		ai_chance = {
+			factor = 1
+		}
+		add_named_threat = { 
+			threat = 2.5
+			name = WGR_wgr_denied_reparations_for_the_east_tt
+		}
+	}
+}
+
+# reparations for ns victims - event.5 trigger
+country_event = {
+	id = west_germany.31
+	title = west_germany.31.t
+	desc = west_germany.31.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #lets start reparations
+		name = west_germany.31.a
+		ai_chance = {
+			factor = 1
+		}
+		ISR = { country_event = { id = west_germany.5 days = 3 } }
+	}
+	option = { #refuse
+		name = west_germany.31.b
+		ai_chance = {
+			factor = 1
+		}
+		add_named_threat = { 
+			threat = 5
+			name = WGR_wgr_denied_reparations_for_israel_tt
+		}
+	}
+}
+
+# trade alliance
+country_event = {
+	id = west_germany.32
+	title = west_germany.32.t
+	desc = west_germany.32.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.32.a
+		ai_chance = {
+			factor = 1
+		}
+		add_ideas = WGR_trade_alliance_focus_idea
+	#	hidden_effect = {
+	#		add_ideas = WGR_corrupt_bureaucracy_idea
+	#	}
+	}
+	option = { #refuse
+		name = west_germany.32.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# trade alliance - better coop
+country_event = {
+	id = west_germany.33
+	title = west_germany.33.t
+	desc = west_germany.33.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.33.a
+		ai_chance = {
+			factor = 1
+		}
+	#	hidden_effect = {
+	#		add_ideas = WGR_trade_alliance_better_coop_idea
+	#	}
+		add_political_power = 20
+	}
+	option = { #refuse
+		name = west_germany.33.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Regain lost Territories - I
+country_event = {
+	id = west_germany.34
+	title = west_germany.34.t
+	desc = west_germany.34.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { # WE WANT THAT
+		name = west_germany.34.a
+		ai_chance = {
+			factor = 1
+		}
+		SOV = { country_event = { id = west_germany.42 days = 2 } }
+		### Königsberg
+		hidden_effect = {
+			country_event = { id = west_germany.35 }
+			set_country_flag = WGR_königsberg_bitte
+		}
+	}
+	option = { # ok, thats not so important
+		name = west_germany.34.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = { id = west_germany.35 }
+		}
+	}
+}
+
+# Regain lost Territories - II
+country_event = {
+	id = west_germany.35
+	title = west_germany.35.t
+	desc = west_germany.35.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { # WE WANT THAT
+		name = west_germany.35.a
+		ai_chance = {
+			factor = 1
+		}
+		POL = { country_event = { id = west_germany.42 days = 1 } }  ### or maybe the OVERLORD ???
+	#	POL = { OVERLORD = { country_event = { id = west_germany.42 } } }
+		### Ermland-Masuren
+		hidden_effect = {
+			country_event = { id = west_germany.36 }
+			set_country_flag = WGR_ermland_masuren_bitte
+		}
+	}
+	option = { # ok, thats not so important
+		name = west_germany.35.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = { id = west_germany.36 }
+		}
+	}
+}
+
+# Regain lost Territories - III
+country_event = {
+	id = west_germany.36
+	title = west_germany.36.t
+	desc = west_germany.36.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { # WE WANT THAT
+		name = west_germany.36.a
+		ai_chance = {
+			factor = 1
+		}
+		POL = { country_event = { id = west_germany.42 days = 1 } }  ### or maybe the OVERLORD ???
+	#	POL = { OVERLORD = { country_event = { id = west_germany.42 } } }
+		### Pommern
+		hidden_effect = {
+			country_event = { id = west_germany.37 }
+			set_country_flag = WGR_pommern_bitte
+		}
+	}
+	option = { # ok, thats not so important
+		name = west_germany.36.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = { id = west_germany.37 }
+		}
+	}
+}
+
+# Regain lost Territories - IV
+country_event = {
+	id = west_germany.37
+	title = west_germany.37.t
+	desc = west_germany.37.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { # WE WANT THAT
+		name = west_germany.37.a
+		ai_chance = {
+			factor = 1
+		}
+		POL = { country_event = { id = west_germany.42 days = 1 } }  ### or maybe the OVERLORD ???
+	#	POL = { OVERLORD = { country_event = { id = west_germany.42 } } }
+		### Schlesien
+		hidden_effect = {
+			country_event = { id = west_germany.38 }
+			set_country_flag = WGR_schlesien_bitte
+		}
+	}
+	option = { # ok, thats not so important
+		name = west_germany.37.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = { id = west_germany.38 }
+		}
+	}
+}
+
+# Regain lost Territories - V
+country_event = {
+	id = west_germany.38
+	title = west_germany.38.t
+	desc = west_germany.38.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { # WE WANT THAT
+		name = west_germany.38.a
+		ai_chance = {
+			factor = 1
+		}
+		POL = { country_event = { id = west_germany.42 days = 1 } }  ### or maybe the OVERLORD ???
+	#	POL = { OVERLORD = { country_event = { id = west_germany.42 } } }
+		### Danzig ( + Umkreis?)
+		hidden_effect = {
+			country_event = { id = west_germany.39 }
+			set_country_flag = WGR_danzig_bitte
+		}
+	}
+	option = { # ok, thats not so important
+		name = west_germany.38.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = { id = west_germany.39 }
+		}
+	}
+}
+
+# Regain lost Territories - VI
+country_event = {
+	id = west_germany.39
+	title = west_germany.39.t
+	desc = west_germany.39.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { # WE WANT THAT
+		name = west_germany.39.a
+		ai_chance = {
+			factor = 1
+		}
+		SOV = { country_event = { id = west_germany.42 days = 2 } }
+		### Memel
+		hidden_effect = {
+			country_event = { id = west_germany.40 }
+			set_country_flag = WGR_memel_bitte
+		}
+	}
+	option = { # ok, thats not so important
+		name = west_germany.39.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = { id = west_germany.40 }
+		}
+	}
+}
+
+# Regain lost Territories - VII
+country_event = {
+	id = west_germany.40
+	title = west_germany.40.t
+	desc = west_germany.40.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { # WE WANT THAT
+		name = west_germany.40.a
+		ai_chance = {
+			factor = 1
+		}
+		DEN = { country_event = { id = west_germany.42 days = 1 } }
+		### Nord-Schleswig
+		hidden_effect = {
+			set_country_flag = WGR_nord_schleswig_bitte
+		}
+	}
+	option = { # ok, thats not so important
+		name = west_germany.40.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# invitation to join the faction of the trade alliance
+country_event = {
+	id = west_germany.41
+	title = west_germany.41.t
+	desc = west_germany.41.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.41.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_opinion = {
+					target = WGR
+					value > 24
+				}
+			}
+		}
+		WGR = { add_to_faction = ROOT }
+	}
+	option = { #refuse
+		name = west_germany.41.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_opinion = {
+					target = WGR
+					value < 25
+				}
+			}
+		}
+	}
+}
+
+# give Germans their claimed land, or refuse
+country_event = {
+	id = west_germany.42
+	title = west_germany.42.t
+	desc = west_germany.42.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.42.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				WGR = {
+					NOT = {
+						has_country_flag = WGR_königsberg_is_back
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					WGR = {
+						NOT = {
+							has_country_flag = WGR_ermland_masuren_bitte
+							has_country_flag = WGR_pommern_is_back
+							has_country_flag = WGR_schlesien_is_back
+							has_country_flag = WGR_danzig_is_back
+						}
+					}
+					NOT = {
+						tag = DEN
+						tag = SOV
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				WGR = {
+					has_country_flag = WGR_königsberg_bitte
+					NOT = { has_country_flag = WGR_königsberg_is_back }
+				}
+				tag = SOV
+			}
+			WGR = {
+				add_state_core = 763
+				transfer_state = 763
+				clr_country_flag = WGR_königsberg_bitte
+				set_country_flag = WGR_königsberg_is_back
+			}
+		}
+		if = {
+			limit = {
+				WGR = {
+					has_country_flag = WGR_ermland_masuren_bitte
+				}
+				tag = POL
+			}
+			WGR = {
+				add_state_core = 5
+				transfer_state = 5
+				clr_country_flag = WGR_ermland_masuren_bitte
+				set_country_flag = WGR_ermland_masuren_is_back
+			}
+		}
+		if = {
+			limit = {
+				WGR = {
+					has_country_flag = WGR_pommern_bitte
+				}
+				tag = POL
+			}
+			WGR = {
+				add_state_core = 63
+				transfer_state = 63
+				add_state_core = 68
+				transfer_state = 68
+				### I'm aware that the Ostmark is not a part of Pommerania, but I do not like the borders very much which occur through the annexion of Pommerania
+				clr_country_flag = WGR_pommern_bitte
+				set_country_flag = WGR_pommern_is_back
+			}
+		}
+		if = {
+			limit = {
+				WGR = {
+					has_country_flag = WGR_schlesien_bitte
+				}
+				tag = POL
+			}
+			WGR = {
+				add_state_core = 66
+				transfer_state = 66
+			#	add_state_core = 67
+			#	transfer_state = 67
+			#	### This is kinda much territory, I think it was better if you would get just the lower Silesia
+				clr_country_flag = WGR_schlesien_bitte
+				set_country_flag = WGR_schlesien_is_back
+			}
+		}
+		if = {
+			limit = {
+				WGR = {
+					has_country_flag = WGR_danzig_bitte
+				}
+				tag = POL
+			}
+			WGR = {
+				add_state_core = 85
+				transfer_state = 85
+				clr_country_flag = WGR_danzig_bitte
+				set_country_flag = WGR_danzig_is_back
+			}
+		}
+		if = {
+			limit = {
+				WGR = {
+					has_country_flag = WGR_memel_bitte
+				}
+				tag = SOV
+			}
+			WGR = {
+				add_state_core = 188
+				transfer_state = 188
+				clr_country_flag = WGR_memel_bitte
+				set_country_flag = WGR_memel_is_back
+			}
+		}
+		if = {
+			limit = {
+				WGR = {
+					has_country_flag = WGR_nord_schleswig_bitte
+				}
+				tag = POL
+			}
+			WGR = {
+				### state is missing
+				clr_country_flag = WGR_nord_schleswig_bitte
+			}
+		}
+	}
+	option = { #refuse
+		name = west_germany.42.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				WGR = {
+					OR = {
+						has_country_flag = WGR_pommern_bitte
+						has_country_flag = WGR_schlesien_bitte
+						has_country_flag = WGR_danzig_bitte
+						has_country_flag = WGR_ermland_masuren_is_back
+					}
+				}
+			}
+		}
+	}
+}
+
+# return Königsberg to Germany
+country_event = {
+	id = west_germany.43
+	title = west_germany.43.t
+	desc = west_germany.43.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.43.a
+		ai_chance = {
+			factor = 10
+		}
+		WGR = {
+			transfer_state = 763
+			add_state_core = 763
+			add_named_threat = { threat = 1 name = west_germany.43.t }
+		}
+	}
+	option = { #refuse
+		name = west_germany.43.b
+		ai_chance = {
+			factor = 1
+		}
+		WGR = {
+			remove_opinion_modifier = {
+				target = SOV
+				modifier = WGR_reconciliation_with_sov_om
+			}
+			remove_opinion_modifier = {
+				target = SOV
+				modifier = WGR_eastintegration_pos
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = WGR_sov_betrayed_us		
+			}
+		}
+	}
+}
+
+# state visit to Moscow
+country_event = {
+	id = west_germany.44
+	title = west_germany.44.t
+	desc = west_germany.44.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.44.a
+		ai_chance = {
+			factor = 10
+		}
+		WGR = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = WGR_friendship		
+			}
+		}
+		SOV = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_friendship		
+			}
+			add_political_power = 75
+		}
+	}
+	option = { #refuse
+		name = west_germany.44.b
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = -0.05
+		WGR = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = WGR_sov_betrayed_us		
+			}
+			add_war_support = 0.1
+		}
+	}
+}
+
+# trust into Berlin
+country_event = {
+	id = west_germany.45
+	title = west_germany.45.t
+	desc = west_germany.45.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #yes we do
+		name = west_germany.45.a
+		ai_chance = {
+			factor = 10
+		}
+		WGR = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = WGR_sov_backs_us_om		
+			}
+		}
+	}
+	option = { #nah, remember hitler
+		name = west_germany.45.b
+		ai_chance = {
+			factor = 1
+		}
+		WGR = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = WGR_sov_betrayed_us		
+			}
+		}
+	}
+}
+
+# german-soviet development department
+country_event = {
+	id = west_germany.46
+	title = west_germany.46.t
+	desc = west_germany.46.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #JOIN
+		name = west_germany.46.a
+		ai_chance = {
+			factor = 10
+		}
+		WGR = { add_to_tech_sharing_group = WGR_german_soviet_research_efforts_id }
+		SOV = { add_to_tech_sharing_group = WGR_german_soviet_research_efforts_id }
+	}
+	option = { #dont join
+		name = west_germany.46.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# integrate nuclear missiles
+country_event = {
+	id = west_germany.47
+	title = west_germany.47.t
+	desc = west_germany.47.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #YES
+		name = west_germany.47.a
+		ai_chance = {
+			factor = 1
+		}
+		add_nuclear_bombs = 2
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_named_threat = { threat = 2.5 name = west_germany.47.t }
+		hidden_effect = {
+			if = {
+				limit = {
+					WGR = {
+						NOT = { is_in_faction_with = USA }
+					}
+				}
+				USA = { country_event = { id = west_germany.48 days = 5 } }
+			}
+			if = {
+				limit = {
+					WGR = {
+						NOT = { is_in_faction_with = FRA }
+					}
+				}
+				FRA = { country_event = { id = west_germany.48 days = 1 } }
+			}
+			if = {
+				limit = {
+					WGR = {
+						NOT = { is_in_faction_with = ENG }
+					}
+				}
+				ENG = { country_event = { id = west_germany.48 days = 1 } }
+			}
+			if = {
+				limit = {
+					WGR = {
+						NOT = { is_in_faction_with = SOV }
+					}
+				}
+				SOV = { country_event = { id = west_germany.48 days = 1 } }
+			}
+		}
+	}
+	option = { #we would rather die
+		name = west_germany.47.b
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = WGR_no_nulear_missiles_yet
+	}
+}
+
+# reaction to german nuclear weapons
+country_event = {
+	id = west_germany.48
+	title = west_germany.48.t
+	desc = west_germany.48.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #ok, move on
+		name = west_germany.48.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				is_in_faction_with = WGR
+			}
+		}
+	}
+	option = { #PLEASE WHATT????
+		name = west_germany.48.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				NOT = { is_in_faction_with = WGR }
+			}
+		}
+		ROOT = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_nuclear_weapons_om		
+			}
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+}
+
+# german-austrian society -- anschluss
+country_event = {
+	id = west_germany.49
+	title = west_germany.49.t
+	desc = west_germany.49.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #YES, again a part of Germany
+		name = west_germany.49.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					AND = {
+						WGR = { has_government = democratic }
+						AUS = { has_government = democratic }
+					}
+					AND = {
+						WGR = { has_government = fascism }
+						AUS = { has_government = fascism }
+					}
+					AND = {
+						WGR = { has_government = communism }
+						AUS = { has_government = communism }
+					}
+					AND = {
+						WGR = { has_government = neutrality }
+						AUS = { has_government = neutrality }
+					}
+				}
+			}
+		}
+		USA = { country_event = { id = west_germany.50 days = 5 } }
+		ENG = { country_event = { id = west_germany.50 days = 1 } }
+		FRA = { country_event = { id = west_germany.50 days = 1 } }
+		SOV = { country_event = { id = west_germany.50 days = 1 } }
+		set_global_flag = WGR_AUS_wants_to_be_a_part_of_WGR
+	}
+	option = { #well, if we found a new state, with a new basic law etc, then we want
+		name = west_germany.49.b
+		ai_chance = {
+			factor = 25
+		}
+		USA = { country_event = { id = west_germany.50 days = 5 } }
+		ENG = { country_event = { id = west_germany.50 days = 1 } }
+		FRA = { country_event = { id = west_germany.50 days = 1 } }
+		SOV = { country_event = { id = west_germany.50 days = 1 } }
+		set_global_flag = WGR_AUS_wants_new_nation
+	}
+	option = { #NOT after Hitler (lol, he was from Austria)
+		name = west_germany.49.c
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# german-austrian society -- anschluss -- reaction from allies/ comintern
+country_event = {
+	id = west_germany.50
+	title = west_germany.50.t
+	desc = west_germany.50.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #allow them to unite
+		name = west_germany.50.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 50
+				AND = {
+					tag = SOV
+					OR = {
+						AND = {
+							WGR = { has_government = democratic }
+							SOV = { has_government = democratic }
+						}
+						AND = {
+							WGR = { has_government = fascism }
+							SOV = { has_government = fascism }
+						}
+						AND = {
+							WGR = { has_government = communism }
+							SOV = { has_government = communism }
+						}
+						AND = {
+							WGR = { has_government = neutrality }
+							SOV = { has_government = neutrality }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 500
+				AND = {
+					tag = SOV
+					WGR = { has_completed_focus = WGR_eastintegration }
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = SOV
+				}
+				set_global_flag = WGR_SOV_support_anschluss_2dot0
+			}
+			if = {
+				limit = {
+					tag = USA
+				}
+				set_global_flag = WGR_USA_support_anschluss_2dot0
+			}
+			if = {
+				limit = {
+					tag = FRA
+				}
+				set_global_flag = WGR_FRA_support_anschluss_2dot0
+			}
+			if = {
+				limit = {
+					tag = ENG
+				}
+				set_global_flag = WGR_ENG_support_anschluss_2dot0
+			}
+		}
+		WGR = { country_event = { id = wgr_news.1 days = 3 } }
+	}
+	option = { #dont allow
+		name = west_germany.50.b
+		ai_chance = {
+			factor = 25
+		}
+		hidden_effect = {
+			WGR = { country_event = { id = wgr_news.2 days = 3 } }
+		}
+	}
+}
+
+# auschwitz trials
+country_event = {
+	id = west_germany.51
+	title = west_germany.51.t
+	desc = west_germany.51.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #pardon everyone
+		name = west_germany.51.a
+		ai_chance = {
+			factor = 1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.17
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						capital_scope = {
+							is_on_continent = europe
+						}
+						capital_scope = {
+							is_on_continent = north_america
+						}
+						OVERLORD = {
+							ROOT = {
+								OR = {
+									capital_scope = {
+										is_on_continent = europe
+									}
+									capital_scope = {
+										is_on_continent = north_america
+									}
+								}
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_auschwitz_trials_pardoned_nazis_heavy		
+				}
+			}
+		}
+	}
+	option = { #pardon everyone, but execute the most responsibles
+		name = west_germany.51.b
+		ai_chance = {
+			factor = 4
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						capital_scope = {
+							is_on_continent = europe
+						}
+						capital_scope = {
+							is_on_continent = north_america
+						}
+						OVERLORD = {
+							ROOT = {
+								OR = {
+									capital_scope = {
+										is_on_continent = europe
+									}
+									capital_scope = {
+										is_on_continent = north_america
+									}
+								}
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_auschwitz_trials_pardoned_nazis_low		
+				}
+			}
+		}
+	}
+	option = { #execute everyone, but not the most innocent
+		name = west_germany.51.c
+		ai_chance = {
+			factor = 75
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						capital_scope = {
+							is_on_continent = europe
+						}
+						capital_scope = {
+							is_on_continent = north_america
+						}
+						OVERLORD = {
+							ROOT = {
+								OR = {
+									capital_scope = {
+										is_on_continent = europe
+									}
+									capital_scope = {
+										is_on_continent = north_america
+									}
+								}
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_auschwitz_trials_killed_nazis_low		
+				}
+			}
+		}
+	}
+	option = { #execute this nazi scum
+		name = west_germany.51.d
+		ai_chance = {
+			factor = 20
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.17
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						capital_scope = {
+							is_on_continent = europe
+						}
+						capital_scope = {
+							is_on_continent = north_america
+						}
+						OVERLORD = {
+							ROOT = {
+								OR = {
+									capital_scope = {
+										is_on_continent = europe
+									}
+									capital_scope = {
+										is_on_continent = north_america
+									}
+								}
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = WGR
+					modifier = WGR_auschwitz_trials_killed_nazis_heavy		
+				}
+			}
+		}
+	}
+}
+
+# children killer jürgen bartsch
+country_event = {
+	id = west_germany.52
+	title = west_germany.52.t
+	desc = west_germany.52.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #imprison him for his whole life! (ATTENTION: whole life in GER means 25 years, so in that case you have to reform prison policies)
+		name = west_germany.52.a
+		ai_chance = {
+			factor = 2
+		}
+		add_political_power = -25
+		hidden_effect = {
+			country_event = { id = west_germany.54 }
+		}
+	}
+	option = { #imprison him for 25 years (lifelong) and after that preventive custody
+		name = west_germany.52.b
+		ai_chance = {
+			factor = 4
+		}
+	}
+	option = { #its all useless, we need the death penalty again!
+		name = west_germany.52.c
+		ai_chance = {
+			factor = 2	###Notiz: sollte gemodified werden, abhängig von der ideologie (aber nicht alle commies etc. werden das machen, nur bestimmte)
+		}
+		add_political_power = -25
+		hidden_effect = {
+			country_event = { id = west_germany.53 }
+		}
+	}
+}
+
+# death penalty
+country_event = {
+	id = west_germany.53
+	title = west_germany.53.t
+	desc = west_germany.53.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #death for these assholes
+		name = west_germany.53.a
+		ai_chance = {
+			factor = 2
+		}
+		add_political_power = -25
+		random_list = {
+			75 = {
+				custom_effect_tooltip = WGR_death_penalty_successful_tt
+				add_ideas = WGR_death_penalty_is_back
+				add_political_power = -25
+			}
+			25 = {
+				custom_effect_tooltip = WGR_death_penalty_not_successful_tt
+			}
+		}
+	}
+	option = { #prison is good enough
+		name = west_germany.53.b
+		ai_chance = {
+			factor = 4
+		}
+	}
+}
+
+# lifelong
+country_event = {
+	id = west_germany.54
+	title = west_germany.54.t
+	desc = west_germany.54.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #lifelong should literally mean lifelong
+		name = west_germany.54.a
+		ai_chance = {
+			factor = 2
+		}
+		add_political_power = -25
+		random_list = {
+			75 = {
+				custom_effect_tooltip = WGR_lifelong_successful_tt
+				add_ideas = WGR_lifelong_means_lifelong
+				add_political_power = -25
+			}
+			25 = {
+				custom_effect_tooltip = WGR_lifelong_not_successful_tt
+			}
+		}
+	}
+	option = { #25 years are long enough
+		name = west_germany.54.b
+		ai_chance = {
+			factor = 4
+		}
+	}
+}
+
+# iranian schah visits WEST germany
+country_event = {
+	id = west_germany.55
+	title = west_germany.55.t
+	desc = west_germany.55.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #ignore the protests
+		name = west_germany.55.a
+		ai_chance = {
+			factor = 4
+		}
+		add_stability = -0.02
+		add_political_power = 20
+		WGR = {
+			add_opinion_modifier = {
+				target = PER
+				modifier = WGR_state_visit
+			}
+		}
+		PER = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_state_visit
+			}
+		}
+	}
+	option = { #say goodbye to the schah earlier than it was planned
+		name = west_germany.55.b
+		ai_chance = {
+			factor = 2
+		}
+		add_stability = 0.02
+		add_political_power = -20
+		WGR = {
+			add_opinion_modifier = {
+				target = PER
+				modifier = WGR_state_visit_failed
+			}
+		}
+		PER = {
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_state_visit_failed
+			}
+		}
+	}
+}
+
+# german-german summit
+country_event = {
+	id = west_germany.56
+	title = west_germany.56.t
+	desc = west_germany.56.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #strengthen cooperation
+		name = west_germany.56.a
+		ai_chance = {
+			factor = 2
+		}
+		if = {
+			limit = {
+				tag = WGR
+			}
+			add_political_power = -50
+			add_stability = 0.02
+			add_opinion_modifier = {
+				target = DDR
+				modifier = WGR_german_german_summit_om_heavy
+			}
+			
+		}
+		if = {
+			limit = {
+				tag = DDR
+			}
+			add_political_power = -50
+			add_stability = 0.02
+			add_opinion_modifier = {
+				target = WGR
+				modifier = WGR_german_german_summit_om_heavy
+			}
+		}
+	}
+	option = { #ok ok, we can cooperate but dont act so fast
+		name = west_germany.56.b
+		ai_chance = {
+			factor = 4
+		}
+		if = {
+			limit = {
+				tag = WGR
+			}
+			add_political_power = -10
+			add_opinion_modifier = {
+				target = DDR
+				modifier = WGR_german_german_summit_om
+			}
+		}
+		if = {
+			limit = {
+				tag = DDR
+			}
+			add_political_power = -10
+			add_opinion_modifier = {
+				target = DDR
+				modifier = WGR_german_german_summit_om
+			}
+		}
+	}
+}
+
+# join UN
+country_event = {
+	id = west_germany.57
+	title = west_germany.57.t
+	desc = west_germany.57.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #join
+		name = west_germany.57.a
+		ai_chance = {
+			factor = 4
+		}
+		add_stability = 0.01
+	}
+	option = { #refuse
+		name = west_germany.57.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Schengener Deal
+country_event = {
+	id = west_germany.58
+	title = west_germany.58.t
+	desc = west_germany.58.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #join
+		name = west_germany.58.a
+		ai_chance = {
+			factor = 4
+		}
+		add_ideas = WGR_schengener_agreement_idea
+		add_political_power = -100
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+	option = { #refuse
+		name = west_germany.58.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# join EU organizations
+country_event = {
+	id = west_germany.59
+	title = west_germany.59.t
+	desc = west_germany.59.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #join
+		name = west_germany.59.a
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = WGR_montanunion_idea
+		add_ideas = WGR_ewg_idea_01
+		add_ideas = WGR_weu_mutual_assistance_league
+		add_ideas = WGR_schengener_agreement_idea
+	}
+	option = { #refuse
+		name = west_germany.59.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# political coop
+country_event = {
+	id = west_germany.60
+	title = west_germany.60.t
+	desc = west_germany.60.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #join
+		name = west_germany.60.a
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = WGR_european_political_collaboration
+	}
+	option = { #refuse
+		name = west_germany.60.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# the fall of the wall
+country_event = {
+	id = west_germany.61
+	title = west_germany.61.t
+	desc = west_germany.61.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #we cannot do anything about it
+		name = west_germany.61.a
+	}
+}
+
+# 10-Punkte-Programm
+country_event = {
+	id = west_germany.62
+	title = west_germany.62.t
+	desc = west_germany.62.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.62.a
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = WGR_ddr_accepted_the_ten_points_program
+	}
+	option = { #refuse
+		name = west_germany.62.b
+		ai_chance = {
+			factor = 1
+		}
+		WGR = { country_event = { id = west_germany.63 } }
+	}
+}
+
+# 10-Punkte-Programm - refused
+country_event = {
+	id = west_germany.63
+	title = west_germany.63.t
+	desc = west_germany.63.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #pressure the ddr
+		name = west_germany.63.a
+		ai_chance = {
+			factor = 10
+		}
+		DDR = { country_event = { id = west_germany.64 } }
+	}
+	option = { #beg moscow to pressure the ddr
+		name = west_germany.63.b
+		ai_chance = {
+			factor = 1
+		}
+		SOV = { country_event = { id = west_germany.65 } }
+	}
+	option = { #we failed D:
+		name = west_germany.63.c
+		ai_chance = {
+			factor = 0
+		}
+		add_timed_idea = {
+			idea = WGR_german_reunification_failed_idea
+			days = 3600
+		}
+	}
+}
+
+# 10-Punkte-Programm - pressure DDR
+country_event = {
+	id = west_germany.64
+	title = west_germany.64.t
+	desc = west_germany.64.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.64.a
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 100
+				SOV = {
+					has_country_flag = WGR_sov_pressures_ddr
+				}
+			}
+		}
+		set_country_flag = WGR_ddr_accepted_the_ten_points_program
+		if = {
+			limit = {
+				SOV = {
+					has_country_flag = WGR_sov_pressures_ddr
+				}
+			}
+			SOV = {
+				clr_country_flag = WGR_sov_pressures_ddr
+				set_country_flag = WGR_sov_supports_reunification
+			}
+		}
+	}
+	option = { #refuse
+		name = west_germany.64.b
+		ai_chance = {
+			factor = 1
+		}
+		add_timed_idea = {
+			idea = WGR_german_reunification_failed_idea
+			days = 3600
+		}
+	}
+}
+
+# 10-Punkte-Programm - beg SOV
+country_event = {
+	id = west_germany.65
+	title = west_germany.65.t
+	desc = west_germany.65.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.65.a
+		ai_chance = {
+			factor = 2
+		}
+		DDR = { country_event = { id = west_germany.64 } }
+		set_country_flag = WGR_sov_pressures_ddr
+	}
+	option = { #refuse
+		name = west_germany.65.b
+		ai_chance = {
+			factor = 1
+		}
+		add_timed_idea = {
+			idea = WGR_german_reunification_failed_idea
+			days = 3600
+		}
+	}
+}
+
+# 2-plus-4 treaty
+country_event = {
+	id = west_germany.66
+	title = west_germany.66.t
+	desc = west_germany.66.desc
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = west_germany.66.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 100
+				has_country_flag = WGR_sov_supports_reunification
+			}
+		}
+		if = {
+			limit = {
+				SOV = {
+					NOT = {
+						has_country_flag = WGR_sov_supports_reunification
+					}
+				}
+			}
+			SOV = {
+				set_country_flag = WGR_sov_supports_reunification
+			}
+		}
+		if = {
+			limit = {
+				USA = {
+					NOT = {
+						has_country_flag = WGR_usa_supports_reunification
+					}
+				}
+			}
+			USA = {
+				set_country_flag = WGR_usa_supports_reunification
+			}
+		}
+		if = {
+			limit = {
+				ENG = {
+					NOT = {
+						has_country_flag = WGR_eng_supports_reunification
+					}
+				}
+			}
+			ENG = {
+				set_country_flag = WGR_eng_supports_reunification
+			}
+		}
+		if = {
+			limit = {
+				FRA = {
+					NOT = {
+						has_country_flag = WGR_fra_supports_reunification
+					}
+				}
+			}
+			FRA = {
+				set_country_flag = WGR_fra_supports_reunification
+			}
+		}
+	}
+	option = { #refuse
+		name = west_germany.66.b
+		ai_chance = {
+			factor = 1
+		}
+	#	add_timed_idea = {
+	#		idea = WGR_german_reunification_failed_idea
+	#		days = 1800
+	#	}
+	#	WGR = {
+	#		create_wargoal = {
+	#			type = puppet_wargoal_focus
+	#			target = ROOT
+	#		}
+	#	}
+	}
+}
+
+# RAF terrorism begins
+country_event = {
+	id = west_germany.67
+	title = west_germany.67.t
+	desc = west_germany.67.desc
+	picture = GFX_report_event_german_speech
+	
+	trigger = {
+		date > 1970.5.14
+		has_completed_focus = WGR_westintegration
+	}
+	
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.5
+			date > 1969.12.31
+		}
+		modifier = {
+			factor = 0.4
+			date > 1970.5.13
+		}
+		modifier = {
+			factor = 0.1
+			date > 1970.5.14
+		}
+	}
+
+	option = { #accept
+		name = west_germany.67.a
+		set_country_flag = WGR_raf_terror_started
+		add_stability = -0.03
+		add_ideas = WGR_raf_terrorism
+	}
+}
