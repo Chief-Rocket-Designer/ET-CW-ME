@@ -3,7 +3,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 200
+			add = 10
 			tag = TUR
 		}
 	}
@@ -13,7 +13,7 @@ focus_tree = {
 		id = harbiye
 		text = "Harbiye"
 		icon = GFX_focus_generic_military_mission
-		cost = 10
+		cost = 10,00
 		x = 5
 		y = 0
 			available_if_capitulated = yes
@@ -36,7 +36,7 @@ focus_tree = {
 		id = Turkish_Navy
 		text = "Turkish Navy"
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10
+		cost = 10,00
 		x = 0
 		y = 0
 			available_if_capitulated = yes
@@ -164,7 +164,7 @@ focus_tree = {
 		id = marshall_plan_economic_aid
 		text = "Marshall Plan"
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 10
+		cost = 10,00
 		mutually_exclusive = {
 			focus = socialist_promises
 		}
@@ -190,7 +190,7 @@ focus_tree = {
 		id = socialist_promises
 		text = "Socialist Promises"
 		icon = GFX_focus_generic_self_management
-		cost = 10
+		cost = 10,00
 		mutually_exclusive = {
 			focus = marshall_plan_economic_aid
 		}
@@ -219,7 +219,7 @@ focus_tree = {
 		id = air_force
 		text = "Expand Turkish Airforce"
 		icon = GFX_goal_generic_build_airforce
-		cost = 10
+		cost = 10,00
 		x = 2
 		y = 0
 			Air_ = Force
@@ -306,7 +306,7 @@ focus_tree = {
 		id = TUR_Destoyers
 		text = "Destroyer_Effort"
 		icon = GFX_goal_generic_navy_battleship
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = Turkish_Navy
 		}
@@ -340,7 +340,7 @@ focus_tree = {
 		id = submarine_effort
 		text = "Submarine Effort"
 		icon = GFX_goal_generic_navy_submarine
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = TUR_Destoyers
 		}
@@ -374,7 +374,7 @@ focus_tree = {
 		id = CAS_effort
 		text = "Close Air Support Research"
 		icon = GFX_goal_generic_air_fighter2
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = air_force
 		}
@@ -396,7 +396,7 @@ focus_tree = {
 		id = bomber_effort
 		text = "Bomber Research"
 		icon = GFX_goal_generic_air_bomber
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = CAS_effort
 		}
@@ -420,7 +420,7 @@ focus_tree = {
 		id = TUR_rocket_effort
 		text = "Rocket Projects"
 		icon = GFX_focus_rocketry
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = submarine_effort
 		}
@@ -451,7 +451,7 @@ focus_tree = {
 		id = TUR_ICBM_SUB
 		text = "Ballistic Missile Submarines"
 		icon = GFX_focus_rocketry
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = TUR_rocket_effort
 		}
@@ -480,7 +480,7 @@ focus_tree = {
 		id = weapon_effort
 		text = "Weapon Development"
 		icon = GFX_goal_generic_army_artillery
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = harbiye
 		}
@@ -502,7 +502,7 @@ focus_tree = {
 		id = doctrine_effort
 		text = "Doctrine Effort"
 		icon = GFX_goal_generic_position_armies
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = weapon_effort
 		}
@@ -524,7 +524,7 @@ focus_tree = {
 		id = tank_designs
 		text = "Turkish Tank Development"
 		icon = GFX_goal_generic_army_tanks
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = harbiye
 		}
@@ -545,7 +545,7 @@ focus_tree = {
 		id = new_tactics
 		text = "New Tactics"
 		icon = GFX_focus_generic_license_production
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = tank_designs
 		}
@@ -567,7 +567,7 @@ focus_tree = {
 		id = TUR_int
 		text = "National Intelligence Service"
 		icon = GFX_goal_generic_political_pressure
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = new_tactics
 		}
@@ -583,7 +583,7 @@ focus_tree = {
 		id = covert_ops
 		text = "Covert Ops"
 		icon = GFX_goal_anti_comintern_pact
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = TUR_int
 		}
@@ -604,7 +604,7 @@ focus_tree = {
 		id = tea_industry
 		text = "Tea Industry"
 		icon = GFX_focus_generic_industry_2
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = socialist_promises
 		}
@@ -626,7 +626,7 @@ focus_tree = {
 		id = textile_factory
 		text = "Textile Industry"
 		icon = GFX_focus_generic_industry_3
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = tea_industry
 		}
@@ -648,7 +648,7 @@ focus_tree = {
 		id = olive_oil_industry
 		text = "Olive Oil Industry"
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = textile_factory
 		}
@@ -670,7 +670,7 @@ focus_tree = {
 		id = anti_communist_propaganda
 		text = "Anti-Communism"
 		icon = GFX_focus_attack_soviet
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = marshall_plan_economic_aid
 		}
@@ -689,7 +689,7 @@ focus_tree = {
 		id = civilian_investment
 		text = "Civilian Investment"
 		icon = GFX_goal_generic_construction2
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = anti_communist_propaganda
 		}
@@ -711,7 +711,7 @@ focus_tree = {
 		id = infrastructure_investment
 		text = "Infrastructure Effort"
 		icon = GFX_goal_generic_construction
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = anti_communist_propaganda
 		}
@@ -733,7 +733,7 @@ focus_tree = {
 		id = american_supermarkets
 		text = "American Supermarkets"
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = infrastructure_investment
 		}
@@ -764,7 +764,7 @@ focus_tree = {
 		id = capitalist_economy
 		text = "Capitalism"
 		icon = GFX_focus_mex_privatisation
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = american_supermarkets
 		}
@@ -805,7 +805,7 @@ focus_tree = {
 		id = turkish_strait_crisis
 		text = "Straits Crisis"
 		icon = GFX_focus_generic_coastal_fort
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = foreign_policy
 		}
@@ -817,7 +817,7 @@ focus_tree = {
 		id = iraqi_kurd_problem
 		text = "Iraq and the Kurds Problem"
 		icon = GFX_focus_prc_infiltration
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = turkish_strait_crisis
 		}
@@ -833,7 +833,7 @@ focus_tree = {
 		id = operation_in_iraq
 		text = "Operation In Iraq"
 		icon = GFX_goal_demand_sudetenland
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = iraqi_kurd_problem
 		}
@@ -856,7 +856,7 @@ focus_tree = {
 		id = political_solution
 		text = "Political Solution"
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = iraqi_kurd_problem
 		}
@@ -878,7 +878,7 @@ focus_tree = {
 		id = TUR_join_nato
 		text = "Join NATO"
 		icon = GFX_goal_generic_alliance
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = turkish_strait_crisis
 		}
@@ -898,7 +898,7 @@ focus_tree = {
 			completion_reward = {
 					army_experience = 100
 					add_ideas = USA_the_pentagon
-					add_ideas = USA_department_of_defense
+					add_idea = USA_department_of_defense
 					add_ideas = USA_airborne_divisions
 					add_ideas = USA_army_of_the_united_states
 					add_ideas = USA_womens_armed_service_integration_act
@@ -913,7 +913,7 @@ focus_tree = {
 		id = remain_indepent
 		text = "Remain Indepent"
 		icon = GFX_goal_demand_sudetenland
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = turkish_strait_crisis
 		}
@@ -932,7 +932,7 @@ focus_tree = {
 		id = ties_with_uk
 		text = "Ties With UK"
 		icon = GFX_focus_chi_british_cooperation
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = TUR_join_nato
 			focus = remain_indepent
@@ -958,7 +958,7 @@ focus_tree = {
 		id = Cyprus_Agreement
 		text = "Cyprus Agreement"
 		icon = GFX_goal_tripartite_pact
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = ties_with_uk
 		}
@@ -979,7 +979,7 @@ focus_tree = {
 		id = ties_with_iran
 		text = "Ties With Iran"
 		icon = GFX_goal_tripartite_pact
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = join_nato
 			focus = remain_indepent
@@ -1005,7 +1005,7 @@ focus_tree = {
 		id = iran_alliance
 		text = "Tabriz Alliance"
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = ties_with_iran
 		}
@@ -1023,7 +1023,7 @@ focus_tree = {
 		id = investigation_commission
 		text = "Investigation Commission"
 		icon = GFX_focus_usa_voter_registration_act
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = covert_ops
 		}
@@ -1040,7 +1040,7 @@ focus_tree = {
 		id = syndicalism
 		text = "Socialist State"
 		icon = GFX_focus_generic_soviet_politics
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = DEV_SOL
 		}
@@ -1057,7 +1057,7 @@ focus_tree = {
 		id = join_warsaw_pact
 		text = "Join Warsaw Pact"
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = syndicalism
 		}
@@ -1084,10 +1084,10 @@ focus_tree = {
 					add_ideas = idea_political_correctness
 					add_ideas = political_commissars_focus
 					idea = internationalism
-				#	add_autonomy = TUR
+					add_autonomy = TUR
 					1000 = add_manpower
-				#	50000 = add_ideas
-				#	= = militarism_focus
+					50000 = add_ideas
+					= = militarism_focus
 					SOV = {
 							add_to_faction = TUR
 						}
@@ -1098,7 +1098,7 @@ focus_tree = {
 		id = ties_with_egypt
 		text = "Ties With Egypt"
 		icon = GFX_goal_tripartite_pact
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = join_nato
 			focus = remain_indepent
@@ -1124,7 +1124,7 @@ focus_tree = {
 		id = coup_turkey
 		text = "27 May Coup"
 		icon = GFX_goal_generic_political_pressure
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = investigation_commission
 		}
@@ -1136,7 +1136,7 @@ focus_tree = {
 		id = new_constitution
 		text = "New Constitution"
 		icon = GFX_focus_generic_treaty
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = coup_turkey
 		}
@@ -1148,7 +1148,7 @@ focus_tree = {
 		id = support_left
 		text = "Support Leftist Groups"
 		icon = GFX_goal_generic_war_with_comintern
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = new_constitution
 		}
@@ -1164,7 +1164,7 @@ focus_tree = {
 		id = remain_neutral
 		text = "Remain Neutral"
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = new_constitution
 		}
@@ -1180,7 +1180,7 @@ focus_tree = {
 		id = support_right
 		text = "Support Rightist Groups"
 		icon = GFX_goal_support_fascism
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = new_constitution
 		}
@@ -1196,7 +1196,7 @@ focus_tree = {
 		id = fascist_arm_support
 		text = "Fascist Arm in Factories"
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = support_right
 		}
@@ -1207,7 +1207,7 @@ focus_tree = {
 	focus = {
 		id = DEV_SOL
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = support_left
 		}
@@ -1222,7 +1222,7 @@ focus_tree = {
 		id = fascist_imperialism
 		text = "Imperialism"
 		icon = GFX_focus_generic_little_entente
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = fascist_arm_support
 		}
@@ -1234,7 +1234,7 @@ focus_tree = {
 		id = attack_syria
 		text = "Destroy Syria"
 		icon = GFX_goal_generic_major_war
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = fascist_imperialism
 		}
@@ -1246,7 +1246,7 @@ focus_tree = {
 		id = attack_iran
 		text = "Attack Iran"
 		icon = GFX_goal_generic_major_war
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = fascist_imperialism
 		}
@@ -1258,7 +1258,7 @@ focus_tree = {
 		id = attack_iraq
 		text = "Punish Iraq"
 		icon = GFX_goal_generic_major_war
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = attack_syria
 			focus = attack_syria
@@ -1272,7 +1272,7 @@ focus_tree = {
 		id = Democracy_Again
 		text = "Democracy Again"
 		icon = GFX_goal_support_democracy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = remain_neutral
 		}
@@ -1284,7 +1284,7 @@ focus_tree = {
 		id = focus_ecevit
 		text ="Prime Minister Inonu"
 		icon = GFX_focus_generic_military_academy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = Democracy_Again
 		}
@@ -1296,7 +1296,7 @@ focus_tree = {
 		id = Premier_Demirel
 		text = "Prime Minister Demirel"
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = Democracy_Again
 		}

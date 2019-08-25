@@ -5,7 +5,7 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 200
+			add = 10
 			tag = SOV
 		}
 	}
@@ -2920,7 +2920,7 @@ focus_tree = {
 		id = SOV_coldwar
 		text = "The cold war"
 		icon = GFX_goal_generic_war_with_comintern
-		cost = 10
+		cost = 10,00
 		x = 31
 		y = 0
 		available = {
@@ -2937,7 +2937,7 @@ focus_tree = {
 		id = SOV_stalin_is_dead
 		text = "Stalin Is Dead"
 		icon = GFX_goal_anti_comintern_pact
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_coldwar
 		}
@@ -2951,7 +2951,7 @@ focus_tree = {
 		id = SOV_the_party_first
 		text = "The real marxist communism"
 		icon = GFX_focus_generic_soviet_politics
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_stalin_is_dead
 		}
@@ -2981,7 +2981,7 @@ focus_tree = {
 		id = SOV_descentralization
 		text = "Soviet descentralization"
 		icon = GFX_goal_continuous_boost_freedom
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_the_party_first
 		}
@@ -2993,7 +2993,7 @@ focus_tree = {
 		id = SOV_the_republics
 		text = "Authority in the republics"
 		icon = GFX_focus_ger_great_red_menace
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_the_party_first
 		}
@@ -3005,7 +3005,7 @@ focus_tree = {
 		id = SOV_Conditional_freedom
 		text = "Conditional freedom"
 		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 50
+		cost = 50,00
 		prerequisite = {
 			focus = SOV_the_republics
 		}
@@ -3020,7 +3020,7 @@ focus_tree = {
 		id = SOV_soviet_development
 		text = "Soviet Development"
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_coldwar
 		}
@@ -3081,7 +3081,7 @@ focus_tree = {
 		id = SOV_comecon
 		text = "Found the Comecon"
 		icon = GFX_focus_generic_join_comintern
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_coldwar
 		}
@@ -3124,7 +3124,7 @@ focus_tree = {
 		id = SOV_nikita
 		text = "Follow Nikita Jrushchov"
 		icon = GFX_focus_generic_military_mission
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_stalin_is_dead
 		}
@@ -3141,7 +3141,7 @@ focus_tree = {
 		id = SOV_political_prisoners
 		text = "Release the political prisoners"
 		icon = GFX_goal_generic_improve_relations
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_nikita
 		}
@@ -3159,7 +3159,7 @@ focus_tree = {
 		id = SOV_secret_speech
 		text = "Anti-Stalinism secret speech"
 		icon = GFX_goal_generic_secret_weapon
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_nikita
 		}
@@ -3177,7 +3177,7 @@ focus_tree = {
 		id = SOV_de-Stalinization
 		text = "The de-Stalinization era"
 		icon = GFX_goal_generic_war_with_comintern
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_political_prisoners
 		}
@@ -3194,7 +3194,7 @@ focus_tree = {
 		id = SOV_Khrushchev_Thaw
 		text = "The Khrushchev Thaw"
 		icon = GFX_soviet
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_de-Stalinization
 		}
@@ -3208,7 +3208,7 @@ focus_tree = {
 		id = SOV_Hungarian_revolution
 		text = "Hungarian Revolution of 1956"
 		icon = GFX_goal_anti_comintern_pact
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Khrushchev_Thaw
 			focus = SOV_Conditional_freedom
@@ -3228,7 +3228,7 @@ focus_tree = {
 		id = SOV_HUN_reestauration
 		text = "Goverment restauration"
 		icon = GFX_goal_generic_demand_territory
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Hungarian_revolution
 		}
@@ -3266,7 +3266,7 @@ focus_tree = {
 		id = SOV_wewillburyyou
 		text = "We will bury you"
 		icon = GFX_goal_demand_sudetenland
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Khrushchev_Thaw
 		}
@@ -3283,7 +3283,7 @@ focus_tree = {
 		id = SOV_press
 		text = "Press reform"
 		icon = GFX_focus_hol_the_foundations_of_defense
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Hungarian_revolution
 		}
@@ -3304,7 +3304,7 @@ focus_tree = {
 		id = SOV_east_germany
 		text = "East Germany Reforms"
 		icon = GFX_DDR_shield
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Khrushchev_Thaw
 		}
@@ -3322,7 +3322,7 @@ focus_tree = {
 		id = SOV_DDR_inmigration
 		text = "The inmigration Problem"
 		icon = GFX_focus_prc_infiltration
-		cost = 20
+		cost = 20,00
 		prerequisite = {
 			focus = SOV_east_germany
 		}
@@ -3341,7 +3341,7 @@ focus_tree = {
 		id = SOV_iron_courtain
 		text = "Reinforce the Iron Courtain"
 		icon = GFX_iron_courtain
-		cost = 30
+		cost = 30,00
 		prerequisite = {
 			focus = SOV_HUN_reestauration
 		}
@@ -3376,7 +3376,7 @@ focus_tree = {
 		id = SOV_DDR_economic
 		text = "East Germany economic expansion"
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_east_germany
 		}
@@ -3407,7 +3407,7 @@ focus_tree = {
 		id = SOV_economic_aid
 		text = "Economic aid"
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_iron_courtain
 		}
@@ -3424,7 +3424,7 @@ focus_tree = {
 		id = SOV_aid_hungary
 		text = "Aid Hungary"
 		icon = GFX_HUN_diplomacy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_economic_aid
 		}
@@ -3455,7 +3455,7 @@ focus_tree = {
 		id = SOV_aid_bulgaria
 		text = "Aid Bulgaria"
 		icon = GFX_BUL_diplomacy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_economic_aid
 		}
@@ -3486,7 +3486,7 @@ focus_tree = {
 		id = SOV_aid_albania
 		text = "Aid Albania"
 		icon = GFX_ALB_diplomacy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_economic_aid
 		}
@@ -3517,7 +3517,7 @@ focus_tree = {
 		id = SOV_aid_romania
 		text = "Aid Romania"
 		icon = GFX_ROM_diplomacy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_economic_aid
 		}
@@ -3548,7 +3548,7 @@ focus_tree = {
 		id = SOV_berlin_wall
 		text = "The berlin wall"
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_iron_courtain
 		}
@@ -3562,7 +3562,7 @@ focus_tree = {
 		id = SOV_aid_poland
 		text = "Aid Poland"
 		icon = GFX_POL_diplomacy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_economic_aid
 		}
@@ -3593,7 +3593,7 @@ focus_tree = {
 		id = SOV_aid_Czechoslovakia
 		text = "Aid Czechoslovakia"
 		icon = GFX_CZE_diplomacy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_economic_aid
 		}
@@ -3624,7 +3624,7 @@ focus_tree = {
 		id = SOV_expand_influences
 		text = "Expand the Soviet Influences"
 		icon = GFX_soviet
-		cost = 30
+		cost = 30,00
 		prerequisite = {
 			focus = SOV_iron_courtain
 		}
@@ -3645,7 +3645,7 @@ focus_tree = {
 		id = SOV_cuba
 		text = "The cuban revolution" #Needs a news event
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_expand_influences
 		}
@@ -3681,7 +3681,7 @@ focus_tree = {
 		id = SOV_misile_crisis
 		text = "Move the nuclear misiles to cuba"
 		icon = GFX_focus_rocketry
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_cuba
 		}
@@ -3705,7 +3705,7 @@ focus_tree = {
 		id = SOV_aproach_west
 		text = "Western Aproach"
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_berlin_wall
 		}
@@ -3738,7 +3738,7 @@ focus_tree = {
 		id = SOV_western_war
 		text = "War with the west"
 		icon = GFX_goal_generic_major_war
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_berlin_wall
 		}
@@ -3763,7 +3763,7 @@ focus_tree = {
 		id = SOV_Afganistan
 		text = "The Soviet-Afgan War"
 		icon = GFX_focus_ger_bulwark_against_bolshevism
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_expand_influences
 		}
@@ -3783,7 +3783,7 @@ focus_tree = {
 		id = SOV_africa
 		text = "African conflics"
 		icon = GFX_goal_generic_allies_build_infantry
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_expand_influences
 		}
@@ -3803,7 +3803,7 @@ focus_tree = {
 		id = SOV_missiles_retired
 		text = "Missiles Retired"
 		icon = GFX_goal_generic_improve_relations
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_misile_crisis
 		}
@@ -3823,7 +3823,7 @@ focus_tree = {
 		id = SOV_missiles_armed
 		text = "The missiles are armed"
 		icon = GFX_focus_wonderweapons
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_misile_crisis
 		}
@@ -3855,7 +3855,7 @@ focus_tree = {
 		id = SOV_hotline
 		text = "Install the US-Soviet Hotline"
 		icon = GFX_goal_generic_propaganda
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_aproach_west
 		}
@@ -3872,7 +3872,7 @@ focus_tree = {
 		id = SOV_reinforce_relations
 		text = "UN positive relations"
 		icon = GFX_goal_support_democracy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_aproach_west
 		}
@@ -3897,7 +3897,7 @@ focus_tree = {
 		id = SOV_Leonid_Brezhnev
 		text = "The Brezhnev era"
 		icon = GFX_focus_generic_join_comintern
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_berlin_wall
 		}
@@ -3911,7 +3911,7 @@ focus_tree = {
 		id = SOV_economic_reform
 		text = "The new economic reform"
 		icon = GFX_focus_generic_soviet_politics
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Leonid_Brezhnev
 		}
@@ -3923,7 +3923,7 @@ focus_tree = {
 		id = SOV_prague_spring
 		text = "The Prague spring"
 		icon = GFX_CZE_diplomacy
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Leonid_Brezhnev
 		}
@@ -3935,7 +3935,7 @@ focus_tree = {
 		id = SOV_hard_hand
 		text = "The eastern iron fist"
 		icon = GFX_goal_demand_sudetenland
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_prague_spring
 		}
@@ -3953,7 +3953,7 @@ focus_tree = {
 		id = SOV_ideological_reforms
 		text = "Ideological Reforms"
 		icon = GFX_goal_support_communism
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Leonid_Brezhnev
 		}
@@ -3965,7 +3965,7 @@ focus_tree = {
 		id = SOV_vietnam_aid
 		text = "Send aid to North Vietnam"
 		icon = GFX_focus_generic_license_production
-		cost = 10
+		cost = 10,00
 		prerequisite = {
 			focus = SOV_Leonid_Brezhnev
 		}
