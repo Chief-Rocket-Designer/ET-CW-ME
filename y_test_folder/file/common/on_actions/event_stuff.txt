@@ -1,0 +1,40 @@
+on_actions = {
+    on_startup = {
+			effect = {
+			every_country = {
+				if = {
+					limit = {
+						is_ai = no
+					}
+					country_event = { id = start.1 days = 0 }
+				}
+				
+			}
+		}   
+    }  
+	if = {
+		limit = {
+			RAM = {
+				exist = yes
+			}
+		}	
+	
+		on_daily = {
+				effect = {
+				RAM = {
+					if = {
+						limit = {
+							RAM = {
+								NOT = {
+									controls_state = 819
+								}
+							}
+						}
+						country_event = { id = USAcivilwar.3 days = 0 }
+					}
+				}
+			}   
+		}
+	}
+}
+

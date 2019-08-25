@@ -1,0 +1,82 @@
+add_namespace = add_election_USA
+
+
+
+country_event = {
+    id = add_election_USA.1
+    title = add_election_USA.1.t
+    desc = add_election_USA.1.d
+    picture = GFX_report_event_ger_civil_war
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+	option = {
+        name = add_election_USA.1.a
+		trigger = {
+			fascism > 40
+        }
+        hidden_effect = {
+            USA = {
+                country_event = { id = usa.32 days = 730 } # midterms
+                set_politics = {
+                    ruling_party = fascism
+                }
+			}
+        }
+    }
+	option = {
+        name = add_election_USA.1.b
+		trigger = {
+			democratic > 40
+        }
+        hidden_effect = {
+            USA = {
+                country_event = { id = usa.32 days = 730 } # midterms
+                set_politics = {
+                    ruling_party = democratic
+                }
+			}
+        }
+    }
+	option = {
+        name = add_election_USA.1.c
+		trigger = {
+			communsim > 40
+        }
+        hidden_effect = {
+            USA = {
+                country_event = { id = usa.32 days = 730 } # midterms
+                set_politics = {
+                    ruling_party = communsim
+                }
+			}
+        }
+    }
+	option = {
+        name = add_election_USA.1.d
+		trigger = {
+			neutrality > 40
+        }
+        hidden_effect = {
+            USA = {
+                country_event = { id = usa.32 days = 730 } # midterms
+                set_politics = {
+                    ruling_party = neutrality
+                }
+			}
+        }
+    }
+	option = { ## temporary fallback
+        name = add_election_USA.1.e
+		trigger = {
+			fascism < 40
+			democratic < 40
+			communsim < 40
+			neutrality < 40
+        }
+        hidden_effect = {
+			
+        }
+    }
+}

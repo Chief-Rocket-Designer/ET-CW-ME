@@ -1,0 +1,10 @@
+################
+##### USA ######
+################
+
+WGR_reunification = {
+	
+	allowed = {
+		original_tag = WGR
+	}
+}
