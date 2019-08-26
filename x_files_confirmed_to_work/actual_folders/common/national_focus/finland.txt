@@ -5,12 +5,12 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 10
+			add = 200
 			tag = FIN
 		}
 	}
 	
-	default = yes
+	default = no
 	reset_on_civilwar = no
 	
 	focus = {
@@ -39,8 +39,6 @@ focus_tree = {
 		}
 	}
 
-
-
 	focus = {
 		id = FIN_Defend_Against_Soviet_Aggression
 		icon = GFX_goal_generic_allies_build_infantry
@@ -59,18 +57,20 @@ focus_tree = {
 				bonus = 100.0
 				uses = 5
 				category = land_doctrine
-				
+			}	
 			add_tech_bonus = {
 				name = USA_tank_experiments
 				uses = 1
 				bonus = 100.0
 				category = armor
-			
+			}
 			add_research_slot = 2
 
 			add_manpower = 50000
-			
-			add_building_construction = {
+			111 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
 						type = bunker
 						level = 3
 						province = 6186
@@ -88,6 +88,59 @@ focus_tree = {
 						province = 52
 						instant_build = yes
 					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 8
+						province = 3161
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3161
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3061
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 204
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 5
+						province = 6009
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 10
+						province = 11105
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 6186
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 5
+						province = 6108				### before: 6104, sry didnt find this province
+						instant_build = yes
+					}
+				}
+			}
+			150 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 3
@@ -109,12 +162,6 @@ focus_tree = {
 					add_building_construction = {
 						type = bunker
 						level = 3
-						province = 6283
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
 						province = 6210
 						instant_build = yes
 					}
@@ -130,57 +177,15 @@ focus_tree = {
 						province = 3073
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 8
-						province = 3161
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3061
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3161
-						instant_build = yes
-					}	
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 204
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 5
-						province = 609
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 10
-						province = 11105
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 5
-						province = 6104
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 6186
-						instant_build = yes
-					}
-
 				}
 			}
+			
+			#		add_building_construction = {
+			#			type = bunker
+			#			level = 3
+			#			province = 6283
+			#			instant_build = yes
+			#		}
 		}
 	}
 
@@ -195,150 +200,123 @@ focus_tree = {
 		y = 3
 		cost = 5
 
-		availalbe_if_capituated = no
+		available_if_capitulated = no
 		
 		completion_reward = {
 			army_experience = 50
-			 
 			show_ideas_tooltip = USA_general_motors
-				}
-
-
-
-
-
-
-
-
-
-		
+		}
 	}
+	
 	focus = {
-	id = FIN_Military_Industry_Act_1955
-	icon = GFX_goal_generic_construct_mil_factory
-	text = "Military Industry Act 1955"
-	prerequisite = { focus = FIN_Foreign_Military_Industry }
-	prerequisite = { focus = FIN_Choose_Military_Alliance }
-	available = {
-			NOT = { date < 1955.1.1 }
-			
-			}
-	x = 0
-	y = 4
-	cost = 5
+		id = FIN_Military_Industry_Act_1955
+		icon = GFX_goal_generic_construct_mil_factory
+		text = "Military Industry Act 1955"
+		prerequisite = { focus = FIN_Foreign_Military_Industry }
+		prerequisite = { focus = FIN_Choose_Military_Alliance }
+		available = {
+				NOT = { date < 1955.1.1 }
+				
+				}
+		x = 0
+		y = 4
+		cost = 5
 
-	availalbe_if_capituated = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 25
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
-						}
+				}
+			}
 			add_tech_bonus = {
 				name = infantry_bonus
 				bonus = 3.0
 				uses = 3
 				category = infantry_weapons
-					}
-			
-						
 			}
 		}
 	}
+	
 	focus = {
-	id = FIN_Military_Industry_Act_1970
-	icon = GFX_goal_generic_construct_mil_factory
-	text = "Military Industry Act 1970"
-	prerequisite = { focus = FIN_Military_Industry_Act_1955 }
-	available = {
+		id = FIN_Military_Industry_Act_1970
+		icon = GFX_goal_generic_construct_mil_factory
+		text = "Military Industry Act 1970"
+		prerequisite = { focus = FIN_Military_Industry_Act_1955 }
+		available = {
 			NOT = { date < 1970.1.1 }
-			
-			}
-	x = 0
-	y = 5
-	cost = 5
+		}
+		x = 0
+		y = 5
+		cost = 5
 
-	availalbe_if_capituated = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 25
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
-					}
+				}
+			}
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 3.0
 				uses = 3
 				category = infantry_weapons
-					
-
-					
-					}
-			
 			}
 		}
 	}
+	
 	focus = {
-	id = FIN_Military_Industry_Act_1985
-	icon = GFX_goal_generic_construct_mil_factory
-	text = "Military Industry Act 1985"
-	prerequisite = { focus = FIN_Military_Industry_Act_1970 }
-	available = {
+		id = FIN_Military_Industry_Act_1985
+		icon = GFX_goal_generic_construct_mil_factory
+		text = "Military Industry Act 1985"
+		prerequisite = { focus = FIN_Military_Industry_Act_1970 }
+		available = {
 			NOT = { date < 1985.1.1 }
-			
-			}
-	x = 0
-	y = 6
-	cost = 5
+		}
+		x = 0
+		y = 6
+		cost = 5
 
-	availalbe_if_capituated = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 25
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
-					}
-				add_tech_bonus = {
-					name = infantry_artillery_bonus
-					bonus = 3.0
-					uses = 3
-					category = infantry_weapons
-					
-
-					
-					}
-			
+				}
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 3.0
+				uses = 3
+				category = infantry_weapons
 			}
 		}
 	}
-
 	
-
-
-
-
-
-
 	focus = {
 		id = FIN_Choose_Military_Alliance
 		icon = GFX_goal_generic_small_arms
 		text = "Choose Military Alliance"
 		prerequisite = { focus = FIN_Defend_Against_Soviet_Aggression }
-		x = 1
-		y = 3
-		relative_position_id = army_effort
+		x = 2
+		y = 2
+		relative_position_id = FIN_Defend_Against_Soviet_Aggression
 		cost = 0
 
 		available_if_capitulated = yes
@@ -347,13 +325,9 @@ focus_tree = {
 			army_experience = 25
 			navy_experience = 25
 			air_experience = 25
-			
-		
-			}
 		}
-		
-
-
+	}
+	
 	focus = {
 		id = FIN_Pro_Western_Government
 		icon = GFX_goal_support_democracy
@@ -361,9 +335,9 @@ focus_tree = {
 		prerequisite = { focus = FIN_Choose_Military_Alliance }
 		mutually_exclusive = { focus = FIN_Non_Aligned_Government }
 		mutually_exclusive = { focus = FIN_Soviet_Oriented_Marxist_In_Government }
-		x = 1
-		y = 4
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = FIN_Choose_Military_Alliance
 		cost = 3
 
 		available_if_capitulated = yes
@@ -371,19 +345,17 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 100
 			set_politics = {
-                                    ruling_party = democratic
-                                        elections_allowed = yes
-						}
+                ruling_party = democratic
+                elections_allowed = yes
+			}
 			set_popularities = {
-	neutrality = 0.15
-	democratic = 0.80
-	communism = 0.5
-}
-	
-		
-			
+				neutrality = 0.15
+				democratic = 0.80
+				communism = 0.5
+			}
 		}
 	}
+	
 	focus = {
 		id = FIN_Non_Aligned_Government
 		icon = GFX_goal_generic_neutrality_focus
@@ -391,9 +363,9 @@ focus_tree = {
 		prerequisite = { focus = FIN_Choose_Military_Alliance }
 		mutually_exclusive = { focus = FIN_Pro_Western_Government }
 		mutually_exclusive = { focus = FIN_Soviet_Oriented_Marxist_In_Government }
-		x = 3
-		y = 4
-		relative_position_id = army_effort
+		x = 2
+		y = 1
+		relative_position_id = FIN_Choose_Military_Alliance
 		cost = 3
 
 		available_if_capitulated = yes
@@ -401,25 +373,17 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 100
 			set_politics = {
-                                    ruling_party = neutrality
-                                        elections_allowed = yes
-						}
+                ruling_party = neutrality
+                elections_allowed = yes
+			}
 			set_popularities = {
-	neutrality = 0.80
-	democratic = 0.15
-	communism = 0.5
-}
-			
-	
-		
-			
-			
-				
-					
-			
+				neutrality = 0.80
+				democratic = 0.15
+				communism = 0.5
+			}
 		}
-		
 	}
+	
 	focus = {
 		id = FIN_Soviet_Oriented_Marxist_In_Government
 		icon = GFX_goal_support_communism
@@ -427,9 +391,9 @@ focus_tree = {
 		prerequisite = { focus = FIN_Choose_Military_Alliance }
 		mutually_exclusive = { focus = FIN_Pro_Western_Government }
 		mutually_exclusive = { focus = FIN_Non_Aligned_Government }
-		x = 5
-		y = 4
-		relative_position_id = army_effort
+		x = 4
+		y = 1
+		relative_position_id = FIN_Choose_Military_Alliance
 		cost = 3
 
 		available_if_capitulated = yes
@@ -437,31 +401,25 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 100
 			set_politics = {
-                                    ruling_party = communism
-                                        elections_allowed = yes
-						}
+                ruling_party = communism
+                elections_allowed = yes
+			}
 			set_popularities = {
-	neutrality = 0.05
-	democratic = 0.15
-	communism = 0.80
-}
-				
-					
-			
+				neutrality = 0.05
+				democratic = 0.15
+				communism = 0.80
+			}
 		}
 	}
-
-
-
-
+	
 	focus = {
 		id = FIN_Join_NATO
 		icon = GFX_focus_generic_little_entente
 		text = "Join NATO"
 		prerequisite = { focus = FIN_Pro_Western_Government }
-		x = 1
-		y = 5
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = FIN_Pro_Western_Government
 		cost = 3
 
 		available_if_capitulated = yes
@@ -470,29 +428,27 @@ focus_tree = {
 			NOT = { has_war_with = USA }
 			is_subject = no
 			is_in_faction = no
-			}
+		}
 		completion_reward = {
 			army_experience = 100
 			add_ideas = USA_the_pentagon
-			add_idea = USA_department_of_defense	
+			add_ideas = USA_department_of_defense	
 			add_ideas = USA_airborne_divisions
 			add_ideas = USA_army_of_the_united_states
 			add_ideas = USA_womens_armed_service_integration_act
 			add_ideas = USA_us_air_force
 			USA ={ add_to_faction = FIN }
-			
-					
-			}
 		}
+	}
 
 	focus = {
 		id = FIN_Join_Warsaw_Pact
 		icon = GFX_goal_support_communism
 		text = "Join Warsaw Pact"
 		prerequisite = { focus = FIN_Soviet_Oriented_Marxist_In_Government }
-		x = 5
-		y = 5
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = FIN_Soviet_Oriented_Marxist_In_Government
 		cost = 3
 
 		available_if_capitulated = yes
@@ -501,7 +457,7 @@ focus_tree = {
 			NOT = { has_war_with = SOV }
 			is_subject = no
 			is_in_faction = no
-			}
+		}
 
 		completion_reward = {
 			army_experience = 500
@@ -514,34 +470,31 @@ focus_tree = {
 			add_ideas = peoples_commissariat_focus
 			add_ideas = idea_political_correctness
 			add_ideas = political_commissars_focus
-			idea = internationalism
-			add_autonomy FIN 1000
-			add_manpower 50000
+			add_ideas = internationalism
+		#	add_autonomy FIN 1000
+			add_manpower = 50000
 			add_ideas = militarism_focus
 			SOV ={ add_to_faction = FIN }
-
-		
-			
-			}
 		}
+	}
 		
 	focus = {
 		id = FIN_Join_Non_Aligned
 		icon = GFX_goal_generic_neutrality_focus
 		text = "We must Remain Neutral!"
 		prerequisite = { focus = FIN_Non_Aligned_Government }
-		x = 3
-		y = 5
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = FIN_Non_Aligned_Government
 		cost = 3
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			pass
-			}
+		#	pass
 		}
 	}
+	
 	focus = {
 		id = Finnish_Defence_Contractors_Mobilzation_Act
 		icon = GFX_goal_generic_construction
@@ -551,23 +504,21 @@ focus_tree = {
 		y = 2
 		cost = 5
 		
-		available_if_capituated = no
+		available_if_capitulated = no
 
 		completion_reward = {
 			army_experience = 25
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 4
 					instant_build = yes
-
-					
-					}
-			
+				}
 			}
 		}
 	}
+	
 	focus = {
 		id = FIN_Emergency_War_Defence_Act
 		icon = GFX_goal_generic_construction
@@ -576,7 +527,7 @@ focus_tree = {
 		y = 0
 		cost = 5
 		
-		available_if_capituated = no
+		available_if_capitulated = no
 
 		available = {
 			has_war = yes 
@@ -585,26 +536,22 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
-					}
-
-			
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
-
-					
-					}
-			
+				}
 			}
 			add_war_support = 0.50
 		}
 	}
+	
 	focus = {
 		id = FIN_Emergency_War_Defence_Act_II
 		icon = GFX_goal_generic_construction
@@ -614,7 +561,7 @@ focus_tree = {
 		y = 1
 		cost = 40
 		
-		available_if_capituated = no
+		available_if_capitulated = no
 
 		available = {
 			has_war = yes 
@@ -623,44 +570,37 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 8
+				add_extra_state_shared_building_slots = 8
 				add_building_construction = {
 					type = industrial_complex
 					level = 4
 					instant_build = yes
-					}
-
-			
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 4
 					instant_build = yes
-
-					
-					}
-			
+				}
 			}
 			add_war_support = 0.50
 			add_manpower = 1000000
 			
 			add_research_slot = 4
-			
 		}
 	}
+	
 	focus = {
 		id = FIN_Moscow_Economic_Pact
 		icon = GFX_goal_generic_soviet_construction
 		text = "Join Moscow Economic Pact"
 		prerequisite = { focus = FIN_Join_Warsaw_Pact }
 
-		x = 5
-		y = 6
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = FIN_Join_Warsaw_Pact
 		cost = 3
 
 		available_if_capitulated = yes
-
-		available = 
 
 		completion_reward = {
 			every_owned_state = {
@@ -669,27 +609,23 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
-
-						
-					}
 				}
 			}
 		}
 	}
+	
 	focus = {
 		id = FIN_Washington_Economic_Pact
 		text = "Join Washington Economic Pact"
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = FIN_Join_NATO }
 
-		x = 1
-		y = 6
-		relative_position_id = army_effort
+		x = 0
+		y = 1
+		relative_position_id = FIN_Join_NATO
 		cost = 3
 
 		available_if_capitulated = yes
-
-		
 
 		completion_reward = {
 			every_owned_state = {
@@ -698,12 +634,11 @@ focus_tree = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-
-						
 				}
 			}
 		}
 	}
+	
 	focus = {
 		id = Finnish_Special_Forces
 		icon = GFX_goal_generic_wolf_pack
@@ -724,6 +659,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Finnish_Special_Forces_II
 		icon = GFX_goal_generic_wolf_pack
@@ -745,6 +681,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = Finnish_Special_Forces_III
 		icon = GFX_goal_generic_wolf_pack
@@ -766,6 +703,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = FIN_Land_Wolf_Pack
 		icon = GFX_goal_generic_wolf_pack
@@ -779,7 +717,7 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 25
-			manpower = 10000
+			add_manpower = 10000
 			add_tech_bonus = {
 				name = infantry_bonus
 				bonus = 1.0
@@ -788,6 +726,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 #---------------------FIN_NAVY
 	
 	focus = {
@@ -813,9 +752,9 @@ focus_tree = {
 				amount = 250
 			}
 			load_oob = FIN_1949_Ships_1
-			
 		}
 	}
+	
 	focus = {
 		id = Finnish_Navy_VI
 		icon = GFX_goal_generic_build_navy
@@ -834,8 +773,8 @@ focus_tree = {
 				bonus = 10.0
 				uses = 1
 				category = naval_equipment
-			load_oob = FIN_1949_Ships_2
 			}
+			load_oob = FIN_1949_Ships_2
 		}
 	}
 	focus = {
@@ -858,13 +797,16 @@ focus_tree = {
 				category = naval_equipment
 			}
 			every_owned_state = {
-			add_extra_state_shared_building_slots = 3
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
 					level = 3
 					instant_build = yes
-					}
 				}
+			}
 		}
 	}
 #---------------FIN_ARMY
@@ -880,7 +822,7 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 5
-			manpower = 50000
+			add_manpower = 50000
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.0
@@ -891,18 +833,18 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 25000
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 2500
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 3000
-				}
-			
+			}
 		}
 	}
+	
 	focus = {
 		id = Finnish_Army_X
 		icon = GFX_goal_generic_army_tanks
@@ -923,36 +865,31 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 				category = armor
-			
-
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 25000
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = support_equipment
 				amount = 2500
-				}
+			}
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
 				amount = 3000
-				}
-			completion_reward = {
+			}
 			FIN = {
 				add_opinion_modifier = {
 					target = SOV
 					modifier = large_increase
-					}
 				}
 			}
 			SOV = {
 				add_opinion_modifier = {
 					target = FIN
 					modifier = large_increase
-					}
 				}
-			
+			}
 			FIN = {
 				add_opinion_modifier = {
 					target = USA
@@ -965,7 +902,6 @@ focus_tree = {
 					modifier = large_increase
 				}
 			}
-			
 		}
 	}
 	
@@ -989,11 +925,10 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 				category = armor
-			
-
 			}
 		}
 	}
+	
 	focus = {
 		id = Finnish_Airforce_XII
 		icon = GFX_focus_usa_escort_fighters
@@ -1018,9 +953,10 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = fighter_equipment
 				amount = 150
-				}
+			}
 		}
 	}
+	
 	focus = {
 		id = Finnish_Integration_XIII
 		icon = GFX_focus_generic_combined_arms
@@ -1054,13 +990,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1949.11.7 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-					
 		}
 	}
+	
 	focus = {
 		id = FIN_Diplomacy_Warsaw
 		text = "Diplomacy toward Warsaw Pact"
@@ -1074,16 +1010,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1949.12.7 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-			
-			
-			
-					
 		}
 	}
+	
 	focus = {
 		id = FIN_Diplomacy_NATO
 		text = "Diplomacy Toward NATO"
@@ -1097,16 +1030,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1950.1.0 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-			
-			
-			
-					
 		}
 	}
+	
 	focus = {
 		id = FIN_Diplomacy_Non_Aligned
 		text = "Diplomacy Toward Non-Aligned Countries"
@@ -1120,16 +1050,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1950.1.0 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-			
-			
-			
-					
 		}
 	}
+	
 	focus = {
 		id = FIN_Diplomacy_Treaty_Finland_West
 		text = "Sign Treaties with the West in Helsinki"
@@ -1143,10 +1070,9 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1975.8.1 }
-				}
+		}
 
 		completion_reward = {
-			
 			USA = {
 				add_opinion_modifier = {
 					target = FIN
@@ -1173,6 +1099,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = FIN_Host_Summits
 		text = "Host Summits for Nations"
@@ -1187,13 +1114,13 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1949.11.7 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-					
 		}
 	}
+	
 	focus = {
 		id = FIN_Host_Helsinki_Accords
 		text = "Host Helsinki Accords"
@@ -1207,18 +1134,10 @@ focus_tree = {
 
 		available = {
 			NOT = { date < 1949.11.7 }
-				}
+		}
 
 		completion_reward = {
 			army_experience = 10
-					
 		}
 	}
-
-
-
-
-
-
-
-
+}

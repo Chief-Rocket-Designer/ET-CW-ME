@@ -2095,7 +2095,7 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_eng_imperial_federation_india.dds"
 	}
 	
-	
+#Mod
 	spriteType = {
 		name = "GFX_news_event_stalin"
 		texturefile = "gfx/event_pictures/news_event_stalin.dds"
@@ -2108,5 +2108,8 @@ spriteTypes = {
 		name = "GFX_news_event_PRC"
 		texturefile = "gfx/event_pictures/news_event_PRC.dds"
 	}
-	
+	spriteType = {
+		name = "GFX_hurricane"
+		texturefile = "gfx/event_pictures/generic_event_report_hurricane.dds"
+	}
 }

@@ -3247,9 +3247,9 @@
  USAcivilwar.2.a:0"Move Capital to Chicago"
  USAcivilwar.2.b:0"Move Capital somewhere else"
  
- naturaldisaster.1.t:0"Hurricane Forms in the Carribean Sea"
+ naturaldisaster.1.t:0"Hurricane Forms just outside of the Carribean Sea"
  naturaldisaster.1.d:0"[GetDateText] Today a large hurricane has formed in the Carribean Sea, meteorology estimates show that the storm will most likley hit florida in about 5-7 days"
- naturaldisaster.1.a:0"Dreadful News"
+ naturaldisaster.1.a:0"Lets Hope it will Miss Us"
  
  
  naturaldisaster.2.t:0"President Please Choose a course of Action involving the Hurricane"
@@ -3257,7 +3257,7 @@
  naturaldisaster.2.a:0"Shelter In Place"
  naturaldisaster.2.b:0"Full Evacuation"
  naturaldisaster.2.c:0"Semi-Evacuation"
- naturaldisaster.2.e:0"They do not vote for me I do not care"
+ naturaldisaster.2.e:0"Not my problem"
  
  naturaldisaster.3.t:0"Hurricane Strikes Florida"
  naturaldisaster.3.d:0"[GetDateText] Today a large hurricane has struck florida"

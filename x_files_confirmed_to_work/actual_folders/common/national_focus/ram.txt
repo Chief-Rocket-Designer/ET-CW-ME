@@ -28,7 +28,7 @@ focus_tree = {
 			
 		}
 	}
-	
+#Society Headers
 	focus = {
 		id = RAM_suspend_the_presecution
 		icon = GFX_focus_generic_diplomatic_treaty
