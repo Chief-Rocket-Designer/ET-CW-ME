@@ -16,4174 +16,6 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 6000 }
 	default = no
-#	focus = {
-#		id = USA_
-#		#icon = GFX_
-#		prerequisite = { focus = }
-#		mutually_exclusive = { focus =  }
-#		x = -3
-#		y = 0
-#		relative_position_id = 
-#
-#		cost = 10
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#
-#		available = {
-#
-#		}
-#		
-#		bypass = {
-#
-#		}
-#
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
-#
-#		complete_tooltip = {
-#
-#		}
-#
-#		completion_reward = {
-#
-#		}
-#	}
-#-----------------------------------------------------------------
-#-----------------------------------------------------------------
-#---------------Mod-Focus-Tree-Section----------------------------
-#-----------------------------------------------------------------
-#-----------------------------------------------------------------
-
-
-
-#----------------Economic_Pact
-
-focus = {
-		id = USA_Washington_Pact
-		text = " Form Washington Economic Council "
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = USA_wartime_industry }
-		x = 6
-		y = 8
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_idea = washington_economic_pact
-		}
-	}
-focus = {
-		id = USA_Bretton_Woods
-		text = " Sign Bretton Woods Agreement "
-		icon = GFX_focus_mex_privatisation
-		prerequisite = { focus = USA_Washington_Pact }
-		x = 6
-		y = 9
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_idea = bretton_woods
-		}
-	}
-focus = {
-		id = USA_Trade_with_Europe
-		text = " Trade With Europe "
-		icon = GFX_focus_mex_privatisation
-		prerequisite = { focus = USA_Bretton_Woods }
-		x = 6
-		y = 10
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_idea = european_economic_ties
-		}
-	}
-#------------------1950S_GROWTH_PERIOD
-focus = {
-		id = USA_WWII_Economic_Boom
-		text = " End of World War II Boom "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_wartime_industry }
-		x = 8
-		y = 8
-		relative_position_id = USA_continue_the_new_deal
-		cost = 20
-
-		available_if_capitulated = yes
-		available = {
-			NOT = {	
-				has_War = yes
-				}
-		}
-		completion_reward = {
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-			
-				}
-			}		
-		}
-	}
-focus = {
-		id = USA_Ideal_American_Decade
-		text = " Growth of the Middle Class "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_WWII_Economic_Boom }
-		x = 8
-		y = 9
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-focus = {
-		id = USA_Lower_Class_Decade
-		text = " Lower Class and Rural Growth "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_Ideal_American_Decade }
-		x = 8
-		y = 10
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-		
-		}
-	}
-focus = {
-		id = USA_leavittown
-		text = " Leavittown and American Suburbia "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_Lower_Class_Decade }
-		x = 8
-		y = 11
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-		available = {
-			date > 1947.10.1
-				}
-
-	completion_reward = {
-		every_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = Urban_Center
-					level = 2
-					instant_build = yes
-				}
-			}
-		
-			358 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			816 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = Urban_Center
-					level = 3
-					instant_build = yes
-				}
-			}
-			
-			819 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			820 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			821 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			822 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			823 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			824 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		}
-	}
-	
-focus = {
-		id = USA_microwave
-		text = " Invention of the Microwave "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_leavittown }
-		x = 9
-		y = 12
-		relative_position_id = USA_continue_the_new_deal
-		cost = 1
-
-		available_if_capitulated = yes
-		available = {
-			date > 1947.10.1
-				}
-
-	completion_reward = {
-		add_stability 0.02
-		modify_building_resources = {
-        	  			 building = industrial_complex
-        	  			 resource = electronics
-        	  			 amount = 2
-        					}
-		}
-	}
-focus = {
-		id = USA_transistor
-		text = " Invention of the Transistor "
-		icon = GFX_transistorfocus
-		prerequisite = { focus = USA_microwave }
-		x = 9
-		y = 13
-		relative_position_id = USA_continue_the_new_deal
-		cost = 1
-
-		available_if_capitulated = yes
-		available = {
-			date > 1947.10.1
-				}
-
-	completion_reward = {
-		add_stability = 0.01
-		modify_building_resources = {
-        	  			 building = industrial_complex
-        	  			 resource = electronics
-        	  			 amount = 4
-        					}
-		}
-	}
-#--------------------Boom_Economy_1950
-focus = {
-		id = USA_1950_Boom_Economy
-		text = " Economy of the 50's "
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = USA_leavittown }
-		prerequisite = { focus = USA_Trade_with_Europe }
-		prerequisite = { focus = USA_Post_War_Science_Boom }
-		x = 5
-		y = 13
-		relative_position_id = USA_continue_the_new_deal
-		cost = 15
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_research_slot = 5
-			add_stability = 0.10
-			
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 7
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 5
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 5
-				category = industry
-					}
-		}
-	}
-
-#----------------------America_1950s
-focus = {
-		id = USA_Wage_Growth
-		text = " Improve Wages "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_1950_Boom_Economy }
-		x = 4
-		y = 14
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_stability = 0.025
-			
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 2
-			}
-		}
-	}
-focus = {
-		id = USA_1950_Optimism
-		text = " Optimistic Society "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_1950_Boom_Economy }
-		x = 6
-		y = 14
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_research_slot = 2
-			add_stability = 0.03
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 2
-			}
-		}
-	}
-focus = {
-		id = USA_1950_Population_Growth
-		text = " Post War Population Boom "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_1950_Boom_Economy }
-		x = 8
-		y = 14
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_stability = 0.05
-			every_owned_state = {
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-			
-				}
-			}
-		}
-	}
-
-focus = {
-		id = USA_family_1950
-		text = " The 1950s American Family "
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = USA_1950_Population_Growth }
-		prerequisite = { focus = USA_1950_Optimism }
-		prerequisite = { focus = USA_Wage_Growth }
-		x = 6
-		y = 15
-		relative_position_id = USA_continue_the_new_deal
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1955.2.1
-		}
-		
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = Urban_Center
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-
-#------------------Public Sector Innovation
-focus = {
-		id = USA_Public_Sector_Innovation
-		text = " Public Sector Innovation "
-		icon = GFX_focus_generic_self_management_shine
-		prerequisite = { focus = USA_1950_Boom_Economy }
-		x = -2
-		y = 14
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_stability = 0.05
-		}
-	}
-	
-focus = {
-		id = USA_NACA_Innovation
-		text = " NACA Design Breakthroughs "
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = USA_Public_Sector_Innovation }
-		x = -2
-		y = 15
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_fighters
-				bonus = 1.5
-				uses = 1
-				technology = jet_fighter2
-				technology = jet_fighter3
-				technology = jet_fighter4
-			}
-			
-		}
-	}
-
-
-
-
-focus = {
-		id = USA_Highway_Act_1956
-		text = " Federal Aid Highway Act of 1956 "
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = USA_NACA_Innovation }
-		x = -2
-		y = 16
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		available = {
-			date > 1956.6.29
-			has_completed_focus = USA_Fish_Wildlife
-				}
-
-		completion_reward = {
-			add_stability = 0.05
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					instant_build = yes
-			
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					instant_build = no
-			
-					}
-			}
-		}
-	}
-	
-focus = {
-		id = USA_NASA_Founding
-		text = " Found NASA "
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Highway_Act_1956 }
-		x = -2
-		y = 17
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		available = {
-			date > 1958.7.29
-				}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_fighters
-				bonus = 1.5
-				uses = 1
-				technology = space_technology1
-				technology = space_technology2
-			}
-			
-		}
-	}
-#NASA
-focus = {
-		id = USA_NASA_Focus
-		text = " NASA Focus's "
-		icon = GFX_usa_nasa
-		x = -19
-		y = 0
-		cost = 0
-
-		available_if_capitulated = yes
-		
-		available = {
-			has_completed_focus = USA_NASA_Founding
-				}
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-focus = {
-		id = USA_Human_Spaceflight
-		text = " NASA Human Spaceflight Programs"
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_NASA_Focus }
-		x = -2
-		y = 1
-		relative_position_id = USA_NASA_Focus
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	focus = {
-		id = USA_space_training
-		text = " Space Training "
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Human_Spaceflight }
-		x = -2
-		y = 1
-		relative_position_id = USA_Human_Spaceflight
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	
-	focus = {
-		id = USA_Project_Mercury
-		text = " Project Mercury "
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_NASA_Focus }
-		prerequisite = { focus = USA_Exlporer_one }
-		prerequisite = { focus = USA_space_training }
-		x = 0
-		y = 3
-		relative_position_id = USA_Human_Spaceflight
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	focus = {
-		id = USA_Project_Gemini
-		text = " Project Gemini "
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Project_Mercury }
-		x = 0
-		y = 4
-		relative_position_id = USA_Human_Spaceflight
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	focus = {
-		id = USA_Project_Apollo
-		text = " Project Apollo "
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Project_Gemini }
-		prerequisite = { focus = USA_Lunar_Rovers }
-		x = 0
-		y = 5
-		relative_position_id = USA_Human_Spaceflight
-		
-		cost = 15
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	focus = {
-		id = USA_Sats
-		text = " NASA Satillite Programs "
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_NASA_Focus }
-		x = 0
-		y = 1
-		relative_position_id = USA_NASA_Focus
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	focus = {
-		id = USA_Exlporer_one
-		text = "Launch Explorer One"
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Sats }
-		x = 0
-		y = 1
-		relative_position_id =  USA_Sats
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	focus = {
-		id = USA_Lunar_Impactors
-		text = "Launch Lunar Impactors"
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Exlporer_one }
-		x = 0
-		y = 2
-		relative_position_id =  USA_Sats
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	focus = {
-		id = USA_Lunar_Landers
-		text = "Launch Lunar Landers"
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Lunar_Impactors }
-		x = 0
-		y = 3
-		relative_position_id =  USA_Sats
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	
-	focus = {
-		id = USA_Lunar_Rovers
-		text = "Launch Lunar Rovers"
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Lunar_Landers }
-		x = 0
-		y = 4
-		relative_position_id =  USA_Sats
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	focus = {
-		id = USA_Interplan_prog
-		text = " NASA Interplanetary Programs "
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_NASA_Focus }
-		x = 2
-		y = 1
-		relative_position_id = USA_NASA_Focus
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-	
-	focus = {
-		id = USA_Mars_Probes
-		text = " NASA Mars Programs "
-		icon = GFX_usa_nasa
-		prerequisite = { focus = USA_Interplan_prog }
-		prerequisite = { focus = USA_Lunar_Impactors }
-		x = 0
-		y = 3
-		relative_position_id = USA_Interplan_prog
-		
-		cost = 10
-
-		available_if_capitulated = yes
-		
-		
-
-		completion_reward = {
-			
-			
-		}
-	}
-
-#---------------------Private Sector Innovation
-focus = {
-		id = USA_Private_Private_Sector_Innovation
-		text = " Private Sector Innovation "
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = USA_1950_Boom_Economy }
-		x = 2
-		y = 14
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_stability = 0.05
-		}
-	}
-	
-focus = {
-		id = USA_Television
-		text = " Color TV "
-		icon = GFX_focus_color_tv
-		prerequisite = { focus = USA_Private_Private_Sector_Innovation }
-		prerequisite = { focus = USA_Wage_Growth }
-		x = 3
-		y = 15
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_stability = 0.05
-			modify_building_resources = {
-        	  			 building = industrial_complex
-        	  			 resource = electronics
-        	  			 amount = 1
-        					}
-		}
-	}
-focus = {
-		id = USA_Auto_Industry
-		text = " U.S. Auto Industry "
-		icon = GFX_auto_cars
-		prerequisite = { focus = USA_Private_Private_Sector_Innovation }
-		x = 1
-		y = 15
-		relative_position_id = USA_continue_the_new_deal
-		cost = 2
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			modify_building_resources = {
-        	  			 building = industrial_complex
-        	  			 resource = electronics
-        	  			 amount = 1
-        					}
-			modify_building_resources = {
-        	  			 building = industrial_complex
-        	  			 resource = vehicles
-        	  			 amount = 4
-        					}
-			modify_building_resources = {
-        	  			 building = industrial_complex
-        	  			 resource = steel
-        	  			 amount = -1
-        					}
-		}
-	}
-
-focus = {
-		id = USA_Arts_Decisions
-		text = " 1950s Arts "
-		icon = GFX_focus_color_tv
-		prerequisite = { focus = USA_Television }
-		x = 2
-		y = 16
-		relative_position_id = USA_continue_the_new_deal
-		cost = 0
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			unlock_national_focus = USA_Arts_Focus
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-focus = {
-		id = USA_Private_Private_Sector_Innovation
-		text = " Private Sector Innovation "
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = USA_1950_Boom_Economy }
-		x = 2
-		y = 14
-		relative_position_id = USA_continue_the_new_deal
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			unlock_national_focus = USA_Arts_Focus
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-#Arts
-	
-focus = {
-		id = USA_Arts_Focus
-		text = " Arts and Entertainment "
-		icon = GFX_goal_generic_consumer_goods
-		
-		relative_position_id = USA_continue_the_new_deal
-		x = -25
-		y = 0
-		cost = 0
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-		}
-	}
-#Set Paths
-	
-focus = {
-		id = USA_TV
-		text = " Television "
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = USA_Arts_Focus }
-		relative_position_id = USA_Arts_Focus
-		x = -2
-		y = 1
-		cost = 1
-		
-		
-		available = {
-			has_completed_focus = USA_Arts_Decisions
-			}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-		}
-	}
-
-focus = {
-		id = USA_Books
-		text = " Books "
-		icon = GFX_goal_generic_consumer_goods
-		relative_position_id = USA_Arts_Focus
-		prerequisite = { focus = USA_Arts_Focus }
-		x = 0
-		y = 1
-		cost = 1
-		
-		
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-		}
-	}
-	
-focus = {
-		id = USA_Radio
-		text = " Radio "
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = USA_Arts_Focus }
-		relative_position_id = USA_Arts_Focus
-		x = 2
-		y = 1
-		cost = 1
-		
-		available = {
-			has_completed_focus = USA_Arts_Decisions
-			}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			
-		}
-	}
-	
-#Actual Focus	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-#---------------Europe(1950s)
-focus = {
-		id = USA_Marshall_Plan
-		text = " Marshall Plan "
-		icon = GFX_focus_mex_privatisation
-		prerequisite = { focus = USA_1950_Boom_Economy }
-		prerequisite = { focus = USA_Improve_Relations_With_Colonies }
-		x = 10
-		y = 14
-		relative_position_id = USA_continue_the_new_deal
-		cost = 20
-
-		available_if_capitulated = yes
-		available = {
-			date > 1947.10.1
-				}
-
-		completion_reward = {
-			ENG = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		    FRA = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			
-			BEL = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			HOL = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			LUX = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			ITA = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			AUS = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			
-			ENG = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			SWI = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			NOR = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			DEN = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			
-			POR = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			TUR = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			
-			GRE = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			IRE = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			ICE = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			SWE = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			ENG = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			WGR = {
-				every_owned_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-			
-				}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			
-			
-		}
-	}
-focus = {
-		id = USA_Free_Trade_Europe
-		text = " Free Trade with Europe "
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = USA_Marshall_Plan }
-		x = 10
-		y = 15
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_research_slot = 5
-			add_stability = 0.10
-			
-		WGR = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		FRA = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		WGR = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		ENG = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		LUX = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		BEL = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		HOL = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		POR = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		ITA = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		IRE = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		NOR = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-		DEN = {
-			add_tech_bonus = {
-				name = industry_bonus
-				bonus = 1.0
-				uses = 1
-				category = industry
-					}
-			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		}
-	}
-
-
-
-
-
-
-
-
-
-#----------------Focus_for_Military_Production
-	focus = {
-		id = USA_Mass_Production_1
-		text = " Mass Production of Military Goods "
-		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = USA_wartime_industry}
-		x = 4
-		y = 8
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 50000
-				}
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 5000
-				}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 5000
-				}
-		}
-	}
-	focus = {
-		id = USA_Mass_Production_2
-		text = " Export More Armaments to Western Europe "
-		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = USA_Mass_Production_1}
-		x = 4
-		y = 9
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
-	focus = {
-		id = USA_Mass_Production_3
-		text = " Export Armaments to British and Former British Colonies "
-		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = USA_Mass_Production_2}
-		x = 4
-		y = 10
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			RAJ = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 2000
-					}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					}
-				}
-			CAN = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 2000
-					}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					}
-				}
-			EGY = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 2000
-					}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					}
-				}
-			SAF = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 2000
-					}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					}
-				}
-			ISR = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 2000
-					}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					}
-				}
-			PAK = { 
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 2000
-					}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					}
-				}
-			ASR = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 2000
-					}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					}
-				}
-			NZL = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 2000
-					}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					}
-				}
-		}
-	}
-	focus = {
-		id = USA_Mass_Production_4
-		text = " Technological Advancement via Industry"
-		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = USA_Mass_Production_3 }
-		x = 4
-		y = 11
-		relative_position_id = USA_continue_the_new_deal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 50000
-				}
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 5000
-				}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 5000
-				}
-		}
-	}
-#------------------------------------USA_Wunderwaffe
-#----------------------Nuclear_wunderwaffe
-	focus = {
-		id = USA_Nuclear_Weapons_II
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = USA_manhattan_project }
-		text = " Los Alamos National Laboratory "
-		
-		x = 0
-		y = 2
-		relative_position_id = USA_scientist_haven
-		cost = 10
-		available_if_capitulated = yes
-
-		completion_reward = {
-		add_nuclear_bombs = 5
-			add_tech_bonus = {
-				name = USA_manhattan_project
-				bonus = 1.0
-				uses = 1
-				category = nuclear
-			}
-		}
-	}
-	focus = {
-		id = USA_Nuclear_Weapons_III
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = USA_Nuclear_Weapons_II }
-		text = " Nevada Test Range "
-		
-		x = 0
-		y = 3
-		relative_position_id = USA_scientist_haven
-		cost = 10
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_nuclear_bombs = 25
-			add_tech_bonus = {
-				name = USA_manhattan_project
-				bonus = 0.50
-				uses = 1
-				category = nuclear
-			}
-		}
-	}
-	focus = {
-		id = USA_Nuclear_Weapons_IV
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = USA_Nuclear_Weapons_III }
-		text = " More Nuclear Sites "
-		
-		x = 0
-		y = 4
-		relative_position_id = USA_scientist_haven
-		cost = 10
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_nuclear_bombs = 50
-				
-			add_tech_bonus = {
-				name = USA_manhattan_project
-				bonus = 0.50
-				uses = 1
-				category = nuclear
-			}
-		}
-	}
-#--------------------Rocketry_Wunderwaffe
-	focus = {
-		id = USA_Rocketry
-		icon = GFX_focus_rocketry
-		prerequisite = { focus = USA_manhattan_project }
-		text = " Order NACA to Develop Long Range Rockets "
-		
-		x = -2
-		y = 2
-		relative_position_id = USA_scientist_haven
-		cost = 10
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_Rocketry
-				bonus = 1.0
-				uses = 1
-				category = rocketry
-			}
-		}
-	}
-	focus = {
-		id = USA_Rocketry_university
-		icon = GFX_focus_rocketry
-		prerequisite = { focus = USA_Rocketry }
-		text = " Enlist American Universities "
-		
-		x = -2
-		y = 3
-		relative_position_id = USA_scientist_haven
-		cost = 10
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_Rocketry
-				bonus = 1.0
-				uses = 1
-				category = rocketry
-			}
-		}
-	}
-	focus = {
-		id = USA_Operation_Paperclip
-		icon = GFX_focus_rocketry
-		prerequisite = { focus = USA_Rocketry_university }
-		text = " Enlist Former German Scientist via Operation Paperclip "
-		
-		x = -2
-		y = 4
-		relative_position_id = USA_scientist_haven
-		cost = 10
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_Rocketry
-				bonus = 1.0
-				uses = 1
-				category = rocketry
-			}
-		}
-	}
-#--------------------US_TECH_II
-	focus = {
-		id = USA_Post_War_Science_Boom
-		icon = GFX_focus_research
-		prerequisite = { focus = USA_Operation_Paperclip }
-		prerequisite = { focus = USA_Nuclear_Weapons_IV }
-		prerequisite = { focus = USA_Mass_Production_4 }
-		text = " Post War Science Boom "
-		
-		x = 0
-		y = 5
-		relative_position_id = USA_scientist_haven
-		cost = 10
-		available_if_capitulated = yes
-
-		completion_reward = {
-
-		}
-	}
-#---------------------------------------------Geopoltical
-	
-	focus = {
-		id = USA_SAFTA
-		icon = GFX_goal_generic_trade
-		prerequisite = { focus = USA_war_plan_gray }
-		prerequisite = { focus = USA_military_construction }
-		text = " South American Free Trade Agreement "
-		x = -2
-		y = 5
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-
-		}
-	}
-
-
-	focus = {
-		id = USA_NATO
-		icon = GFX_NATO
-		prerequisite = { focus = USA_war_plan_gray }
-		mutually_exclusive = { focus = USA_hemisphere_defense }
-		text = " Form NATO Alliance "
-		x = 2
-		y = 5
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			remove_faction = Allies
-			if = {
-				limit = {
-					is_in_faction = no
-				}
-				create_faction = NATO
-			}
-			add_to_faction = FRA
-			add_to_faction = FRA
-			add_to_faction = ENG
-			add_to_faction = BEL
-			add_to_faction = HOL
-			add_to_faction = NOR
-			add_to_faction = DEN
-			add_to_faction = ITA
-			add_to_faction = POR
-			add_to_faction = CAN
-			add_to_faction = LUX
-			add_to_faction = ICE
-		}
-	}
-focus = {
-		id = USA_Solidify_Alliance
-		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = USA_NATO 
-			focus = USA_hemisphere_defense
-		}
-		text = " Solidify U.S. Alliances"
-		
-		x = 0
-		y = 6
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1949.1.1
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		every_country = {
-			if = {
-				limit = {
-					is_in_faction = NATO
-						}
-					USA = {
-						add_opinion_modifier = {
-							target = every_country
-							modifier = large_increase
-						}
-					}
-					every_country = {
-						add_opinion_modifier = {
-							target = USA
-							modifier = large_increase
-						}
-					}
-					
-				}
-			}
-		}
-	}
-focus = {
-		id = USA_Expand_US_Alliances
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = USA_Solidify_Alliance }
-		text = " Expand U.S. Alliances "
-		x = 0
-		y = 7
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			USA = {
-					add_opinion_modifier = {
-						target = every_country
-						modifier = large_increase
-					}
-				}
-				every_country = {
-					add_opinion_modifier = {
-						target = USA
-						modifier = large_increase
-					}
-				}
-			
-		}
-	}
-focus = {
-		id = USA_Improve_Relations_With_Colonies
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = USA_Expand_US_Alliances }
-		text = " Improve Colonial Ties "
-		x = 0
-		y = 8
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			
-		}
-	}
-
-focus = {
-		id = USA_Canada_Question
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = USA_Improve_Relations_With_Colonies }
-		text = " Canadian Question "
-		x = 0
-		y = 10
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			
-		}
-	}
-	
-	
-focus = {
-		id = USA_Canada_Question_Take_Action
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = USA_Canada_Question }
-		text = " Canada Should Join the USA "
-		x = -1
-		y = 11
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			USA = {
-				add_state_core = 276
-			}
-			
-			USA = {
-				add_state_core = 682
-			}
-			
-			USA = {
-				add_state_core = 466
-			}
-			
-			USA = {
-				add_state_core = 468
-			}
-			
-			USA = {
-				add_state_core = 465
-			}
-			
-			
-			USA = {
-				add_state_core = 464
-			}
-			
-			USA = {
-				add_state_core = 683
-			}
-			
-			USA = {
-				add_state_core = 472
-			}
-			
-			USA = {
-				add_state_core = 469
-			}
-			
-			USA = {
-				add_state_core = 470
-			}
-			
-			USA = {
-				add_state_core = 473
-			}
-			
-			USA = {
-				add_state_core = 471
-			}
-		}
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-focus = {
-		id = USA_Canada_Question_Backoff
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = USA_Canada_Question }
-		text = " Canada is not the USA! "
-		x = 1
-		y = 11
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			
-		}
-	}		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-focus = {
-		id = USA_Invite_WGR
-		text = " Invite West Germany into NATO "
-		icon = GFX_NATO
-		prerequisite = { focus = USA_Expand_US_Alliances }
-		prerequisite = { focus = USA_NATO }
-		x = 2
-		y = 8
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1955.5.1
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_to_faction = WGR
-		}
-	}
-focus = {
-		id = USA_NATO_POLAND
-		icon = GFX_NATO
-		prerequisite = { focus = USA_Invite_WGR }
-		text = " Invite Poland into NATO "
-		x = 2
-		y = 9
-		relative_position_id = USA_intervention_in_the_americas
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			POL = {
-				has_government = {
-					democratic
-					}
-				has_government= {
-					neutrality
-					}
-					
-			}
-		}
-has
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_to_faction = POL		
-		}
-	}
-
-
-
-
-
-
-
-
-
-#-----------------------------------------------Poltical
-#--------National Politics
-focus = {
-		id = USA_National_School_Lunch
-		icon = GFX_goal_generic_trade
-		text = " National School Lunch Act "
-		prerequisite = { focus = USA_federal_housing_act }
-		x = 0
-		y = 4
-		relative_position_id = USA_wpa
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1946.6.4
-			congress_low_support_trigger = yes
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_stability = 0.05
-			every_owned_state = {
-				#State_Population_1 (50000)
-						}
-		}
-	}
-	
-focus = {
-		id = USA_Small_Biz
-		icon = GFX_goal_generic_production
-		text = " Small Business Administration Act "
-		prerequisite = { focus = USA_National_School_Lunch }
-		x = 0
-		y = 5
-		relative_position_id = USA_wpa
-
-		cost = 4
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1953.7.30
-			congress_medium_support_trigger = yes
-		}
-	
-		completion_reward = {
-			#add_idea = SBA_1
-		}
-	}
-focus = {
-		id = USA_Fish_Wildlife
-		icon = GFX_goal_generic_cavalry
-		prerequisite = { focus = USA_Small_Biz }
-
-		text = " Fish and Wildlife Act of 1956 "
-		x = 0
-		y = 6
-		relative_position_id = USA_wpa
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1956.4.27
-			congress_medium_support_trigger = yes
-		}
-		completion_reward = {
-			#add_idea = Fish_Wildlife
-		}
-	}
-focus = {
-		id = USA_Nuclear_Act
-		text = " Price - Anderson Nuclear Industries Indemnity Act  "
-		icon = GFX_topbar_nuke
-		prerequisite = { focus = USA_Fish_Wildlife }
-		prerequisite = { focus = USA_Nuclear_Weapons_IV }
-		x = 2
-		y = 11
-		relative_position_id = USA_wpa
-
-		cost = 3
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1957.9.9
-			congress_high_support_trigger = yes
-		}
-
-
-		completion_reward = {
-			add_stability = 0.01
-			every_owned_state = {
-				add_building_construction = {
-							type = nuclear_reactor
-							level = 1
-							instant_build = yes
-					}
-				}
-			}
-		}
-	
-focus = {
-		id = USA_Civil_Rights_1957
-		text = " 1957 Civil Rights Act "
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = USA_Fish_Wildlife }
-		prerequisite = { focus = USA_Old_Order } 
-		x = 0
-		y = 7
-		relative_position_id = USA_wpa
-
-		cost = 12
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1957.9.9
-			congress_high_support_trigger = yes
-		}
-
-
-		completion_reward = {
-			add_stability = 0.01
-			#add_idea = civil_rights_1
-		}
-	}
-
-focus = {
-		id = USA_1958_Transportation
-		icon = GFX_goal_generic_construct_infrastructure
-		text = " 1958 Transportation Act "
-		prerequisite = { focus = USA_Civil_Rights_1957 }
-		x = 0
-		y = 8
-		relative_position_id = USA_wpa
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1958.1.1
-			congress_medium_support_trigger = yes
-		}
-		
-		completion_reward = {
-			every_owned_state = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-focus = {
-		id = USA_1958_Aviation
-		icon = GFX_goal_generic_build_airforce
-		text = " 1958 Federal Aviation Agency/Administration Act "
-		prerequisite = { focus = USA_1958_Transportation }
-		x = 0
-		y = 9
-		relative_position_id = USA_wpa
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1958.1.1
-			congress_medium_support_trigger = yes
-		}
-		
-		completion_reward = {
-			every_owned_state = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-focus = {
-		id = USA_Civil_Rights_1960
-		text = " 1960 Civil Rights Act "
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = USA_1958_Aviation }
-		x = 0
-		y = 10
-		relative_position_id = USA_wpa
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1960.5.9
-			congress_high_support_trigger = yes
-		}
-
-
-		completion_reward = {
-			add_stability = 0.02
-			#add_idea = civil_rights_2
-		}
-	}
-focus = {
-		id = USA_1962_Trade
-		icon = GFX_goal_generic_trade
-		text = " Trade Expansion Act "
-		prerequisite = { focus = USA_Civil_Rights_1960 }
-		x = 0
-		y = 11
-		relative_position_id = USA_wpa
-
-		cost = 4
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1962.10.11
-			congress_high_support_trigger = yes
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-
-#---------------------------------------------------------------------------------------------Military Politics
-focus = {
-		id = USA_GI_BILL
-		icon = GFX_focus_generic_military_mission
-		text = " Sign U.S. GI Bill "
-		prerequisite = { focus = USA_federal_housing_act }
-
-		x = -2
-		y = 4
-		relative_position_id = USA_wpa
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1944.6.22
-			congress_low_support_trigger = yes
-		}
-	
-		completion_reward = {
-
-		}
-	}
-
-
-focus = {
-		id = USA_Civil_Air_Patrol
-		text = " Incorporate Civil Air Patrol "
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = USA_GI_BILL }
-		x = -2
-		y = 5
-		relative_position_id = USA_wpa
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1948.5.26
-			congress_low_support_trigger = yes
-		}
-
-
-		completion_reward = {
-			manpower = 7000
-		}
-	}
-focus = {
-		id = USA_CIA_ACT
-		icon = GFX_CIA
-		text = " Sign CIA Act "
-		prerequisite = { focus = USA_Civil_Air_Patrol }
-		x = -14
-		y = 6
-		relative_position_id = USA_wpa
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1949.5.27
-			congress_low_support_trigger = yes
-		}
-
-		completion_reward = {
-			#add_idea = CIA_1
-		}
-	}
-#---------------USA CIA ACT Stuff--------------------
-focus = {
-		id = USA_CIA_1
-		icon = GFX_CIA
-		text = " CIA Actions "
-		prerequisite = { focus = USA_Civil_Air_Patrol }
-		x = 0
-		y = 1
-		relative_position_id = USA_CIA_ACT
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1950.1.1
-			congress_low_support_trigger = yes
-		}
-
-		completion_reward = {
-			
-		}
-	}
-	
-
-	
-	
-	
-	
-#old order
-focus = {
-		id = USA_Old_Order
-		icon = GFX_American_Eagle
-		mutually_exclusive = { focus = USA_Go_With_Alt_Hist }
-		text = " What is Wrong with America? "
-		x = 7
-		y = 7
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			congress_low_support_trigger = yes
-		}
-
-		completion_reward = {
-			
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-#USA Alt History
-
-focus = {
-		id = USA_Go_With_Alt_Hist
-		icon = GFX_Broken_American_Eagle
-		mutually_exclusive = { focus = USA_Old_Order }
-		text = " Change America Now!  "
-		x = 2
-		y = 7
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			
-		}
-	}
-
-#Socialist Header 1950s
-
-focus = {
-		id = USA_Go_With_Communist_1950s
-		icon = GFX_Broken_American_Eagle
-		prerequisite = { focus = USA_Go_With_Alt_Hist }
-		mutually_exclusive = { focus = USA_Go_With_Fascist_1950s }
-		relative_position_id = USA_Go_With_Alt_Hist 
-		text = " American Proleteriat  "
-		x = -4
-		y = 1
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.25
-				}
-			set_party_name = { 
-				ideology = communism
-				long_name = "US Joint Leftist Party"
-				name = "US Joint eftist Party" 
-			}
-		}
-	}
-	
-focus = {
-		id = USA_Go_With_Left_Liberty_1950s
-		icon = GFX_Broken_American_Eagle
-		prerequisite = { focus = USA_Go_With_Communist_1950s }
-		mutually_exclusive = { focus = USA_Go_With_Left_Auth_1950s }
-		mutually_exclusive = { focus = USA_Go_With_Left_Center_1950s }
-		relative_position_id = USA_Go_With_Communist_1950s
-		text = " Promote Anarcho Communist Economic Theory  "
-		x = -2
-		y = 1
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-				}
-			set_party_name = { 
-				ideology = communism
-				long_name = "US Anarcho-Communist Party"
-				name = "US Anarcho-Communist Party" 
-			}
-		}
-	}
-	
-focus = {
-		id = USA_Go_With_Left_Center_1950s
-		icon = GFX_Broken_American_Eagle
-		prerequisite = { focus = USA_Go_With_Communist_1950s }
-		mutually_exclusive = { focus = USA_Go_With_Left_Auth_1950s }
-		mutually_exclusive = { focus = USA_Go_With_Left_Liberty_1950s }
-		relative_position_id = USA_Go_With_Communist_1950s
-		text = " Promote Centrist Communist Economic Theory  "
-		x = 0
-		y = 1
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-				}
-			set_party_name = { 
-				ideology = communism
-				long_name = "US Centrist Communist Party"
-				name = "US Centrist Communist Party" 
-			}
-		}
-	}
-	
-focus = {
-		id = USA_Go_With_Left_Auth_1950s
-		icon = GFX_Broken_American_Eagle
-		prerequisite = { focus = USA_Go_With_Communist_1950s }
-		mutually_exclusive = { focus = USA_Go_With_Left_Center_1950s }
-		mutually_exclusive = { focus = USA_Go_With_Left_Liberty_1950s }
-		relative_position_id = USA_Go_With_Communist_1950s
-		text = " Promote Marxist Leninist Economic Theory  "
-		x = 2
-		y = 1
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-				}
-			set_party_name = { 
-				ideology = communism
-				long_name = "US Marxist Leninist Party"
-				name = "US Marxist Leninist Party" 
-			}
-		}
-	}
-	
-#revolution section
-
-focus = {
-		id = USA_Go_With_Left_Peaceful_Reform
-		icon = GFX_Broken_American_Eagle
-		prerequisite = { focus = USA_Go_With_Communist_1950s }
-		mutually_exclusive = { focus = USA_Go_With_Left_Violent_Revolution }
-		
-		relative_position_id = USA_Go_With_Communist_1950s
-		text = " Promote Marxist Leninist Economic Theory  "
-		x = 2
-		y = 1
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_stability = 0.05
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
-				}
-		}
-	}
-	
-focus = {
-		id = USA_Go_With_Left_Peaceful_Reform
-		icon = GFX_Broken_American_Eagle
-		mutually_exclusive = { focus = USA_Go_With_Left_Violent_Revolution }
-		prerequisite = { focus = USA_Go_With_Left_Center_1950s
-		focus = USA_Go_With_Left_Liberty_1950s
-		focus = USA_Go_With_Left_Auth_1950s
-		}
-		relative_position_id = USA_Go_With_Communist_1950s
-		text = " Communist Call for Peaceful Revolution "
-		x = 1
-		y = 2
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_stability = 0.05
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
-				}
-		}
-	}
-	
-focus = {
-		id = USA_Go_With_Left_Violent_Revolution
-		icon = GFX_Broken_American_Eagle
-		mutually_exclusive = { focus = USA_Go_With_Left_Peaceful_Reform }
-		prerequisite = { focus = USA_Go_With_Left_Center_1950s
-		focus = USA_Go_With_Left_Liberty_1950s
-		focus = USA_Go_With_Left_Auth_1950s
-
-		}
-		relative_position_id = USA_Go_With_Communist_1950s
-		text = " We Shall Overthrow the Bourgoise at any cost!  "
-		x = -1
-		y = 2
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_stability = -0.25
-			add_popularity = {
-				ideology = communism
-				popularity = 0.03
-				}
-		}
-	}
-
-#Violent Revolution Paths
-
-focus = {
-		id = USA_Go_With_Left_Civil_War
-		icon = GFX_Broken_American_Eagle
-		mutually_exclusive = { focus = USA_Go_With_Left_Peaceful_Reform }
-		prerequisite = { focus = USA_Go_With_Left_Center_1950s
-		focus = USA_Go_With_Left_Liberty_1950s
-		focus = USA_Go_With_Left_Auth_1950s
-
-		}
-		relative_position_id = USA_Go_With_Communist_1950s
-		text = " Communist Delcare Seperatist State!  "
-		x = -1
-		y = 2
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-
-		completion_reward = {
-			add_stability = -0.25
-			add_popularity = {
-				ideology = communism
-				popularity = 0.10
-			}
-				
-			hidden_effect = {
-				RAM = {
-					add_state_core = 819
-					add_state_core = 820
-					add_state_core = 394
-					add_state_core = 391
-					add_state_core = 821
-					add_state_core = 825
-					add_state_core = 826
-					add_state_core = 797
-					add_state_core = 818
-					add_state_core = 822
-					add_state_core = 395
-					add_state_core = 393
-					add_state_core = 281
-					add_state_core = 629
-					add_state_core = 686
-					add_state_core = 790
-					add_state_core = 261
-					add_state_core = 396
-				}
-			}
-			USA = {
-				release = RAM
-			}
-			RAM = {	
-				hidden_effect = {
-					remove_idea = recent_collectivization
-					set_province_controller = 6713
-					load_oob = "RAM_Civil_War"	
-					add_manpower = 1000000
-					RAM = {
-						add_equipment_to_stockpile = {
-							type = infantry_equipment
-							amount = 200000
-						}
-						add_equipment_to_stockpile = {
-							type = support_equipment
-							amount = 20000
-						}
-						add_equipment_to_stockpile = {
-							type = artillery_equipment
-							amount = 17500
-						}
-						393 = {
-							add_building_construction = {
-								type = bunker
-								level = 20
-								province = 9724
-								instant_build = yes
-							}
-						}
-						822 = {
-							add_building_construction = {
-								type = bunker
-								level = 20
-								province = 4569
-								instant_build = yes
-							}
-						}
-						820 = {
-							add_building_construction = {
-								type = bunker
-								level = 20
-								province = 9450
-								instant_build = yes
-							}
-						}
-						819 = {
-							add_building_construction = {
-								type = bunker
-								level = 20
-								province = 6710
-								instant_build = yes
-							}
-						}
-						396 = {
-							add_building_construction = {
-								type = bunker
-								level = 20
-								province = 6713
-								instant_build = yes
-							}
-						}
-					}
-				}
-				create_faction = Revolutionary-American-Assistance-Leauge
-			}
-			USA = {
-				hidden_effect = {
-					country_event = { id = USAcivilwar.1  days = 0 }
-					load_oob = "USA_Civil_War"	
-					add_manpower = 1000000
-					USA = {
-						add_equipment_to_stockpile = {
-							type = infantry_equipment
-							amount = 170000
-						}
-						add_equipment_to_stockpile = {
-							type = support_equipment
-							amount = 17000
-						}
-						add_equipment_to_stockpile = {
-							type = artillery_equipment
-							amount = 17500
-						}
-					}
-				}
-				every_owned_state = {
-					add_claim_by = RAM
-					add_core_of = RAM
-				}
-			}
-		}	
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-focus = {
-		id = USA_Go_With_Communist_1950s
-		icon = GFX_Broken_American_Eagle
-		prerequisite = { focus = USA_Go_With_Alt_Hist }
-		mutually_exclusive = { focus = USA_Go_With_Fascist_1950s }
-		relative_position_id = USA_Go_With_Alt_Hist 
-		text = " American Proleteriat  "
-		x = -4
-		y = 1
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.25
-				}
-			set_party_name = { 
-				ideology = communism
-				long_name = "US Joint Leftist Party"
-				name = "US Joint eftist Party" 
-			}
-		}
-	}
-
-#Fascist Header 1950s 
-
-focus = {
-		id = USA_Go_With_Fascist_1950s
-		icon = GFX_Broken_American_Eagle
-		prerequisite = { focus = USA_Go_With_Alt_Hist }
-		mutually_exclusive = { focus = USA_Go_With_Communist_1950s }
-		relative_position_id = USA_Go_With_Alt_Hist 
-		text = " National Socialist American Worker's Party  "
-		x = 4
-		y = 1
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			OR = {
-			
-			}
-		}
-
-		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.25
-				}
-			set_party_name = { 
-				ideology = fascism
-				long_name = "US National Socialist American Worker's Party"
-				name = "US National Socialist American Worker's Party" 
-			}
-		}
-	}
-
-
-#--------------------------------------------------------------------
-#---------------------------Military Stuff---------------------------
-#--------------------------------------------------------------------
-#-----------War Plan World
-focus = {
-		id = USA_warplan_world
-		icon = GFX_goal_generic_territory_or_war
-		text = " Warplan Office "
-		prerequisite = { focus = USA_destroyers_for_bases }
-		prerequisite = { focus = USA_anti_bolshevist_aid }
-		prerequisite = { focus = USA_war_plan_ruby }
-		prerequisite = { focus = USA_war_plan_scarlet_garnet }
-		prerequisite = { focus = USA_war_plan_gray }
-		prerequisite = { focus = USA_NATO }
-		x = 3
-		y = 7
-		relative_position_id = USA_war_plans_division
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			has_completed_focus = USA_build_the_pentagon
-			date > 1950.1.1
-			}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			
-		}
-	}
-	
-#Invite South America
-focus = {
-		id = USA_Invite_South_America
-		icon = GFX_NATO
-		text = " Invite South American Countries to NATO "
-		x = -3
-		y = 1
-		mutually_exclusive = { focus = USA_NOT_Invite_South_America }
-		prerequisite = { focus = USA_warplan_world }
-		relative_position_id = USA_warplan_world
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_to_faction = CHL
-			add_to_faction = COL
-			add_to_faction = BRA
-			add_to_faction = PRU
-			add_to_faction = ECU
-			add_to_faction = ARG
-			add_to_faction = VEN
-			}
-	}
-focus = {
-		id = USA_Influence_South_America
-		icon = GFX_NATO
-		text = " Spread American Ideals "
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_Invite_South_America }
-		relative_position_id = USA_Invite_South_America
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			}
-	}
-		
-#No South America NATO
-		
-
-focus = {
-		id = USA_NOT_Invite_South_America
-		icon = GFX_NATO
-		text = " Do Not Invite South America to NATO "
-		x = -1
-		y = 1
-		mutually_exclusive = { focus = USA_Invite_South_America }
-		prerequisite = { focus = USA_warplan_world }
-		relative_position_id = USA_warplan_world
-		cost = 1
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-				add_stability = 0.05
-			}
-	}
-
-focus = {
-		id = USA_NOT_Invite_South_America_Sent
-		icon = GFX_NATO
-		text = " Spread Pro-American Sentiment in South America "
-		x = 0
-		y = 1
-		mutually_exclusive = { focus = USA_Invite_South_America }
-		prerequisite = { focus = USA_NOT_Invite_South_America }
-		relative_position_id = USA_NOT_Invite_South_America
-		cost = 1
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			VEN = {
-				 if = {
-					limit = {
-							has_government = democratic
-							}
-
-						add_ideas = NATO_Ally
-					}
-
-				}
-		}
-	}
-
-
-
-
-
-
-
-
-#------------------------------------------------------Army
-#-----------------Special Forces
-focus = {
-		id = USA_air_assault
-		icon = GFX_focus_generic_paratrooper
-		text = " Air Assault Training School "
-		prerequisite = { focus = USA_airborne_divisions }
-		x = -2
-		y = 3
-		relative_position_id = USA_selective_training_act
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			hidden_effect = {
-				#load_oob = USA_1949_Stuff1
-			}
-		}
-	}
-focus = {
-		id = USA_training_schools
-		icon = GFX_USA_advanced_infantry_weapons_medium
-		text = " Special Forces Training Schools "
-		prerequisite = { focus = USA_air_assault }
-		x = -2
-		y = 4
-		relative_position_id = USA_selective_training_act
-
-		cost = 10
-
-		
-
-		available = {
-			date > 1950.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			army_experience = 100
-		}
-	}
-#--------------------------------------------------------------------Armor
-focus = {
-		id = USA_walker_bulldog
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M41 Walker Bulldog "
-		prerequisite = { focus = USA_armored_infantry }
-		x = 0
-		y = 4
-		relative_position_id = USA_support_rock_island
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1948.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-focus = {
-		id = USA_M48_Patton
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M48 Patton "
-		prerequisite = { focus = USA_walker_bulldog }
-		x = 0
-		y = 5
-		relative_position_id = USA_support_rock_island
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1948.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-focus = {
-		id = USA_M60
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M60 "
-		prerequisite = { focus = USA_M48_Patton }
-		x = 0
-		y = 6
-		relative_position_id = USA_support_rock_island
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1948.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-
-focus = {
-		id = USA_M60_A3
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M60 A3 "
-		prerequisite = { focus = USA_M60 }
-		x = 2
-		y = 7
-		relative_position_id = USA_support_rock_island
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1978.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-focus = {
-		id = USA_M60_A2
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M60 A2 "
-		prerequisite = { focus = USA_M60 }
-		x = 0
-		y = 7
-		relative_position_id = USA_support_rock_island
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1970.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-focus = {
-		id = USA_M60_A1
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M60 A1 "
-		prerequisite = { focus = USA_M60 }
-		x = -2
-		y = 7
-		relative_position_id = USA_support_rock_island
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1963.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-focus = {
-		id = USA_M1
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M1 Abrams "
-		prerequisite = { focus = USA_M60_A1 }
-		prerequisite = { focus = USA_M60_A2 }
-		prerequisite = { focus = USA_M60_A3 }
-		x = 0
-		y = 8
-		relative_position_id = USA_support_rock_island
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1985.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-focus = {
-		id = USA_M1_A1
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M1A1 Abrams "
-		prerequisite = { focus = USA_M1 }
-		x = -1
-		y = 9
-		relative_position_id = USA_support_rock_island
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1986.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-	
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-focus = {
-		id = USA_M1_A2
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M1A2 Abrams "
-		prerequisite = { focus = USA_M1 }
-		x = 1
-		y = 9
-		relative_position_id = USA_support_rock_island
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1986.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-focus = {
-		id = USA_M1_A3
-		icon = GFX_focus_generic_combined_arms
-		text = " Develop M1A3 Abrams "
-		prerequisite = { focus = USA_M1_A2 }
-		prerequisite = { focus = USA_M1_A1 }
-		x = 0
-		y = 10
-		relative_position_id = USA_support_rock_island
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 2023.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_main_battle_tanks
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-#--------------------Coast Guards
-#--------------------Air Force
-focus = {
-		id = USA_Airforce_1
-		icon = GFX_goal_generic_build_airforce
-		text = " Form United States Air Force Branch "
-		prerequisite = {
-		focus = USA_us_air_force
-		focus = USA_us_army_airforce
-		}
-		x = 0
-		y = 3
-		relative_position_id = USA_escort_fighters
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-
-		completion_reward = {
-			#add_idea = CIA_1
-		}
-	}
-focus = {
-		id = USA_Airforce_2
-		icon = GFX_goal_generic_build_airforce
-		text = " Form Strategic Air Command (SAC) "
-		prerequisite = { focus = USA_Airforce_1 }
-		x = 0
-		y = 4
-		relative_position_id = USA_escort_fighters
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1946.3.21
-			
-		}
-
-		completion_reward = {
-			#add_idea = CIA_1
-		}
-	}
-focus = {
-		id = USA_Airforce_3
-		icon = GFX_goal_generic_build_airforce
-		text = " Form United States Air Force Branch "
-		prerequisite = { focus = USA_Airforce_2 }
-		x = 0
-		y = 5
-		relative_position_id = USA_escort_fighters
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1949.5.27
-			
-		}
-
-		completion_reward = {
-			#add_idea = CIA_1
-		}
-	}
-focus = {
-		id = USA_Airforce_4
-		icon = GFX_goal_generic_build_airforce
-		text = " Form United States Air Force Branch "
-		prerequisite = { focus = USA_Airforce_3 }
-		x = 0
-		y = 6
-		relative_position_id = USA_escort_fighters
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1949.5.27
-			
-		}
-
-		completion_reward = {
-			#add_idea = CIA_1
-		}
-	}
-focus = {
-		id = USA_Airforce_5
-		icon = GFX_goal_generic_build_airforce
-		text = " Form United States Air Force Branch "
-		prerequisite = { focus = USA_Airforce_4 }
-		x = 0
-		y = 7
-		relative_position_id = USA_escort_fighters
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1949.5.27
-			
-		}
-
-		completion_reward = {
-			#add_idea = CIA_1
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-#--------------------Marines
-#--------------------Navy
-focus = {
-		id = USA_Post_War_Submarines
-		icon = GFX_goal_generic_navy_submarine
-		text = " Learn from German U-Boats "
-		prerequisite = { focus = USA_unrestricted_submarine_warfare }
-		x = 0
-		y = 2
-		relative_position_id = USA_fleet_submarines
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1948.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_fleet_submarines
-				bonus = 1.5
-				uses = 2
-				category = ss_tech
-			}
-		}
-	}
-
-focus = {
-		id = USA_Nuclear_Submarine
-		icon = GFX_goal_generic_navy_submarine
-		text = " USS Nautilus SSN 571 "
-		prerequisite = { focus = USA_Post_War_Submarines  }
-		x = 0
-		y = 3
-		relative_position_id = USA_fleet_submarines
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			date > 1948.1.1
-		}
-		
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_fleet_submarines
-				bonus = 1.5
-				uses = 2
-				category = nuclear_submarine_tech
-			}
-		}
-	}
-#-----------------------------------------------
-#--------------------END OF MOD-----------------
-#-----------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	focus = {
 		id = USA_continue_the_new_deal
@@ -6793,7 +2625,7 @@ focus = {
 			has_dlc = "Man the Guns"
 		}
 		available = {
-			has_governemnt = democratic
+			has_government = democratic
 		}
 		
 		bypass = {
@@ -10018,7 +5850,4144 @@ focus = {
 	
 
 	
+	
+	
+	
+	#	focus = {
+#		id = USA_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+#-----------------------------------------------------------------
+#-----------------------------------------------------------------
+#---------------Mod-Focus-Tree-Section----------------------------
+#-----------------------------------------------------------------
+#-----------------------------------------------------------------
+#MODDED_SECTION
 
+
+
+#----------------Economic_Pact
+
+focus = {
+		id = USA_Washington_Pact
+		text = " Form Washington Economic Council "
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = USA_wartime_industry }
+		x = 6
+		y = 8
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = washington_economic_pact
+		}
+	}
+focus = {
+		id = USA_Bretton_Woods
+		text = " Sign Bretton Woods Agreement "
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = USA_Washington_Pact }
+		x = 6
+		y = 9
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = bretton_woods
+		}
+	}
+focus = {
+		id = USA_Trade_with_Europe
+		text = " Trade With Europe "
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = USA_Bretton_Woods }
+		x = 6
+		y = 10
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = european_economic_ties
+		}
+	}
+#------------------1950S_GROWTH_PERIOD
+focus = {
+		id = USA_WWII_Economic_Boom
+		text = " End of World War II Boom "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_wartime_industry }
+		x = 8
+		y = 8
+		relative_position_id = USA_continue_the_new_deal
+		cost = 20
+
+		available_if_capitulated = yes
+		available = {
+			NOT = {	
+				has_War = yes
+				}
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+			
+				}
+			}		
+		}
+	}
+focus = {
+		id = USA_Ideal_American_Decade
+		text = " Growth of the Middle Class "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_WWII_Economic_Boom }
+		x = 8
+		y = 9
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+focus = {
+		id = USA_Lower_Class_Decade
+		text = " Lower Class and Rural Growth "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_Ideal_American_Decade }
+		x = 8
+		y = 10
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		
+		}
+	}
+focus = {
+		id = USA_leavittown
+		text = " Leavittown and American Suburbia "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_Lower_Class_Decade }
+		x = 8
+		y = 11
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+			date > 1947.10.1
+				}
+
+	completion_reward = {
+		every_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = Urban_Center
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+			358 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			816 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = Urban_Center
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+			819 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			820 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			821 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			822 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			823 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			824 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+	}
+	
+focus = {
+		id = USA_microwave
+		text = " Invention of the Microwave "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_leavittown }
+		x = 9
+		y = 12
+		relative_position_id = USA_continue_the_new_deal
+		cost = 1
+
+		available_if_capitulated = yes
+		available = {
+			date > 1947.10.1
+				}
+
+	completion_reward = {
+		add_stability 0.02
+		modify_building_resources = {
+        	  			 building = industrial_complex
+        	  			 resource = electronics
+        	  			 amount = 2
+        					}
+		}
+	}
+focus = {
+		id = USA_transistor
+		text = " Invention of the Transistor "
+		icon = GFX_transistorfocus
+		prerequisite = { focus = USA_microwave }
+		x = 9
+		y = 13
+		relative_position_id = USA_continue_the_new_deal
+		cost = 1
+
+		available_if_capitulated = yes
+		available = {
+			date > 1947.10.1
+				}
+
+	completion_reward = {
+		add_stability = 0.01
+		modify_building_resources = {
+        	  			 building = industrial_complex
+        	  			 resource = electronics
+        	  			 amount = 4
+        					}
+		}
+	}
+#--------------------Boom_Economy_1950
+focus = {
+		id = USA_1950_Boom_Economy
+		text = " Economy of the 50's "
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = USA_leavittown }
+		prerequisite = { focus = USA_Trade_with_Europe }
+		prerequisite = { focus = USA_Post_War_Science_Boom }
+		x = 5
+		y = 13
+		relative_position_id = USA_continue_the_new_deal
+		cost = 15
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 5
+			add_stability = 0.10
+			
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 5
+				category = industry
+					}
+		}
+	}
+
+#----------------------America_1950s
+focus = {
+		id = USA_Wage_Growth
+		text = " Improve Wages "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_1950_Boom_Economy }
+		x = 4
+		y = 14
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.025
+			
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+focus = {
+		id = USA_1950_Optimism
+		text = " Optimistic Society "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_1950_Boom_Economy }
+		x = 6
+		y = 14
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 2
+			add_stability = 0.03
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+focus = {
+		id = USA_1950_Population_Growth
+		text = " Post War Population Boom "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_1950_Boom_Economy }
+		x = 8
+		y = 14
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			every_owned_state = {
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+			
+				}
+			}
+		}
+	}
+
+focus = {
+		id = USA_family_1950
+		text = " The 1950s American Family "
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = USA_1950_Population_Growth }
+		prerequisite = { focus = USA_1950_Optimism }
+		prerequisite = { focus = USA_Wage_Growth }
+		x = 6
+		y = 15
+		relative_position_id = USA_continue_the_new_deal
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1955.2.1
+		}
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+
+#------------------Public Sector Innovation
+focus = {
+		id = USA_Public_Sector_Innovation
+		text = " Public Sector Innovation "
+		icon = GFX_focus_generic_self_management_shine
+		prerequisite = { focus = USA_1950_Boom_Economy }
+		x = -2
+		y = 14
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+focus = {
+		id = USA_NACA_Innovation
+		text = " NACA Design Breakthroughs "
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = USA_Public_Sector_Innovation }
+		x = -2
+		y = 15
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fighters
+				bonus = 1.5
+				uses = 1
+				technology = jet_fighter2
+				technology = jet_fighter3
+				technology = jet_fighter4
+			}
+			
+		}
+	}
+
+
+
+
+focus = {
+		id = USA_Highway_Act_1956
+		text = " Federal Aid Highway Act of 1956 "
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = USA_NACA_Innovation }
+		x = -2
+		y = 16
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		available = {
+			date > 1956.6.29
+			has_completed_focus = USA_Fish_Wildlife
+				}
+
+		completion_reward = {
+			add_stability = 0.05
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+			
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = no
+			
+					}
+			}
+		}
+	}
+	
+focus = {
+		id = USA_NASA_Founding
+		text = " Found NASA "
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Highway_Act_1956 }
+		x = -2
+		y = 17
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		available = {
+			date > 1958.7.29
+				}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fighters
+				bonus = 1.5
+				uses = 1
+				technology = space_technology1
+				technology = space_technology2
+			}
+			
+		}
+	}
+#NASA
+focus = {
+		id = USA_NASA_Focus
+		text = " NASA Focus's "
+		icon = GFX_usa_nasa
+		x = -19
+		y = 0
+		cost = 0
+
+		available_if_capitulated = yes
+		
+		available = {
+			has_completed_focus = USA_NASA_Founding
+				}
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+focus = {
+		id = USA_Human_Spaceflight
+		text = " NASA Human Spaceflight Programs"
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_NASA_Focus }
+		x = -2
+		y = 1
+		relative_position_id = USA_NASA_Focus
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = USA_space_training
+		text = " Space Training "
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Human_Spaceflight }
+		x = -2
+		y = 1
+		relative_position_id = USA_Human_Spaceflight
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	
+	focus = {
+		id = USA_Project_Mercury
+		text = " Project Mercury "
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_NASA_Focus }
+		prerequisite = { focus = USA_Exlporer_one }
+		prerequisite = { focus = USA_space_training }
+		x = 0
+		y = 3
+		relative_position_id = USA_Human_Spaceflight
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	focus = {
+		id = USA_Project_Gemini
+		text = " Project Gemini "
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Project_Mercury }
+		x = 0
+		y = 4
+		relative_position_id = USA_Human_Spaceflight
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	focus = {
+		id = USA_Project_Apollo
+		text = " Project Apollo "
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Project_Gemini }
+		prerequisite = { focus = USA_Lunar_Rovers }
+		x = 0
+		y = 5
+		relative_position_id = USA_Human_Spaceflight
+		
+		cost = 15
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = USA_Sats
+		text = " NASA Satillite Programs "
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_NASA_Focus }
+		x = 0
+		y = 1
+		relative_position_id = USA_NASA_Focus
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	focus = {
+		id = USA_Exlporer_one
+		text = "Launch Explorer One"
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Sats }
+		x = 0
+		y = 1
+		relative_position_id =  USA_Sats
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	focus = {
+		id = USA_Lunar_Impactors
+		text = "Launch Lunar Impactors"
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Exlporer_one }
+		x = 0
+		y = 2
+		relative_position_id =  USA_Sats
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	focus = {
+		id = USA_Lunar_Landers
+		text = "Launch Lunar Landers"
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Lunar_Impactors }
+		x = 0
+		y = 3
+		relative_position_id =  USA_Sats
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	
+	focus = {
+		id = USA_Lunar_Rovers
+		text = "Launch Lunar Rovers"
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Lunar_Landers }
+		x = 0
+		y = 4
+		relative_position_id =  USA_Sats
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = USA_Interplan_prog
+		text = " NASA Interplanetary Programs "
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_NASA_Focus }
+		x = 2
+		y = 1
+		relative_position_id = USA_NASA_Focus
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+	
+	focus = {
+		id = USA_Mars_Probes
+		text = " NASA Mars Programs "
+		icon = GFX_usa_nasa
+		prerequisite = { focus = USA_Interplan_prog }
+		prerequisite = { focus = USA_Lunar_Impactors }
+		x = 0
+		y = 3
+		relative_position_id = USA_Interplan_prog
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		
+
+		completion_reward = {
+			
+			
+		}
+	}
+
+#---------------------Private Sector Innovation
+focus = {
+		id = USA_Private_Private_Sector_Innovation
+		text = " Private Sector Innovation "
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = USA_1950_Boom_Economy }
+		x = 2
+		y = 14
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+focus = {
+		id = USA_Television
+		text = " Color TV "
+		icon = GFX_focus_color_tv
+		prerequisite = { focus = USA_Private_Private_Sector_Innovation }
+		prerequisite = { focus = USA_Wage_Growth }
+		x = 3
+		y = 15
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			modify_building_resources = {
+        	  			 building = industrial_complex
+        	  			 resource = electronics
+        	  			 amount = 1
+        					}
+		}
+	}
+focus = {
+		id = USA_Auto_Industry
+		text = " U.S. Auto Industry "
+		icon = GFX_auto_cars
+		prerequisite = { focus = USA_Private_Private_Sector_Innovation }
+		x = 1
+		y = 15
+		relative_position_id = USA_continue_the_new_deal
+		cost = 2
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			modify_building_resources = {
+        	  			 building = industrial_complex
+        	  			 resource = electronics
+        	  			 amount = 1
+        					}
+			modify_building_resources = {
+        	  			 building = industrial_complex
+        	  			 resource = vehicles
+        	  			 amount = 4
+        					}
+			modify_building_resources = {
+        	  			 building = industrial_complex
+        	  			 resource = steel
+        	  			 amount = -1
+        					}
+		}
+	}
+
+focus = {
+		id = USA_Arts_Decisions
+		text = " 1950s Arts "
+		icon = GFX_focus_color_tv
+		prerequisite = { focus = USA_Television }
+		x = 2
+		y = 16
+		relative_position_id = USA_continue_the_new_deal
+		cost = 0
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_national_focus = USA_Arts_Focus
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+focus = {
+		id = USA_Private_Private_Sector_Innovation
+		text = " Private Sector Innovation "
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = USA_1950_Boom_Economy }
+		x = 2
+		y = 14
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_national_focus = USA_Arts_Focus
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+#Arts
+	
+focus = {
+		id = USA_Arts_Focus
+		text = " Arts and Entertainment "
+		icon = GFX_goal_generic_consumer_goods
+		
+		relative_position_id = USA_continue_the_new_deal
+		x = -25
+		y = 0
+		cost = 0
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+#Set Paths
+	
+focus = {
+		id = USA_TV
+		text = " Television "
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = USA_Arts_Focus }
+		relative_position_id = USA_Arts_Focus
+		x = -2
+		y = 1
+		cost = 1
+		
+		
+		available = {
+			has_completed_focus = USA_Arts_Decisions
+			}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+focus = {
+		id = USA_Books
+		text = " Books "
+		icon = GFX_goal_generic_consumer_goods
+		relative_position_id = USA_Arts_Focus
+		prerequisite = { focus = USA_Arts_Focus }
+		x = 0
+		y = 1
+		cost = 1
+		
+		
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	
+focus = {
+		id = USA_Radio
+		text = " Radio "
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = USA_Arts_Focus }
+		relative_position_id = USA_Arts_Focus
+		x = 2
+		y = 1
+		cost = 1
+		
+		available = {
+			has_completed_focus = USA_Arts_Decisions
+			}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+	
+#Actual Focus	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+#---------------Europe(1950s)
+focus = {
+		id = USA_Marshall_Plan
+		text = " Marshall Plan "
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = USA_1950_Boom_Economy }
+		prerequisite = { focus = USA_Improve_Relations_With_Colonies }
+		x = 10
+		y = 14
+		relative_position_id = USA_continue_the_new_deal
+		cost = 20
+
+		available_if_capitulated = yes
+		available = {
+			date > 1947.10.1
+				}
+
+		completion_reward = {
+			ENG = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		    FRA = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+			BEL = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			HOL = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			LUX = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			ITA = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			AUS = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+			ENG = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			SWI = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			NOR = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			DEN = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+			POR = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			TUR = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+			GRE = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IRE = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			ICE = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			SWE = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			ENG = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			WGR = {
+				every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			
+				}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			
+			
+		}
+	}
+focus = {
+		id = USA_Free_Trade_Europe
+		text = " Free Trade with Europe "
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = USA_Marshall_Plan }
+		x = 10
+		y = 15
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 5
+			add_stability = 0.10
+			
+		WGR = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		FRA = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		WGR = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		ENG = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		LUX = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		BEL = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		HOL = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		POR = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		ITA = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		IRE = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		NOR = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+		DEN = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+					}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+	}
+
+
+
+
+
+
+
+
+
+#----------------Focus_for_Military_Production
+	focus = {
+		id = USA_Mass_Production_1
+		text = " Mass Production of Military Goods "
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = USA_wartime_industry}
+		x = 4
+		y = 8
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 50000
+				}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 5000
+				}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 5000
+				}
+		}
+	}
+	focus = {
+		id = USA_Mass_Production_2
+		text = " Export More Armaments to Western Europe "
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = USA_Mass_Production_1}
+		x = 4
+		y = 9
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_Mass_Production_3
+		text = " Export Armaments to British and Former British Colonies "
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = USA_Mass_Production_2}
+		x = 4
+		y = 10
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			RAJ = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+					}
+				}
+			CAN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+					}
+				}
+			EGY = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+					}
+				}
+			SAF = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+					}
+				}
+			ISR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+					}
+				}
+			PAK = { 
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+					}
+				}
+			ASR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+					}
+				}
+			NZL = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 2000
+					}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 1000
+					}
+				}
+		}
+	}
+	focus = {
+		id = USA_Mass_Production_4
+		text = " Technological Advancement via Industry"
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = USA_Mass_Production_3 }
+		x = 4
+		y = 11
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 50000
+				}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 5000
+				}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 5000
+				}
+		}
+	}
+#------------------------------------USA_Wunderwaffe
+#----------------------Nuclear_wunderwaffe
+	focus = {
+		id = USA_Nuclear_Weapons_II
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = USA_manhattan_project }
+		text = " Los Alamos National Laboratory "
+		
+		x = 0
+		y = 2
+		relative_position_id = USA_scientist_haven
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_nuclear_bombs = 5
+			add_tech_bonus = {
+				name = USA_manhattan_project
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	focus = {
+		id = USA_Nuclear_Weapons_III
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = USA_Nuclear_Weapons_II }
+		text = " Nevada Test Range "
+		
+		x = 0
+		y = 3
+		relative_position_id = USA_scientist_haven
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_nuclear_bombs = 25
+			add_tech_bonus = {
+				name = USA_manhattan_project
+				bonus = 0.50
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+	focus = {
+		id = USA_Nuclear_Weapons_IV
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = USA_Nuclear_Weapons_III }
+		text = " More Nuclear Sites "
+		
+		x = 0
+		y = 4
+		relative_position_id = USA_scientist_haven
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_nuclear_bombs = 50
+				
+			add_tech_bonus = {
+				name = USA_manhattan_project
+				bonus = 0.50
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+#--------------------Rocketry_Wunderwaffe
+	focus = {
+		id = USA_Rocketry
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = USA_manhattan_project }
+		text = " Order NACA to Develop Long Range Rockets "
+		
+		x = -2
+		y = 2
+		relative_position_id = USA_scientist_haven
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_Rocketry
+				bonus = 1.0
+				uses = 1
+				category = rocketry
+			}
+		}
+	}
+	focus = {
+		id = USA_Rocketry_university
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = USA_Rocketry }
+		text = " Enlist American Universities "
+		
+		x = -2
+		y = 3
+		relative_position_id = USA_scientist_haven
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_Rocketry
+				bonus = 1.0
+				uses = 1
+				category = rocketry
+			}
+		}
+	}
+	focus = {
+		id = USA_Operation_Paperclip
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = USA_Rocketry_university }
+		text = " Enlist Former German Scientist via Operation Paperclip "
+		
+		x = -2
+		y = 4
+		relative_position_id = USA_scientist_haven
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_Rocketry
+				bonus = 1.0
+				uses = 1
+				category = rocketry
+			}
+		}
+	}
+#--------------------US_TECH_II
+	focus = {
+		id = USA_Post_War_Science_Boom
+		icon = GFX_focus_research
+		prerequisite = { focus = USA_Operation_Paperclip }
+		prerequisite = { focus = USA_Nuclear_Weapons_IV }
+		prerequisite = { focus = USA_Mass_Production_4 }
+		text = " Post War Science Boom "
+		
+		x = 0
+		y = 5
+		relative_position_id = USA_scientist_haven
+		cost = 10
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	}
+#---------------------------------------------Geopoltical
+	
+	focus = {
+		id = USA_SAFTA
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = USA_war_plan_gray }
+		prerequisite = { focus = USA_military_construction }
+		text = " South American Free Trade Agreement "
+		x = -2
+		y = 5
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = USA_NATO
+		icon = GFX_NATO
+		prerequisite = { focus = USA_war_plan_gray }
+		mutually_exclusive = { focus = USA_hemisphere_defense }
+		text = " Form NATO Alliance "
+		x = 2
+		y = 5
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_faction = Allies
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = NATO
+			}
+			add_to_faction = FRA
+			add_to_faction = FRA
+			add_to_faction = ENG
+			add_to_faction = BEL
+			add_to_faction = HOL
+			add_to_faction = NOR
+			add_to_faction = DEN
+			add_to_faction = ITA
+			add_to_faction = POR
+			add_to_faction = CAN
+			add_to_faction = LUX
+			add_to_faction = ICE
+		}
+	}
+focus = {
+		id = USA_Solidify_Alliance
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = USA_NATO 
+			focus = USA_hemisphere_defense
+		}
+		text = " Solidify U.S. Alliances"
+		
+		x = 0
+		y = 6
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1949.1.1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		every_country = {
+			if = {
+				limit = {
+					is_in_faction = NATO
+						}
+					USA = {
+						add_opinion_modifier = {
+							target = every_country
+							modifier = large_increase
+						}
+					}
+					every_country = {
+						add_opinion_modifier = {
+							target = USA
+							modifier = large_increase
+						}
+					}
+					
+				}
+			}
+		}
+	}
+focus = {
+		id = USA_Expand_US_Alliances
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = USA_Solidify_Alliance }
+		text = " Expand U.S. Alliances "
+		x = 0
+		y = 7
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			USA = {
+					add_opinion_modifier = {
+						target = every_country
+						modifier = large_increase
+					}
+				}
+				every_country = {
+					add_opinion_modifier = {
+						target = USA
+						modifier = large_increase
+					}
+				}
+			
+		}
+	}
+focus = {
+		id = USA_Improve_Relations_With_Colonies
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = USA_Expand_US_Alliances }
+		text = " Improve Colonial Ties "
+		x = 0
+		y = 8
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			
+		}
+	}
+
+focus = {
+		id = USA_Canada_Question
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = USA_Improve_Relations_With_Colonies }
+		text = " Canadian Question "
+		x = 0
+		y = 10
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			
+		}
+	}
+	
+	
+focus = {
+		id = USA_Canada_Question_Take_Action
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = USA_Canada_Question }
+		text = " Canada Should Join the USA "
+		x = -1
+		y = 11
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			USA = {
+				add_state_core = 276
+			}
+			
+			USA = {
+				add_state_core = 682
+			}
+			
+			USA = {
+				add_state_core = 466
+			}
+			
+			USA = {
+				add_state_core = 468
+			}
+			
+			USA = {
+				add_state_core = 465
+			}
+			
+			
+			USA = {
+				add_state_core = 464
+			}
+			
+			USA = {
+				add_state_core = 683
+			}
+			
+			USA = {
+				add_state_core = 472
+			}
+			
+			USA = {
+				add_state_core = 469
+			}
+			
+			USA = {
+				add_state_core = 470
+			}
+			
+			USA = {
+				add_state_core = 473
+			}
+			
+			USA = {
+				add_state_core = 471
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+focus = {
+		id = USA_Canada_Question_Backoff
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = USA_Canada_Question }
+		text = " Canada is not the USA! "
+		x = 1
+		y = 11
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			
+		}
+	}		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+focus = {
+		id = USA_Invite_WGR
+		text = " Invite West Germany into NATO "
+		icon = GFX_NATO
+		prerequisite = { focus = USA_Expand_US_Alliances }
+		prerequisite = { focus = USA_NATO }
+		x = 2
+		y = 8
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1955.5.1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_to_faction = WGR
+		}
+	}
+focus = {
+		id = USA_NATO_POLAND
+		icon = GFX_NATO
+		prerequisite = { focus = USA_Invite_WGR }
+		text = " Invite Poland into NATO "
+		x = 2
+		y = 9
+		relative_position_id = USA_intervention_in_the_americas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			POL = {
+				has_government = {
+					democratic
+					}
+				has_government= {
+					neutrality
+					}
+					
+			}
+		}
+has
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_to_faction = POL		
+		}
+	}
+
+
+
+
+
+
+
+
+
+#-----------------------------------------------Poltical
+#--------National Politics
+focus = {
+		id = USA_National_School_Lunch
+		icon = GFX_goal_generic_trade
+		text = " National School Lunch Act "
+		prerequisite = { focus = USA_federal_housing_act }
+		x = 0
+		y = 4
+		relative_position_id = USA_wpa
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1946.6.4
+			congress_low_support_trigger = yes
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			every_owned_state = {
+				#State_Population_1 (50000)
+						}
+		}
+	}
+	
+focus = {
+		id = USA_Small_Biz
+		icon = GFX_goal_generic_production
+		text = " Small Business Administration Act "
+		prerequisite = { focus = USA_National_School_Lunch }
+		x = 0
+		y = 5
+		relative_position_id = USA_wpa
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1953.7.30
+			congress_medium_support_trigger = yes
+		}
+	
+		completion_reward = {
+			#add_ideas = SBA_1
+		}
+	}
+focus = {
+		id = USA_Fish_Wildlife
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = USA_Small_Biz }
+
+		text = " Fish and Wildlife Act of 1956 "
+		x = 0
+		y = 6
+		relative_position_id = USA_wpa
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1956.4.27
+			congress_medium_support_trigger = yes
+		}
+		completion_reward = {
+			#add_ideas = Fish_Wildlife
+		}
+	}
+focus = {
+		id = USA_Nuclear_Act
+		text = " Price - Anderson Nuclear Industries Indemnity Act  "
+		icon = GFX_topbar_nuke
+		prerequisite = { focus = USA_Fish_Wildlife }
+		prerequisite = { focus = USA_Nuclear_Weapons_IV }
+		x = 2
+		y = 11
+		relative_position_id = USA_wpa
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1957.9.9
+			congress_high_support_trigger = yes
+		}
+
+
+		completion_reward = {
+			add_stability = 0.01
+			every_owned_state = {
+				add_building_construction = {
+							type = nuclear_reactor
+							level = 1
+							instant_build = yes
+					}
+				}
+			}
+		}
+	
+focus = {
+		id = USA_Civil_Rights_1957
+		text = " 1957 Civil Rights Act "
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = USA_Fish_Wildlife }
+		prerequisite = { focus = USA_Old_Order } 
+		x = 0
+		y = 7
+		relative_position_id = USA_wpa
+
+		cost = 12
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1957.9.9
+			congress_high_support_trigger = yes
+		}
+
+
+		completion_reward = {
+			add_stability = 0.01
+			#add_ideas = civil_rights_1
+		}
+	}
+
+focus = {
+		id = USA_1958_Transportation
+		icon = GFX_goal_generic_construct_infrastructure
+		text = " 1958 Transportation Act "
+		prerequisite = { focus = USA_Civil_Rights_1957 }
+		x = 0
+		y = 8
+		relative_position_id = USA_wpa
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1958.1.1
+			congress_medium_support_trigger = yes
+		}
+		
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+focus = {
+		id = USA_1958_Aviation
+		icon = GFX_goal_generic_build_airforce
+		text = " 1958 Federal Aviation Agency/Administration Act "
+		prerequisite = { focus = USA_1958_Transportation }
+		x = 0
+		y = 9
+		relative_position_id = USA_wpa
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1958.1.1
+			congress_medium_support_trigger = yes
+		}
+		
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+focus = {
+		id = USA_Civil_Rights_1960
+		text = " 1960 Civil Rights Act "
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = USA_1958_Aviation }
+		x = 0
+		y = 10
+		relative_position_id = USA_wpa
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1960.5.9
+			congress_high_support_trigger = yes
+		}
+
+
+		completion_reward = {
+			add_stability = 0.02
+			#add_ideas = civil_rights_2
+		}
+	}
+focus = {
+		id = USA_1962_Trade
+		icon = GFX_goal_generic_trade
+		text = " Trade Expansion Act "
+		prerequisite = { focus = USA_Civil_Rights_1960 }
+		x = 0
+		y = 11
+		relative_position_id = USA_wpa
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1962.10.11
+			congress_high_support_trigger = yes
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+
+#---------------------------------------------------------------------------------------------Military Politics
+focus = {
+		id = USA_GI_BILL
+		icon = GFX_focus_generic_military_mission
+		text = " Sign U.S. GI Bill "
+		prerequisite = { focus = USA_federal_housing_act }
+
+		x = -2
+		y = 4
+		relative_position_id = USA_wpa
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1944.6.22
+			congress_low_support_trigger = yes
+		}
+	
+		completion_reward = {
+
+		}
+	}
+
+
+focus = {
+		id = USA_Civil_Air_Patrol
+		text = " Incorporate Civil Air Patrol "
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = USA_GI_BILL }
+		x = -2
+		y = 5
+		relative_position_id = USA_wpa
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1948.5.26
+			congress_low_support_trigger = yes
+		}
+
+
+		completion_reward = {
+			manpower = 7000
+		}
+	}
+focus = {
+		id = USA_CIA_ACT
+		icon = GFX_CIA
+		text = " Sign CIA Act "
+		prerequisite = { focus = USA_Civil_Air_Patrol }
+		x = -14
+		y = 6
+		relative_position_id = USA_wpa
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1949.5.27
+			congress_low_support_trigger = yes
+		}
+
+		completion_reward = {
+			#add_ideas = CIA_1
+		}
+	}
+#---------------USA CIA ACT Stuff--------------------
+focus = {
+		id = USA_CIA_1
+		icon = GFX_CIA
+		text = " CIA Actions "
+		prerequisite = { focus = USA_Civil_Air_Patrol }
+		x = 0
+		y = 1
+		relative_position_id = USA_CIA_ACT
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1950.1.1
+			congress_low_support_trigger = yes
+		}
+
+		completion_reward = {
+			
+		}
+	}
+	
+
+	
+	
+	
+	
+#old order
+focus = {
+		id = USA_Old_Order
+		icon = GFX_American_Eagle
+		mutually_exclusive = { focus = USA_Go_With_Alt_Hist }
+		text = " What is Wrong with America? "
+		x = 7
+		y = 7
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			congress_low_support_trigger = yes
+		}
+
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+#USA Alt History
+
+focus = {
+		id = USA_Go_With_Alt_Hist
+		icon = GFX_Broken_American_Eagle
+		mutually_exclusive = { focus = USA_Old_Order }
+		text = " Change America Now!  "
+		x = 2
+		y = 7
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_medium_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			
+		}
+	}
+
+#Socialist Header 1950s
+
+focus = {
+		id = USA_Go_With_Communist_1950s
+		icon = GFX_Broken_American_Eagle
+		prerequisite = { focus = USA_Go_With_Alt_Hist }
+		mutually_exclusive = { focus = USA_Go_With_Fascist_1950s }
+		relative_position_id = USA_Go_With_Alt_Hist 
+		text = " American Proleteriat  "
+		x = -4
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+				}
+			set_party_name = { 
+				ideology = communism
+				long_name = "US Joint Leftist Party"
+				name = "US Joint eftist Party" 
+			}
+		}
+	}
+	
+focus = {
+		id = USA_Go_With_Left_Liberty_1950s
+		icon = GFX_Broken_American_Eagle
+		prerequisite = { focus = USA_Go_With_Communist_1950s }
+		mutually_exclusive = { focus = USA_Go_With_Left_Auth_1950s }
+		mutually_exclusive = { focus = USA_Go_With_Left_Center_1950s }
+		relative_position_id = USA_Go_With_Communist_1950s
+		text = " Promote Anarcho Communist Economic Theory  "
+		x = -2
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+				}
+			set_party_name = { 
+				ideology = communism
+				long_name = "US Anarcho-Communist Party"
+				name = "US Anarcho-Communist Party" 
+			}
+		}
+	}
+	
+focus = {
+		id = USA_Go_With_Left_Center_1950s
+		icon = GFX_Broken_American_Eagle
+		prerequisite = { focus = USA_Go_With_Communist_1950s }
+		mutually_exclusive = { focus = USA_Go_With_Left_Auth_1950s }
+		mutually_exclusive = { focus = USA_Go_With_Left_Liberty_1950s }
+		relative_position_id = USA_Go_With_Communist_1950s
+		text = " Promote Centrist Communist Economic Theory  "
+		x = 0
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+				}
+			set_party_name = { 
+				ideology = communism
+				long_name = "US Centrist Communist Party"
+				name = "US Centrist Communist Party" 
+			}
+		}
+	}
+	
+focus = {
+		id = USA_Go_With_Left_Auth_1950s
+		icon = GFX_Broken_American_Eagle
+		prerequisite = { focus = USA_Go_With_Communist_1950s }
+		mutually_exclusive = { focus = USA_Go_With_Left_Center_1950s }
+		mutually_exclusive = { focus = USA_Go_With_Left_Liberty_1950s }
+		relative_position_id = USA_Go_With_Communist_1950s
+		text = " Promote Marxist Leninist Economic Theory  "
+		x = 2
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+				}
+			set_party_name = { 
+				ideology = communism
+				long_name = "US Marxist Leninist Party"
+				name = "US Marxist Leninist Party" 
+			}
+		}
+	}
+	
+#revolution section
+
+focus = {
+		id = USA_Go_With_Left_Peaceful_Reform
+		icon = GFX_Broken_American_Eagle
+		prerequisite = { focus = USA_Go_With_Communist_1950s }
+		mutually_exclusive = { focus = USA_Go_With_Left_Violent_Revolution }
+		
+		relative_position_id = USA_Go_With_Communist_1950s
+		text = " Promote Marxist Leninist Economic Theory  "
+		x = 2
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+				}
+		}
+	}
+	
+focus = {
+		id = USA_Go_With_Left_Peaceful_Reform
+		icon = GFX_Broken_American_Eagle
+		mutually_exclusive = { focus = USA_Go_With_Left_Violent_Revolution }
+		prerequisite = { focus = USA_Go_With_Left_Center_1950s
+		focus = USA_Go_With_Left_Liberty_1950s
+		focus = USA_Go_With_Left_Auth_1950s
+		}
+		relative_position_id = USA_Go_With_Communist_1950s
+		text = " Communist Call for Peaceful Revolution "
+		x = 1
+		y = 2
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+				}
+		}
+	}
+	
+focus = {
+		id = USA_Go_With_Left_Violent_Revolution
+		icon = GFX_Broken_American_Eagle
+		mutually_exclusive = { focus = USA_Go_With_Left_Peaceful_Reform }
+		prerequisite = { focus = USA_Go_With_Left_Center_1950s
+		focus = USA_Go_With_Left_Liberty_1950s
+		focus = USA_Go_With_Left_Auth_1950s
+
+		}
+		relative_position_id = USA_Go_With_Communist_1950s
+		text = " We Shall Overthrow the Bourgoise at any cost!  "
+		x = -1
+		y = 2
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_stability = -0.25
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+				}
+		}
+	}
+
+#Violent Revolution Paths
+
+focus = {
+		id = USA_Go_With_Left_Civil_War
+		icon = GFX_Broken_American_Eagle
+		mutually_exclusive = { focus = USA_Go_With_Left_Peaceful_Reform }
+		prerequisite = { focus = USA_Go_With_Left_Center_1950s
+		focus = USA_Go_With_Left_Liberty_1950s
+		focus = USA_Go_With_Left_Auth_1950s
+
+		}
+		relative_position_id = USA_Go_With_Communist_1950s
+		text = " Communist Delcare Seperatist State!  "
+		x = -1
+		y = 2
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+
+		completion_reward = {
+			add_stability = -0.25
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+				
+			hidden_effect = {
+				RAM = {
+					add_state_core = 819
+					add_state_core = 820
+					add_state_core = 394
+					add_state_core = 391
+					add_state_core = 821
+					add_state_core = 825
+					add_state_core = 826
+					add_state_core = 797
+					add_state_core = 818
+					add_state_core = 822
+					add_state_core = 395
+					add_state_core = 393
+					add_state_core = 281
+					add_state_core = 629
+					add_state_core = 686
+					add_state_core = 790
+					add_state_core = 261
+					add_state_core = 396
+				}
+			}
+			USA = {
+				release = RAM
+			}
+			RAM = {	
+				hidden_effect = {
+					remove_idea = recent_collectivization
+					set_province_controller = 6713
+					load_oob = "RAM_Civil_War"	
+					add_manpower = 1000000
+					RAM = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 200000
+						}
+						add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 20000
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment
+							amount = 17500
+						}
+						393 = {
+							add_building_construction = {
+								type = bunker
+								level = 20
+								province = 9724
+								instant_build = yes
+							}
+						}
+						822 = {
+							add_building_construction = {
+								type = bunker
+								level = 20
+								province = 4569
+								instant_build = yes
+							}
+						}
+						820 = {
+							add_building_construction = {
+								type = bunker
+								level = 20
+								province = 9450
+								instant_build = yes
+							}
+						}
+						819 = {
+							add_building_construction = {
+								type = bunker
+								level = 20
+								province = 6710
+								instant_build = yes
+							}
+						}
+						396 = {
+							add_building_construction = {
+								type = bunker
+								level = 20
+								province = 6713
+								instant_build = yes
+							}
+						}
+					}
+				}
+				create_faction = Revolutionary-American-Assistance-Leauge
+			}
+			USA = {
+				hidden_effect = {
+					country_event = { id = USAcivilwar.1  days = 0 }
+					load_oob = "USA_Civil_War"	
+					add_manpower = 1000000
+					USA = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 170000
+						}
+						add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 17000
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment
+							amount = 17500
+						}
+					}
+				}
+				every_owned_state = {
+					add_claim_by = RAM
+					add_core_of = RAM
+				}
+			}
+		}	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+focus = {
+		id = USA_Go_With_Communist_1950s
+		icon = GFX_Broken_American_Eagle
+		prerequisite = { focus = USA_Go_With_Alt_Hist }
+		mutually_exclusive = { focus = USA_Go_With_Fascist_1950s }
+		relative_position_id = USA_Go_With_Alt_Hist 
+		text = " American Proleteriat  "
+		x = -4
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+				}
+			set_party_name = { 
+				ideology = communism
+				long_name = "US Joint Leftist Party"
+				name = "US Joint eftist Party" 
+			}
+		}
+	}
+
+#Fascist Header 1950s 
+
+focus = {
+		id = USA_Go_With_Fascist_1950s
+		icon = GFX_Broken_American_Eagle
+		prerequisite = { focus = USA_Go_With_Alt_Hist }
+		mutually_exclusive = { focus = USA_Go_With_Communist_1950s }
+		relative_position_id = USA_Go_With_Alt_Hist 
+		text = " National Socialist American Worker's Party  "
+		x = 4
+		y = 1
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			congress_high_support_trigger = yes
+			OR = {
+			
+			}
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+				}
+			set_party_name = { 
+				ideology = fascism
+				long_name = "US National Socialist American Worker's Party"
+				name = "US National Socialist American Worker's Party" 
+			}
+		}
+	}
+
+
+#--------------------------------------------------------------------
+#---------------------------Military Stuff---------------------------
+#--------------------------------------------------------------------
+#-----------War Plan World
+focus = {
+		id = USA_warplan_world
+		icon = GFX_goal_generic_territory_or_war
+		text = " Warplan Office "
+		prerequisite = { focus = USA_destroyers_for_bases }
+		prerequisite = { focus = USA_anti_bolshevist_aid }
+		prerequisite = { focus = USA_war_plan_ruby }
+		prerequisite = { focus = USA_war_plan_scarlet_garnet }
+		prerequisite = { focus = USA_war_plan_gray }
+		prerequisite = { focus = USA_NATO }
+		x = 3
+		y = 7
+		relative_position_id = USA_war_plans_division
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = USA_build_the_pentagon
+			date > 1950.1.1
+			}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			
+		}
+	}
+	
+#Invite South America
+focus = {
+		id = USA_Invite_South_America
+		icon = GFX_NATO
+		text = " Invite South American Countries to NATO "
+		x = -3
+		y = 1
+		mutually_exclusive = { focus = USA_NOT_Invite_South_America }
+		prerequisite = { focus = USA_warplan_world }
+		relative_position_id = USA_warplan_world
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_faction = CHL
+			add_to_faction = COL
+			add_to_faction = BRA
+			add_to_faction = PRU
+			add_to_faction = ECU
+			add_to_faction = ARG
+			add_to_faction = VEN
+			}
+	}
+focus = {
+		id = USA_Influence_South_America
+		icon = GFX_NATO
+		text = " Spread American Ideals "
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_Invite_South_America }
+		relative_position_id = USA_Invite_South_America
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			}
+	}
+		
+#No South America NATO
+		
+
+focus = {
+		id = USA_NOT_Invite_South_America
+		icon = GFX_NATO
+		text = " Do Not Invite South America to NATO "
+		x = -1
+		y = 1
+		mutually_exclusive = { focus = USA_Invite_South_America }
+		prerequisite = { focus = USA_warplan_world }
+		relative_position_id = USA_warplan_world
+		cost = 1
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				add_stability = 0.05
+			}
+	}
+
+focus = {
+		id = USA_NOT_Invite_South_America_Sent
+		icon = GFX_NATO
+		text = " Spread Pro-American Sentiment in South America "
+		x = 0
+		y = 1
+		mutually_exclusive = { focus = USA_Invite_South_America }
+		prerequisite = { focus = USA_NOT_Invite_South_America }
+		relative_position_id = USA_NOT_Invite_South_America
+		cost = 1
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			VEN = {
+				 if = {
+					limit = {
+							has_government = democratic
+							}
+
+						add_ideas = NATO_Ally
+					}
+
+				}
+		}
+	}
+
+
+
+
+
+
+
+
+#------------------------------------------------------Army
+#-----------------Special Forces
+focus = {
+		id = USA_air_assault
+		icon = GFX_focus_generic_paratrooper
+		text = " Air Assault Training School "
+		prerequisite = { focus = USA_airborne_divisions }
+		x = -2
+		y = 3
+		relative_position_id = USA_selective_training_act
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			hidden_effect = {
+				#load_oob = USA_1949_Stuff1
+			}
+		}
+	}
+focus = {
+		id = USA_training_schools
+		icon = GFX_USA_advanced_infantry_weapons_medium
+		text = " Special Forces Training Schools "
+		prerequisite = { focus = USA_air_assault }
+		x = -2
+		y = 4
+		relative_position_id = USA_selective_training_act
+
+		cost = 10
+
+		
+
+		available = {
+			date > 1950.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			army_experience = 100
+		}
+	}
+#--------------------------------------------------------------------Armor
+focus = {
+		id = USA_walker_bulldog
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M41 Walker Bulldog "
+		prerequisite = { focus = USA_armored_infantry }
+		x = 0
+		y = 4
+		relative_position_id = USA_support_rock_island
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1948.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+focus = {
+		id = USA_M48_Patton
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M48 Patton "
+		prerequisite = { focus = USA_walker_bulldog }
+		x = 0
+		y = 5
+		relative_position_id = USA_support_rock_island
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1948.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+focus = {
+		id = USA_M60
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M60 "
+		prerequisite = { focus = USA_M48_Patton }
+		x = 0
+		y = 6
+		relative_position_id = USA_support_rock_island
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1948.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+focus = {
+		id = USA_M60_A3
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M60 A3 "
+		prerequisite = { focus = USA_M60 }
+		x = 2
+		y = 7
+		relative_position_id = USA_support_rock_island
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1978.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+focus = {
+		id = USA_M60_A2
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M60 A2 "
+		prerequisite = { focus = USA_M60 }
+		x = 0
+		y = 7
+		relative_position_id = USA_support_rock_island
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1970.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+focus = {
+		id = USA_M60_A1
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M60 A1 "
+		prerequisite = { focus = USA_M60 }
+		x = -2
+		y = 7
+		relative_position_id = USA_support_rock_island
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1963.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+focus = {
+		id = USA_M1
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M1 Abrams "
+		prerequisite = { focus = USA_M60_A1 }
+		prerequisite = { focus = USA_M60_A2 }
+		prerequisite = { focus = USA_M60_A3 }
+		x = 0
+		y = 8
+		relative_position_id = USA_support_rock_island
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1985.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+focus = {
+		id = USA_M1_A1
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M1A1 Abrams "
+		prerequisite = { focus = USA_M1 }
+		x = -1
+		y = 9
+		relative_position_id = USA_support_rock_island
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1986.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+	
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+focus = {
+		id = USA_M1_A2
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M1A2 Abrams "
+		prerequisite = { focus = USA_M1 }
+		x = 1
+		y = 9
+		relative_position_id = USA_support_rock_island
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1986.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+focus = {
+		id = USA_M1_A3
+		icon = GFX_focus_generic_combined_arms
+		text = " Develop M1A3 Abrams "
+		prerequisite = { focus = USA_M1_A2 }
+		prerequisite = { focus = USA_M1_A1 }
+		x = 0
+		y = 10
+		relative_position_id = USA_support_rock_island
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 2023.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+#--------------------Coast Guards
+#--------------------Air Force
+focus = {
+		id = USA_Airforce_1
+		icon = GFX_goal_generic_build_airforce
+		text = " Form United States Air Force Branch "
+		prerequisite = {
+		focus = USA_us_air_force
+		focus = USA_us_army_airforce
+		}
+		x = 0
+		y = 3
+		relative_position_id = USA_escort_fighters
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		completion_reward = {
+			#add_ideas = CIA_1
+		}
+	}
+focus = {
+		id = USA_Airforce_2
+		icon = GFX_goal_generic_build_airforce
+		text = " Form Strategic Air Command (SAC) "
+		prerequisite = { focus = USA_Airforce_1 }
+		x = 0
+		y = 4
+		relative_position_id = USA_escort_fighters
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1946.3.21
+			
+		}
+
+		completion_reward = {
+			#add_ideas = CIA_1
+		}
+	}
+focus = {
+		id = USA_Airforce_3
+		icon = GFX_goal_generic_build_airforce
+		text = " Form United States Air Force Branch "
+		prerequisite = { focus = USA_Airforce_2 }
+		x = 0
+		y = 5
+		relative_position_id = USA_escort_fighters
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1949.5.27
+			
+		}
+
+		completion_reward = {
+			#add_ideas = CIA_1
+		}
+	}
+focus = {
+		id = USA_Airforce_4
+		icon = GFX_goal_generic_build_airforce
+		text = " Form United States Air Force Branch "
+		prerequisite = { focus = USA_Airforce_3 }
+		x = 0
+		y = 6
+		relative_position_id = USA_escort_fighters
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1949.5.27
+			
+		}
+
+		completion_reward = {
+			#add_ideas = CIA_1
+		}
+	}
+focus = {
+		id = USA_Airforce_5
+		icon = GFX_goal_generic_build_airforce
+		text = " Form United States Air Force Branch "
+		prerequisite = { focus = USA_Airforce_4 }
+		x = 0
+		y = 7
+		relative_position_id = USA_escort_fighters
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1949.5.27
+			
+		}
+
+		completion_reward = {
+			#add_ideas = CIA_1
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+#--------------------Marines
+#--------------------Navy
+focus = {
+		id = USA_Post_War_Submarines
+		icon = GFX_goal_generic_navy_submarine
+		text = " Learn from German U-Boats "
+		prerequisite = { focus = USA_unrestricted_submarine_warfare }
+		x = 0
+		y = 2
+		relative_position_id = USA_fleet_submarines
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1948.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fleet_submarines
+				bonus = 1.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+focus = {
+		id = USA_Nuclear_Submarine
+		icon = GFX_goal_generic_navy_submarine
+		text = " USS Nautilus SSN 571 "
+		prerequisite = { focus = USA_Post_War_Submarines  }
+		x = 0
+		y = 3
+		relative_position_id = USA_fleet_submarines
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			date > 1948.1.1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fleet_submarines
+				bonus = 1.5
+				uses = 2
+				category = nuclear_submarine_tech
+			}
+		}
+	}
+#-----------------------------------------------
+#--------------------END OF MOD-----------------
+#-----------------------------------------------
 	
 
 	
