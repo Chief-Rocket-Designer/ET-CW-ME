@@ -1,0 +1,25 @@
+﻿add_namespace = int_economy
+
+country_event = {
+
+    id = int_economy.1 
+    title = int_economy.1.t 
+    desc = int_economy.1.d 
+
+    is_triggered_only = yes
+	
+	trigger = {
+		}
+
+    option = { 
+        name = int_economy.1.a 
+    }
+	
+	option = { 
+        name = int_economy.1.b
+    }
+	
+	option = { 
+        name = int_economy.1.c
+    }
+}
