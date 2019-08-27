@@ -1,0 +1,49 @@
+1. interface/countrypoliticsview.gfx - fixed 2 errors by removing a randomly placed z
+2. common/units/equipment/guided_missiles.txt - fixed 1 error by removing a randomly placed }
+3. common/buildings/00_buildings.txt - fixed 2 errors by correcting the spelling of aluminium (makes it so the aluminium effects work}
+4. common/ideas/economy_gen.txt - fixed 2 errors by using the correct modifiers (TENSION_VOLUNTEER_FORCE_DIVISION changed to send_volunteers_tension & removed VOLUNTEERS_TRANSFER_SPEED because thats not a thing)
+5. common/ideas/international.txt - fixed 1 error by using appropriate values (also compressed the modifiers into production_speed_buildings_factor since it affects all relevant modifiers)
+6. history/states/755-Haixi.txt - fixed 2 errors by fixing a broken limit ( NOT = { has_dlc = "Waking the Tiger"} )
+7. common/autonomous_states/ssr.txt - fixed 1 error by replacing limit with allowed (puppet works!)
+8. common/decisions/categories/00_decision_categories.txt - fixed 1 error by adding a closing bracket to category_exile_forces
+9. common/decisions/categories/DDR_decision_categories.txt - fixed 2 errors by removing a duplicate category and removing an extra } at the extradite_traitors category
+10. common/decisions/DDR_Decision.txt - fixed 5 errors by adding a days_remove duration, otherwise effects go on forever (i made it 90 days for now you can change it)
+11. common/national_focus/ddr.txt - fixed 13 errors by using correct code for tech bonus (use technology not category since special forces is under infantry category) also removed ideas that dont belong there
+12. common/national_focus/ddr.txt - fixed 2 errors by commenting out an idea that does not exist for now (NVA)
+13. common/national_focus/ddr.txt - fixed 1 error by using the correct category for air tech bonus
+14. common/national_focus/finland.txt - fixed 4 errors by using correct code for tech bonus (use technology not category since special forces is under infantry category)
+15. common/national_focus/ram.txt - fixed 3 errors by correcting political_power to add_political_power
+16. common/national_focus/ram.txt - fixed 1 error by moving RAM_Delcare_New_Communist_State down since RAM_ussr_economic_cooperation comes before it
+17. common/national_focus/soviet.txt - fixed 1 error by changing JUG to YUG (im assuming this is yugoslavia?)
+18. common/national_focus/turkey.txt - fixed 1 error by fixing a broken cost value
+19. common/national_focus/turkey.txt - fixed 1 error by removing whatever this is (Air_ = Force)
+20. common/national_focus/turkey.txt - fixed 3 errors by giving appropriate focus names as to not conflict with base game focuses
+21. common/national_focus/turkey.txt - fixed 3 errors by adding missing completion_reward
+22. common/national_focus/turkey.txt - fixed broken completion reward for the join_warsaw_pact focus
+23. common/national_focus/ddr.txt - fixed 2 errors by removing nonexistent focuses (looking at you DDR_Reject_Results)
+24. common/national_focus/turkey.txt - fixed 2 errors by correcting a nonexistent focus (looking at you join_nato)
+25. history/countries/SOV - fixed 2 errors by dismantling faction correctly
+26. common/scripted_effects/buildings_scripted_effects.txt - fixed 2 errors by removing an additional add_ideas
+27. common/scripted_diplomatic_actions/investments_scripted_diplomatic_actions.txt - fixed 1 error by spelling no correctly
+28. events/ColdNews.txt - fixed 1 error by adding a namespace for collapse_econ
+29. events/ColdNews.txt -  fixed 1 error by setting the collapse_econ event to be triggered only otherwise it'll spam everyday
+30. events/ColdNews.txt -  fixed 4 errors by adding a temporary title and description for the events
+31. events/MORE_USA_ELECTION_EVENTS.txt -  fixed 1 error by correcting file format
+32. events/MORE_USA_ELECTION_EVENTS.txt - fixed 5 errors by spelling communism correctly
+33. events/USAcivilwars.txt -  fixed 1 error by correcting file format
+34. events/USAcivilwars.txt - fixed 4 errors by changing visible with trigger
+35. events/coldcrisis.txt - fixed 1 error by correcting file format
+36. events/coldcrisis.txt - fixed 2 errors by removing MTTH (if the event is triggered just set it to trigger after a certain number of days at the trigger)
+37. events/decolonisation.txt - fixed 1 error by correcting file format
+38. events/econ.txt - fixed 1 error by correcting file format
+39. events/korea.txt - fixed 1 error by correcting file format
+40. events/naturaldisasters.txt - fixed 1 error by correcting file format
+41. events/politics.txt - fixed 1 error by correcting file format
+42. events/politics.txt - fixed 3 errors by removing MTTH (if the event is triggered just set it to trigger after a certain number of days at the trigger)
+43. events/saudi.txt - fixed 1 error by correcting file format
+44. events/startup.txt - fixed 1 error by correcting file format
+45. events/startup.txt - fixed 8 errors by removing country_event = { id = naturaldisaster.1 days = 1 }
+46. common/on_actions/More_Elections_USA.txt - fixed 2 errors by moving the date limit to its correct place
+47. common/on_actions/More_Elections_USA.txt - fixed 1 error by removing additional brackets
+48. common/on_actions/event_stuff.txt - fixed 2 errors by adding a missing bracket and moving a limit to its correct place
+49. common/national_focus/ddr.txt - fixed 1 error by spelling ddr correctly (Dissolve_DRR)
