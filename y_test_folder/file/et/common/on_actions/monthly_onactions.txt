@@ -1,0 +1,31 @@
+on_actions = {
+	on_daily = {
+		add_to_variable = {
+			var = MONTHLY_COUNTER
+			value = 1
+		}
+	}
+}
+
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = MONTHLY_COUNTER
+						value = 29
+						compare = greater_than
+					}
+				}
+				every_country = {
+					set_variable = {
+						var = MONTHLY_COUNTER
+						value = 0
+					}
+				}
+				#Put what you want for monthly here
+			}
+		}
+	}
+}

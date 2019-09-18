@@ -1,0 +1,69 @@
+ideas = {
+    country = {
+		national_dictatorship = {
+            removal_cost = -1
+			picture = kgb
+
+            modifier = {
+                mobilization_speed = 0.05
+				surrender_limit = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				planning_speed = 0.05
+				offence = 0.02
+				political_power_gain = 2
+				enemy_partisan_effect = 0.10
+				stability_weekly  = 0.01
+				trade_opinion_factor = -0.25
+				justify_war_goal_time = -0.10
+				license_purchase_cost = 0.40
+				research_speed_factor = -0.20
+				nuclear_production_factor = -0.10
+				
+            }
+        }
+	
+	
+	
+	
+        KGB = {
+            removal_cost = -1
+			picture = kgb
+
+            modifier = {
+                mobilization_speed = 0.05
+				surrender_limit = 0.25
+				send_volunteer_size = 2
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				planning_speed = 0.05
+				offence = 0.05
+				political_power_gain = 2
+				enemy_partisan_effect = -0.10
+				encryption_factor = 0.10
+				decryption_factor = 0.50
+            }
+        }
+		
+		stasi = {
+            removal_cost = -1
+			picture = stasi
+
+			modifier = {
+                mobilization_speed = 0.10
+				surrender_limit = 0.20
+				send_volunteer_size = 1
+				army_core_attack_factor = 0.02
+				army_core_defence_factor = 0.02
+				planning_speed = 0.08
+				offence = 0.08
+				political_power_gain = 2
+				enemy_partisan_effect = -0.15
+				encryption_factor = 0.15
+				decryption_factor = 0.15
+            }
+            
+        }
+	
+    }
+}

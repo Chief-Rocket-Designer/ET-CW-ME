@@ -1,0 +1,72 @@
+#################
+#### DDR GDR ####
+#################
+DDR_Politics_category = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = DDR
+	}
+}
+
+
+DDR_Stasi_Interior_category = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = DDR
+	}
+}
+
+DDR_Stasi_Foreign_category = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = DDR
+	}
+}
+
+DDR_Nationale_Volkesarmee_category = {
+icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = DDR
+	}
+	
+}
+
+
+DDR_Extradite_Traitors_category = {
+	icon = military_operation
+
+	picture = GFX_decision_cat_picture_ger_case_anton
+
+	allowed = {
+		original_tag = DDR
+	}
+
+	visible = {
+		has_government = communism
+		has_completed_focus = Extradite_DDR_Turncoats_for_Trial
+		
+	}
+}
+
+DDR_Form_German_Socialist_Republic_category = {
+	
+	allowed = {
+		original_tag = DDR
+	}
+
+	visible = {
+		has_completed_focus = Secure_Government
+	}
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=764
+	name="STATE_764"
+	manpower = 585579
+	state_category = rural
+
+	history={
+		owner = YUG
+		controller = YUG
+
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = YUG
+		add_core_of = SER
+		
+		1910.1.1 = {
+			owner = AHE
+			add_core_of = AHE
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		
+		1936.1.1 = {
+			owner = YUG
+			add_core_of = YUG
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+	}
+
+	provinces={
+		614 3614 6643 11787
+	}
+}

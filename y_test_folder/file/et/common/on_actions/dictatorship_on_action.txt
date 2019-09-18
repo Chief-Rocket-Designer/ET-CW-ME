@@ -1,0 +1,9 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            every_country = {
+                dictatorship_stuff = yes
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+on_actions = {
+    on_declare_war = { 
+		effect = { 
+			if = { 
+				limit = { 
+						any_country = {
+							has_war_with = USA
+						}
+						set_global_flag = USA_militias
+					}
+				}
+			}
+		}
+	}

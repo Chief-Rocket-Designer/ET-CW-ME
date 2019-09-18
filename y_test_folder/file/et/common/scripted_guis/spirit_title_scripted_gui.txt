@@ -1,0 +1,12 @@
+scripted_gui = {
+	spirit_title_scripted_gui = {
+		context_type = selected_country_context
+		
+		window_name = "spirit_title_scripted_gui"
+		parent_window_token = selected_country_view_info
+		
+		visible = {
+			always = yes
+		}
+	}
+}
