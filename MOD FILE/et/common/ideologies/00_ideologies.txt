@@ -57,6 +57,9 @@ ideologies = {
 			guarantee_tension = 0.15
 			take_states_cost_factor = 0.25
 			annex_cost_factor = 0.5
+			industrial_capacity_factory = 0.1
+			industrial_capacity_factory = 0.15
+			monnthly_population = 0.8
 		}
 		
 		faction_modifiers = {
@@ -150,6 +153,8 @@ ideologies = {
 		
 		modifiers = {
 			justify_war_goal_when_in_major_war_time = -0.80
+			political_power_factor = 0.15
+			monthly_population = -0.3
 		}
 
 		ai_fascist = yes # uses the fascist AI behaviour
@@ -273,6 +278,9 @@ ideologies = {
 			}
 			
 			syndicalism = {
+			}
+			
+			marxism = {
 			}
 		}
 
