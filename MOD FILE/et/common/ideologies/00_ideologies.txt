@@ -60,6 +60,7 @@ ideologies = {
 			industrial_capacity_factory = 0.1
 			industrial_capacity_factory = 0.15
 			monnthly_population = 0.8
+			trade_opinion_factor = 0.4
 		}
 		
 		faction_modifiers = {
@@ -155,6 +156,7 @@ ideologies = {
 			justify_war_goal_when_in_major_war_time = -0.80
 			political_power_factor = 0.15
 			monthly_population = -0.3
+			army_speed_factor = 0.2
 		}
 
 		ai_fascist = yes # uses the fascist AI behaviour
@@ -204,7 +206,8 @@ ideologies = {
 			lend_lease_tension = 0.4
 			send_volunteers_tension = 0.4
 			guarantee_tension = 0.4
-			drift_defence_factor = -0.3	
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
 		}
 		
 		faction_modifiers = {
@@ -216,7 +219,7 @@ ideologies = {
 		ai_neutral = yes # 
 	}
 	
-	islamic = {
+	islamist = {
 	
 		types = {
 		
@@ -224,9 +227,6 @@ ideologies = {
 			}
 			
 			terrorist = {
-			}
-			
-			demo_islam = {
 			}
 			
 			comm_islam = {
@@ -258,7 +258,12 @@ ideologies = {
 		}
 		
 		modifiers = {
-			justify_war_goal_when_in_major_war_time = -0.80
+			partisan_effect = 0.2
+			army_morale_factor = 0.04
+			no_supply_grace = 48
+			minimum_training_level = -0.1
+			army_attack_factor = -0.1
+			army_defence_factor = -0.1
 		}
 
 		ai_fascist = yes # uses the fascist AI behaviour
