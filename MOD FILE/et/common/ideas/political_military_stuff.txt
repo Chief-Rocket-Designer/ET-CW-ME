@@ -1,5 +1,28 @@
 ideas = {
     country = {
+		stalin_death = { 
+			removal_cost = -1
+			picture = kgb
+
+            modifier = {
+                mobilization_speed = -0.05
+				surrender_limit = =0.05
+				army_core_attack_factor = -0.05
+				army_core_defence_factor = -0.05
+				planning_speed = -0.05
+				offence = -0.02
+				political_power_gain = -1
+				enemy_partisan_effect = 0.10
+				stability_weekly  = -0.01
+				trade_opinion_factor = -0.25
+				justify_war_goal_time = 0.10
+				license_purchase_cost = 0.40
+				research_speed_factor = 0.20
+				nuclear_production_factor = -0.15
+				
+            }
+        }
+		
 		national_dictatorship = {
             removal_cost = -1
 			picture = kgb

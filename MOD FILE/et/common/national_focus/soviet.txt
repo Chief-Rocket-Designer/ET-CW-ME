@@ -3102,7 +3102,7 @@ focus_tree = {
 		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 100
 		}
 
 		available_if_capitulated = yes
@@ -3592,6 +3592,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_secret_speech
 		}
+		ai_will_do = {
+			factor = 2
+		}
 		x = 0
 		y = 1
 		completion_reward = {
@@ -3604,6 +3607,9 @@ focus_tree = {
 		icon = GFX_soviet
 		cost = 10
 		relative_position_id = SOV_de-Stalinization
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = SOV_de-Stalinization
 		}
@@ -3616,8 +3622,8 @@ focus_tree = {
 		prerequisite = { 
 			focus = SOV_loosen_up_society
 		}
-		x = 4
-		y = 1
+		x = 6
+		y = 5
 		completion_reward = {
 			add_war_support = -0.2
 		}
@@ -3628,10 +3634,13 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		relative_position_id = SOV_Khrushchev_Thaw
 		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = SOV_Khrushchev_Thaw
 		}
-		x = 4
+		x = 8
 		y = 1
 		completion_reward = {
 			add_opinion_modifier = {
@@ -3691,12 +3700,89 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = SOV_domestic_affairs_Khrush
+		text = "Krushchevs Domestic Policies"
+		icon = GFX_goal_prolet
+		relative_position_id = SOV_Khrushchev_Thaw
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = SOV_Khrushchev_Thaw
+		}
+		x = -8
+		y = 1
+		completion_reward = {
+		}
+	}
 	
+	focus = {
+		id = SOV_Khrush_Command_econ
+		text = "Support Soviet Computer Sectors"
+		icon = GFX_transistorfocus
+		relative_position_id = SOV_domestic_affairs_Khrush
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_domestic_affairs_Khrush
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			modify_building_resources = {
+				building = industrial_complex
+				resource = electronics
+				amount = 3
+        	}
+		}
+	}
 	
+	focus = {
+		id = SOV_Khrush_Pro_Computer_Econ
+		text = "Electonic Command Economy Experiments"
+		icon = GFX_communism_computers
+		relative_position_id = SOV_Khrush_Command_econ
+		mutually_exclusive = { focus = SOV_Khrush_Old_Soviet_Bureacracy } 
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = SOV_Khrush_Command_econ
+		}
+		x = -2
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+			modify_building_resources = {
+				building = industrial_complex
+				resource = electronics
+				amount = 1
+        	}
+		}
+	}
 	
-	
-	
-	
+	focus = {
+		id = SOV_Khrush_Old_Soviet_Bureacracy
+		text = "Old Soviet Bureacracy"
+		icon = GFX_bureacracy
+		relative_position_id = SOV_Khrush_Command_econ
+		mutually_exclusive = { focus = SOV_Khrush_Pro_Computer_Econ } 
+		cost = 10
+		prerequisite = {
+			focus = SOV_Khrush_Command_econ
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = soviet_bureacratic_state
+		}
+	}
 	
 	
 	
@@ -3766,20 +3852,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_research_slot = 2
-			every_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
 			
 			hidden_effect = {
 				SOV = {
 					add_to_variable = {
 						var = national_gdp_changes
-						value = 0.01
+						value = 1000
 					}
 				}
 			}

@@ -7,19 +7,25 @@ ideologies = {
 			conservatism = {
 			}
 		
-			market_liberalism = {
+			liberalism = {
 			}
 			
-			social_liberalism = {
+			social_democracy = {
 			}
 		
 			socialism = {
 			}
 			
-			auth_dem = { 
+			democratic_centrism = {
 			}
 			
-			right_libertarian = {
+			democratic_neutrality = { 
+			}
+			
+			libertarian = {
+			}
+			
+			democratic_coup_governments = { 
 			}
 		}
 		
@@ -57,10 +63,8 @@ ideologies = {
 			guarantee_tension = 0.15
 			take_states_cost_factor = 0.25
 			annex_cost_factor = 0.5
-			industrial_capacity_factory = 0.1
-			industrial_capacity_factory = 0.15
-			monnthly_population = 0.8
-			trade_opinion_factor = 0.4
+			trade_opinion_factor = 0.35
+			trade_laws_cost_factor = 0.10
 		}
 		
 		faction_modifiers = {
@@ -69,9 +73,13 @@ ideologies = {
 		ai_democratic = yes # uses the democratic AI behaviour
 	}
 
+
 	communism = {
 		
 		types = {
+		
+			marxism = {
+			}
 			
 			leninism = {
 			}
@@ -82,6 +90,17 @@ ideologies = {
 			anti_revisionism = {
 			}
 			
+			anarchist_communism = {
+			}
+			
+			democratic_socialism = {
+			}
+			
+			rev_socialism = { 
+			} 
+			
+			naz_bols = {
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -92,7 +111,7 @@ ideologies = {
 			"FACTION_NAME_COMMUNIST_5"
 		}
 		
-		color = { 153 6 6 }
+		color = { 255 0 0 }
 		
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5
@@ -107,7 +126,6 @@ ideologies = {
 		
 		modifiers = {
 			puppet_cost_factor = -0.3
-			foreign_subversive_activities = -0.2
 		}
 		
 		faction_modifiers = {
@@ -154,9 +172,6 @@ ideologies = {
 		
 		modifiers = {
 			justify_war_goal_when_in_major_war_time = -0.80
-			political_power_factor = 0.15
-			monthly_population = -0.3
-			army_speed_factor = 0.2
 		}
 
 		ai_fascist = yes # uses the fascist AI behaviour
@@ -206,8 +221,7 @@ ideologies = {
 			lend_lease_tension = 0.4
 			send_volunteers_tension = 0.4
 			guarantee_tension = 0.4
-			army_attack_factor = 0.1
-			army_defence_factor = 0.1
+			drift_defence_factor = -0.3	
 		}
 		
 		faction_modifiers = {
@@ -219,20 +233,23 @@ ideologies = {
 		ai_neutral = yes # 
 	}
 	
-	islamist = {
+	islamic = {
 	
 		types = {
 		
-			monarchist = {
+			islamic_monarchist = {
 			}
 			
-			terrorist = {
+			islamic_terrorist = {
 			}
 			
-			comm_islam = {
+			democratic_islam = {
 			}
 			
-			nationalist = {
+			communist_islam = {
+			}
+			
+			fascism_islam = {
 			}
 			
 		}
@@ -258,11 +275,12 @@ ideologies = {
 		}
 		
 		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.80
 			partisan_effect = 0.2
-			army_morale_factor = 0.04
+			army_morale_factor = 0.10
 			no_supply_grace = 48
 			minimum_training_level = -0.1
-			army_attack_factor = -0.1
+			army_attack_factor = 0.1
 			army_defence_factor = -0.1
 		}
 
@@ -272,20 +290,17 @@ ideologies = {
 	anarchism = {
 	
 		types = {
+		
+			anarcho_capitalism  = {
+			}
 			
-			anarchist_communism  = {
+			anarcho_communism  = {
 			}
 			
 			anarcho_primitivism = {
 			}
 			
-			mutualism = {
-			}
-			
-			syndicalism = {
-			}
-			
-			marxism = {
+			anarcho_centrism = {
 			}
 		}
 
@@ -304,18 +319,84 @@ ideologies = {
 		faction_impact_on_world_tension = 0.1
 		
 		rules = {
-			can_force_government = yes
+			can_force_government = no
 			can_puppet = no
 			can_send_volunteers = yes
 		}
 		
 		modifiers = {
+			#increased_influence_factor = 0.3 #30% easier to influence
 			generate_wargoal_tension = 0.90
-			join_faction_tension = 1
-			drift_defence_factor = 0.4
+			join_faction_tension = 0.80
+			lend_lease_tension = 0.80
+			send_volunteers_tension = 1
+			guarantee_tension = 1
+			drift_defence_factor = -0.4
 			army_core_defense = 0.15
 			conscription_factor = 0.15
 			army_org_factor = -0.04
+		}
+		
+		faction_modifiers = {
+		}
+
+		can_be_boosted = no
+		can_collaborate = yes
+
+		ai_neutral = yes # 
+	}
+	
+	monarchist = {
+	
+		types = {
+		
+			absolute_monarchy = {
+			}
+			
+			limited_monarchy = {
+			}
+			
+			constitutional_monarchy = {
+			}
+			
+			imperial_monarchy = {
+			}
+			
+			
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+		}
+		
+		color = { 214 203 5 }
+		
+		
+		war_impact_on_world_tension = 0.25		#no major danger
+		faction_impact_on_world_tension = 0.1
+		
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_send_volunteers = yes
+		}
+		
+		modifiers = {
+			#increased_influence_factor = 0.3 #30% easier to influence
+			generate_wargoal_tension = 0.25
+			join_faction_tension = 0.25
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 10
+			guarantee_tension = 5
+			drift_defence_factor = -0.4
+			army_core_defense = -0.02
+			conscription_factor = 0.05
+			army_org_factor = -0.02
+			trade_opinion_factor = 0.01
 		}
 		
 		faction_modifiers = {

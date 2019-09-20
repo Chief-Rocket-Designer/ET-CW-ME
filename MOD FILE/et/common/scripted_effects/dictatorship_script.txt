@@ -1,5 +1,5 @@
 dictatorship_stuff = {
-	every_country = { 
+	if = {
 		limit = { 
 			has_government = fascism
 			has_elections = no
@@ -7,7 +7,7 @@ dictatorship_stuff = {
 		add_ideas = national_dictatorship
 	}
 	
-	every_country = { 
+	if = { 
 		limit = { 
 			has_government = islamic
 			has_elections = no
@@ -15,7 +15,7 @@ dictatorship_stuff = {
 		add_ideas = national_dictatorship
 	}
 	
-	every_country = { 
+	if = { 
 		limit = { 
 			has_elections = yes
 		}

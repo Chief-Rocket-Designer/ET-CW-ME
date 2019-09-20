@@ -1,9 +1,7 @@
 american_militias = { 		
 		if = { 
 				limit = { 
-						any_country = {
-							has_war_with = USA
-						}
+						has_global_flag = USA_militias_off
 						USA = {
 							surrender_progress > 0.35
 							has_country_flag = twond_Amendment
@@ -77,7 +75,8 @@ american_militias = {
 						add_state_core = 806
 						add_state_core = 807
 						add_state_core = 808
-					}			
+					}
+					set_global_flag = USA_militias_off
 				}
 				
 			if = {
