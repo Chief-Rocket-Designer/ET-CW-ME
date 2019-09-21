@@ -1,0 +1,51 @@
+continent = {
+	name = europe
+	political = {
+		strasserism = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe__Generic_10.dds"	
+					"gfx/leaders/Europe/Portrait_Europe__Generic_11.dds"	
+					"gfx/leaders/Europe/Portrait_Europe__Generic_12.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = north_america
+	political = {
+		strasserism = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe__Generic_10.dds"	
+					"gfx/leaders/Europe/Portrait_Europe__Generic_11.dds"	
+					"gfx/leaders/Europe/Portrait_Europe__Generic_12.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = australia
+	political = {
+		strasserism = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe__Generic_10.dds"	
+					"gfx/leaders/Europe/Portrait_Europe__Generic_11.dds"	
+					"gfx/leaders/Europe/Portrait_Europe__Generic_12.dds"
+			}
+		}
+	}
+}
+
+continent = {
+	name = asia
+	political = {
+		strasserism = {
+				male = { 
+					"gfx/leaders/Europe/Portrait_Europe__Generic_10.dds"	
+					"gfx/leaders/Europe/Portrait_Europe__Generic_11.dds"	
+					"gfx/leaders/Europe/Portrait_Europe__Generic_12.dds"
+			}
+		}
+	}
+}

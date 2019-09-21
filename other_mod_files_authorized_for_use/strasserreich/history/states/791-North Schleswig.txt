@@ -1,0 +1,20 @@
+state={
+	id=791
+	name="STATE_791"
+	provinces={
+		332 11251 
+	}
+	history={
+		owner = DEN
+		victory_points = {
+			332 3 
+		}
+		buildings = {
+			infrastructure = 8
+		}
+		add_core_of = DEN
+	}
+	manpower=200000
+	buildings_max_level_factor=2.000
+	state_category=city
+}

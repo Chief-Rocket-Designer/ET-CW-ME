@@ -1,0 +1,96 @@
+spriteTypes = {	
+
+	### Strassler Gang
+	spriteType = {
+		name = "GFX_idea_hitleroof"
+		texturefile = "gfx/interface/ideas/hitleroof.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_strasseristidea"
+		texturefile = "gfx/interface/ideas/hammerswordhand.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_brotherrival"
+		texturefile = "gfx/interface/ideas/GER_brotherrival.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_gregors_hammer"
+		texturefile = "gfx/interface/ideas/GER_gregors_hammer.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_ottos_hammer"
+		texturefile = "gfx/interface/ideas/GER_hammer.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_gregors_sword"
+		texturefile = "gfx/interface/ideas/GER_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_ottos_sword"
+		texturefile = "gfx/interface/ideas/GER_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_hitlerslegacy"
+		texturefile = "gfx/interface/ideas/hitleroof.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_international_support"
+		texturefile = "gfx/interface/ideas/boot.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_otto"
+		texturefile = "gfx/interface/ideas/GER_otto.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_otto_dislike"
+		texturefile = "gfx/interface/ideas/GER_otto.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_otto_hatred"
+		texturefile = "gfx/interface/ideas/GER_otto.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_danube_idea"
+		texturefile = "gfx/interface/ideas/hammerswordhand.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_leni"
+		texturefile = "gfx/interface/ideas/GER_leni.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_otto"
+		texturefile = "gfx/interface/ideas/GER_otto.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_artur_dinter"
+		texturefile = "gfx/interface/ideas/GER_artur_dinter.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_hitlerscelebrated"
+		texturefile = "gfx/interface/ideas/GER_hitlercelebrated.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_reinhard_heydrich"
+		texturefile = "gfx/interface/ideas/GER_reinhard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_krupp_nationalised"
+		texturefile = "gfx/interface/ideas/idea_krupp_nationalised.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Volksreichs_Marineforschung"
+		texturefile = "gfx/interface/ideas/idea_ships_nationalised.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_neues_sonar"
+		texturefile = "gfx/interface/ideas/idea_generic_naval_manufacturer_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_guild_system_idea"
+		texturefile = "gfx/interface/ideas/GER_guildsystem.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_volksreich_labour_service_idea"
+		texturefile = "gfx/interface/ideas/GER_volksreichlabourservice.dds"
+	}
+}

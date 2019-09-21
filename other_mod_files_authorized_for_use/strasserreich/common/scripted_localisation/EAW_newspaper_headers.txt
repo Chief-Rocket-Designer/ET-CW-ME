@@ -1,0 +1,15 @@
+# Originally made for Equestria at War, Yard1, original concept by Agatha (TWR dev team)
+# ^^ Love you guys - Teutonician
+defined_text = { # Country
+	name = GetNewspaperHeader
+	text = {
+		trigger = {
+			tag = GER
+		}
+		localization_key = newspaper_der_deutsche_revolution_header
+	}
+    #keep this one without triggers and at the end as a fallback
+	text = {
+		localization_key = newspaper_header_2
+	}
+}

@@ -1,0 +1,3741 @@
+focus_tree = {
+	id = german_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+
+	continuous_focus_position = { x = 90000 y = 90000 }
+	default = no
+
+	focus = {
+		id = GER_hammer
+		icon = GFX_focus_ger_hammer
+		x = 20
+		y = 0
+		cost = 8
+		available = {
+			has_country_flag = GER_hammer_first
+		}
+		mutually_exclusive = { focus = GER_sword }
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			country_event = {
+		    	id = strasser.3
+		    	days = 1
+		    	random = 10
+			}
+			log = "[GetDateText]: [Root.GetName]: Focus GER_hammer"
+		}
+	}
+	focus = {
+		id = GER_sword
+		icon = GFX_focus_ger_sword
+		x = 2
+		y = 0
+		relative_position_id = GER_hammer
+		cost = 8
+		available = {
+			has_country_flag = GER_sword_first
+		}
+		mutually_exclusive = { focus = GER_hammer }
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			country_event = {
+		    	id = strasser.4
+		    	days = 1
+		    	random = 10
+			}
+			log = "[GetDateText]: [Root.GetName]: Focus GER_sword"
+		}
+	}
+	focus = {
+		id = GER_strassers_pamphlet
+		icon = GFX_focus_ger_strassers_pamphlet
+		x = -2
+		y = 1
+		relative_position_id = GER_hammer
+		cost = 4
+		prerequisite = {
+			focus = GER_hammer
+			focus = GER_sword
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_strassers_pamphlet"
+			country_event = {
+		    	id = strasser.5
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_strassers_manifesto
+		icon = GFX_focus_ger_strassers_manifesto
+		x = 1
+		y = 1
+		relative_position_id = GER_hammer
+		cost = 4
+		prerequisite = {
+			focus = GER_hammer
+			focus = GER_sword
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_strassers_manifesto"
+			country_event = {
+		    	id = strasser.6
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_strassers_letter
+		icon = GFX_focus_ger_strassers_letter
+		x = 4
+		y = 1
+		relative_position_id = GER_hammer
+		cost = 4
+		prerequisite = {
+			focus = GER_hammer
+			focus = GER_sword
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_strassers_letter"
+			country_event = {
+		    	id = strasser.7
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+#ECONOMICS
+
+	focus = {
+		id = GER_strasserreich
+		icon = GFX_focus_ger_strasserreich
+		x = 0
+		y = 1
+		relative_position_id = GER_strassers_manifesto
+		cost = 5
+		prerequisite = {
+			focus = GER_strassers_pamphlet
+		}
+		prerequisite = {
+			focus = GER_strassers_manifesto
+		}
+		prerequisite = {
+			focus = GER_strassers_letter
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_strasserreich"
+			add_stability = 0.10
+		}
+	}
+	focus = {
+		id = GER_extreme_autarky
+		icon = GFX_focus_ger_extreme_autarky
+		x = -12
+		y = 1
+		relative_position_id = GER_strasserreich
+		cost = 5
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_extreme_autarky"
+			add_tech_bonus = {
+				name = GER_autarky
+				bonus = 1.0
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+			add_ideas = GER_autarky_idea
+		}
+	}
+	focus = {
+		id = GER_three_year_plan
+		icon = GFX_focus_ger_three_year_plan
+		x = -5
+		y = 1
+		relative_position_id = GER_extreme_autarky
+		cost = 5
+		prerequisite = {
+			focus = GER_extreme_autarky
+		}
+		available = {
+			OR = {
+				has_war_support > 0.25
+				has_stability > 0.5
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_three_year_plan"
+			add_timed_idea = {
+		    idea = GER_three_year_plan_idea
+		    days = 1096
+			}
+		}
+	}
+	focus = {
+		id = GER_red_factories
+		icon = GFX_focus_ger_red_factories
+		x = -2
+		y = 1
+		relative_position_id = GER_three_year_plan
+		cost = 5
+		prerequisite = {
+			focus = GER_three_year_plan
+		}
+		available = {
+			AND = {
+				has_tech = basic_machine_tools
+				num_of_factories > 70
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_red_factories"
+			add_tech_bonus = {
+		    	bonus = 0.5
+		    	uses = 1
+		    	category = construction_tech
+			}
+		}
+	}
+	focus = {
+		id = GER_white_steel
+		icon = GFX_focus_ger_white_steel
+		x = 0
+		y = 1
+		relative_position_id = GER_three_year_plan
+		cost = 5
+		prerequisite = {
+			focus = GER_three_year_plan
+		}
+		available = {
+			OR = {
+				has_full_control_of_state = 65
+				any_other_country = {
+					is_subject_of = GER
+					has_full_control_of_state = 65
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_white_steel"
+			add_resource = {
+			    type = steel
+			    amount = 100
+			    state = 65
+			}
+		}
+	}
+	focus = {
+		id = GER_black_oil
+		icon = GFX_focus_ger_black_oil
+		x = 2
+		y = 1
+		relative_position_id = GER_three_year_plan
+		cost = 5
+		prerequisite = {
+			focus = GER_three_year_plan
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		available = {
+			OR = {
+				has_full_control_of_state = 59
+				any_other_country = {
+					is_subject_of = GER
+					has_full_control_of_state = 59
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_black_oil"
+			add_resource = {
+			    type = oil
+			    amount = 30
+			    state = 59
+			}
+			59 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_red_hammers
+		icon = GFX_focus_ger_red_hammers
+		x = 0
+		y = 1
+		relative_position_id = GER_red_factories
+		cost = 5
+		prerequisite = {
+			focus = GER_red_factories
+		}
+		available = {
+			AND = {
+				has_tech = construction3
+				num_of_factories > 90
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_red_hammers"
+			add_tech_bonus = {
+		    	bonus = 0.5
+		    	uses = 2
+		    	category = industry
+			}
+		}
+	}
+	focus = {
+		id = GER_white_fuel
+		icon = GFX_focus_ger_white_fuel
+		x = 0
+		y = 1
+		relative_position_id = GER_white_steel
+		cost = 5
+		prerequisite = {
+			focus = GER_white_steel
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		available = {
+			OR = {
+				has_full_control_of_state = 64
+				any_other_country = {
+					is_subject_of = GER
+					has_full_control_of_state = 64
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_white_fuel"
+			set_fuel_ratio = 1.3
+			64 = {
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_black_rubber
+		icon = GFX_focus_ger_black_rubber
+		x = 0
+		y = 1
+		relative_position_id = GER_black_oil
+		cost = 5
+		prerequisite = {
+			focus =  GER_black_oil
+		}
+		available = {
+			OR = {
+				has_full_control_of_state = 58
+				any_other_country = {
+					is_subject_of = GER
+					has_full_control_of_state = 58
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_black_rubber"
+			add_resource = {
+			    type = rubber
+			    amount = 50
+			    state = 58
+			}
+		}
+	}
+	focus = {
+		id = GER_german_science
+		icon = GFX_focus_ger_german_science
+		x = 0
+		y = 1
+		relative_position_id = GER_white_fuel
+		cost = 5
+		prerequisite = {
+			focus = GER_red_hammers
+			focus = GER_black_rubber
+			focus = GER_white_fuel
+		}
+		available = {
+			AND = {
+				is_major = yes
+				OR = {
+					has_political_power > 100
+					has_war = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_german_science"
+			add_research_slot = 1
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = GER_volksreichsautobahn
+		icon = GFX_focus_ger_volkreichsautobahn
+		x = -1
+		y = 1
+		relative_position_id = GER_extreme_autarky
+		cost = 6
+		prerequisite = {
+			focus = GER_extreme_autarky
+		}
+		available = {
+			OR = {
+				has_full_control_of_state = 64
+				has_full_control_of_state = 59
+				has_full_control_of_state = 60
+				has_full_control_of_state = 54
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_volksreichsautobahn"
+			custom_effect_tooltip = GER_autobahn_tt
+			hidden_effect = {
+				64 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+						}
+					}
+				}
+				59 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+						}
+					}
+				}
+				60 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+						}
+					}
+				}
+				54 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+						}
+					}
+				}
+			}		
+		}
+	}
+	focus = {
+		id = GER_volkreich_labour_service
+		icon = GFX_focus_ger_volkreich_labour_service
+		x = 1
+		y = 1
+		relative_position_id = GER_extreme_autarky
+		cost = 5
+		prerequisite = {
+			focus = GER_extreme_autarky
+		}
+		available = {
+			NOT = {
+				OR = {
+					has_idea = strikes_1
+					has_idea = strikes_2
+					has_idea = strikes_3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_volkreich_labour_service"
+			add_ideas = GER_volksreich_labour_service_idea
+		}
+	}
+	focus = {
+		id = GER_westwall
+		icon = GFX_focus_ger_westwall
+		x = 0
+		y = 1
+		relative_position_id = GER_volksreichsautobahn
+		cost = 6
+		prerequisite = {
+			focus = GER_volksreichsautobahn
+		}
+		available = {
+			AND = {
+				OR = {
+					has_full_control_of_state = 42
+					has_full_control_of_state = 50
+					has_full_control_of_state = 51				
+				}
+				42 = {
+					is_demilitarized_zone = no
+				}
+				51 = {
+					is_demilitarized_zone = no
+				}
+				790 = {
+					is_demilitarized_zone = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_westwall"
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = todt
+			50 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					custom_effect_tooltip = GER_west_wall_forts
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11640
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6712
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6542
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3530
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 42 = { is_demilitarized_zone = yes } }
+				custom_effect_tooltip = GER_west_wall_tt
+			}
+			42 = {
+				custom_effect_tooltip = GER_west_wall_forts
+			}
+			hidden_effect = {
+				42 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3558
+							instant_build = yes
+						}
+						
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 563
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11531
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9575
+							instant_build = yes
+						}
+					}
+				}
+			}			
+		}
+	}
+	focus = {
+		id = GER_guild_system
+		icon = GFX_focus_ger_guild_system
+		x = 0
+		y = 1
+		relative_position_id = GER_volkreich_labour_service
+		cost = 6
+		prerequisite = {
+			focus = GER_volkreich_labour_service
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_guild_system"
+			add_ideas = GER_guild_system_idea
+		}
+	}
+#WAS IS DAS DEUTSCHES VATERLAND?
+	focus = {
+		id = GER_was_ist_das_deutsches_vaterland
+		icon = GFX_focus_ger_was_ist_das_deutsches_vaterland
+		x = -7
+		y = 1
+		relative_position_id = GER_strasserreich
+		cost = 5
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+		available = {
+			AND = {
+				has_civil_war = no
+				OR = {
+					has_country_leader = {
+						name = "Gregor Strasser"
+						ruling_only = yes
+					}
+					has_country_leader = {
+						name = "Otto Strasser"
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_was_ist_das_deutsches_vaterland"
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = GER_is_it_prussia
+		icon = GFX_focus_ger_is_it_prussia
+		x = -1
+		y = 1
+		relative_position_id = GER_was_ist_das_deutsches_vaterland
+		cost = 5
+		prerequisite = {
+			focus = GER_was_ist_das_deutsches_vaterland
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		available = {
+			OR = {
+				has_full_control_of_state = 64
+				any_other_country = {
+					is_subject_of = GER
+					has_full_control_of_state = 64
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_prussia"
+			64 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			68 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			66 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}		
+	}
+	focus = {
+		id = GER_is_it_swabia
+		icon = GFX_focus_ger_is_it_swabia
+		x = 1
+		y = 1
+		relative_position_id = GER_was_ist_das_deutsches_vaterland
+		cost = 5
+		prerequisite = {
+			focus = GER_was_ist_das_deutsches_vaterland
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		available = {
+			OR = {
+				has_full_control_of_state = 50
+				any_other_country = {
+					is_subject_of = GER
+					has_full_control_of_state = 50
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_swabia"
+			50 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_the_vines_blossom_on_the_rhine
+		icon = GFX_focus_ger_rheingold
+		x = 1
+		y = 1
+		relative_position_id = GER_is_it_prussia
+		cost = 8
+		prerequisite = {
+			focus = GER_is_it_prussia
+		}
+		prerequisite = {
+			focus = GER_is_it_swabia
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		available = {
+			is_puppet = no
+			NOT = {
+				has_game_rule = {
+					rule = GER_can_remilitarize_rhineland
+					option = no
+				}
+			}
+		}
+		bypass = {
+			42 = { is_demilitarized_zone = no }
+			51 = { is_demilitarized_zone = no }
+			790 = { is_demilitarized_zone = no }
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_rheingold"
+			42 = { set_demilitarized_zone = no }
+			51 = { set_demilitarized_zone = no }
+			790 = { set_demilitarized_zone = no }
+			custom_effect_tooltip = GER_rhineland_ultimatum
+			add_political_power = 120
+			army_experience = 5
+			add_named_threat = { threat = 5 name = GER_the_vines_blossom_on_the_rhine }
+			if = {
+				limit = { FRA = { is_puppet = no } }
+				FRA = {
+					country_event = { id = strasser.11 }
+					custom_effect_tooltip = may_provoke_hostility
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_is_it_bavaria
+		icon = GFX_focus_ger_is_it_bavaria
+		x = -1
+		y = 1
+		relative_position_id = GER_the_vines_blossom_on_the_rhine
+		cost = 6
+		prerequisite = {
+			focus = GER_the_vines_blossom_on_the_rhine
+		}
+		available = {
+			AND = {
+				OR = {
+					has_full_control_of_state = 52
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 52
+					}
+				}
+				OR = {
+					has_full_control_of_state = 53
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 53
+					}
+				}
+				OR = {
+					has_full_control_of_state = 54
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 54
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_bavaria"
+			52 = {
+				set_building_level = {
+				    type = anti_air_building
+				    level = 3
+				    instant_build = yes
+				}
+			}
+			53 = {
+				set_building_level = {
+				    type = anti_air_building
+				    level = 3
+				    instant_build = yes
+				}
+			}
+			54 = {
+				set_building_level = {
+				    type = anti_air_building
+				    level = 3
+				    instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_is_it_styria
+		icon = GFX_focus_ger_is_it_styria
+		x = 1
+		y = 1
+		relative_position_id = GER_the_vines_blossom_on_the_rhine
+		cost = 6
+		prerequisite = {
+			focus = GER_the_vines_blossom_on_the_rhine
+		}
+		available = {
+			AUS = {
+				exists = yes
+				has_capitulated = no
+				OR = {
+					has_full_control_of_state = 152
+					any_other_country = {
+						is_subject_of = AUS
+						has_full_control_of_state = 152
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_styria"
+			152 = {
+				if = {
+					limit = { is_controlled_by = AUS }
+					add_building_construction = {
+						type = infrastructure
+						level = 7
+						instant_build = yes
+					}
+				}
+			}
+			4 = {
+				if = {
+					limit = { is_controlled_by = AUS }
+					add_building_construction = {
+						type = infrastructure
+						level = 8
+						instant_build = yes
+					}
+				}
+			}
+			153 = {
+				if = {
+					limit = { is_controlled_by = AUS }
+					add_building_construction = {
+						type = infrastructure
+						level = 6
+						instant_build = yes
+					}
+				}
+			}
+			AUS = {
+				add_popularity = {
+				    ideology = strasserism
+				    popularity = 0.2
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_the_citizens_of_the_mark_mold_iron
+		icon = GFX_focus_ger_the_citizens_of_the_mark_mold_iron
+		x = -1
+		y = 1
+		relative_position_id = GER_guild_system
+		cost = 6
+		prerequisite = {
+			focus = GER_westwall
+			focus = GER_the_vines_blossom_on_the_rhine
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_the_citizens_of_the_mark_mold_iron"
+			create_import = {
+			    resource = steel
+    			amount = 50
+    			exporter = SWI
+			}
+		}
+	}
+
+	focus = {
+		id = GER_the_place_where_cattle_of_the_marsi_roam
+		icon = GFX_focus_ger_the_place_where_cattle_of_the_marsi_roam
+		x = 1
+		y = 1
+		relative_position_id = GER_guild_system
+		cost = 6
+		prerequisite = {
+			focus = GER_the_vines_blossom_on_the_rhine
+			focus = GER_guild_system
+		}
+		available = {
+			NOT = {
+				ITA = {
+					has_war_with = GER
+				}
+				GER = {
+					has_war_with = ITA
+					has_capitulated = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_the_place_where_cattle_of_the_marsi_roam"
+			custom_effect_tooltip = GER_marsi_tt
+			hidden_effect = {
+				add_offsite_building = { type = industrial_complex level = 2 }		
+			}
+		}
+	}
+	focus = {
+		id = GER_where_the_danube_rushes_along
+		icon = GFX_focus_ger_where_the_danube_rushes_along
+		x = 0
+		y = 2
+		relative_position_id = GER_guild_system
+		cost = 6
+		prerequisite = {
+			focus = GER_the_place_where_cattle_of_the_marsi_roam
+			focus = GER_the_citizens_of_the_mark_mold_iron
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_where_the_danube_rushes_along"
+			custom_effect_tooltip = GER_danube_tt
+			hidden_effect = {
+				AUS = {
+					country_event = strasser.16
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = GER_is_it_westphalia
+		icon = GFX_focus_ger_is_it_westphalia
+		x = -1
+		y = 1
+		relative_position_id = GER_is_it_bavaria
+		cost = 6
+		prerequisite = {
+			focus = GER_the_place_where_cattle_of_the_marsi_roam
+			focus = GER_is_it_bavaria
+		}
+		available = {
+			AND = {
+				OR = {
+					has_full_control_of_state = 51
+					has_full_control_of_state = 56
+					has_full_control_of_state = 57				
+				}
+				51 = {
+					is_demilitarized_zone = no
+				}
+				56 = {
+					is_demilitarized_zone = no
+				}
+				57 = {
+					is_demilitarized_zone = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_westphalia"
+			custom_effect_tooltip = GER_westphalia_tt			
+			hidden_effect = {
+				51 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3547
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9522
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3444
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3512
+							instant_build = yes
+						}
+					}
+				}
+				56 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9281
+							instant_build = yes
+						}
+						
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11264
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11360
+							instant_build = yes
+						}
+					}
+				}
+				57 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11346
+							instant_build = yes
+						}
+					}
+				}
+			}				
+		}
+	}
+	focus = {
+		id = GER_is_it_pommerania
+		icon = GFX_focus_ger_is_it_pommerania
+		x = 1
+		y = 1
+		relative_position_id = GER_is_it_bavaria
+		cost = 6
+		prerequisite = {
+			focus = GER_is_it_styria
+			focus = GER_is_it_bavaria
+		}
+		available = {
+			AND = {
+				OR = {
+					has_full_control_of_state = 63
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 63
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_pommerania"
+			63 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_is_it_tyrol
+		icon = GFX_focus_ger_is_it_tyrol
+		x = 0
+		y = 1
+		relative_position_id = GER_is_it_pommerania
+		cost = 6
+		prerequisite = {
+			focus = GER_is_it_pommerania
+			focus = GER_the_sand_of_dunes_blows
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_tyrol"	
+			custom_effect_tooltip = GER_tyrol_tt
+			hidden_effect = {
+    			add_state_core = 39
+	    		AUS = {
+		    		add_state_core = 39
+				}
+				create_wargoal = {
+				    type = take_state_focus
+				    target = ITA
+				    generator = { 39 }
+				}
+			}
+		}
+	} 
+	focus = {
+		id = GER_is_it_the_swiss #Is it The Land Of the Swiss
+		icon = GFX_focus_ger_is_it_the_land_of_the_swiss
+		x = -2
+		y = 0
+		relative_position_id = GER_is_it_tyrol
+		cost = 6
+		prerequisite = {
+			focus = GER_is_it_westphalia
+		}
+		available = {
+			AND = {
+				SWI = {
+					exists = yes
+				}
+				GER = {
+					has_capitulated = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_is_it_the_swiss"
+			custom_effect_tooltip = GER_swiss_tt
+			hidden_effect = {
+				add_state_core = 3
+				add_state_core = 151
+				create_wargoal = {
+				    type = take_state_focus
+				    target = SWI
+				    generator = { 3 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_it_must_be_austria
+		icon = GFX_focus_ger_it_must_be_austria
+		x = 1
+		y = 1
+		relative_position_id = GER_is_it_the_swiss 
+		cost = 6
+		prerequisite = {
+			focus = GER_is_it_tyrol
+		}
+		prerequisite = {
+			focus = GER_is_it_the_swiss 
+		}
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+		available = {
+			threat > 0.15
+			has_army_manpower = { size > 549999 }
+			OR = {
+				GER = {
+					has_country_leader = {
+					    name = "Gregor Strasser"
+					    ruling_only = yes
+					}
+				}
+				GER = {
+					has_country_leader = {
+					    name = "Otto Strasser"
+					    ruling_only = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_it_must_be_austria"
+			custom_effect_tooltip = GER_it_must_be_austria_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						AUS = {
+							is_puppet_of = GER
+						}
+					}
+					country_event = strasser.18
+				}
+				else = {
+					country_event = strasser.19
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_as_far_as_the_German_tongue_speaks
+		icon = GFX_focus_ger_as_far_as_the_German_tongue_speaks
+		x = 0
+		y = 1
+		relative_position_id = GER_it_must_be_austria
+		cost = 20
+		prerequisite = {
+			focus = GER_it_must_be_austria
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_as_far_as_the_German_tongue_speaks"
+			custom_effect_tooltip = GER_as_far_as_the_German_tongue_speaks_tt
+		}
+	}
+	focus = {
+		id = GER_the_sand_of_dunes_blows
+		icon = GFX_focus_ger_the_sand_of_dunes_blows
+		x = 3
+		y = 1
+		relative_position_id = GER_is_it_bavaria
+		cost = 6
+		prerequisite = {
+			focus = GER_is_it_styria
+			focus = GER_is_it_bavaria
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		available = {
+			AND = {
+				OR = {
+					has_full_control_of_state = 63
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 63
+					}
+				}
+				OR = {
+					has_full_control_of_state = 62
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 62
+					}
+				}
+				OR = {
+					has_full_control_of_state = 61
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 61
+					}
+				}
+				OR = {
+					has_full_control_of_state = 58
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 58
+					}
+				}
+				OR = {
+					has_full_control_of_state = 59
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 59
+					}
+				}
+				OR = {
+					has_full_control_of_state = 56
+					any_other_country = {
+						is_subject_of = GER
+						has_full_control_of_state = 56
+					}
+				}
+			}
+
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_the_sand_of_dunes_blows"
+			custom_effect_tooltip = GER_imsorry_tt
+				63 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 11372
+							instant_build = yes
+						}
+						
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 6282
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 6334
+							instant_build = yes
+						}
+					}
+				}
+				62 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 9388
+							instant_build = yes
+						}
+					}
+				}
+				61 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 321
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 11305
+							instant_build = yes
+						}
+					}
+				}
+				58 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 6389
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 9347
+							instant_build = yes
+						}
+					}
+				}
+				59 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 3326
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 6325
+							instant_build = yes
+						}
+					}
+				}
+				56 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 241
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = coastal_bunker
+							level = 3
+							province = 11360
+							instant_build = yes
+						}
+					}
+				}
+
+		}
+	}
+	focus = {
+		id = GER_in_a_small_polish_village
+		icon = GFX_focus_ger_in_a_small_polish_village
+		x = 0
+		y = 1
+		relative_position_id = GER_as_far_as_the_German_tongue_speaks
+		cost = 6
+		prerequisite = {
+			focus = GER_as_far_as_the_German_tongue_speaks
+		}
+		ai_will_do = {
+			factor = 10	
+			modifier = {
+				factor = 0
+				OR = {
+					date < 1939.1.1
+					any_neighbor_country = {
+						has_war_with = GER
+						NOT = { has_capitulated = yes }
+						strength_ratio = {
+							tag = GER
+							ratio > 0.6
+						}
+					}
+				}
+			}
+		}
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 949999 } #100 div			
+			#Make custom trigger tooltip here
+			85 = {
+				owner = {
+					original_tag = POL
+				}
+				controller = {
+					original_tag = POL
+				}
+			}
+			OR = {
+				POL = {
+					has_civil_war = no
+				}
+				#custom_trigger_tooltip = {
+					#tooltip = GER_danzig_trigger_polish_civil_war
+					AND = {
+						any_other_country = {
+							original_tag = POL
+							has_civil_war = yes
+							OR = {
+								is_in_faction_with = ROOT
+								has_volunteers_amount_from = {
+									tag = GER
+									count > 0
+								}
+							}
+						}
+					}
+				#}
+			}
+		}
+		bypass = {
+			OR = {
+				has_war_with = POL
+				is_in_faction_with = POL
+				NOT = {
+					85 = {
+						controller = {
+							original_tag = POL 
+						}
+						owner = {
+							original_tag = POL 
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_in_a_small_polish_village"
+			add_named_threat = { threat = 5 name = GER_danzig_or_war }
+			POL = {
+				country_event = strasser.27
+			}
+		}
+	}
+#DAS RHEINGOLD
+
+#Foreign Policy
+	focus = {
+		id = GER_spanish_civil_war
+		icon = GFX_focus_ger_spanish_civil_war
+		x = 0
+		y = 1
+		relative_position_id = GER_strasserreich
+		cost = 5
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+		available = {
+	 		AND = {
+	 			SPR = {	has_civil_war = yes }
+				has_global_flag = spanish_civil_war
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_spanish_civil_war"
+			country_event = strasser.12
+			add_ideas = GER_international_support
+		}
+	}
+	focus = {
+		id = GER_stand_against_the_reds
+		icon = GFX_focus_ger_stand_against_the_reds
+		x = -2
+		y = 1
+		relative_position_id = GER_spanish_civil_war
+		cost = 7
+		prerequisite = {
+			focus = GER_spanish_civil_war
+		}
+		available = {
+	 		has_country_flag = ger_supported_SPA
+		}
+		mutually_exclusive = { focus = GER_stand_with_the_reds }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_stand_against_the_reds"
+			SOV = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+			ITA = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = medium_increase
+				}
+			}
+			JAP = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_stand_with_the_reds
+		icon = GFX_focus_ger_stand_with_the_reds
+		x = 2
+		y = 1
+		relative_position_id = GER_spanish_civil_war
+		cost = 7
+		prerequisite = {
+			focus = GER_spanish_civil_war
+		}
+		available = {
+	 		has_country_flag = ger_supported_SPR
+		}
+		mutually_exclusive = { focus = GER_stand_against_the_reds }
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_stand_with_the_reds"
+			SOV = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = huge_increase
+				}
+			}
+			ITA = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+			JAP = {
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_seeking_for_the_black_shirts
+		icon = GFX_focus_ger_seeking_for_the_black_shirts
+		x = -1
+		y = 1
+		relative_position_id = GER_stand_against_the_reds
+		cost = 7
+		prerequisite = {
+			focus = GER_stand_against_the_reds
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+
+		bypass = {
+			ITA = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_seeking_for_the_black_shirts"
+			diplomatic_relation = {
+				country = ITA
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = ITA
+				relation = guarantee
+				active = yes
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = GER
+					relation = guarantee
+					active = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_seeking_for_the_red_sun
+		icon = GFX_focus_ger_seeking_for_the_red_sun
+		x = 1
+		y = 1
+		relative_position_id = GER_stand_against_the_reds
+		cost = 10
+		prerequisite = {
+			focus = GER_stand_against_the_reds
+		}
+		bypass = {
+			JAP = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_seeking_for_the_red_sun"
+			diplomatic_relation = {
+				country = JAP
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = JAP
+				relation = guarantee
+				active = yes
+			}
+			JAP = {
+				diplomatic_relation = {
+					country = GER
+					relation = guarantee
+					active = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_molotov_strasser_pact
+		icon = GFX_focus_ger_molotov_strasser_pact
+		x = -1
+		y = 1
+		relative_position_id = GER_stand_with_the_reds
+		cost = 7
+		prerequisite = {
+			focus = GER_stand_with_the_reds
+		}
+		available = {
+			is_puppet = no
+			has_government = strasserism
+			has_army_manpower = { size > 849999 } #ca 90 div
+			SOV = {
+				NOT = { has_war_with = GER }
+				country_exists = SOV
+			}
+			NOT = { has_completed_focus = GER_bulwark_against_bolshevism }
+			NOT = { has_completed_focus = GER_the_great_red_menace }
+		}
+		bypass = {
+			SOV = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_molotov_strasser_pact"
+			SOV = {
+				country_event = { id = strasser.29 days = 1 }
+				custom_effect_tooltip = needs_approval
+			}
+
+		}
+	}
+	focus = {
+		id = GER_the_polish_question
+		icon = GFX_focus_ger_the_polish_question
+		x = 1
+		y = 1
+		relative_position_id = GER_stand_with_the_reds
+		cost = 7
+		prerequisite = {
+			focus = GER_stand_with_the_reds
+		}
+		bypass = {
+			POL = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_the_polish_question"
+			custom_effect_tooltip = GER_polish_question_tt
+			country_event = {
+		    	id = strasser.53
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_red_and_black
+		icon = GFX_focus_ger_red_and_black
+		x = 1
+		y = 1
+		relative_position_id = GER_seeking_for_the_black_shirts
+		cost = 7
+		prerequisite = {
+			focus = GER_seeking_for_the_black_shirts
+			focus = GER_seeking_for_the_red_sun
+		}
+		available = {
+			is_in_faction = no
+			OR = {
+				ITA = {
+					NOT = { has_war_with = ROOT }
+					exists = yes
+					has_capitulated = no
+				}
+				any_other_country = {
+					is_major = yes
+					has_government = communism
+					is_faction_leader = yes
+				}
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = ITA
+					has_war_with = GER
+				}
+			}
+			ITA = {
+				num_faction_members > 1
+				is_faction_leader = yes
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_red_and_black"
+			if = {
+				limit = {
+					ITA = {
+						exists = yes
+						has_government = fascism
+						is_faction_leader = yes
+					}
+				}
+				ITA = {
+					country_event = generic.2
+				}
+			}
+			else = {
+				get_best_alliance_match_communism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_red_and_red
+		icon = GFX_focus_ger_red_and_red
+		x = 5
+		y = 1
+		relative_position_id = GER_seeking_for_the_black_shirts
+		cost = 7
+		prerequisite = {
+			focus = GER_molotov_strasser_pact
+		}
+		prerequisite = {
+			focus = GER_the_polish_question
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		bypass = {
+			is_in_faction_with = SOV
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		available = {
+			is_in_faction = no
+			OR = {
+				SOV = {
+					NOT = { has_war_with = ROOT }
+					exists = yes
+					has_capitulated = no
+				}
+				any_other_country = {
+					is_major = yes
+					has_government = communism
+					is_faction_leader = yes
+				}
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = SOV
+					has_war_with = GER
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_red_and_red"
+			if = {
+				limit = {
+					SOV = {
+						exists = yes
+						has_government = communism
+						is_faction_leader = yes
+					}
+				}
+				SOV = {
+					country_event = generic.2
+				}
+			}
+			else = {
+				get_best_alliance_match_communism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_seek_for_hungary
+		icon = GFX_focus_ger_seek_for_hungary
+		x = -1
+		y = 1
+		relative_position_id = GER_red_and_black
+		cost = 7
+		prerequisite = {
+			focus = GER_red_and_black
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_seek_for_hungary"
+			diplomatic_relation = {
+				country = HUN
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = HUN
+				relation = guarantee
+				active = yes
+			}
+			HUN = {
+				diplomatic_relation = {
+					country = GER
+					relation = guarantee
+					active = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_seek_for_romania
+		icon = GFX_focus_ger_seek_for_romania
+		x = 1
+		y = 1
+		relative_position_id = GER_red_and_black
+		cost = 7
+		prerequisite = {
+			focus = GER_red_and_black
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_seek_for_romania"
+			diplomatic_relation = {
+				country = ROM
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = ROM
+				relation = guarantee
+				active = yes
+			}
+			ROM = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_seek_for_spain
+		icon = GFX_focus_ger_seek_for_spain
+		x = -1
+		y = 1
+		relative_position_id = GER_red_and_red
+		cost = 7
+		prerequisite = {
+			focus = GER_red_and_red
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_seek_for_spain"
+			diplomatic_relation = {
+				country = SPR
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = SPR
+				relation = guarantee
+				active = yes
+			}
+			SPR = {
+				diplomatic_relation = {
+					country = GER
+					relation = guarantee
+					active = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_spread_the_red
+		icon = GFX_focus_ger_spread_the_red
+		x = 1
+		y = 1
+		relative_position_id = GER_red_and_red
+		cost = 7
+		prerequisite = {
+			focus = GER_red_and_red
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_spread_the_red"
+			SOV = {
+				add_ideas = GER_spread_the_red_idea
+			}
+		}
+	}
+	focus = {
+		id = GER_destroy_capitalism
+		icon = GFX_focus_ger_destroy_capitalism
+		x = -2
+		y = 2
+		relative_position_id = GER_red_and_red
+		cost = 7
+		prerequisite = {
+			focus = GER_seek_for_hungary
+			focus = GER_spread_the_red
+		}
+		prerequisite = {
+			focus = GER_seek_for_spain
+			focus = GER_seek_for_romania
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_destroy_capitalism"
+			create_wargoal = {
+			    type = annex_everything
+			    target = USA
+			}
+		}
+	}
+
+
+	focus = {
+		id = GER_establish_the_cult_of_strasser
+		icon = GFX_focus_ger_establish_the_cult_of_strasser
+		x = 10
+		y = 1
+		relative_position_id = GER_strasserreich
+		cost = 6
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_establish_the_cult_of_strasser"
+			set_party_name = { 
+		    	ideology = strasserism 
+    			long_name = GER_strasserism_party_cult_long 
+    			name = GER_strasserism_party_cult
+			}
+		}
+	}
+	focus = {
+		id = GER_one_people
+		icon = GFX_focus_ger_one_people
+		x = -2
+		y = 1
+		relative_position_id = GER_establish_the_cult_of_strasser
+		cost = 6
+		prerequisite = {
+			focus = GER_establish_the_cult_of_strasser
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_one_people"
+			add_popularity = {
+			    ideology = strasserism
+			    popularity = 0.3
+			}
+		}
+	}
+	focus = {
+		id = GER_one_empire
+		icon = GFX_focus_ger_one_empire
+		x = 0
+		y = 1
+		relative_position_id = GER_establish_the_cult_of_strasser
+		cost = 6
+		prerequisite = {
+			focus = GER_establish_the_cult_of_strasser
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_one_empire"
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GER_one_leader
+		icon = GFX_focus_ger_one_leader
+		x = 2
+		y = 1
+		relative_position_id = GER_establish_the_cult_of_strasser
+		cost = 6
+		prerequisite = {
+			focus = GER_establish_the_cult_of_strasser
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_one_leader"
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = GER_posters
+		icon = GFX_focus_ger_posters
+		x = -1
+		y = 1
+		relative_position_id = GER_one_people
+		cost = 5
+		prerequisite = {
+			focus = GER_one_people
+			focus = GER_one_empire
+			focus = GER_one_leader
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_posters"
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GER_radios
+		icon = GFX_focus_ger_radios
+		x = 1
+		y = 1
+		relative_position_id = GER_one_people
+		cost = 5
+		prerequisite = {
+			focus = GER_one_people
+			focus = GER_one_empire
+			focus = GER_one_leader
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_radios"
+			add_tech_bonus = {
+		    	bonus = 0.5
+		    	uses = 1
+		    	category = electronics
+			}			
+		}
+	}
+	focus = {
+		id = GER_newspaper
+		icon = GFX_focus_ger_newspaper
+		x = 3
+		y = 1
+		relative_position_id = GER_one_people
+		cost = 5
+		prerequisite = {
+			focus = GER_one_people
+			focus = GER_one_empire
+			focus = GER_one_leader
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_newspaper"
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GER_literature_and_music
+		icon = GFX_focus_ger_literature_and_music
+		x = 5
+		y = 1
+		relative_position_id = GER_one_people
+		cost = 5
+		prerequisite = {
+			focus = GER_one_people
+			focus = GER_one_empire
+			focus = GER_one_leader
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_literature_and_music"
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_artur_dinter
+		}
+	}
+	focus = {
+		id = GER_art_and_architecture
+		icon = GFX_focus_ger_art_and_architecture
+		x = -3
+		y = 1
+		relative_position_id = GER_one_people
+		cost = 5
+		prerequisite = {
+			focus = GER_one_people
+			focus = GER_one_empire
+			focus = GER_one_leader
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_art_and_architecture"
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = speer
+		}
+	}
+	focus = {
+		id = GER_cinema
+		icon = GFX_focus_ger_cinema
+		x = 7
+		y = 1
+		relative_position_id = GER_one_people
+		cost = 5
+		prerequisite = {
+			focus = GER_one_people
+			focus = GER_one_empire
+			focus = GER_one_leader
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_cinema"
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = leni
+		}
+	}
+	focus = {
+		id = GER_issues_of_the_table
+		icon = GFX_focus_ger_issues_of_the_table
+		x = 9
+		y = 1
+		relative_position_id = GER_establish_the_cult_of_strasser
+		cost = 5
+		prerequisite = {
+			focus = GER_establish_the_cult_of_strasser
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_issues_of_the_table"
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = GER_education
+		icon = GFX_focus_ger_education
+		x = -2
+		y = 1
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_one_people
+			focus = GER_one_empire
+			focus = GER_one_leader
+		}
+		prerequisite = {
+			focus = GER_issues_of_the_table
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_education"
+			country_event = {
+		    	id = strasser.34
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_strassers_university
+		icon = GFX_focus_ger_strassers_university
+		x = -2
+		y = 4
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_education
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_education"
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = GER_trade_union
+		icon = GFX_focus_ger_trade_union
+		x = 0
+		y = 1
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_issues_of_the_table
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_education"
+			country_event = {
+		    	id = strasser.35
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_hitler
+		icon = GFX_focus_ger_hitler
+		x = 2
+		y = 1
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_issues_of_the_table
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_hitler"
+			country_event = {
+		    	id = strasser.36
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_versailles_question
+		icon = GFX_focus_ger_the_versailles_question
+		x = 2
+		y = 4
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_hitler
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_versailles_question"
+			country_event = {
+		    	id = strasser.43
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_class_conflict
+		icon = GFX_focus_ger_class_conflict
+		x = -1
+		y = 2
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_issues_of_the_table
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_class_conflict"
+			country_event = {
+		    	id = strasser.38
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_wealth_distribution
+		icon = GFX_focus_ger_wealth_distribution
+		x = 1
+		y = 2
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_issues_of_the_table
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_wealth_distribution"
+			country_event = {
+		    	id = strasser.39
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_the_jewish_question
+		icon = GFX_focus_ger_the_jewish_question
+		x = 1
+		y = 3
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_wealth_distribution
+		}
+		available = {
+			has_country_flag = GER_jewish_fault
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_the_jewish_question"
+			country_event = {
+		    	id = strasser.41
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_the_judicial_question
+		icon = GFX_focus_ger_the_judicial_question
+		x = -1
+		y = 3
+		relative_position_id = GER_issues_of_the_table
+		cost = 5
+		prerequisite = {
+			focus = GER_class_conflict
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_the_judicial_question"
+			country_event = {
+		    	id = strasser.42
+		    	days = 1
+		    	random = 10
+			}
+		}
+	}
+	focus = {
+		id = GER_strasser_nuremburg_rally
+		icon = GFX_focus_ger_strasser_nuremburg_rally
+		x = 4
+		y = 6
+		relative_position_id = GER_establish_the_cult_of_strasser
+		cost = 7
+		prerequisite = {
+			focus = GER_the_judicial_question
+			focus = GER_the_jewish_question
+			focus = GER_strassers_university
+			focus = GER_versailles_question
+		}
+		prerequisite = {
+			focus = GER_art_and_architecture
+			focus = GER_posters
+			focus = GER_radios
+			focus = GER_newspaper
+			focus = GER_literature_and_music
+			focus = GER_cinema
+			focus = GER_education
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_strasser_nuremburg_rally"
+			country_event = {
+		    	id = strasser.44
+		    	days = 1
+		    	random = 10
+			}
+			hidden_effect = {
+				country_event = {
+			    	id = strasser.44
+			    	days = 728
+			    	random = 10
+				}
+				country_event = {
+			    	id = strasser.44
+			    	days = 1092
+			    	random = 10
+				}
+				country_event = {
+			    	id = strasser.44
+			    	days = 1456
+			    	random = 10
+				}
+				country_event = {
+			    	id = strasser.44
+			    	days = 1820
+			    	random = 10
+				}			
+			}
+		}
+	}
+	focus = {
+		id = GER_the_trials
+		icon = GFX_focus_ger_the_trials
+		x = 24
+		y = 1
+		relative_position_id = GER_strasserreich
+		cost = 6
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_the_trials"
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = GER_josef_beppo_rohmer
+		icon = GFX_focus_ger_josef_beppo_rohmer
+		x = -2
+		y = 1
+		relative_position_id = GER_the_trials
+		cost = 6
+		prerequisite = {
+			focus = GER_the_trials
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_josef_beppo_rohmer"
+			country_event = strasser.45
+		}
+	}
+	focus = {
+		id = GER_communists
+		icon = GFX_focus_ger_communists
+		x = 0
+		y = 1
+		relative_position_id = GER_the_trials
+		cost = 6
+		prerequisite = {
+			focus = GER_the_trials
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_communists"
+			country_event = strasser.46
+		}
+	}
+	focus = {
+		id = GER_nsdap
+		icon = GFX_focus_ger_nsdap
+		x = 2
+		y = 1
+		relative_position_id = GER_the_trials
+		cost = 6
+		prerequisite = {
+			focus = GER_the_trials
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_nsdap"
+			country_event = strasser.47
+		}
+	}
+	focus = {
+		id = GER_strasser_sicherheitsdienst
+		icon = GFX_focus_ger_strasser_sicherheitsdienst
+		x = 5
+		y = 0
+		relative_position_id = GER_the_trials
+		cost = 7
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_strasser_sicherheitsdienst"
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = reinhard_heydrich
+		}
+	}
+	focus = {
+		id = GER_strasserjugend
+		icon = GFX_focus_ger_straserjugend
+		x = 3
+		y = 1
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_strasser_sicherheitsdienst
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_strasserjugend"
+			add_ideas = GER_strasserjugend_idea
+		}
+	}
+	focus = {
+		id = GER_SSG_training
+		icon = GFX_focus_ger_SSG_training
+		x = 1
+		y = 1
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_strasser_sicherheitsdienst
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_SSG_training"
+			set_technology = { 
+				tech_military_police = 1 
+				tech_military_police2 = 1 
+			}
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = GER_enchorage_military_scientists
+		icon = GFX_focus_ger_enchorage_military_scientists
+		x = -1
+		y = 1
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_strasser_sicherheitsdienst
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_enchorage_military_scientists"
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = GER_urban_patrols
+		icon = GFX_focus_ger_urban_patrols
+		x = 0
+		y = 2
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_enchorage_military_scientists
+			focus = GER_SSG_training
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_enchorage_urban_patrols"
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = GER_verteidigungstrupp
+		icon = GFX_focus_ger_militarkamp
+		x = 0
+		y = 3
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_urban_patrols
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_enchorage_verteidigungstrupp"
+			add_ideas = GER_verteidigungstrupp
+		}
+	}
+	focus = {
+		id = GER_stettin_schutzgruppe_center
+		icon = GFX_focus_ger_stettin_schutzgruppe_center
+		x = 0
+		y = 4
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_verteidigungstrupp
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_stettin_schutzgruppe_center"
+			add_war_support = 0.1
+			63 = {
+				add_building_construction = {
+    				type = arms_factory
+				    level = 2
+				    instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_anti_resistance_act
+		icon = GFX_focus_ger_anti_resistance_act
+		x = -1
+		y = 5
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_stettin_schutzgruppe_center
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_anti_resistance_act"
+			add_ideas = GER_anti_resistance_act
+		}
+	}
+	focus = {
+		id = GER_undercover_personel
+		icon = GFX_focus_ger_undercover_personel
+		x = 1
+		y = 5
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_stettin_schutzgruppe_center
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_undercover_personel"
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = GER_pistols_for_officers
+		icon = GFX_focus_ger_pistols_for_officers
+		x = -1
+		y = 6
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_anti_resistance_act
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_pistols_for_officers"
+			create_corps_commander = {
+				name = "Reinhold Heydrich"
+				picture = "Portrait_Germany_Reinhold Heydrich.dds"
+				traits = { trickster brilliant_strategist }
+				skill = 6
+				attack_skill = 6
+				defense_skill = 6
+				planning_skill = 5
+				logistics_skill = 2
+			}
+		}
+	}
+	focus = {
+		id = GER_coded_conversations
+		icon = GFX_focus_ger_coded_conversations
+		x = 1
+		y = 6
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_undercover_personel
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_coded_conversations"
+			add_ideas = GER_coded_conversations
+		}
+	}
+	focus = {
+		id = GER_maximum_surveillance
+		icon = GFX_focus_ger_maximum_surveilance
+		x = 0
+		y = 7
+		relative_position_id = GER_strasser_sicherheitsdienst
+		cost = 6
+		prerequisite = {
+			focus = GER_pistols_for_officers
+		}
+		prerequisite = {
+			focus = GER_coded_conversations
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_maximum_surveillance"
+			add_ideas = GER_maximum_surveillance
+		}
+	}
+	focus = {
+		id = GER_operation_black_storm
+		icon = GFX_focus_ger_operation_black_storm
+		x = -1
+		y = 1
+		relative_position_id = GER_nsdap
+		cost = 6
+		prerequisite = {
+			focus = GER_strasser_sicherheitsdienst
+		}
+		prerequisite = {
+			focus = GER_nsdap
+		}
+		prerequisite = {
+			focus = GER_communists
+		}
+		prerequisite = {
+			focus = GER_josef_beppo_rohmer
+		}
+		available = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_operation_black_storm"
+			custom_effect_tooltip = GER_operation_black_storm_tt
+		}
+	}
+	focus = {
+		id = GER_blood_brothers
+		icon = GFX_focus_ger_blood_brothers
+		x = -3
+		y = 2
+		relative_position_id = GER_nsdap
+		cost = 6
+		prerequisite = {
+			focus = GER_operation_black_storm
+		}
+		available = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_blood_brothers"
+		}
+	}
+	focus = {
+		id = GER_sword_in_the_back
+		icon = GFX_focus_ger_sword_in_the_back
+		x = -1
+		y = 2
+		relative_position_id = GER_nsdap
+		cost = 6
+		prerequisite = {
+			focus = GER_operation_black_storm
+		}
+		available = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_sword_in_the_back"
+		}
+	}
+	focus = {
+		id = GER_battle_of_the_brothers
+		icon = GFX_focus_ger_battle_of_the_brothers
+		x = 1
+		y = 2
+		relative_position_id = GER_nsdap
+		cost = 6
+		prerequisite = {
+			focus = GER_operation_black_storm
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			always = no
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_battle_of_the_brothers"
+		}
+	}
+	focus = {
+		id = GER_status_quo
+		icon = GFX_focus_ger_status_quo
+		x = -1
+		y = 3
+		relative_position_id = GER_nsdap
+		cost = 7
+		prerequisite = {
+			focus = GER_blood_brothers
+			focus = GER_sword_in_the_back
+			focus = GER_battle_of_the_brothers
+		}
+		available = {
+			OR = {
+				has_country_flag = GER_done_civil_war
+				has_country_flag = GER_gregor_ded
+				has_country_flag = GER_otto_ded
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_status_quo"
+		}
+	}
+
+	focus = {
+		id = GER_volksmacht
+		icon = GFX_focus_ger_volksmacht
+		x = 8
+		y = -1
+		relative_position_id = GER_nsdap
+		cost = 7
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_volksmacht"
+			custom_effect_tooltip = GER.volksmacht_tt
+		}
+	}
+	focus = {
+		id = GER_restore_SA
+		icon = GFX_focus_ger_restore_SA
+		x = 0
+		y = 1
+		relative_position_id = GER_volksmacht
+		cost = 7
+		prerequisite = {
+			focus = GER_volksmacht
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_restore_SA"
+			add_manpower = 250000
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = GER_brandenburgen_militarfabriken
+		icon = GFX_focus_ger_brandenburgen_militarfabriken
+		x = 2
+		y = 1
+		relative_position_id =  GER_restore_SA
+		cost = 7
+		prerequisite = {
+			focus =  GER_restore_SA
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_brandenburgen_militarfabriken"
+			custom_effect_tooltip = GER.brandenburgen_militarfabriken_tt
+		}
+	}
+	focus = {
+		id = GER_militarschulen
+		icon = GFX_focus_ger_militarschulen
+		x = 0
+		y = 2
+		relative_position_id =  GER_restore_SA
+		cost = 7
+		prerequisite = {
+			focus =  GER_restore_SA
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_militarschulen"
+			custom_effect_tooltip = GER.militarschulen_tt
+		}
+	}
+	focus = {
+		id = GER_rheinkaserne
+		icon = GFX_focus_ger_rheinkaserne
+		x = 0
+		y = 1
+		relative_position_id = GER_brandenburgen_militarfabriken
+		cost = 7
+		prerequisite = {
+			focus = GER_brandenburgen_militarfabriken
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_rheinkaserne"
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = GER_radartechnologie
+		icon = GFX_focus_ger_radartechnologie
+		x = 0
+		y = 1
+		relative_position_id = GER_rheinkaserne
+		cost = 7
+		prerequisite = {
+			focus = GER_rheinkaserne
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_radartechnologie"
+			add_tech_bonus = {
+    			bonus = 0.5
+	    		uses = 1
+			    category = radar_tech
+			}
+		}
+	}
+	focus = {
+		id = GER_militarbau
+		icon = GFX_focus_ger_militarbau
+		x = 0
+		y = 1
+		relative_position_id = GER_radartechnologie
+		cost = 7
+		prerequisite = {
+			focus = GER_radartechnologie
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_militarbau"
+			add_temporary_buff_to_units = {
+			    combat_offense = 0.025
+			    combat_breakthrough = 0.025
+			    org_damage_multiplier = -0.1
+			    str_damage_multiplier = 0.025
+			    war_support_reduction_on_damage = 0.02
+ 			    cannot_retreat_while_attacking = 0.1		
+			    days = 365
+    			tooltip = ABILITY_FORCE_ATTACK_TOOLTIP
+			}
+		}
+	}
+	focus = {
+		id = GER_increased_army_training
+		icon = GFX_focus_ger_increased_army_training
+		x = 0
+		y = 1
+		relative_position_id = GER_militarschulen
+		cost = 7
+		prerequisite = {
+			focus = GER_militarschulen
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_increased_army_training"
+			add_ideas = ger_increased_army_training_idea
+		}
+	}
+	focus = {
+		id = GER_panzerforschung
+		icon = GFX_focus_ger_panzerforschung
+		x = 0
+		y = 1
+		relative_position_id = GER_increased_army_training
+		cost = 7
+		prerequisite = {
+			focus = GER_increased_army_training
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_panzerforschung"
+			add_tech_bonus = {
+    			bonus = 0.5
+	    		uses = 1
+			    category = armor
+			}
+		}
+	}
+	focus = {
+		id = GER_compulsary_military_lessons
+		icon = GFX_focus_ger_compulsary_military_lessons
+		x = -2
+		y = 1
+		relative_position_id = GER_militarschulen
+		cost = 7
+		prerequisite = {
+			focus = GER_militarschulen
+		}
+		prerequisite = {
+			focus = GER_strasserjugend
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_compulsary_military_lessons"
+			swap_ideas = {
+				remove_idea = GER_strasserjugend_idea
+				add_idea = GER_strasserjugend_idea_two
+			}
+		}
+	}
+	focus = {
+		id = GER_lower_the_age_limit_for_conscription
+		icon = GFX_focus_ger_lower_the_age_limit_for_conscription
+		x = 0
+		y = 1
+		relative_position_id = GER_compulsary_military_lessons
+		cost = 7
+		prerequisite = {
+			focus = GER_compulsary_military_lessons
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_lower_the_age_limit_for_conscription"
+			swap_ideas = {
+				remove_idea = GER_strasserjugend_idea_two
+				add_idea = GER_strasserjugend_idea_three
+			}
+		}
+	}
+	focus = {
+		id = GER_reformed_army_universities
+		icon = GFX_focus_ger_reformed_army_universities
+		x = 0
+		y = 1
+		relative_position_id = GER_panzerforschung
+		cost = 7
+		prerequisite = {
+			focus = GER_lower_the_age_limit_for_conscription
+			focus = GER_panzerforschung
+			focus = GER_militarbau
+		}
+
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_reformed_army_universities"
+			custom_effect_tooltip = GER.reformed_army_universities_tt
+		}
+	}
+	focus = {
+		id = GER_nationalisation_of_krupp
+		icon = GFX_focus_ger_nationalisation_of_krupp
+		x = 0
+		y = 1
+		relative_position_id = GER_reformed_army_universities
+		cost = 7
+		prerequisite = {
+			focus = GER_reformed_army_universities
+		}
+
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_nationalisation_of_krupp"
+			custom_effect_tooltip = GER.nationalisation_of_krupp_tt
+		}
+	}
+
+	focus = {
+		id = GER_wehrmarine
+		icon = GFX_focus_ger_wehrmarine
+		x = 6
+		y = 0
+		relative_position_id = GER_volksmacht
+		cost = 7
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_wehrmarine"
+			custom_effect_tooltip = GER.volksmacht_tt
+		}
+	}
+	focus = {
+		id = GER_hamburger_dock
+		icon = GFX_focus_ger_hamburger_dock
+		x = 2
+		y = 1
+		relative_position_id = GER_wehrmarine
+		cost = 7
+		prerequisite = {
+			focus = GER_wehrmarine
+		}
+		available = {
+			has_full_control_of_state = 58		
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_hamburger_dock"
+			58 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_new_prototypes
+		icon = GFX_focus_ger_new_prototypes
+		x = 0
+		y = 1
+		relative_position_id = GER_wehrmarine
+		cost = 7
+		prerequisite = {
+			focus = GER_wehrmarine
+		}
+
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_new_prototypes"
+			navy_experience = 25
+		}
+	}
+	focus = {
+		id = GER_improve_bismark
+		icon = GFX_focus_ger_improve_bismark
+		x = -1
+		y = 1
+		relative_position_id = GER_new_prototypes
+		cost = 7
+		prerequisite = {
+			focus = GER_new_prototypes
+		}
+		mutually_exclusive = { focus = GER_improve_U_boots }
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_improve_bismark"
+			add_tech_bonus = {
+				name = GER_improve_bismark
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}			
+		}
+	}
+	focus = {
+		id = GER_improve_U_boots
+		icon = GFX_focus_ger_improve_U_boots
+		x = 1
+		y = 1
+		relative_position_id = GER_new_prototypes
+		cost = 7
+		prerequisite = {
+			focus = GER_new_prototypes
+		}
+		mutually_exclusive = { focus = GER_improve_bismark }
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_improve_U_boots"
+			add_tech_bonus = {
+				name = GER_improve_U_boots
+				bonus = 1
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = GER_neues_sonar
+		icon = GFX_focus_ger_neues_sonar
+		x = 0
+		y = 2
+		relative_position_id = GER_new_prototypes
+		cost = 7
+		prerequisite = {
+			focus = GER_improve_bismark
+			focus = GER_improve_U_boots
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_neues_sonar"
+			add_ideas = GER_neues_sonar
+		}
+	}
+	focus = {
+		id = GER_next_level_torpedo
+		icon = GFX_focus_ger_next_level_torpedo
+		x = -2
+		y = 3
+		relative_position_id = GER_new_prototypes
+		cost = 7
+		prerequisite = {
+			focus = GER_neues_sonar
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_next_level_torpedo"
+			add_ideas = GER_next_level_torpedo
+		}
+	}
+	focus = {
+		id = GER_bergwerk_researches
+		icon = GFX_focus_ger_bergwerk_researches
+		x = 0
+		y = 3
+		relative_position_id = GER_new_prototypes
+		cost = 7
+		prerequisite = {
+			focus = GER_neues_sonar
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_bergwerk_researches"
+			add_ideas = Volksreichs_Marineforschung
+		}
+	}
+	focus = {
+		id = GER_improved_cannons
+		icon = GFX_focus_ger_improved_cannons
+		x = 2
+		y = 3
+		relative_position_id = GER_new_prototypes
+		cost = 7
+		prerequisite = {
+			focus = GER_neues_sonar
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_improved_cannons"
+			add_ideas = GER_improved_cannons
+		}
+	}
+	focus = {
+		id = GER_u_bootschule
+		icon = GFX_focus_ger_u_bootschule
+		x = 0
+		y = 1
+		relative_position_id = GER_next_level_torpedo
+		cost = 7
+		prerequisite = {
+			focus = GER_next_level_torpedo
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_u_bootschule"
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = alfred_saalwachter			
+		}
+	}
+	focus = {
+		id = GER_bergwerkkruiser
+		icon = GFX_focus_ger_bergwerkkruiser
+		x = 0
+		y = 1
+		relative_position_id = GER_bergwerk_researches
+		cost = 7
+		prerequisite = {
+			focus = GER_bergwerk_researches
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_bergwerkkruiser"
+			add_tech_bonus = {
+				name = GER_bergwerkkruiser
+				bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	focus = {
+		id = GER_larger_secondary_batteries
+		icon = GFX_focus_ger_larger_secondary_batteries
+		x = 0
+		y = 1
+		relative_position_id = GER_improved_cannons
+		cost = 7
+		prerequisite = {
+			focus = GER_improved_cannons
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_larger_secondary_batteries"
+			add_ideas = GER_larger_secondary_batteries
+		}
+	}
+	focus = {
+		id = GER_beach_hopping
+		icon = GFX_focus_ger_beach_hopping
+		x = 0
+		y = 2
+		relative_position_id = GER_bergwerkkruiser
+		cost = 7
+		prerequisite = {
+			focus = GER_bergwerkkruiser
+			focus = GER_larger_secondary_batteries
+			focus = GER_u_bootschule
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_beach_hopping"
+			add_ideas = GER_beach_hopping
+		}
+	}
+	focus = {
+		id = GER_fight_from_flight
+		icon = GFX_focus_ger_fight_from_flight
+		x = 6
+		y = 0
+		relative_position_id = GER_wehrmarine
+		cost = 7
+		prerequisite = {
+			focus = GER_strasserreich
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_fight_from_flight"
+			custom_effect_tooltip = GER.volksmacht_tt
+		}
+	}
+	focus = {
+		id = GER_nationalise_the_flight_production
+		icon = GFX_focus_ger_nationalise_the_flight_production
+		x = 0
+		y = 1
+		relative_position_id = GER_fight_from_flight
+		cost = 7
+		prerequisite = {
+			focus = GER_fight_from_flight
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_nationalise_the_flight_production"
+			custom_effect_tooltip = available_political_advisor
+		}
+	}
+	focus = {
+		id = GER_airfleet_commitee
+		icon = GFX_focus_ger_airfleet_commitee
+		x = 0
+		y = 1
+		relative_position_id = GER_nationalise_the_flight_production
+		cost = 7
+		prerequisite = {
+			focus = GER_nationalise_the_flight_production
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_beach_hopping"
+			custom_effect_tooltip = available_political_advisor
+		}
+	}
+	focus = {
+		id = GER_hitler_planes
+		icon = GFX_focus_ger_hitler_planes
+		x = -1
+		y = 1
+		relative_position_id = GER_airfleet_commitee
+		cost = 7
+		prerequisite = {
+			focus = GER_airfleet_commitee
+		}
+		mutually_exclusive = { focus = GER_strasser_planes }
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_hitler_planes"
+			custom_effect_tooltip = GER_hitler_planes_tt
+			hidden_effect = { set_technology = { cv_fighter2 = 1 } }
+		}
+	}
+	focus = {
+		id = GER_strasser_planes
+		icon = GFX_focus_ger_strasser_planes
+		x = 1
+		y = 1
+		relative_position_id = GER_airfleet_commitee
+		cost = 7
+		prerequisite = {
+			focus = GER_airfleet_commitee
+		}
+		mutually_exclusive = { focus = GER_hitler_planes }
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_strasser_planes"
+			custom_effect_tooltip = GER_strasser_planes_tt
+			hidden_effect = { set_technology = { cat_heavy_fighter2 = 1 } }
+		}
+	}
+	focus = {
+		id = GER_bombing_technology
+		icon = GFX_focus_ger_bombing_technology
+		x = -1
+		y = 1
+		relative_position_id = GER_hitler_planes
+		cost = 7
+		prerequisite = {
+			focus = GER_strasser_planes
+			focus = GER_hitler_planes
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_bombing_technology"
+			add_tech_bonus = {
+				name = FRA_heavy_fighter_focus
+				bonus = 1.0
+				uses = 2
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	focus = {
+		id = GER_CAS
+		icon = GFX_focus_ger_CAS
+		x = 1
+		y = 1
+		relative_position_id = GER_hitler_planes
+		cost = 7
+		prerequisite = {
+			focus = GER_strasser_planes
+			focus = GER_hitler_planes
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_CAS"
+			add_tech_bonus = {
+				name = FRA_cas_focus
+				bonus = 1.0
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = GER_naval_air_superiority
+		icon = GFX_focus_ger_naval_air_superiority
+		x = 3
+		y = 1
+		relative_position_id = GER_hitler_planes
+		cost = 7
+		prerequisite = {
+			focus = GER_strasser_planes
+			focus = GER_hitler_planes
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_naval_air_superiority"
+			add_tech_bonus = {
+				name = uk_carrier_focus
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+	focus = {
+		id = GER_wunderwaffen
+		icon = GFX_focus_ger_wunderwaffen
+		x = 0
+		y = 1
+		relative_position_id = GER_CAS
+		cost = 10
+		prerequisite = {
+			focus = GER_bombing_technology
+		}
+		prerequisite = {
+			focus = GER_CAS
+		}
+		prerequisite = {
+			focus = GER_naval_air_superiority
+		}
+		ai_will_do = {
+			factor = 10
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_wunderwaffen"
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+				category = rocketry
+			}
+		}
+	}
+}

@@ -1,0 +1,638 @@
+﻿l_english:
+ INS_HOL_democratic:0 "Dutch East Indies"
+ INS_HOL_democratic_DEF:0 "the Dutch East Indies"
+ AUS_GER_puppet:0 "German-Austria VRK"
+ AUS_GER_puppet_ADJ:0 "German-Austrian"
+ AUS_GER_puppet_DEF:0 "The German-Austrian VRK"
+ AUS_puppet_strasserism:0 "German-Austria VRK"
+ AUS_puppet_strasserism_ADJ:0 "German-Austrian"
+ AUS_puppet_strasserism_DEF:0 "The German-Austrian VRK"
+
+ ITA_GER_puppet_strasserism:0 "Latin VRK"
+ ITA_GER_puppet_strasserism_ADJ:0 "Latin VRK"
+ ITA_GER_puppet_strasserism_DEF:0 "The Latin VRK"
+
+ JAP_GER_puppet_strasserism:0 "Nippon VRK"
+ JAP_GER_puppet_strasserism_ADJ:0 "Nipponese VRK"
+ JAP_GER_puppet_strasserism_DEF:0 "The Nippon VRK"
+
+ SOV_puppet_strasserism:0 "Eastern-Slavic VRK"
+ SOV_puppet_strasserism_ADJ:0 "Eastern-Slavic VRK"
+ SOV_puppet_strasserism_DEF:0 "The Eastern-Slavic VRK"
+
+ FRA_puppet_strasserism:0 "Frank VRK"
+ FRA_puppet_strasserism_ADJ:0 "Frank VRK"
+ FRA_puppet_strasserism_DEF:0 "The Frank VRK"
+
+ ENG_puppet_strasserism:0 "British VRK"
+ ENG_puppet_strasserism_ADJ:0 "British VRK"
+ ENG_puppet_strasserism_DEF:0 "The British VRK"
+
+ USA_puppet_strasserism:0 "American VRK"
+ USA_puppet_strasserism_ADJ:0 "American VRK"
+ USA_puppet_strasserism_DEF:0 "The American VRK"
+
+ ITA_puppet_strasserism:0 "Latin VRK"
+ ITA_puppet_strasserism_ADJ:0 "Latin VRK"
+ ITA_puppet_strasserism_DEF:0 "The Latin VRK"
+
+ AFG_puppet_strasserism:0 "Afgani VRK"
+ AFG_puppet_strasserism_ADJ:0 "Afgani VRK"
+ AFG_puppet_strasserism_DEF:0 "The Afgani VRK"
+
+ ALB_puppet_strasserism:0 "Albanian VRK"
+ ALB_puppet_strasserism_ADJ:0 "Albanian VRK"
+ ALB_puppet_strasserism_DEF:0 "The Albanian VRK"
+
+ ARG_puppet_strasserism:0 "Argentinian VRK"
+ ARG_puppet_strasserism_ADJ:0 "Argentinian VRK"
+ ARG_puppet_strasserism_DEF:0 "The Argentinian VRK"
+
+ AST_puppet_strasserism:0 "Down-Under VRK"
+ AST_puppet_strasserism_ADJ:0 "Down-Under VRK"
+ AST_puppet_strasserism_DEF:0 "The Down-Under VRK"
+
+ ALG_puppet_strasserism:0 "Algerian VRK"
+ ALG_puppet_strasserism_ADJ:0 "Algerian VRK"
+ ALG_puppet_strasserism_DEF:0 "The Algerian VRK"
+
+ ANG_puppet_strasserism:0 "Angolian VRK"
+ ANG_puppet_strasserism_ADJ:0 "Angolian VRK"
+ ANG_puppet_strasserism_DEF:0 "The Angolian VRK"
+
+ ARM_puppet_strasserism:0 "Armanian VRK"
+ ARM_puppet_strasserism_ADJ:0 "Armanian VRK"
+ ARM_puppet_strasserism_DEF:0 "The Armanian VRK"
+
+ BEL_puppet_strasserism:0 "Flanders VRK"
+ BEL_puppet_strasserism_ADJ:0 "Flanders VRK"
+ BEL_puppet_strasserism_DEF:0 "The Flanders VRK"
+
+ NIG_puppet_strasserism:0 "Nigerian VRK"
+ NIG_puppet_strasserism_ADJ:0 "Nigerian VRK"
+ NIG_puppet_strasserism_DEF:0 "The Nigerian VRK"
+
+ BHU_puppet_strasserism:0 "Bhutan VRK"
+ BHU_puppet_strasserism_ADJ:0 "Bhutan VRK"
+ BHU_puppet_strasserism_DEF:0 "The Bhutan VRK"
+
+ BLR_puppet_strasserism:0 "Byelorussian VRK"
+ BLR_puppet_strasserism_ADJ:0 "Byelorussian VRK"
+ BLR_puppet_strasserism_DEF:0 "The Byelorussian VRK"
+
+ BOL_puppet_strasserism:0 "Bolivia VRK"
+ BOL_puppet_strasserism_ADJ:0 "Bolivia VRK"
+ BOL_puppet_strasserism_DEF:0 "The Bolivia VRK"
+
+ BOS_puppet_strasserism:0 "Bosnian VRK"
+ BOS_puppet_strasserism_ADJ:0 "Bosnian VRK"
+ BOS_puppet_strasserism_DEF:0 "The Bosnian VRK"
+
+ BOT_puppet_strasserism:0 "Botswanian VRK"
+ BOT_puppet_strasserism_ADJ:0 "Botswanian VRK"
+ BOT_puppet_strasserism_DEF:0 "The Botswanian VRK"
+
+ BRA_puppet_strasserism:0 "Brazilian VRK"
+ BRA_puppet_strasserism_ADJ:0 "Brazilian VRK"
+ BRA_puppet_strasserism_DEF:0 "The Brazilian VRK"
+
+ BRU_puppet_strasserism:0 "Burmese VRK"
+ BRU_puppet_strasserism_ADJ:0 "Burmese VRK"
+ BRU_puppet_strasserism_DEF:0 "The Burmese VRK"
+
+ CAL_puppet_strasserism:0 "Californian VRK"
+ CAL_puppet_strasserism_ADJ:0 "Californian VRK"
+ CAL_puppet_strasserism_DEF:0 "The Californian VRK"
+
+ CAM_puppet_strasserism:0 "Cameroonian VRK"
+ CAM_puppet_strasserism_ADJ:0 "Cameroonian VRK"
+ CAM_puppet_strasserism_DEF:0 "The Cameroonian VRK"
+
+ CAN_puppet_strasserism:0 "Canadian VRK"
+ CAN_puppet_strasserism_ADJ:0 "Canadian VRK"
+ CAN_puppet_strasserism_DEF:0 "The Canadian VRK"
+
+ CGX_puppet_strasserism:0 "Guangxi VRK"
+ CGX_puppet_strasserism_ADJ:0 "Guangxi VRK"
+ CGX_puppet_strasserism_DEF:0 "The Guangxi VRK"
+
+ GXC_puppet_strasserism:0 "Guangxi VRK"
+ GXC_puppet_strasserism_ADJ:0 "Guangxi VRK"
+ GXC_puppet_strasserism_DEF:0 "The Guangxi VRK"
+
+ PRC_puppet_strasserism:0 "Chinese VRK"
+ PRC_puppet_strasserism_ADJ:0 "Chinese VRK"
+ PRC_puppet_strasserism_DEF:0 "The Chinese VRK"
+
+ CHI_puppet_strasserism:0 "Chinese VRK"
+ CHI_puppet_strasserism_ADJ:0 "Chinese VRK"
+ CHI_puppet_strasserism_DEF:0 "The Chinese VRK"
+
+ CHL_puppet_strasserism:0 "Chili VRK"
+ CHL_puppet_strasserism_ADJ:0 "Chili VRK"
+ CHL_puppet_strasserism_DEF:0 "The Chili VRK"
+
+ CMB_puppet_strasserism:0 "Cambodian VRK"
+ CMB_puppet_strasserism_ADJ:0 "Cambodian VRK"
+ CMB_puppet_strasserism_DEF:0 "The Cambodian VRK"
+
+ COL_puppet_strasserism:0 "Colombian VRK"
+ COL_puppet_strasserism_ADJ:0 "Colombian VRK"
+ COL_puppet_strasserism_DEF:0 "The Colombian VRK"
+
+ COG_puppet_strasserism:0 "Zairean VRK"
+ COG_puppet_strasserism_ADJ:0 "Zairean VRK"
+ COG_puppet_strasserism_DEF:0 "The Zairean VRK"
+
+ COS_puppet_strasserism:0 "Costa Rican VRK"
+ COS_puppet_strasserism_ADJ:0 "Costa Rican VRK"
+ COS_puppet_strasserism_DEF:0 "The Costa Rican VRK"
+
+ CRO_puppet_strasserism:0 "Croatia VRK"
+ CRO_puppet_strasserism_ADJ:0 "Croatia VRK"
+ CRO_puppet_strasserism_DEF:0 "The Croatia VRK"
+
+ CSA_puppet_strasserism:0 "Confederate VRK"
+ CSA_puppet_strasserism_ADJ:0 "Confederate VRK"
+ CSA_puppet_strasserism_DEF:0 "The Confederate VRK"
+
+ SHX_puppet_strasserism:0 "Shanxi VRK"
+ SHX_puppet_strasserism_ADJ:0 "Shanxi VRK"
+ SHX_puppet_strasserism_DEF:0 "The Shanxi VRK"
+
+ CUB_puppet_strasserism:0 "Cubian VRK"
+ CUB_puppet_strasserism_ADJ:0 "Cubian VRK"
+ CUB_puppet_strasserism_DEF:0 "The Cubian VRK"
+
+ XSM_puppet_strasserism:0 "Xibei San Ma VRK"
+ XSM_puppet_strasserism_ADJ:0 "Xibei San Ma VRK"
+ XSM_puppet_strasserism_DEF:0 "The Xibei San Ma VRK"
+
+ CYN_puppet_strasserism:0 "Yunnan VRK"
+ CYN_puppet_strasserism_ADJ:0 "Yunnan VRK"
+ CYN_puppet_strasserism_DEF:0 "The Yunnan VRK"
+
+ YUN_puppet_strasserism:0 "Yunnan VRK"
+ YUN_puppet_strasserism_ADJ:0 "Yunnan VRK"
+ YUN_puppet_strasserism_DEF:0 "The Yunnan VRK"
+
+ Cyprus_puppet_strasserism:0 "Cypriot VRK"
+ Cyprus_puppet_strasserism_ADJ:0 "Cypriot VRK"
+ Cyprus_puppet_strasserism_DEF:0 "The Cypriot VRK"
+
+ CZE_puppet_strasserism:0 "Bohemian VRK"
+ CZE_puppet_strasserism_ADJ:0 "Bohemian VRK"
+ CZE_puppet_strasserism_DEF:0 "The Bohemian VRK"
+
+ DDR_puppet_strasserism:0 "Eastern-Deutsch VRK" #why
+ DDR_puppet_strasserism_ADJ:0 "Eastern-Deutsch VRK"
+ DDR_puppet_strasserism_DEF:0 "The Eastern-Deutsch VRK"
+
+ WGR_puppet_strasserism:0 "Western-Deutsch VRK" #why
+ WGR_puppet_strasserism_ADJ:0 "Western-Deutsch VRK"
+ WGR_puppet_strasserism_DEF:0 "The Western-Deutsch VRK"
+
+ DEN_puppet_strasserism:0 "Danish VRK"
+ DEN_puppet_strasserism_ADJ:0 "Danish VRK"
+ DEN_puppet_strasserism_DEF:0 "The Danish VRK"
+
+ DFR_puppet_strasserism:0 "German VRK"
+ DFR_puppet_strasserism_ADJ:0 "German VRK"
+ DFR_puppet_strasserism_DEF:0 "The German VRK"
+
+ DOM_puppet_strasserism:0 "Dominican VRK"
+ DOM_puppet_strasserism_ADJ:0 "Dominican VRK"
+ DOM_puppet_strasserism_DEF:0 "The Dominican VRK"
+
+ EAF_puppet_strasserism:0 "East African VRK"
+ EAF_puppet_strasserism_ADJ:0 "East African VRK"
+ EAF_puppet_strasserism_DEF:0 "The East African VRK"
+
+ ECU_puppet_strasserism:0 "Ecuadorian VRK"
+ ECU_puppet_strasserism_ADJ:0 "Ecuadorian VRK"
+ ECU_puppet_strasserism_DEF:0 "The Ecuadorian VRK"
+
+ EGY_puppet_strasserism:0 "Egyptian VRK"
+ EGY_puppet_strasserism_ADJ:0 "Egyptian VRK"
+ EGY_puppet_strasserism_DEF:0 "The Egyptian VRK"
+
+ EQA_puppet_strasserism:0 "Equitorial VRK"
+ EQA_puppet_strasserism_ADJ:0 "Equitorial VRK"
+ EQA_puppet_strasserism_DEF:0 "The Equitorial VRK"
+
+ EST_puppet_strasserism:0 "Estonian VRK"
+ EST_puppet_strasserism_ADJ:0 "Estonian VRK"
+ EST_puppet_strasserism_DEF:0 "The Estonian VRK"
+
+ ETH_puppet_strasserism:0 "Ethiopian VRK"
+ ETH_puppet_strasserism_ADJ:0 "Ethiopian VRK"
+ ETH_puppet_strasserism_DEF:0 "The Ethiopian VRK"
+
+ FIN_puppet_strasserism:0 "Finnish VRK"
+ FIN_puppet_strasserism_ADJ:0 "Finnish VRK"
+ FIN_puppet_strasserism_DEF:0 "The Finnish VRK"
+
+ FLA_puppet_strasserism:0 "Flanders VRK"
+ FLA_puppet_strasserism_ADJ:0 "Flanders VRK"
+ FLA_puppet_strasserism_DEF:0 "The Flanders VRK"
+
+ GAB_puppet_strasserism:0 "Gabon VRK"
+ GAB_puppet_strasserism_ADJ:0 "Gabon VRK"
+ GAB_puppet_strasserism_DEF:0 "The Gabon VRK"
+
+ GEO_puppet_strasserism:0 "Geogrian VRK"
+ GEO_puppet_strasserism_ADJ:0 "Georgian VRK"
+ GEO_puppet_strasserism_DEF:0 "The Georgian VRK"
+
+ GER_puppet_strasserism:0 "German SSR"
+ GER_puppet_strasserism_ADJ:0 "German SSR"
+ GER_puppet_strasserism_DEF:0 "The German SSR"
+
+ GLD_puppet_strasserism:0 "Gold VRK"
+ GLD_puppet_strasserism_ADJ:0 "Gold VRK"
+ GLD_puppet_strasserism_DEF:0 "The Gold VRK"
+
+ GRE_puppet_strasserism:0 "Greek VRK"
+ GRE_puppet_strasserism_ADJ:0 "Greek VRK"
+ GRE_puppet_strasserism_DEF:0 "The Greek VRK"
+
+ GUA_puppet_strasserism:0 "Guatemalian VRK"
+ GUA_puppet_strasserism_ADJ:0 "Guatemalian VRK"
+ GUA_puppet_strasserism_DEF:0 "The Guatemalian VRK"
+
+ GUI_puppet_strasserism:0 "Guinean VRK"
+ GUI_puppet_strasserism_ADJ:0 "Guinean VRK"
+ GUI_puppet_strasserism_DEF:0 "The Guinean VRK"
+
+ GUY_puppet_strasserism:0 "Guyanan VRK"
+ GUY_puppet_strasserism_ADJ:0 "Guyanan VRK"
+ GUY_puppet_strasserism_DEF:0 "The Guyanan VRK"
+
+ HAI_puppet_strasserism:0 "Haiti VRK"
+ HAI_puppet_strasserism_ADJ:0 "Haiti VRK"
+ HAI_puppet_strasserism_DEF:0 "The Haiti VRK"
+
+ HOL_puppet_strasserism:0 "Dutch VRK"
+ HOL_puppet_strasserism_ADJ:0 "Dutch VRK"
+ HOL_puppet_strasserism_DEF:0 "The Dutch VRK"
+
+ HON_puppet_strasserism:0 "Hondurans VRK"
+ HON_puppet_strasserism_ADJ:0 "Hondurans VRK"
+ HON_puppet_strasserism_DEF:0 "The Hondurans VRK"
+
+ HUN_puppet_strasserism:0 "Hungarian VRK"
+ HUN_puppet_strasserism_ADJ:0 "Hungarian VRK"
+ HUN_puppet_strasserism_DEF:0 "The Hungarian VRK"
+
+ ICE_puppet_strasserism:0 "Icelandic VRK"
+ ICE_puppet_strasserism_ADJ:0 "Icelandic VRK"
+ ICE_puppet_strasserism_DEF:0 "The Icelandic VRK"
+
+ IDC_puppet_strasserism:0 "Indochinese VRK"
+ IDC_puppet_strasserism_ADJ:0 "Indochinese VRK"
+ IDC_puppet_strasserism_DEF:0 "The Indochinese VRK"
+
+ IND_puppet_strasserism:0 "Indian VRK"
+ IND_puppet_strasserism_ADJ:0 "Indian VRK"
+ IND_puppet_strasserism_DEF:0 "The Indian VRK"
+
+ INO_puppet_strasserism:0 "Indoneseian VRK"
+ INO_puppet_strasserism_ADJ:0 "Indoesian VRK"
+ INO_puppet_strasserism_DEF:0 "The Indonesian VRK"
+
+ PER_puppet_strasserism:0 "Persian VRK"
+ PER_puppet_strasserism_ADJ:0 "Persian VRK"
+ PER_puppet_strasserism_DEF:0 "The Persian VRK"
+
+ IRE_puppet_strasserism:0 "Hibernian VRK"
+ IRE_puppet_strasserism_ADJ:0 "Hibernian VRK"
+ IRE_puppet_strasserism_DEF:0 "The Hibernian VRK"
+
+ IRQ_puppet_strasserism:0 "Iraqi VRK"
+ IRQ_puppet_strasserism_ADJ:0 "Iraqi VRK"
+ IRQ_puppet_strasserism_DEF:0 "The Iraqi VRK"
+
+ ISR_puppet_strasserism:0 "Israeli VRK"
+ ISR_puppet_strasserism_ADJ:0 "Israeli VRK"
+ ISR_puppet_strasserism_DEF:0 "The Israeli VRK"
+
+ JEM_puppet_strasserism:0 "Yemenite VRK"
+ JEM_puppet_strasserism_ADJ:0 "Yemenite VRK"
+ JEM_puppet_strasserism_DEF:0 "The Yemenite VRK"
+
+ YEM_puppet_strasserism:0 "Yemenite VRK"
+ YEM_puppet_strasserism_ADJ:0 "Yemenite VRK"
+ YEM_puppet_strasserism_DEF:0 "The Yemenite VRK"
+
+ JOR_puppet_strasserism:0 "Jordan VRK"
+ JOR_puppet_strasserism_ADJ:0 "Jordan VRK"
+ JOR_puppet_strasserism_DEF:0 "The Jordan VRK"
+
+ KAZ_puppet_strasserism:0 "Kazaki VRK"
+ KAZ_puppet_strasserism_ADJ:0 "Kazaki VRK"
+ KAZ_puppet_strasserism_DEF:0 "The Kazaki VRK"
+
+ KOR_puppet_strasserism:0 "Korean VRK"
+ KOR_puppet_strasserism_ADJ:0 "Korean VRK"
+ KOR_puppet_strasserism_DEF:0 "The Korean VRK"
+
+ KUR_puppet_strasserism:0 "Kurdistan VRK"
+ KUR_puppet_strasserism_ADJ:0 "Kurdistan VRK"
+ KUR_puppet_strasserism_DEF:0 "The Kurdistan VRK"
+
+ KYG_puppet_strasserism:0 "Kyrgyz VRK"
+ KYG_puppet_strasserism_ADJ:0 "Kyrgyz VRK"
+ KYG_puppet_strasserism_DEF:0 "The Kyrgyz VRK"
+
+ LAT_puppet_strasserism:0 "Latvian VRK"
+ LAT_puppet_strasserism_ADJ:0 "Latvian VRK"
+ LAT_puppet_strasserism_DEF:0 "The Latvian VRK"
+
+ LAO_puppet_strasserism:0 "Laosese VRK"
+ LAO_puppet_strasserism_ADJ:0 "Laosese VRK"
+ LAO_puppet_strasserism_DEF:0 "The Laosese VRK"
+
+ LBA_puppet_strasserism:0 "Libyan VRK"
+ LBA_puppet_strasserism_ADJ:0 "Libyan VRK"
+ LBA_puppet_strasserism_DEF:0 "The Libyan VRK"
+
+ LEB_puppet_strasserism:0 "Lebanon VRK"
+ LEB_puppet_strasserism_ADJ:0 "Lebanon VRK"
+ LEB_puppet_strasserism_DEF:0 "The Lebanon VRK"
+
+ LIB_puppet_strasserism:0 "Liberian VRK"
+ LIB_puppet_strasserism_ADJ:0 "Liberian VRK"
+ LIB_puppet_strasserism_DEF:0 "The Liberian VRK"
+
+ LIT_puppet_strasserism:0 "Lithuanian VRK"
+ LIT_puppet_strasserism_ADJ:0 "Lithuanian VRK"
+ LIT_puppet_strasserism_DEF:0 "The Lithuanian VRK"
+
+ LUX_puppet_strasserism:0 "Luxemburgian VRK"
+ LUX_puppet_strasserism_ADJ:0 "Luxemburgian VRK"
+ LUX_puppet_strasserism_DEF:0 "The Luxemburgian VRK"
+
+ MAD_puppet_strasserism:0 "Madagascarian VRK"
+ MAD_puppet_strasserism_ADJ:0 "Madagascarian VRK"
+ MAD_puppet_strasserism_DEF:0 "The Madagascarian VRK"
+
+ MAL_puppet_strasserism:0 "Mali VRK"
+ MAL_puppet_strasserism_ADJ:0 "Mali VRK"
+ MAL_puppet_strasserism_DEF:0 "The Mali VRK"
+
+ MAN_puppet_strasserism:0 "Manchukuo VRK"
+ MAN_puppet_strasserism_ADJ:0 "Manchukuo VRK"
+ MAN_puppet_strasserism_DEF:0 "The Manchukuo VRK"
+
+ MEN_puppet_strasserism:0 "Mengkukuo VRK"
+ MEN_puppet_strasserism_ADJ:0 "Mengkukuo VRK"
+ MEN_puppet_strasserism_DEF:0 "The Mengkukuo VRK"
+
+ MEX_puppet_strasserism:0 "Mexican VRK"
+ MEX_puppet_strasserism_ADJ:0 "Mexican VRK"
+ MEX_puppet_strasserism_DEF:0 "The Mexican VRK"
+
+ MAL_puppet_strasserism:0 "Malasian VRK"
+ MAL_puppet_strasserism_ADJ:0 "Malasian VRK"
+ MAL_puppet_strasserism_DEF:0 "The Malasian VRK"
+
+ MON_puppet_strasserism:0 "Mongolian VRK"
+ MON_puppet_strasserism_ADJ:0 "Mongolian VRK"
+ MON_puppet_strasserism_DEF:0 "The Mongolian VRK"
+
+ MOR_puppet_strasserism:0 "Morocco VRK"
+ MOR_puppet_strasserism_ADJ:0 "Morocco VRK"
+ MOR_puppet_strasserism_DEF:0 "The Morocco VRK"
+
+ MZB_puppet_strasserism:0 "Mozambique VRK"
+ MZB_puppet_strasserism_ADJ:0 "Mozambique VRK"
+ MZB_puppet_strasserism_DEF:0 "The Mozambique VRK"
+
+ MNT_puppet_strasserism:0 "Montenegro VRK"
+ MNT_puppet_strasserism_ADJ:0 "Montenegro VRK"
+ MNT_puppet_strasserism_DEF:0 "The Montenegro VRK"
+
+ NMB_puppet_strasserism:0 "Namibian VRK"
+ NMB_puppet_strasserism_ADJ:0 "Namibian VRK"
+ NMB_puppet_strasserism_DEF:0 "The Namibian VRK"
+
+ D01_puppet_strasserism:0 "Hispanian VRK"
+ D01_puppet_strasserism_ADJ:0 "Hispanian VRK"
+ D01_puppet_strasserism_DEF:0 "The Hispanian VRK"
+
+ SPR_puppet_strasserism:0 "Hispanian VRK"
+ SPR_puppet_strasserism_ADJ:0 "Hispanian VRK"
+ SPR_puppet_strasserism_DEF:0 "The Hispanian VRK"
+
+ CAT_puppet_strasserism:0 "Hispanian VRK"
+ CAT_puppet_strasserism_ADJ:0 "Hispanian VRK"
+ CAT_puppet_strasserism_DEF:0 "The Hispanian VRK"
+
+ NEP_puppet_strasserism:0 "Nepalese VRK"
+ NEP_puppet_strasserism_ADJ:0 "Nepalese VRK"
+ NEP_puppet_strasserism_DEF:0 "The Nepalese VRK"
+
+ NIC_puppet_strasserism:0 "Nicaraguan VRK"
+ NIC_puppet_strasserism_ADJ:0 "Nicaraguan VRK"
+ NIC_puppet_strasserism_DEF:0 "The Nicaraguan VRK"
+
+ NOR_puppet_strasserism:0 "Norwegian VRK"
+ NOR_puppet_strasserism_ADJ:0 "Norwegian VRK"
+ NOR_puppet_strasserism_DEF:0 "The Norwegian VRK"
+
+ NZL_puppet_strasserism:0 "New Zealander VRK"
+ NZL_puppet_strasserism_ADJ:0 "New Zealander VRK"
+ NZL_puppet_strasserism_DEF:0 "The New Zealander VRK"
+
+ OMN_puppet_strasserism:0 "Oman VRK"
+ OMN_puppet_strasserism_ADJ:0 "Oman VRK"
+ OMN_puppet_strasserism_DEF:0 "The Oman VRK"
+
+ PAK_puppet_strasserism:0 "Pakistani VRK"
+ PAK_puppet_strasserism_ADJ:0 "Pakistani VRK"
+ PAK_puppet_strasserism_DEF:0 "The Pakistani VRK"
+
+ PAL_puppet_strasserism:0 "Palestian VRK"
+ PAL_puppet_strasserism_ADJ:0 "Palestian VRK"
+ PAL_puppet_strasserism_DEF:0 "The Palestian VRK"
+
+ PAN_puppet_strasserism:0 "Panama VRK"
+ PAN_puppet_strasserism_ADJ:0 "Panama VRK"
+ PAN_puppet_strasserism_DEF:0 "The Panama VRK"
+
+ PAR_puppet_strasserism:0 "Paraguay VRK"
+ PAR_puppet_strasserism_ADJ:0 "Paraguay VRK"
+ PAR_puppet_strasserism_DEF:0 "The Paraguay VRK" 
+
+ PHI_puppet_strasserism:0 "Philipi VRK"
+ PHI_puppet_strasserism_ADJ:0 "Philipi VRK"
+ PHI_puppet_strasserism_DEF:0 "The Philipi VRK"
+
+ POL_puppet_strasserism:0 "Polish VRK"
+ POL_puppet_strasserism_ADJ:0 "Polish VRK"
+ POL_puppet_strasserism_DEF:0 "The Polish VRK"
+
+ POR_puppet_strasserism:0 "Portugal VRK"
+ POR_puppet_strasserism_ADJ:0 "Portugal VRK"
+ POR_puppet_strasserism_DEF:0 "The Portugal VRK"
+
+ PRI_puppet_strasserism:0 "Primorsk VRK"
+ PRI_puppet_strasserism_ADJ:0 "Primorsk VRK"
+ PRI_puppet_strasserism_DEF:0 "The Primorsk VRK"
+
+ PRK_puppet_strasserism:0 "Korean VRK"
+ PRK_puppet_strasserism_ADJ:0 "Korean VRK"
+ PRK_puppet_strasserism_DEF:0 "The Korean VRK"
+
+ PRU_puppet_strasserism:0 "Peru VRK"
+ PRU_puppet_strasserism_ADJ:0 "Peru VRK"
+ PRU_puppet_strasserism_DEF:0 "The Peru VRK"
+
+ QUE_puppet_strasserism:0 "Quebec VRK"
+ QUE_puppet_strasserism_ADJ:0 "Quebec VRK"
+ QUE_puppet_strasserism_DEF:0 "The Quebec VRK"
+
+ RAJ_puppet_strasserism:0 "Indian VRK"
+ RAJ_puppet_strasserism_ADJ:0 "Indian VRK"
+ RAJ_puppet_strasserism_DEF:0 "The Indian VRK"
+
+ RHO_puppet_strasserism:0 "Rhodesian VRK"
+ RHO_puppet_strasserism_ADJ:0 "Rhodesian VRK"
+ RHO_puppet_strasserism_DEF:0 "The Rhodesian VRK"
+
+ ROM_puppet_strasserism:0 "Romanian VRK"
+ ROM_puppet_strasserism_ADJ:0 "Romanian VRK"
+ ROM_puppet_strasserism_DEF:0 "The Romanian VRK"
+
+ RSI_puppet_strasserism:0 "North Italian VRK"
+ RSI_puppet_strasserism_ADJ:0 "North Italian VRK"
+ RSI_puppet_strasserism_DEF:0 "The North Italian VRK"
+
+ RUS_puppet_strasserism:0 "Russian VRK"
+ RUS_puppet_strasserism_ADJ:0 "Russian VRK"
+ RUS_puppet_strasserism_DEF:0 "The Russian VRK"
+
+ SAF_puppet_strasserism:0 "South African VRK"
+ SAF_puppet_strasserism_ADJ:0 "South African VRK"
+ SAF_puppet_strasserism_DEF:0 "The South African VRK"
+
+ ELS_puppet_strasserism:0 "El Salvadorian VRK"
+ ELS_puppet_strasserism_ADJ:0 "El Salvadorian VRK"
+ ELS_puppet_strasserism_DEF:0 "The El Salvadorian VRK"
+
+ SAR_puppet_strasserism:0 "Sarawak VRK"
+ SAR_puppet_strasserism_ADJ:0 "Sarawak VRK"
+ SAR_puppet_strasserism_DEF:0 "The Sarawak VRK"
+
+ SAU_puppet_strasserism:0 "Arabian VRK"
+ SAU_puppet_strasserism_ADJ:0 "Arabian VRK"
+ SAU_puppet_strasserism_DEF:0 "The Arabian VRK"
+
+ SCA_puppet_strasserism:0 "Scandinavian VRK"
+ SCA_puppet_strasserism_ADJ:0 "Scandinavian VRK"
+ SCA_puppet_strasserism_DEF:0 "The Scandinavian VRK"
+
+ SIK_puppet_strasserism:0 "Sinkiang VRK"
+ SIK_puppet_strasserism_ADJ:0 "Sinkian VRK"
+ SIK_puppet_strasserism_DEF:0 "The Sinkian VRK"
+
+ SWI_puppet_strasserism:0 "Swiss VRK"
+ SWI_puppet_strasserism_ADJ:0 "Swiss VRK"
+ SWI_puppet_strasserism_DEF:0 "The Swiss VRK"
+
+ SWE_puppet_strasserism:0 "Swedish VRK"
+ SWE_puppet_strasserism_ADJ:0 "Swedish VRK"
+ SWE_puppet_strasserism_DEF:0 "The Swedish VRK"
+
+ SCO_puppet_strasserism:0 "Scottish VRK"
+ SCO_puppet_strasserism_ADJ:0 "Scottish VRK"
+ SCO_puppet_strasserism_DEF:0 "The Scottish VRK"
+
+ SER_puppet_strasserism:0 "Serbian VRK"
+ SER_puppet_strasserism_ADJ:0 "Serbian VRK"
+ SER_puppet_strasserism_DEF:0 "The Serbian VRK"
+
+ SIA_puppet_strasserism:0 "Siamese VRK"
+ SIA_puppet_strasserism_ADJ:0 "Siamese VRK"
+ SIA_puppet_strasserism_DEF:0 "The Siamese VRK"
+
+ SIB_puppet_strasserism:0 "Siberian VRK"
+ SIB_puppet_strasserism_ADJ:0 "Siberian VRK"
+ SIB_puppet_strasserism_DEF:0 "The Siberian VRK"
+
+ SIE_puppet_strasserism:0 "Sierra Leone VRK"
+ SIE_puppet_strasserism_ADJ:0 "Sierra Leone VRK"
+ SIE_puppet_strasserism_DEF:0 "The Sierra Leone VRK"
+
+ TAN_puppet_strasserism:0 "Tannu Tuva VRK"
+ TAN_puppet_strasserism_ADJ:0 "Tannu Tuva VRK"
+ TAN_puppet_strasserism_DEF:0 "The Tannu Tuva VRK"
+
+ TEX_puppet_strasserism:0 "Texan VRK"
+ TEX_puppet_strasserism_ADJ:0 "Texan VRK"
+ TEX_puppet_strasserism_DEF:0 "The Texan VRK"
+
+ TIB_puppet_strasserism:0 "Tibet VRK"
+ TIB_puppet_strasserism_ADJ:0 "Tibet VRK"
+ TIB_puppet_strasserism_DEF:0 "The Tibet VRK"
+
+ TRA_puppet_strasserism:0 "Transural VRK"
+ TRA_puppet_strasserism_ADJ:0 "Transural VRK"
+ TRA_puppet_strasserism_DEF:0 "The Transural VRK"
+
+ TRM_puppet_strasserism:0 "Turkmeni VRK"
+ TRM_puppet_strasserism_ADJ:0 "Turkmeni VRK"
+ TRM_puppet_strasserism_DEF:0 "The Turkmeni VRK"
+
+ TUN_puppet_strasserism:0 "Tunisian VRK"
+ TUN_puppet_strasserism_ADJ:0 "Tunisian VRK"
+ TUN_puppet_strasserism_DEF:0 "The Tunisian VRK"
+
+ TUR_puppet_strasserism:0 "Turk VRK"
+ TUR_puppet_strasserism_ADJ:0 "Turk VRK"
+ TUR_puppet_strasserism_DEF:0 "The Turk VRK"
+
+ UKR_puppet_strasserism:0 "Ukranian VRK"
+ UKR_puppet_strasserism_ADJ:0 "Ukranian VRK"
+ UKR_puppet_strasserism_DEF:0 "The Ukranian VRK"
+
+ URG_puppet_strasserism:0 "Uruguay VRK"
+ URG_puppet_strasserism_ADJ:0 "Uruguay VRK"
+ URG_puppet_strasserism_DEF:0 "The Uruguay VRK"
+
+ UZB_puppet_strasserism:0 "Uzbeki VRK"
+ UZB_puppet_strasserism_ADJ:0 "Uzbeki VRK"
+ UZB_puppet_strasserism_DEF:0 "The Uzbeki VRK"
+
+ VEN_puppet_strasserism:0 "Venezualian VRK"
+ VEN_puppet_strasserism_ADJ:0 "Venezualian VRK"
+ VEN_puppet_strasserism_DEF:0 "The Venezualian VRK"
+
+ VIC_puppet_strasserism:0 "Vichy VRK"
+ VIC_puppet_strasserism_ADJ:0 "Vichy VRK"
+ VIC_puppet_strasserism_DEF:0 "The Vichy VRK"
+
+ VIN_puppet_strasserism:0 "Vietnamese VRK"
+ VIN_puppet_strasserism_ADJ:0 "Vietnamese VRK"
+ VIN_puppet_strasserism_DEF:0 "The Vietnamese VRK"
+
+ WLL_puppet_strasserism:0 "Wallonian VRK"
+ WLL_puppet_strasserism_ADJ:0 "Wallonian VRK"
+ WLL_puppet_strasserism_DEF:0 "The Wallonian VRK"
+
+ YUG_puppet_strasserism:0 "Yugoslavian VRK"
+ YUG_puppet_strasserism_ADJ:0 "Yugoslavian VRK"
+ YUG_puppet_strasserism_DEF:0 "The Yugoslavian VRK"
+
+ EMU_puppet_strasserism:0 "Emu VRK"
+ EMU_puppet_strasserism_ADJ:0 "Emu VRK"
+ EMU_puppet_strasserism_DEF:0 "The Emu VRK"
+
+ INS_puppet_strasserism:0 "German East Indies"
+ INS_puppet_strasserism_ADJ:0 "German East Indies"
+ INS_puppet_strasserism_DEF:0 "The German East Indies"
+
+ DUT_puppet_strasserism:0 "Dutch VRK"
+ DUT_puppet_strasserism_ADJ:0 "Dutch VRK"
+ DUT_puppet_strasserism_DEF:0 "The Dutch VRK"
+

@@ -1,0 +1,513 @@
+spriteTypes = {	
+
+#STRASSERREICH# (Hi there? What you doing here for?)
+	SpriteType = {
+	name = "GFX_focus_ger_hammer"
+	texturefile = "gfx/interface/goals/focus_ger_hammer.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_sword"
+	texturefile = "gfx/interface/goals/focus_ger_sword.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_class_conflict"
+	texturefile = "gfx/interface/goals/focus_ger_class_conflict.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_establish_the_cult_of_strasser"
+	texturefile = "gfx/interface/goals/focus_ger_cult_of_personality.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_education"
+	texturefile = "gfx/interface/goals/focus_ger_education.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_hitler"
+	texturefile = "gfx/interface/goals/focus_ger_hitler.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_issues_of_the_table"
+	texturefile = "gfx/interface/goals/focus_ger_issues_of_the_table.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_the_jewish_question"
+	texturefile = "gfx/interface/goals/focus_ger_jewish_question.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_the_judicial_question"
+	texturefile = "gfx/interface/goals/focus_ger_judicial_question.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_trade_union"
+	texturefile = "gfx/interface/goals/focus_ger_trade_union.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_the_versailles_question"
+	texturefile = "gfx/interface/goals/focus_ger_versailles_question.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_wealth_distribution"
+	texturefile = "gfx/interface/goals/focus_ger_wealth_distribution.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_josef_beppo_rohmer"
+	texturefile = "gfx/interface/goals/focus_ger_josef_beppo_rohmer.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_strassers_letter"
+	texturefile = "gfx/interface/goals/focus_ger_strassers_letter.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_strassers_manifesto"
+	texturefile = "gfx/interface/goals/focus_ger_strassers_manifesto.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_strassers_pamphlet"
+	texturefile = "gfx/interface/goals/focus_ger_strassers_pamphlet.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_strasserreich"
+	texturefile = "gfx/interface/goals/focus_ger_strasserreich.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_the_trials"
+	texturefile = "gfx/interface/goals/focus_ger_the_trials.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_communists"
+	texturefile = "gfx/interface/goals/focus_ger_communists.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_nsdap"
+	texturefile = "gfx/interface/goals/focus_ger_nsdap.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_rheingold"
+	texturefile = "gfx/interface/goals/focus_ger_rhinegold.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_volksmacht"
+	texturefile = "gfx/interface/goals/focus_ger_volksmacht.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_spanish_civil_war"
+	texturefile = "gfx/interface/goals/focus_ger_spanish_civil_war.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_extreme_autarky"
+	texturefile = "gfx/interface/goals/focus_ger_extreme_autarky.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_guild_system"
+	texturefile = "gfx/interface/goals/focus_ger_guild_system.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_volkreich_labour_service"
+	texturefile = "gfx/interface/goals/focus_ger_volkreich_labour_service.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_volkreichsautobahn"
+	texturefile = "gfx/interface/goals/focus_ger_volksreichautobahn.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_stand_against_the_reds"
+	texturefile = "gfx/interface/goals/focus_ger_stand_against_the_reds.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_stand_with_the_reds"
+	texturefile = "gfx/interface/goals/focus_ger_stand_with_the_reds.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_german_science"
+	texturefile = "gfx/interface/goals/focus_ger_german_science.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_westwall"
+	texturefile = "gfx/interface/goals/focus_ger_westwall.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_black_rubber"
+	texturefile = "gfx/interface/goals/focus_ger_black_rubber.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_three_year_plan"
+	texturefile = "gfx/interface/goals/focus_ger_three_year_plan.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_red_factories"
+	texturefile = "gfx/interface/goals/focus_ger_red_factories.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_red_hammers"
+	texturefile = "gfx/interface/goals/focus_ger_red_hammers.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_white_steel"
+	texturefile = "gfx/interface/goals/focus_ger_white_steel.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_white_fuel"
+	texturefile = "gfx/interface/goals/focus_ger_white_fuel.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_black_oil"
+	texturefile = "gfx/interface/goals/focus_ger_black_oil.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_one_people"
+	texturefile = "gfx/interface/goals/focus_ger_one_people.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_one_empire"
+	texturefile = "gfx/interface/goals/focus_ger_one_empire.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_one_leader"
+	texturefile = "gfx/interface/goals/focus_ger_one_leader.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_art_and_architecture"
+	texturefile = "gfx/interface/goals/focus_ger_art_and_architecture.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_posters"
+	texturefile = "gfx/interface/goals/focus_ger_posters.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_radios"
+	texturefile = "gfx/interface/goals/focus_ger_radio.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_newspaper"
+	texturefile = "gfx/interface/goals/focus_ger_newspaper.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_literature_and_music"
+	texturefile = "gfx/interface/goals/focus_ger_literature_and_music.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_cinema"
+	texturefile = "gfx/interface/goals/focus_ger_cinema.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_seeking_for_the_black_shirts"
+	texturefile = "gfx/interface/goals/focus_ger_seeking_for_the_black_shirts.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_seeking_for_the_red_sun"
+	texturefile = "gfx/interface/goals/focus_ger_seeking_for_the_red_sun.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_molotov_strasser_pact"
+	texturefile = "gfx/interface/goals/focus_ger_molotov_strasser_pact.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_the_polish_question"
+	texturefile = "gfx/interface/goals/focus_ger_the_polish_question.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_red_and_black"
+	texturefile = "gfx/interface/goals/focus_ger_red_and_black.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_red_and_red"
+	texturefile = "gfx/interface/goals/focus_ger_red_and_red.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_seek_for_hungary"
+	texturefile = "gfx/interface/goals/focus_ger_seek_for_hungary.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_seek_for_romania"
+	texturefile = "gfx/interface/goals/focus_ger_seek_for_romania.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_seek_for_spain"
+	texturefile = "gfx/interface/goals/focus_ger_seek_for_spain.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_spread_the_red"
+	texturefile = "gfx/interface/goals/focus_ger_spread_the_red.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_destroy_capitalism"
+	texturefile = "gfx/interface/goals/focus_ger_destroy_capitalism.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_operation_black_storm"
+	texturefile = "gfx/interface/goals/focus_ger_operation_black_storm.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_blood_brothers"
+	texturefile = "gfx/interface/goals/focus_ger_blood_brothers.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_sword_in_the_back"
+	texturefile = "gfx/interface/goals/focus_ger_sword_in_the_back.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_battle_of_the_brothers"
+	texturefile = "gfx/interface/goals/focus_ger_battle_of_the_brothers.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_status_quo"
+	texturefile = "gfx/interface/goals/focus_ger_status_quo.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_strasser_sicherheitsdienst"
+	texturefile = "gfx/interface/goals/focus_ger_strasser_sicherheitsdienst.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_restore_SA"
+	texturefile = "gfx/interface/goals/focus_ger_restore_SA.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_enchorage_military_scientists"
+	texturefile = "gfx/interface/goals/focus_ger_enchorage_military_scientists.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_SSG_training"
+	texturefile = "gfx/interface/goals/focus_ger_SSG_training.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_urban_patrols"
+	texturefile = "gfx/interface/goals/focus_ger_urban_patrols.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_militarkamp"
+	texturefile = "gfx/interface/goals/focus_ger_militarkamp.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_straserjugend"
+	texturefile = "gfx/interface/goals/focus_ger_strasserjugend.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_compulsary_military_lessons"
+	texturefile = "gfx/interface/goals/focus_ger_compulsary_military_lessons.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_stettin_schutzgruppe_center"
+	texturefile = "gfx/interface/goals/focus_ger_stettin_schutzgruppe_center.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_lower_the_age_limit_for_conscription"
+	texturefile = "gfx/interface/goals/focus_ger_lower_age_for_conscription.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_anti_resistance_act"
+	texturefile = "gfx/interface/goals/focus_ger_anti_resistance_act.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_pistols_for_officers"
+	texturefile = "gfx/interface/goals/focus_ger_pistols_for_officers.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_undercover_personel"
+	texturefile = "gfx/interface/goals/focus_ger_undercover_personel.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_coded_conversations"
+	texturefile = "gfx/interface/goals/focus_ger_coded_conversations.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_maximum_surveilance"
+	texturefile = "gfx/interface/goals/focus_ger_maximum_surveliance.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_strassers_university"
+	texturefile = "gfx/interface/goals/focus_ger_strassers_university.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_strasser_nuremburg_rally"
+	texturefile = "gfx/interface/goals/focus_ger_strasser_nuremburg_rally.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_militarschulen"
+	texturefile = "gfx/interface/goals/focus_ger_militarschulen.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_increased_army_training"
+	texturefile = "gfx/interface/goals/focus_ger_increased_army_training.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_panzerforschung"
+	texturefile = "gfx/interface/goals/focus_ger_panzerforschung.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_reformed_army_universities"
+	texturefile = "gfx/interface/goals/focus_ger_army_universities.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_nationalisation_of_krupp"
+	texturefile = "gfx/interface/goals/focus_ger_nationalisation_of_krupp.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_brandenburgen_militarfabriken"
+	texturefile = "gfx/interface/goals/focus_ger_brandenburgen_militarfabriken.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_radartechnologie"
+	texturefile = "gfx/interface/goals/focus_ger_radartechnologie.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_militarbau"
+	texturefile = "gfx/interface/goals/focus_ger_militarbau.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_rheinkaserne"
+	texturefile = "gfx/interface/goals/focus_ger_rheinkaserne.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_wehrmarine"
+	texturefile = "gfx/interface/goals/focus_ger_wehrmarine.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_new_prototypes"
+	texturefile = "gfx/interface/goals/focus_ger_new_prototypes.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_hamburger_dock"
+	texturefile = "gfx/interface/goals/focus_ger_hamburger_dock.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_improve_bismark"
+	texturefile = "gfx/interface/goals/focus_ger_improve_bismark.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_improve_U_boots"
+	texturefile = "gfx/interface/goals/focus_ger_improve_U_boots.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_neues_sonar"
+	texturefile = "gfx/interface/goals/focus_ger_neues_sonar.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_next_level_torpedo"
+	texturefile = "gfx/interface/goals/focus_ger_next_level_torpedo.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_bergwerk_researches"
+	texturefile = "gfx/interface/goals/focus_ger_bergwerk_researches.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_improved_cannons"
+	texturefile = "gfx/interface/goals/focus_ger_improved_cannons.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_u_bootschule"
+	texturefile = "gfx/interface/goals/focus_ger_u_bootschule.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_bergwerkkruiser"
+	texturefile = "gfx/interface/goals/focus_ger_bergwerkkruiser.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_larger_secondary_batteries"
+	texturefile = "gfx/interface/goals/focus_ger_larger_secondary_batteries.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_beach_hopping"
+	texturefile = "gfx/interface/goals/focus_ger_beach_hopping.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_fight_from_flight"
+	texturefile = "gfx/interface/goals/focus_ger_fight_from_flight.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_nationalise_the_flight_production"
+	texturefile = "gfx/interface/goals/focus_ger_nationalise_the_flight_production.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_airfleet_commitee"
+	texturefile = "gfx/interface/goals/focus_ger_airfleet_commitee.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_strasser_planes"
+	texturefile = "gfx/interface/goals/focus_ger_strasser_planes.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_hitler_planes"
+	texturefile = "gfx/interface/goals/focus_ger_hitler_planes.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_bombing_technology"
+	texturefile = "gfx/interface/goals/focus_ger_bombing_technology.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_CAS"
+	texturefile = "gfx/interface/goals/focus_ger_CAS.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_naval_air_superiority"
+	texturefile = "gfx/interface/goals/focus_ger_naval_air_superiority.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_wunderwaffen"
+	texturefile = "gfx/interface/goals/focus_ger_wunderwaffen.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_was_ist_das_deutsches_vaterland"
+	texturefile = "gfx/interface/goals/focus_ger_was_ist_das_deutsches_vaterland.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_is_it_prussia"
+	texturefile = "gfx/interface/goals/focus_ger_is_it_prussia.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_is_it_swabia"
+	texturefile = "gfx/interface/goals/focus_ger_is_it_swabia.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_the_citizens_of_the_mark_mold_iron"
+	texturefile = "gfx/interface/goals/focus_ger_the_citizens_of_the_mark_mold_iron.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_the_place_where_cattle_of_the_marsi_roam"
+	texturefile = "gfx/interface/goals/focus_ger_the_place_where_the_cattle_of_the_marsi_roam.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_is_it_bavaria"
+	texturefile = "gfx/interface/goals/focus_ger_is_it_bavaria.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_is_it_styria"
+	texturefile = "gfx/interface/goals/focus_ger_is_it_styria.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_where_the_danube_rushes_along"
+	texturefile = "gfx/interface/goals/focus_ger_where_the_danube_rushes_along.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_is_it_westphalia"
+	texturefile = "gfx/interface/goals/focus_ger_is_it_westphalia.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_is_it_pommerania"
+	texturefile = "gfx/interface/goals/focus_ger_is_it_pomerania.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_is_it_tyrol"
+	texturefile = "gfx/interface/goals/focus_ger_is_it_the_tyrol.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_it_must_be_austria"
+	texturefile = "gfx/interface/goals/focus_ger_it_must_be_austria.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_as_far_as_the_German_tongue_speaks"
+	texturefile = "gfx/interface/goals/focus_ger_as_far_as_the_German_tongue_speaks.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_in_a_small_polish_village"
+	texturefile = "gfx/interface/goals/focus_ger_in_a_small_polish_village.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_is_it_the_land_of_the_swiss"
+	texturefile = "gfx/interface/goals/focus_ger_is_it_the_swiss.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_ger_the_sand_of_dunes_blows"
+	texturefile = "gfx/interface/goals/focus_ger_the_sand_of_dunes_blows.dds"			
+	}
+}
+

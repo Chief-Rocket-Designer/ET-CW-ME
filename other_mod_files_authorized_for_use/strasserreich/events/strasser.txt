@@ -1,0 +1,2236 @@
+###########################
+# German Events
+###########################
+add_namespace = strasser
+country_event = {
+	id = strasser.1
+	title = strasser.1.t
+	desc = strasser.1.d
+	picture = GFX_report_event_strasserreich
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.1"}
+	fire_only_once = yes
+	trigger = {	
+		NOT = { has_country_flag = STRASSERREICH_INTRO }
+		TAG = GER
+	}
+	immediate = { set_country_flag = STRASSERREICH_INTRO }
+	mean_time_to_happen = { days = 0 }
+	option = {
+		name = strasser.1.a
+		country_event = { id = strasser.2 }
+	}
+}
+country_event = {
+	id = strasser.2
+	title = strasser.2.t
+	desc = strasser.2.d
+	picture = GFX_report_event_german_speech
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.2"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = { set_country_flag = STRASSERREICH_INTRO }
+	option = {
+		name = strasser.2.a
+		set_country_flag = GER_hammer_first
+	}
+	option = {
+		name = strasser.2.b
+		set_country_flag = GER_sword_first
+	}
+}
+country_event = {
+	id = strasser.3
+	title = strasser.3.t
+	desc = strasser.3.d
+	picture = GFX_report_event_german_speech
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.3"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.3.a
+		set_country_flag = GER_gregor_hammer
+		add_ideas = GER_gregors_hammer
+	}
+	option = {
+		name = strasser.3.b
+		set_country_flag = GER_otto_hammer
+		add_ideas = GER_ottos_hammer
+	}
+}
+country_event = {
+	id = strasser.4
+	title = strasser.4.t
+	desc = strasser.4.d
+	picture = GFX_report_event_german_speech
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.4"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.4.a
+		set_country_flag = GER_gregor_sword
+		add_ideas = GER_gregors_sword
+	}
+	option = {
+		name = strasser.4.b
+		set_country_flag = GER_otto_sword
+		add_ideas = GER_ottos_sword
+	}
+}
+country_event = {
+	id = strasser.5
+	title = strasser.5.t
+	desc = strasser.5.d
+	picture = GFX_report_event_german_speech
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.5"}
+	is_triggered_only = yes
+	option = {
+		name = strasser.5.a
+		add_stability = 0.2
+	}
+	option = {
+		name = strasser.5.b
+		add_stability = 0.1
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+}
+country_event = {
+	id = strasser.6
+	title = strasser.6.t
+	desc = strasser.6.d
+	picture = GFX_report_event_german_speech
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.6"}
+	is_triggered_only = yes
+	option = {
+		name = strasser.6.a
+		add_popularity = {
+		    ideology = communism
+		    popularity = -0.5
+		}
+	}
+	option = {
+		name = strasser.6.b
+		add_popularity = {
+		    ideology = fascism
+		    popularity = -0.5
+		}
+	}
+}
+country_event = {
+	id = strasser.7
+	title = strasser.7.t
+	desc = strasser.7.d
+	picture = GFX_report_event_german_speech
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.7"}
+	is_triggered_only = yes
+	option = {
+		name = strasser.7.a
+		add_war_support = 0.30
+	}
+}
+country_event = {
+	id = strasser.8
+	title = strasser.8.t
+	desc = strasser.8.d
+	picture = GFX_report_event_german_speech
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.8"}
+	trigger = {
+			has_completed_focus = GER_strassers_pamphlet
+			has_completed_focus = GER_strassers_manifesto
+			has_completed_focus = GER_strassers_letter
+			has_idea = hitleroof
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = strasser.8.a
+		swap_ideas = {
+		    remove_idea = hitleroof
+		    add_idea = GER_hitlerslegacy
+		}
+	}
+}
+country_event = {
+	id = strasser.9
+	title = strasser.9.t
+	desc = strasser.9.d
+	picture = GFX_report_event_flag_picking
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.9"}
+	trigger = {
+		AND = {
+			focus_progress = {
+			    focus = GER_strasserreich
+			   	progress = 0.5
+			}
+			NOT = {
+				has_country_flag = germany.has.flag.mate
+			}	
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = strasser.9.a
+		set_country_flag = germany.has.flag.mate
+	}
+	option = {
+		name = strasser.9.b
+		set_cosmetic_tag = GER_strasserism2
+		set_country_flag = germany.has.flag.mate
+	}
+	option = {
+		name = strasser.9.c
+		set_cosmetic_tag = GER_strasserism3
+		set_country_flag = germany.has.flag.mate
+	}
+	option = {
+		name = strasser.9.e
+		set_cosmetic_tag = GER_strasserism4
+		set_country_flag = germany.has.flag.mate
+	}
+}
+
+country_event = {
+	id = strasser.12
+	title = strasser.12.t
+	desc = strasser.12.d
+	picture = GFX_report_event_generic_sign_treaty3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.9"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.12.a
+		add_ideas = {	FRA_scw_intervention_nationalists_focus	}
+		random_other_country = {
+			limit = {
+				original_tag = SPR
+				has_government = fascism
+			}
+			add_opinion_modifier = {				
+				target = ROOT
+				modifier = FRA_scw_intervention_nationalists_SPA
+			}
+		}
+		SPR = {
+			add_opinion_modifier = {				
+				target = ROOT
+				modifier = FRA_scw_intervention_nationalists_SPR
+			}
+		}
+		hidden_effect = {
+		set_country_flag = ger_supported_SPA
+			random_other_country = {
+				limit = {
+					original_tag = SPR
+					has_government = fascism
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 200
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT
+					value = 200
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = -200
+				}
+				GER = {
+					add_ai_strategy = {
+						type = befriend
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = protect
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = antagonize
+						id = PREV
+						value = -200
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = strasser.12.b
+		add_ideas = {	FRA_scw_intervention_nationalists_focus	}
+		SPR = {
+			add_opinion_modifier = {				
+				target = ROOT
+				modifier = FRA_scw_intervention_republicans_SPR
+			}
+		}
+		set_country_flag = ger_supported_SPR
+		random_other_country = {
+			limit = {
+				original_tag = SPR
+				has_government = fascism
+			}
+			add_opinion_modifier = {				
+				target = ROOT
+				modifier = FRA_scw_intervention_republicans_SPA
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = SPR
+					has_government = communism
+				}
+				add_ai_strategy = {
+					type = befriend
+					id = ROOT
+					value = 200
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT
+					value = 200
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = -200
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = befriend
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = protect
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = PREV
+						value = 200
+					}
+					add_ai_strategy = {
+						type = antagonize
+						id = PREV
+						value = -200
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = strasser.12.c
+		set_country_flag = ger_supported_SPA
+		set_country_flag = ger_supported_SPR
+		CAT = {
+			add_state_core = 165
+		}
+		SPR = {
+			country_event = { id = strasser.13 }
+		}
+	}
+}
+
+country_event = {
+	id = strasser.13
+	title = strasser.13.t
+	desc = strasser.13.d
+	picture = GFX_report_event_generic_sign_treaty3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.13"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.13.a
+		release = CAT
+		declare_war_on = {
+		    target = CAT
+		    type = annex_everything
+		}
+		D01 = {
+			declare_war_on = {
+			    target = CAT
+			    type = annex_everything
+			}
+		}
+		CAT = {
+		load_oob = "CAT_1936"		
+		}
+	}
+}
+
+country_event = {
+	id = strasser.14
+	title = strasser.14.t
+	desc = strasser.14.d
+	picture = GFX_report_event_hungary_parliament
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.14"}
+	trigger = {	
+		controls_state = 41
+		TAG = CAT
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = strasser.14.a
+		set_cosmetic_tag = CAT_united
+		add_state_core = 297
+		add_state_core = 166
+		add_state_core = 169
+		add_state_core = 167
+		add_state_core = 170
+		add_state_core = 168
+		add_state_core = 174
+		add_state_core = 175
+		add_state_core = 171
+		add_state_core = 41
+		add_state_core = 177
+		add_state_core = 176
+		add_state_core = 290
+		add_state_core = 172
+		add_state_core = 783
+		add_state_core = 173
+		add_state_core = 178
+		add_state_core = 698
+		add_state_core = 699
+		add_state_core = 697
+	}
+}
+
+country_event = {
+	id = strasser.11
+	title = strasser.11.t
+	desc = strasser.11.d
+	picture = GFX_report_event_worried_french
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.11"}
+	is_triggered_only = yes
+	option = {
+		name = strasser.11.a
+		set_state_owner = 790
+		GER = {
+			country_event = { id = strasser.15 } 
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+	option = {
+		name = strasser.11.b
+		GER = {
+			country_event = { id = strasser.15 } 
+		}
+		42 = { set_demilitarized_zone = yes }
+		51 = { set_demilitarized_zone = yes }
+		790 = { set_demilitarized_zone = yes }
+	}
+}
+
+country_event = {
+	id = strasser.15
+	title = strasser.15.t
+	desc = strasser.15.d
+	picture = GFX_report_event_worried_french
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.15"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.15.a
+		declare_war_on = {
+		    target = FRA
+		    type = annex_everything
+		}
+	}
+	option = {
+		name = strasser.15.b
+	}
+}
+
+country_event = {
+	id = strasser.16
+	title = strasser.16.t
+	desc = strasser.16.d
+	picture = GFX_report_event_german_reichstag_gathering
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.16"}
+	is_triggered_only = yes
+	option = {
+		name = strasser.16.a
+		add_ideas = GER_danube_idea
+	}
+}
+
+country_event = {
+	id = strasser.17
+	title = strasser.17.t
+	desc = strasser.17.d
+	picture = GFX_report_event_germany_politician_handshake
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.17"}
+	fire_only_once = yes
+	trigger = {
+	    tag = GER
+		AUS = {
+			exists = yes
+			strasserism > 0.4
+			NOT = {
+				has_war_with = GER
+			}
+		}
+		NOT = {
+			has_country_flag = AUS_puppet_done
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = strasser.17.a
+		puppet = AUS
+		remove_unit_leader = 24
+		hidden_effect = {
+		AUS = {
+				set_cosmetic_tag = AUS_puppet
+				create_country_leader = {
+					name = "Josef ''Sepp'' Dietrich"
+					desc = "POLITICS_FRITS_CLAUSEN_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Josef_Dietrich.dds"
+					expire = "1965.1.1"
+					ideology = strasserism_subtype
+					traits = { }
+				}
+				set_country_flag = AUS_puppet_done
+			}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.18
+	title = strasser.18.t
+	desc = strasser.18.d
+	picture = GFX_report_event_germany_politician_handshake
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.18"}
+	is_triggered_only = yes
+	option = {
+		name = strasser.18.a
+		if = {
+			limit = {
+				AUS = {
+					is_puppet_of = GER
+				}
+			}
+			GER = {
+				annex_country = {
+				    target = AUS
+				    transfer_troops = yes
+				}
+				add_state_core = 4
+				add_state_core = 152
+				add_state_core = 153
+				create_corps_commander = {
+					name = "Sepp Dietrich"
+					picture = "Portrait_Germany_Josef_Dietrich.dds"
+					traits = { trait_reckless brilliant_strategist armor_officer politically_connected }
+					skill = 4
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 5
+					logistics_skill = 4
+				}
+			}
+		}
+		hidden_effect = {
+ 			add_named_threat = { threat = 5 name = germany.18.t }
+		}
+	}
+}
+
+country_event = {
+	id = strasser.19
+	title = strasser.19.t
+	desc = strasser.19.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.19"}
+	is_triggered_only = yes
+	option = {
+		name = strasser.19.a
+		declare_war_on = {
+		    target = AUS
+		    type = annex_everything
+		}
+		add_state_core = 4
+		add_state_core = 152
+		add_state_core = 153
+		hidden_effect = {
+ 			add_named_threat = { threat = 5 name = germany.19.t }
+		}
+	}
+}
+
+country_event = {
+	id = strasser.20
+	title = strasser.20.t
+	desc = strasser.20.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.20"}
+	trigger = {
+		AND = {
+			focus_progress = {
+			    focus = GER_as_far_as_the_German_tongue_speaks
+			    progress = 0.1
+			}
+			BEL = {
+				exists = yes
+				controls_state = 788
+			}		
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = strasser.20.a
+		custom_effect_tooltip = GER_eupen_tt
+		hidden_effect = {
+ 			add_named_threat = { threat = 2 name = germany.20.t }
+ 			add_state_core = 788
+ 			BEL = {
+ 				country_event = strasser.21
+ 			}
+ 			FRI = {
+ 				add_state_core = 788
+ 			}
+ 		}
+	}
+}
+country_event = {
+	id = strasser.21
+	title = strasser.21.t
+	desc = strasser.21.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.21"}
+	is_triggered_only = yes
+	option = {
+		name = strasser.21.a
+		custom_effect_tooltip = GER_eupen2_tt
+		hidden_effect = {
+ 			release = FRI
+			declare_war_on = {
+				target = FRI
+			    type = annex_everything
+			}
+			FRI = {
+				load_oob = "FRI_1936"
+				set_country_flag = putsch_rebellion		
+			}
+		}
+	}
+}
+country_event = {
+	id = strasser.22
+	title = strasser.22.t
+	desc = strasser.22.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.22"}
+	trigger = {
+		NOT = {
+			FRI = {
+				has_war_with = BEL
+			}
+		}
+		FRI = {
+			exists = yes
+			has_country_flag = {
+			    flag = putsch_rebellion
+			    days > 90
+			}
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = strasser.22.a
+
+		hidden_effect = {
+ 			white_peace = FRI
+ 			GER = {
+				annex_country = {
+				    target = FRI
+				    transfer_troops = no
+				}
+ 			}
+		}
+	}
+}
+country_event = {
+	id = strasser.23
+	title = strasser.23.t
+	desc = strasser.23.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.23"}
+	trigger = {
+		AND = {
+			focus_progress = {
+			    focus = GER_as_far_as_the_German_tongue_speaks
+			    progress = 0.2
+			}
+			DEN = {
+				exists = yes
+				controls_state = 791
+			}		
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+	fire_only_once = yes
+	option = {
+		name = strasser.23.a
+ 		add_state_core = 791	
+ 		add_political_power = -50
+	}
+	option = {
+		name = strasser.23.b
+	}
+}
+country_event = {
+	id = strasser.24
+	title = strasser.24.t
+	desc = strasser.24.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.24"}
+	trigger = {
+		AND = {
+			focus_progress = {
+			    focus = GER_as_far_as_the_German_tongue_speaks
+			    progress = 0.3
+			}
+			LUX = {
+				exists = yes
+				controls_state = 8
+			}		
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+	fire_only_once = yes
+	option = {
+		name = strasser.24.a
+ 		add_state_core = 8	
+ 		add_political_power = -70
+	}
+	option = {
+		name = strasser.24.b
+	}
+}
+country_event = {
+	id = strasser.25
+	title = strasser.25.t
+	desc = strasser.25.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.25"}
+	trigger = {
+		AND = {
+			focus_progress = {
+			    focus = GER_as_far_as_the_German_tongue_speaks
+			    progress = 0.3
+			}
+			YUG = {
+				exists = yes
+				controls_state = 102
+			}		
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+	fire_only_once = yes
+	option = {
+		name = strasser.25.a
+ 		add_state_core = 102
+ 		add_political_power = -100
+	}
+	option = {
+		name = strasser.25.b
+	}
+}
+country_event = {
+	id = strasser.26
+	title = strasser.26.t
+	desc = strasser.26.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.26"}
+	trigger = {
+		AND = {
+			focus_progress = {
+			    focus = GER_as_far_as_the_German_tongue_speaks
+			    progress = 0.3
+			}
+			CZE = {
+				exists = yes
+				controls_state = 69
+			}		
+		}
+	}
+	mean_time_to_happen = { days = 10 }
+	fire_only_once = yes
+	option = {
+		name = strasser.26.a
+ 		add_state_core = 69
+ 		add_state_core = 74
+ 		add_political_power = -150
+	}
+	option = {
+		name = strasser.26.b
+	}
+}
+country_event = {
+	id = strasser.27
+	title = strasser.27.t
+	desc = strasser.27.d
+	picture = GFX_report_event_german_troops
+	fire_only_once = yes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.27"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.27.a
+ 		GER = {
+			transfer_state = 85
+			add_state_core = 85
+			transfer_state = 789
+			add_state_core = 789
+ 		}
+	}
+	option = {
+		name = strasser.27.b
+		hidden_effect = {
+			GER = {
+				country_event = strasser.28
+			}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.28
+	title = strasser.28.t
+	desc = strasser.28.d
+	picture = GFX_report_event_worried_french
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.15"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.28.a
+		declare_war_on = {
+		    target = POL
+		    type = annex_everything
+		}
+		add_state_core = 789
+		add_state_core = 85
+	}
+	option = {
+		name = strasser.28.b
+	}
+}
+
+country_event = {
+	id = strasser.29
+	title = strasser.29.t
+	desc = strasser.29.d
+	picture = GFX_report_event_worried_french
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.29"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.29.a
+		GER = {
+			diplomatic_relation = {
+				country = SOV
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = SOV
+				relation = guarantee
+				active = yes
+			}		
+		}
+		diplomatic_relation = {
+			country = GER
+			relation = guarantee
+			active = yes
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	option = {
+		name = strasser.29.b
+		GER = {
+			country_event = strasser.30
+		}
+	}
+}
+
+country_event = {
+	id = strasser.30
+	title = strasser.30.t
+	desc = strasser.30.d
+	picture = GFX_report_event_worried_french
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.30"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.30.a
+	}
+}
+
+country_event = {
+	id = strasser.31
+	title = strasser.31.t
+	desc = strasser.31.d
+	picture = GFX_report_event_worried_french
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.31"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.31.a
+				ai_chance = { 
+			factor = 90 
+			modifier = {
+				factor = 0
+				GER = {
+					OR = { 
+						has_wargoal_against = SOV
+						is_justifying_wargoal_against = SOV
+					}
+					NOT = {
+						is_in_faction_with = SOV
+					}
+				}
+			}
+		}
+		add_opinion_modifier = { target = GER modifier = MR_pact }# pact		
+		GER = {
+			add_state_claim = 85
+			add_state_claim = 789
+			add_state_claim = 86
+			add_state_claim = 88
+			add_state_claim = 86
+			add_state_claim = 762
+
+		}
+		SOV = {
+			add_state_claim = 96
+			add_state_claim = 95
+			add_state_claim = 784
+			add_state_claim = 94
+			add_state_claim = 93
+			add_state_claim = 91
+			add_state_claim = 89
+			add_state_claim = 92
+			add_state_claim = 90
+			add_state_claim = 97
+			add_state_claim = 98
+			add_state_claim = 10
+			add_state_claim = 87
+		}
+		set_global_flag = sov_yes_pact_strasser
+		"GER" = {
+			country_event = {
+    			id = strasser.32
+			    days = 365
+		   		random = 0
+			}
+		}
+
+		"SOV" = {
+			country_event = {
+    			id = strasser.32
+			    days = 365
+		   		random = 0
+			}
+		}
+	}		
+	option = {
+		name = strasser.31.b
+		GER = {
+			country_event = strasser.30
+		}
+	}
+}
+
+country_event = {
+	id = strasser.32
+	title = strasser.32.t
+	desc = strasser.32.d
+	picture = GFX_report_event_german_troops
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.32"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.32.a
+		declare_war_on = {
+		    target = POL
+		    type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = strasser.33
+	title = strasser.33.t
+	desc = strasser.33.d
+	picture = GFX_report_event_german_troops
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.33"}
+	trigger = {
+		tag = GER
+		has_global_flag = sov_yes_pact_strasser
+		SOV = { exists = yes }
+		NOT =  { has_war_with = SOV }
+		OR = {
+			OR = {
+				owns_state = 96
+				owns_state = 95
+				owns_state = 94
+				owns_state = 93
+				owns_state = 91
+				owns_state = 97
+				owns_state = 89
+				owns_state = 784
+			}
+			AND = {
+				POL = { has_capitulated = yes }
+				OR = {
+					controls_state = 96
+					controls_state = 95
+					controls_state = 94
+					controls_state = 93
+					controls_state = 91
+					controls_state = 97
+					controls_state = 89
+					controls_state = 784
+				}
+			}
+			OR = {
+				any_other_country = {
+					is_in_faction_with = GER
+					GER = {
+						is_faction_leader = yes
+					}
+					OR = {
+						owns_state = 96
+						owns_state = 95
+						owns_state = 94
+						owns_state = 93
+						owns_state = 91
+						owns_state = 97
+						owns_state = 89
+						owns_state = 784
+						AND = {
+							POL = { has_capitulated = yes }
+							OR = {
+								controls_state = 96
+								controls_state = 95
+								controls_state = 94
+								controls_state = 93
+								controls_state = 91
+								controls_state = 97
+								controls_state = 89
+								controls_state = 784
+							}
+						}		
+					}
+				}
+			}
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = strasser.33.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				AND = {
+					POL = {
+						is_ai = no
+						has_civil_war = no
+					}
+					is_in_faction_with = POL
+				}
+			}
+		}
+		if = {
+			limit = {
+				96 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 96
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 96 }
+		}
+		if = {
+			limit = {
+				95 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 95
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 95 }
+		}
+		if = {
+			limit = {
+				94 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 94
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 94 }
+		}
+		if = {
+			limit = {
+				93 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 93
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 93 }
+		}
+		if = {
+			limit = {
+				91 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 91
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 91 }
+		}
+		if = {
+			limit = {
+				87 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 91
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 87 }
+		}
+		if = {
+			limit = {
+				97 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 97
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 97 }
+		}
+		if = {
+			limit = {
+				89 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 89
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 89 }
+		}
+		if = {
+			limit = {
+				784 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 784
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 784 }
+		}
+		if = {
+			limit = {
+				92 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 92
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 92 }
+		}
+		if = {
+			limit = {
+				90 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 90
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 90 }
+		}
+		if = {
+			limit = {
+				10 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 10
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 10 }
+		}
+		if = {
+			limit = {
+				87 = {
+					OR = {
+						is_controlled_by = GER
+						any_other_country = {
+							controls_state = 87
+							is_in_faction_with = GER
+							GER = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 98 }
+		}
+	}
+	option = {
+		name = strasser.33.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = -1
+				is_historical_focus_on = yes
+				NOT = {
+					AND = {
+						POL = {
+							is_ai = no
+							has_civil_war = no
+						}
+						is_in_faction_with = POL
+					}
+				}
+			}
+		}
+		clr_global_flag = sov_yes_pact_strasser
+		diplomatic_relation = {
+			country = SOV
+			relation = non_aggression_pact
+			active = no
+		}		
+		SOV = {
+			add_state_claim = 96
+			add_state_claim = 95
+			add_state_claim = 94
+			add_state_claim = 93
+			add_state_claim = 91
+			add_state_claim = 97
+			add_state_claim = 89
+			add_state_claim = 784
+			create_wargoal = {
+				type = annex_everything
+				target = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.34
+	title = strasser.34.t
+	desc = strasser.34.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.34"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.34.a
+		add_tech_bonus = {
+		    bonus = 0.5
+		    uses = 2
+		    category = industry
+		}
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+	option = {
+		name = strasser.34.b
+		add_tech_bonus = {
+		    bonus = 0.5
+		    uses = 1
+		    category = infantry_weapons
+		}
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+}
+
+country_event = {
+	id = strasser.35
+	title = strasser.35.t
+	desc = strasser.35.d
+	picture = GFX_report_event_generic_strike
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.35"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.35.a
+		add_popularity = {
+		    ideology = strasserism
+		    popularity = 0.2
+		}
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+	option = {
+		name = strasser.35.b
+		add_offsite_building = { type = industrial_complex level = 1 }
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+}
+
+country_event = {
+	id = strasser.36
+	title = strasser.36.t
+	desc = strasser.36.d
+	picture = GFX_report_event_hitler_parade
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.36"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.36.a
+		swap_ideas = {
+		    remove_idea = GER_hitlerslegacy
+		    add_idea = GER_hitlerscelebrated
+		}
+		hidden_effect = {
+			sound_effect = "peace_conference"
+			country_event = {
+		    	id = strasser.37
+		    	days = 15
+		    	random = 50
+			}
+		}
+	}
+	option = {
+		name = strasser.36.b
+		remove_ideas = GER_hitlerslegacy
+		add_political_power = 100
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+}
+
+country_event = {
+	id = strasser.37
+	title = strasser.37.t
+	desc = strasser.37.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.37"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.37.a
+		if = {
+			limit = {	
+				has_idea = GER_otto
+			}
+			swap_ideas = {
+		   		remove_idea = GER_otto
+		  		add_idea = GER_otto_dislike
+			}		
+		}
+		else_if = {
+			limit = {	
+				has_idea = GER_otto_dislike
+			}
+			swap_ideas = {
+		   		remove_idea = GER_otto_dislike
+		  		add_idea = GER_otto_hatred
+			}			
+		}
+		else = {
+			limit = {
+				has_idea = GER_otto_hatred
+			}
+			add_stability = -0.1
+		}
+	}
+}
+
+country_event = {
+	id = strasser.38
+	title = strasser.38.t
+	desc = strasser.38.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.38"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.38.a
+		add_political_power = 50
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+	option = {
+		name = strasser.38.b
+		add_offsite_building = { type = industrial_complex level = 3 }
+		hidden_effect = {
+			sound_effect = "peace_conference"
+			if = {
+    			limit = {
+    				AND = {
+    					has_idea = GER_otto
+			    		has_idea = GER_otto_dislike
+    					has_idea = GER_otto_hatred
+    				}
+    			}
+    			country_event = {
+		    		id = strasser.37
+		    		days = 15
+		    		random = 50
+				}
+    		}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.39
+	title = strasser.39.t
+	desc = strasser.39.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.39"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.39.a
+		set_country_flag = GER_jewish_fault
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+	option = {
+		name = strasser.39.b
+		add_political_power = -50
+		hidden_effect = {
+			sound_effect = "peace_conference"
+			if = {
+    			limit = {
+    				AND = {
+    					has_idea = GER_otto
+			    		has_idea = GER_otto_dislike
+    					has_idea = GER_otto_hatred
+    				}
+    			}
+    			country_event = {
+		    		id = strasser.37
+		    		days = 15
+		    		random = 50
+				}
+    		}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.40
+	title = strasser.40.t
+	desc = strasser.40.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.40"}
+	trigger = {
+		has_idea = GER_otto_hatred
+		has_stability > 0.5
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = strasser.39.a
+		add_ideas = GER_brotherrival
+	}
+}
+
+country_event = {
+	id = strasser.41
+	title = strasser.41.t
+	desc = strasser.41.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.41"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.41.a
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+	option = {
+		name = strasser.41.b
+		hidden_effect = {
+			sound_effect = "peace_conference"
+			if = {
+    			limit = {
+    				AND = {
+    					has_idea = GER_otto
+			    		has_idea = GER_otto_dislike
+    					has_idea = GER_otto_hatred
+    				}
+    			}
+    			country_event = {
+		    		id = strasser.37
+		    		days = 15
+		    		random = 50
+				}
+    		}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.42
+	title = strasser.42.t
+	desc = strasser.42.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.42"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.42.a
+		add_war_support = 0.1
+		hidden_effect = {
+			sound_effect = "peace_conference"
+			if = {
+    			limit = {
+    				AND = {
+    					has_idea = GER_otto
+			    		has_idea = GER_otto_dislike
+    					has_idea = GER_otto_hatred
+    				}
+    			}
+    			country_event = {
+		    		id = strasser.37
+		    		days = 15
+		    		random = 50
+				}
+    		}
+		}
+	}
+	option = {
+		name = strasser.42.b
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+}
+
+country_event = {
+	id = strasser.43
+	title = strasser.43.t
+	desc = strasser.43.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.43"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.43.a
+		add_popularity = {
+		    ideology = communism
+		    popularity = -0.2
+		}		
+		hidden_effect = {
+			sound_effect = "peace_conference"
+		}
+	}
+	option = {
+		name = strasser.43.b
+		create_wargoal = {
+			type = annex_everything
+			target = ENG
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FRA
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ITA
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = BEL
+		}
+		hidden_effect = {
+			sound_effect = "peace_conference"
+			if = {
+    			limit = {
+    				AND = {
+    					has_idea = GER_otto
+			    		has_idea = GER_otto_dislike
+    					has_idea = GER_otto_hatred
+    				}
+    			}
+    			country_event = {
+		    		id = strasser.37
+		    		days = 15
+		    		random = 50
+				}
+    		}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.44
+	title = strasser.44.t
+	desc = strasser.44.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.44"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.44.a
+		add_popularity = {
+		    ideology = strasserism
+		    popularity = 0.1
+		}
+		army_experience = 20
+		add_war_support = 0.1
+		add_stability = 0.05	
+		add_ideas = GER_strasseristidea
+	}
+}
+
+country_event = {
+	id = strasser.45
+	title = strasser.45.t
+	desc = strasser.45.d
+	picture = GFX_report_event_soviet_purge_trial
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.45"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.45.a
+		add_stability = -0.1
+		add_popularity = {
+		    ideology = strasserism
+		    popularity = 0.15
+		}
+		hidden_effect = {
+			if = {
+				limit = {	
+					has_idea = GER_otto
+				}
+				swap_ideas = {
+		   			remove_idea = GER_otto
+		  			add_idea = GER_otto_dislike
+				}		
+			}
+			else_if = {
+				limit = {	
+					has_idea = GER_otto_dislike
+				}
+				swap_ideas = {
+		   			remove_idea = GER_otto_dislike
+			  		add_idea = GER_otto_hatred
+				}			
+			}
+			else = {
+				limit = {
+					has_idea = GER_otto_hatred
+				}
+				add_stability = -0.1
+			}
+		}	
+	}
+	option = {
+		name = strasser.45.b
+		add_stability = 0.05
+		add_popularity = {
+		    ideology = fascism
+		    popularity = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = strasser.46
+	title = strasser.46.t
+	desc = strasser.46.d
+	picture = GFX_report_event_soviet_purge_trial
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.46"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.46.a
+		add_popularity = {
+    		ideology = communism
+			popularity = -2.5
+		}		
+		add_stability = 0.5	
+		hidden_effect = {
+			if = {
+				limit = {	
+					has_idea = GER_otto
+				}
+				swap_ideas = {
+		   			remove_idea = GER_otto
+		  			add_idea = GER_otto_dislike
+				}		
+			}
+			else_if = {
+				limit = {	
+					has_idea = GER_otto_dislike
+				}
+				swap_ideas = {
+		   			remove_idea = GER_otto_dislike
+			  		add_idea = GER_otto_hatred
+				}			
+			}
+			else = {
+				limit = {
+					has_idea = GER_otto_hatred
+				}
+				add_stability = -0.1
+			}
+			set_temp_variable = {
+				var = ban_ideology_var
+				value = party_popularity@communism
+			}
+			multiply_temp_variable = {
+				var = ban_ideology_var
+				value = -1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = ban_ideology_var
+			}
+			multiply_temp_variable = {
+				var = ban_ideology_var
+				value = 0.66
+			}	
+		}	
+	}
+	option = {
+		name = strasser.46.b
+		add_popularity = {
+		    ideology = communism
+		    popularity = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = strasser.47
+	title = strasser.47.t
+	desc = strasser.47.d
+	picture = GFX_report_event_soviet_purge_trial
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.47"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.47.a
+		custom_effect_tooltip = ban_fascist_party_tt
+		add_popularity = {
+    		ideology = fascism
+			popularity = -0.25
+		}		
+		add_stability = 0.1	
+	}
+	option = {
+		name = strasser.47.b
+		add_popularity = {
+		    ideology = fascism
+		    popularity = 0.1
+		}
+		add_war_support = 0.05
+		set_country_flag = ger_allowed_nsdap
+		hidden_effect = {
+			if = {
+				limit = {	
+					has_idea = GER_otto
+				}
+				swap_ideas = {
+		   			remove_idea = GER_otto
+		  			add_idea = GER_otto_dislike
+				}		
+			}
+			else_if = {
+				limit = {	
+					has_idea = GER_otto_dislike
+				}
+				swap_ideas = {
+		   			remove_idea = GER_otto_dislike
+			  		add_idea = GER_otto_hatred
+				}			
+			}
+			else = {
+				limit = {
+					has_idea = GER_otto_hatred
+				}
+				add_stability = -0.1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.51
+	title = strasser.51.t
+	desc = strasser.51.d
+	picture = GFX_report_event_soviet_purge_trial
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.51"}
+	trigger = {
+		AND = {
+		    original_tag = GER
+		    has_stability > 0.5
+			has_idea = GER_otto_hatred
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = strasser.51.a
+		complete_national_focus = GER_operation_black_storm
+	}
+}
+
+country_event = {
+	id = strasser.48
+	title = strasser.48.t
+	desc = strasser.48.d
+	picture = GFX_report_event_soviet_purge_trial
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.48"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.48.a
+		kill_country_leader = yes
+		add_stability = -0.15
+		add_war_support = -0.15
+		set_country_flag = GER_gregor_ded
+		remove_ideas = {
+			GER_gregors_sword
+			GER_gregors_hammer
+			GER_otto
+			otto
+			GER_otto_hatred
+			GER_otto_dislike
+			GER_brotherrival
+		}
+	}
+}
+
+country_event = {
+	id = strasser.49
+	title = strasser.49.t
+	desc = strasser.49.d
+	picture = GFX_report_event_soviet_purge_trial
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.49"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.49.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		set_country_flag = GER_otto_ded
+		remove_ideas = {
+			GER_ottos_sword
+			GER_ottos_hammer
+			GER_otto
+			otto
+			GER_otto_hatred
+			GER_otto_dislike
+			GER_brotherrival
+		}
+	}
+}
+
+country_event = {
+	id = strasser.50
+	title = strasser.50.t
+	desc = strasser.50.d
+	picture = GFX_report_event_soviet_purge_trial
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.50"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.50.a
+		retire_country_leader = yes
+		remove_ideas = {
+			GER_gregors_sword
+			GER_gregors_hammer
+			GER_otto
+			otto
+			GER_otto_hatred
+			GER_otto_dislike
+			GER_brotherrival
+		}
+	}
+}
+
+country_event = {
+	id = strasser.52
+	title = strasser.52.t
+	desc = strasser.52.d
+	picture = GFX_report_event_soviet_purge_trial
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.52"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.52.a
+		create_country_leader = {
+			name = "Otto Strasser"
+			desc = "POLITICS_OTTO_STRASSER_DESC"
+			picture = "Portrait_Germany_Otto_Strasser.dds"
+			expire = "1965.1.1"
+			ideology = anarchist_communism
+			traits = {
+			}
+		}
+		remove_ideas = {
+			GER_ottos_sword
+			GER_ottos_hammer
+			GER_otto
+			otto
+			GER_otto_hatred
+			GER_otto_dislike
+			GER_brotherrival
+		}
+		start_civil_war = {
+    		ruling_party = strasserism
+    		ideology = communism
+    		size = 0.5
+    		only_own_territory = no
+    		capital = 52
+    		states = { 
+    		    52 53 54 50
+    		}
+		}
+	}
+}
+
+country_event = {
+	id = strasser.53
+	title = strasser.53.t
+	desc = strasser.53.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.53"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.53.a
+		create_wargoal = {
+		    type = annex_everything
+		    target = POL
+		}
+		SOV = {
+			create_wargoal = {
+			    type = annex_everything
+		    	target = POL
+			}
+			set_country_flag = molotov_strasser_pact_flag
+			add_state_core = 97
+			add_state_core = 92
+			add_state_core = 784
+			add_state_core = 96
+			add_state_core = 95
+			add_state_core = 94
+			add_state_core = 93
+			add_state_core = 91
+		}
+		set_country_flag = molotov_strasser_pact_flag
+		add_state_core = 789
+		add_state_core = 88
+		add_state_core = 85
+		add_state_core = 86
+		add_state_core = 87
+		add_state_core = 98
+		add_state_core = 10
+		add_state_core = 90
+		add_state_core = 762
+	}
+}
+
+country_event = {
+	id = strasser.54
+	title = strasser.54.t
+	desc = strasser.54.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.54"}
+	trigger = {
+		GER = {
+			is_in_faction_with = ITA
+			has_completed_focus = GER_is_it_tyrol
+		}
+		tag = GER
+		ITA = {			
+			owns_state = 39
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = strasser.54.a
+		ITA = {
+			country_event = strasser.55
+		}
+	}
+	option = {
+		name = strasser.54.b
+	}	
+}
+
+country_event = {
+	id = strasser.55
+	title = strasser.55.t
+	desc = strasser.55.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.55"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.55.a
+		ai_will_do = {
+			factor = 200
+		}
+		GER = {
+			country_event = strasser.56
+		}
+	}
+	option = {
+		name = strasser.55.b
+		GER = {
+			country_event = strasser.57
+		}
+	}		
+}
+
+country_event = {
+	id = strasser.56
+	title = strasser.56.t
+	desc = strasser.56.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.56"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.56.a
+		set_state_owner = 39
+		ITA = {
+			remove_state_core = 39
+		}
+	}
+}
+
+country_event = {
+	id = strasser.57
+	title = strasser.57.t
+	desc = strasser.57.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.57"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = strasser.57.a
+		GER = {
+			remove_state_core = 39
+		}
+	}
+}
+
+country_event = {
+	id = strasser.58
+	title = strasser.58.t
+	desc = strasser.58.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.58"}
+	trigger = {
+		in_faction_with = SOV
+		tag = GER
+		has_country_flag = molotov_strasser_pact_flag
+		OR = {
+			owns_state = 97
+			owns_state = 92
+			owns_state = 784
+			owns_state = 96
+			owns_state = 95
+			owns_state = 94
+			owns_state = 93
+			owns_state = 91
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = strasser.58.a
+		GER = {
+			transfer_state = 789
+			transfer_state = 88
+			transfer_state = 85
+			transfer_state = 86
+			transfer_state = 87
+			transfer_state = 98
+			transfer_state = 10
+			transfer_state = 90
+			transfer_state = 762
+		}
+		SOV = {
+			transfer_state = 97
+			transfer_state = 92
+			transfer_state = 784
+			transfer_state = 96
+			transfer_state = 95
+			transfer_state = 94
+			transfer_state = 93
+			transfer_state = 91
+			transfer_state = 89
+		}
+	}
+}
+
+country_event = {
+	id = strasser.59
+	title = strasser.59.t
+	desc = strasser.59.d
+	picture = GFX_report_event_generic_rally2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event strasser.59"}
+	trigger = {
+		in_faction_with = GER
+		tag = SOV
+		has_country_flag = molotov_strasser_pact_flag
+		OR = {
+			owns_state = 789
+			owns_state = 88
+			owns_state = 85
+			owns_state = 86
+			owns_state = 87
+			owns_state = 98
+			owns_state = 10
+			owns_state = 90
+			owns_state = 762
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = strasser.59.a
+		GER = {
+			transfer_state = 789
+			transfer_state = 88
+			transfer_state = 85
+			transfer_state = 86
+			transfer_state = 87
+			transfer_state = 98
+			transfer_state = 10
+			transfer_state = 90
+			transfer_state = 762
+		}
+		SOV = {
+			transfer_state = 97
+			transfer_state = 92
+			transfer_state = 784
+			transfer_state = 96
+			transfer_state = 95
+			transfer_state = 94
+			transfer_state = 93
+			transfer_state = 89
+			transfer_state = 91
+		}
+	}
+}

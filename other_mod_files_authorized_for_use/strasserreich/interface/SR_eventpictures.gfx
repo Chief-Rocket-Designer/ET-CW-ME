@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_strasserreich"
+		texturefile = "gfx/event_pictures/report_event_ger_strasserreich.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_flag_picking"
+		texturefile = "gfx/event_pictures/report_event_ger_flag_picking.dds"
+	}
+}

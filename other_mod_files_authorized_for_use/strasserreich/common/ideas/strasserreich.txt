@@ -1,0 +1,407 @@
+ideas = {
+	country = {
+		hitleroof = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = -0.5
+				political_power_gain = -1
+				stability_factor = -0.50
+				war_support_factor = -0.3
+			}
+		}
+		GER_hitlerslegacy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.40
+				war_support_factor = -0.1
+			}
+		}
+		GER_hitlerscelebrated = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = +0.05
+				war_support_factor = +0.1
+			}
+		}
+		GER_strasseristidea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				fascism_drift = -0.20
+				communism_drift = -0.20
+				master_ideology_drift = 0.05
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		GER_brotherrival = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.01
+			}
+		}
+		GER_gregors_hammer = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				economy_cost_factor = -0.25
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		GER_ottos_hammer = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		GER_gregors_sword = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				high_command_cost_factor = -0.10
+		    	army_chief_cost_factor = -0.25
+		        mobilization_laws_cost_factor = -0.10
+				training_time_army_factor = -0.1
+			}
+		}
+		GER_ottos_sword = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army = 0.05
+				offence = 0.2
+			}
+		}
+		GER_international_support = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				send_volunteer_size = 3
+			}
+		}
+		GER_otto = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		GER_otto_dislike = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1		
+				stability_weekly = -0.01	
+			}
+		}
+		GER_otto_hatred = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3
+				stability_weekly = -0.03			
+			}
+		}
+		GER_three_year_plan_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+					production_speed_buildings_factor = 0.15
+			}
+		}
+		GER_guild_system_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		GER_volksreich_labour_service_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		GER_danube_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				strasserism_drift = 0.50
+			}
+		}
+		ger_increased_army_training_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+		} 
+		GER_strasserjugend_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				strasserism_drift = 0.05
+			}
+		}
+		GER_strasserjugend_idea_two = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				training_time_factor = -0.1
+				strasserism_drift = 0.05
+			}
+		}
+		GER_strasserjugend_idea_three = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				training_time_factor = -0.1
+				strasserism_drift = 0.05
+				conscription = 0.05
+			}
+		}
+		GER_spread_the_red_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				strasserism_drift = 0.20
+			}
+		}
+		GER_neues_sonar = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_battleship_combat_factor = 0.3	
+			}
+		}
+		GER_improved_cannons = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				navy_capital_ship_attack_factor = 0.1
+			}		
+		}
+		GER_next_level_torpedo = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				naval_torpedo_range_factor = 2
+			}		
+		}
+		GER_larger_secondary_batteries = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = 0.1
+			}		
+		}
+		GER_beach_hopping = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				amphibious_invasion = 0.20
+				invasion_preparation = -0.5
+			}		
+		}
+		GER_verteidigungstrupp = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.1
+				defence = 0.05
+			}		
+		}		
+		GER_anti_resistance_act = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				enemy_partisan_effect = -0.2
+			}				
+		}
+		GER_coded_conversations = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				encryption_factor = 0.2
+			}		
+		}
+		GER_maximum_surveillance = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				encryption_factor = 0.25
+				enemy_partisan_effect = -0.3
+				war_support_weekly = 0.05
+				stability_weekly = 0.005
+			}		
+		}		
+	}
+}
+
