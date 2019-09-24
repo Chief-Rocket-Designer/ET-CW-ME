@@ -1,7 +1,0 @@
-on_actions = {
-    on_daily = {
-        effect = {
-			dictatorship_stuff = yes
-        }
-    }
-}
