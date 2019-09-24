@@ -1,0 +1,32 @@
+state={
+	id=802
+	name="Kiel Kanal"
+	provinces={
+		317 3231 11366 
+	}
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 10
+
+		}
+		add_core_of = DAN
+		1910.1.1 = {
+			owner = GEE
+			add_core_of = GEE
+		}
+		
+		1936.1.1 = {
+			owner = GER
+			add_core_of = GER
+		}
+		1949.1.1 = {
+			owner = WGR
+			add_core_of = DDR
+			add_core_of = WGR
+		}
+	}
+	manpower=345000
+	buildings_max_level_factor=1.000
+	state_category = town
+}

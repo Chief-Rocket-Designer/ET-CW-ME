@@ -1,0 +1,12 @@
+on_actions = {
+	on_daily = { 
+		effect = { 
+			if = {
+				limit = {
+					has_global_flag = USA_militias_check
+				}
+			american_militias = yes	
+		}
+	}
+}
+}

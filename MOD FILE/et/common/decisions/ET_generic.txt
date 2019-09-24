@@ -1,0 +1,132 @@
+ETM_generic_category = {
+	ETM_generic_decision = {
+		allowed = {
+			date > 1941
+		}
+		available = {
+			date > 1941
+		}
+		visible = {
+			date > 1941
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			
+		}
+	}
+}
+
+ETM_space_exploration_category = {
+	ETM_space_exploration_groundwork = {
+		allowed = {
+			
+		}
+		available = {
+
+		}
+		visible = {
+			
+		}
+		cost = 0
+		days_remove = 365
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_country_flag = se_rs
+		}
+	}
+	
+	ETM_space_exploration_recruit_scientist = {
+		allowed = {
+			has_country_flag = se_rs
+		}
+		available = {
+			has_country_flag = se_rs
+		}
+		visible = {
+			has_country_flag = se_rs
+		}
+		cost = 100
+		days_remove = 600
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_country_flag = se_lc
+		}
+	}
+	
+	ETM_space_exploration_setup_launchcenter = {
+		allowed = {
+			has_country_flag = se_lc
+		}
+		available = {
+			has_country_flag = se_lc
+		}
+		visible = {
+			has_country_flag = se_lc
+		}
+		cost = 100
+		days_remove = 1000
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_country_flag = se_dlv
+		}
+	}
+	
+	ETM_space_exploration_design_launch_vehicles = {
+		allowed = {
+			has_country_flag = se_dlv
+		}
+		available = {
+			has_country_flag = se_dlv
+		}
+		visible = {
+			has_country_flag = se_dlv
+		}
+		cost = 100
+		days_remove = 1000
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_country_flag = space_exploration_allowed_flag
+		}
+	}
+	
+	ETM_space_exploration_one = {
+		allowed = {
+			has_country_flag = space_exploration_allowed_flag
+			NOT = { 
+				has_country_flag = se_1
+			}
+		}
+		available = {
+			has_country_flag = space_exploration_allowed_flag
+			NOT = { 
+				has_country_flag = se_1
+			}
+		}
+		visible = {
+			has_country_flag = space_exploration_allowed_flag
+			NOT = { 
+				has_country_flag = se_1
+			}
+		}
+		cost = 0
+		days_remove = 14
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_country_flag = se_1
+			country_event = { id = space_exploration.1  days = 0 }
+		}
+	}
+}

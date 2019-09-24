@@ -1,0 +1,70 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "etm_invest_in_target_action_sender_gui"
+		position = { x = 10 y = 4 }	
+		size = { width = 564 height = 500 }
+		margin = { top = 13 left = 13 bottom = 0 right = 13 }
+		verticalScrollbar = "right_vertical_sliderno_bg"
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_tiled_window_transparent"
+		}
+		
+		gridboxtype = {
+			name = "etm_invest_in_target_action_sender_gui_gridbox"
+			position = { x = 119 y = 0 }
+			size = { width = 325 height = 100%% }
+			slotsize = { width = 325 height = 50 }
+			add_horizontal = no
+			max_slots_horizontal = 1
+			format = "UPPER_LEFT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "etm_invest_in_target_action_sender_gui_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 325 height = 50 }
+		
+		containerWindowType = {
+			name = "text_window"
+			position = { x = 0 y = 0 }
+			size = { width = 270 height = 48 }
+		
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_generic_bg_1"
+			}
+			
+			instantTextboxType = {
+				name = "entry_name"
+				position = { x = 10 y = 4 }
+				font = "hoi_18mbs"
+				text = "[This.GetInvestmentTypeName]"
+				maxWidth = 250
+				maxHeight = 40
+				fixedsize = yes
+				format = left
+				vertical_alignment = center
+				pdx_tooltip = "ETM_INVEST_IN_TARGET_ACTION_ENTRY_BUTTON_TT"
+			}
+		}
+		
+		buttonType = {
+			name = "entry_button"
+			position = { x = 275 y = 0 }	
+			spriteType = "GFX_buildings_strip"
+			frame = 1
+			pdx_tooltip = "ETM_INVEST_IN_TARGET_ACTION_ENTRY_BUTTON_TT"
+			pdx_tooltip_delayed = "ETM_INVEST_IN_TARGET_ACTION_ENTRY_BUTTON_TT_DELAYED"
+		}
+		
+		iconType = {
+			name = "entry_button_overlay"
+			position = { x = 274 y = 0 }
+			quadTextureSprite = "GFX_construction_glow_overlay"
+		}
+	}
+}

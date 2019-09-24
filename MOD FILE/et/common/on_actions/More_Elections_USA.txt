@@ -1,0 +1,36 @@
+#Created on 8/23/2019 By Chief Rocket Designer
+
+
+
+
+
+
+on_actions = {
+	USA = {
+		limit = {
+			date > 1948.12.31
+		}
+		
+			on_new_term_election = {
+				effect = {
+						if = {
+							limit = { 
+								TAG = USA
+								}
+							add_to_variable = { USA_election_counter = 1 } 
+						}
+						#electionblocks
+						if = {
+							limit = {
+								USA_election_counter = 1
+							}
+							USA = { 
+								country_event = { id = add_election_USA.1 days = 0 }
+							}
+						}
+				}
+			}
+		}
+	}
+}
+}

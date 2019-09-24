@@ -1,0 +1,437 @@
+add_namespace = USA_free_stuff_one
+
+#Free Water
+
+country_event = {
+	id = USA_free_stuff_one.1
+	title = USA_free_stuff_one.1.t
+	desc = USA_free_stuff_one.1.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.1.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.2
+	title = USA_free_stuff_one.2.t
+	desc = USA_free_stuff_one.2.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.2.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.3
+	title = USA_free_stuff_one.3.t
+	desc = USA_free_stuff_one.3.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.3.a
+		hidden_effect = {
+			add_ideas = public_water
+		
+		}
+	}
+}
+
+#Free Transportation
+
+country_event = {
+	id = USA_free_stuff_one.4
+	title = USA_free_stuff_one.4.t
+	desc = USA_free_stuff_one.4.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.4.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.5
+	title = USA_free_stuff_one.5.t
+	desc = USA_free_stuff_one.5.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.5.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.6
+	title = USA_free_stuff_one.6.t
+	desc = USA_free_stuff_one.6.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.6.a
+		hidden_effect = {
+			add_ideas = public_transit
+		
+		}
+	}
+}
+
+#Free Electric
+
+country_event = {
+	id = USA_free_stuff_one.7
+	title = USA_free_stuff_one.7.t
+	desc = USA_free_stuff_one.7.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.7.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.8
+	title = USA_free_stuff_one.8.t
+	desc = USA_free_stuff_one.8.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.8.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.9
+	title = USA_free_stuff_one.9.t
+	desc = USA_free_stuff_one.9.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.9.a
+		hidden_effect = {
+			add_ideas = public_electricity
+		
+		}
+	}
+}
+
+#Free Electric
+
+country_event = {
+	id = USA_free_stuff_one.10
+	title = USA_free_stuff_one.10.t
+	desc = USA_free_stuff_one.10.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.10.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.11
+	title = USA_free_stuff_one.11.t
+	desc = USA_free_stuff_one.11.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.11.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.12
+	title = USA_free_stuff_one.12.t
+	desc = USA_free_stuff_one.12.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.12.a
+		hidden_effect = {
+			add_ideas = public_housing_program
+		
+		}
+	}
+}	
+
+#Free College
+
+country_event = {
+	id = USA_free_stuff_one.10
+	title = USA_free_stuff_one.10.t
+	desc = USA_free_stuff_one.10.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.10.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.11
+	title = USA_free_stuff_one.11.t
+	desc = USA_free_stuff_one.11.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.11.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.12
+	title = USA_free_stuff_one.12.t
+	desc = USA_free_stuff_one.12.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.12.a
+		hidden_effect = {
+			add_ideas = public_housing_program
+		
+		}
+	}
+
+}
+
+#Free College
+
+country_event = {
+	id = USA_free_stuff_one.13
+	title = USA_free_stuff_one.13.t
+	desc = USA_free_stuff_one.13.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.13.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.14
+	title = USA_free_stuff_one.14.t
+	desc = USA_free_stuff_one.14.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.14.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.15
+	title = USA_free_stuff_one.15.t
+	desc = USA_free_stuff_one.15.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.15.a
+		hidden_effect = {
+			add_ideas = public_college
+		
+		}
+	}
+}
+
+#Public Heatlhcare
+
+country_event = {
+	id = USA_free_stuff_one.16
+	title = USA_free_stuff_one.16.t
+	desc = USA_free_stuff_one.16.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.16.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.17
+	title = USA_free_stuff_one.17.t
+	desc = USA_free_stuff_one.17.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.17.a
+		hidden_effect = {
+		
+		
+		}
+	}
+}
+
+country_event = {
+	id = USA_free_stuff_one.18
+	title = USA_free_stuff_one.18.t
+	desc = USA_free_stuff_one.18.d
+	picture = GFX_hurricane
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	
+	option = { 
+		name = USA_free_stuff_one.18.a
+		hidden_effect = {
+			add_ideas = public_healthcare
+		
+		}
+	}
+}
+

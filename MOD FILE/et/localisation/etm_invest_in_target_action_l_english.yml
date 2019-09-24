@@ -1,0 +1,37 @@
+﻿l_english:
+ # Scrited Diplomatic Actions & GUI:
+ ETM_INVEST_IN_TARGET_ACTION_TITLE: "Investments"
+ ETM_INVEST_IN_TARGET_ACTION_ACTION_DESC: "Invest in one of their states by funding a building construction. \nThis will create a building construction of a specific building in one of their states and increase our trade influence with them by §G+10§!. \n\nIf this action is not available, you may have reached your current maximum amount of investments."
+ ETM_INVEST_IN_TARGET_ACTION_ACCEPT_TITLE: "Foreign Investment"
+ ETM_INVEST_IN_TARGET_ACTION_ACCEPT_DESC: "§Y[Root.GetNameWithFlag]§! has decided to invest in our country. They started a construction of a building in one of our states. The construction will be completed in §Y100§! days, if they don't cancel it."
+ 
+ ETM_INVEST_IN_TARGET_ACTION_ENTRY_BUTTON_TT: "§Y[This.GetInvestmentTypeName]§! \n§L[This.GetInvestmentTypeDesc]§!"
+ ETM_INVEST_IN_TARGET_ACTION_ENTRY_BUTTON_TT_DELAYED: "[This.GetInvestmentEntryButtonTooltipDelayed] \n--------------\n§YRequirements:§! \n[!entry_button_click_enabled]"
+ 
+ TARGET_HAS_A_STATE_THAT_CAN_CONSTRUCT_THIS_BUILDING: "§Y[This.GetInvestmentTypeName]§! can be constructed in any state owned by §Y[This.GetNameWithFlag]§!"
+ 
+ # Scripted Localisation:
+ string_etm_invest_in_target_action_entry_button_tt_delayed_select: "§GClick§! to select §Y[This.GetInvestmentTypeName]§! as the type of investment in §Y[This.GetNameWithFlag]§!."
+ string_etm_invest_in_target_action_entry_button_tt_delayed_deselect: "§GClick§! to deselect §Y[This.GetInvestmentTypeName]§! as the type of investment in §Y[This.GetNameWithFlag]§!."
+ 
+ synthetic_refinery_desc_2: "This building provinces the state with specific resources."
+ 
+ # Decisions:
+ etm_investment_category: "Investments"
+ etm_investment_mission_1: "Investment in [This.GetInvestmentStateController1]"
+ etm_investment_mission_1_desc: "We invested in §Y[?investment_state_1.GetName]§! (§Y[This.GetInvestmentStateController1]§!). The building construction will be finished in §Y[?days_mission_timeout@etm_investment_mission_1]§! days."
+ etm_investment_mission_2: "Investment in [This.GetInvestmentStateController2]"
+ etm_investment_mission_2_desc: "We invested in §Y[?investment_state_2.GetName]§! (§Y[This.GetInvestmentStateController2]§!). The building construction will be finished in §Y[?days_mission_timeout@etm_investment_mission_2]§! days."
+ etm_investment_mission_3: "Investment in [This.GetInvestmentStateController3]"
+ etm_investment_mission_3_desc: "We invested in §Y[?investment_state_3.GetName]§! (§Y[This.GetInvestmentStateController3]§!). The building construction will be finished in §Y[?days_mission_timeout@etm_investment_mission_3]§! days."
+ etm_investment_mission_4: "Investment in [This.GetInvestmentStateController4]"
+ etm_investment_mission_4_desc: "We invested in §Y[?investment_state_4.GetName]§! (§Y[This.GetInvestmentStateController4]§!). The building construction will be finished in §Y[?days_mission_timeout@etm_investment_mission_4]§! days."
+ etm_investment_mission_5: "Investment in [This.GetInvestmentStateController5]"
+ etm_investment_mission_5_desc: "We invested in §Y[?investment_state_5.GetName]§! (§Y[This.GetInvestmentStateController5]§!). The building construction will be finished in §Y[?days_mission_timeout@etm_investment_mission_5]§! days."
+ 
+ ETM_INVESTMENT_MISSION_COMPLETE_TT: "The construction of a §Y[This.GetInvestmentTypeNameOtherContext]§! in §Y[This.GetName]§! is canceled.\n"
+ ETM_INVESTMENT_MISSION_TIMEOUT_TT: "§Y[This.GetName]§! receives §Y1§! level of §Y[This.GetInvestmentTypeNameOtherContext]§!.\n"
+ 
+ # Opinion Modifiers:
+ etm_investment_trade_opinion: "Foreign Investment"
+ 

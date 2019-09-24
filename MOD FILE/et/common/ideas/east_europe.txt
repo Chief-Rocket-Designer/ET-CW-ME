@@ -1,0 +1,48 @@
+ideas = {
+	country = {
+		YUG_anti_communist = {
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+		
+			modifier = {
+				communism_drift = 0.15
+				join_faction_tension = 1
+				ai_get_ally_desire_factor = -200
+			}
+
+		}	
+		KOR_anti_communist = {
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+		
+			modifier = {
+				democratic_drift = 0.15
+				join_faction_tension = 1
+				ai_get_ally_desire_factor = -200
+			}
+
+		}	
+		CZE_communist = {
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+		
+			modifier = {
+				communism_drift = 0.15
+			}
+
+		}
+		SOV_free_prisoners = {
+			removal_cost = -1
+
+			picture = generic_spy_political
+		
+			modifier = {
+				encryption_factor = 0.1
+			}
+
+		}
+	}
+}

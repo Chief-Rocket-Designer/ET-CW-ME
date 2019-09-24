@@ -1,0 +1,26 @@
+state={
+	id=804
+	name="Vascongadas"
+	provinces={
+		740 3735 6756 
+	}
+	history={
+		owner = SPR
+		victory_points = {
+			740 3 
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 1
+			740 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = SPR
+	}
+	manpower=767000
+	buildings_max_level_factor=1.000
+	state_category = city
+}

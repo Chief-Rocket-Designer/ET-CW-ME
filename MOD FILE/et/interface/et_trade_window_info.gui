@@ -1,0 +1,124 @@
+guiTypes = {
+	containerWindowType = {
+		name = "open_et_trade_window_info_window"
+		position = { x = -70 y = 400 }
+		size = { width = 50 height = 50 }
+		orientation = upper_right
+		
+		buttonType = {
+			name = "open_button"
+			spriteType = "button_right"
+			scale = 1.6
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "OPEN_ET_TRADE_WINDOW_INFO_WINDOW_TT"
+		}
+		
+		buttonType = {
+			name = "close_button"
+			spriteType = "button_left"
+			scale = 1.6
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "CLOSE_ET_TRADE_WINDOW_INFO_WINDOW_TT"
+		}
+	}
+	
+	containerWindowType = {
+		name = "et_trade_window_info_window"
+		position = { x = 720 y = 0 }
+		size = { width = 300 height = 400 }
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_tiled_window_w_close"
+		}
+		
+		buttonType = {
+			name = "close_button"
+			spriteType = "GFX_closebutton"
+			position = { x = -45 y = 14 }
+			orientation = upper_right
+			pdx_tooltip = "DIPLOMACY_CLOSE"
+			shortcut = "ESCAPE"
+		}
+		
+		containerWindowType = {
+			name = "title_window"
+			position = { x = 13 y = 13 }
+			size = { width = 237 height = 39 }
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_header_1"
+			}
+			
+			instantTextBoxType = {
+				name = "title"
+				position = { x = 10 y = 6 }
+				text = "ET_TRADE_WINDOW_INFO_WINDOW_TITLE"
+				format = center
+				font = "hoi_24header"
+				maxWidth = 210
+				multiline = no
+			}
+		}
+		
+		containerWindowType = {
+			name = "entry_window"
+			position = { x = 13 y = 50 }
+			size = { width = 274 height = 100%% }
+			margin = { top = 0 left = 0 right = 13 bottom = 13 }
+			verticalScrollbar = "right_vertical_sliderno_bg"
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			
+			gridboxtype = {
+				name = "et_trade_window_info_gridbox"
+				position = { x = 5 y = 5 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 240 height = 48 }
+				add_horizontal = no
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+				padding = { bottom = 5 }
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "et_trade_window_info_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 240 height = 45 }
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_tiled_generic_bg_1"
+		}
+		
+		instantTextBoxType = {
+			name = "entry_name"
+			position = { x = 10 y = 2 }
+			text = "ET_TRADE_WINDOW_INFO_ENTRY_NAME"
+			format = left
+			font = "hoi_16mbs"
+			maxWidth = 160
+			maxHeight = 40
+			fixedsize = yes
+			vertical_alignment = center
+			pdx_tooltip = "ET_TRADE_WINDOW_INFO_ENTRY_TT"
+		}
+		
+		instantTextBoxType = {
+			name = "entry_value"
+			position = { x = 150 y = 12 }
+			text = "ET_TRADE_WINDOW_INFO_ENTRY_VALUE"
+			format = right
+			font = "hoi_18mbs"
+			maxWidth = 80
+			multiline = no
+			pdx_tooltip = "ET_TRADE_WINDOW_INFO_ENTRY_TT"
+		}
+	}
+}

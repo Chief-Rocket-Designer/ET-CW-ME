@@ -1,0 +1,36 @@
+﻿l_english:
+ # GUIs:
+ OPEN_ET_TRADE_WINDOW_INFO_WINDOW_TT: "§GClick§! to open the window with additional §YInformation§!."
+ CLOSE_ET_TRADE_WINDOW_INFO_WINDOW_TT: "§GClick§! to close the window with additional §YInformation§!."
+ 
+ ET_TRADE_WINDOW_INFO_WINDOW_TITLE: "Information"
+ 
+ ET_TRADE_WINDOW_INFO_ENTRY_NAME: "[This.GetTradeWindowInfoEntryName]"
+ ET_TRADE_WINDOW_INFO_ENTRY_VALUE: "[This.GetTradeWindowInfoEntryValue]"
+ ET_TRADE_WINDOW_INFO_ENTRY_TT: "§Y[This.GetName]'s§! current §Y[This.GetTradeWindowInfoEntryName]§! is [This.GetTradeWindowInfoEntryValue]."
+ 
+ 
+ # Scripted Localisation:
+ string_et_trade_window_info_entry_gdp: "Gross Domestic Product per Capita"
+ string_et_trade_window_info_entry_gdp_value: "§Y[?num_gdp_capita_gui|0]K§!"
+ string_et_trade_window_info_entry_industry_capability: "Industrial Capability"
+ string_et_trade_window_info_entry_industry_capability_value: "§Y[?industry_capability_gui|0]§!"
+ string_et_trade_window_info_entry_total_population: "Total Population"
+ string_et_trade_window_info_entry_total_population_value: "§Y[?GUI_total_population|0]K§!"
+ string_et_trade_window_info_entry_synthetic_refinery: "Amount of Synthetic Refineries"
+ string_et_trade_window_info_entry_synthetic_refinery_value: "§Y[?num_sr_gui|0]§!"
+ string_et_trade_window_info_entry_urban_center: "Amount of Urban Centers"
+ string_et_trade_window_info_entry_urban_center_value: "§Y[?num_uc_gui|0]§!"
+ string_et_trade_window_info_entry_fuel_silo: "Amount of Fuel Silos"
+ string_et_trade_window_info_entry_fuel_silo_value: "§Y[?num_fs_gui|0]§!"
+ string_et_trade_window_info_entry_nuclear_reactor: "Amount of Nuclear Reactors"
+ string_et_trade_window_info_entry_nuclear_reactor_value: "§Y[?num_nr_gui|0]§!"
+ string_et_trade_window_info_entry_rocket_site: "Amount of Rocket Sites"
+ string_et_trade_window_info_entry_rocket_site_value: "§Y[?num_rs_gui|0]§!"
+ string_et_trade_window_info_entry_arms_factory: "Amount of Military Factories"
+ string_et_trade_window_info_entry_arms_factory_value: "§Y[?num_af_gui|0]§!"
+ string_et_trade_window_info_entry_industrial_complex: "Amount of Civilian Factories"
+ string_et_trade_window_info_entry_industrial_complex_value: "§Y[?num_ic_gui|0]§!"
+ string_et_trade_window_info_entry_dockyard: "Amount of Dockyards"
+ string_et_trade_window_info_entry_dockyard_value: "§Y[?num_dy_gui|0]§!"
+ 

@@ -1,0 +1,17 @@
+state={
+	id=803
+	name="Cantabria"
+	provinces={
+		738 9703 11688 
+	}
+	history={
+		owner = SPR
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = SPR
+	}
+	manpower=234900
+	buildings_max_level_factor=1.000
+	state_category = city
+}
