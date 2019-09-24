@@ -1,0 +1,808 @@
+############################
+### France 1945 Focuses ####
+############################
+### HS1San/Senku Ishigami ##
+############################
+
+focus_tree = {
+	id = etcwme_france_fortyfive_focus
+	country = {
+		factor = 0
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 5000 }
+	
+	#focus = {
+	#	id = FRA_fortyfive_
+	#	icon = GFX_
+	#	prerequisite = { focus = }
+	#	mutually_exclusive = { focus =  }
+	#	x = -3
+	#	y = 0
+	#	relative_position_id =
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	complete_tooltip = {
+	#
+	#	}
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}
+	
+	focus = {
+
+		id = FRA_fortyfive_government_of_national_unanimity
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 5
+		y = 0
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_unite_the_french_resistance
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { 
+			focus = FRA_fortyfive_government_of_national_unanimity 
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			# remove_ideas = ETCWME_FRA_political_instability
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_putting_aside_our_differences
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { 
+			focus = FRA_fortyfive_unite_the_french_resistance 
+		}
+		x = -1
+		y = 2
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+
+	focus = {
+
+		id = FRA_fortyfive_pardon_maurice_thorez
+		icon = GFX_goal_support_communism
+		prerequisite = { 
+			focus = FRA_fortyfive_unite_the_french_resistance 
+		}
+		x = 1
+		y = 2
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_begin_the_legal_purges
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { 
+			focus = FRA_fortyfive_putting_aside_our_differences 
+		}
+		prerequisite = { 
+			focus = FRA_fortyfive_pardon_maurice_thorez 
+		}
+		x = 0
+		y = 3
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			# country_event = 
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_repeal_discriminatory_laws
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { 
+			focus = FRA_fortyfive_begin_the_legal_purges 
+		}
+		x = -2
+		y = 4
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			# remove_ideas = ETCWME_FRA_vichy_influence
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_new_commissioners_of_the_republic
+		icon = GFX_goal_support_democracy
+		prerequisite = { 
+			focus = FRA_fortyfive_begin_the_legal_purges 
+		}
+		x = 0
+		y = 4
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_disband_vichy_organizations
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { 
+			focus = FRA_fortyfive_begin_the_legal_purges 
+		}
+		x = 2
+		y = 4
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			# remove_ideas = ETCWME_FRA_vichy_influence
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_execute_guilty_collaborators
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { 
+			focus = FRA_fortyfive_repeal_discriminatory_laws 
+		}
+		prerequisite = { 
+			focus = FRA_fortyfive_new_commissioners_of_the_republic 
+		}
+		prerequisite = { 
+			focus = FRA_fortyfive_disband_vichy_organizations 
+		}
+		x = 0
+		y = 5
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -1
+			}
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_national_administration_school
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { 
+			focus = FRA_fortyfive_execute_guilty_collaborators 
+		}
+		x = -2
+		y = 6
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_social_security
+		icon = GFX_goal_generic_defence
+		prerequisite = { 
+			focus = FRA_fortyfive_national_administration_school 
+		}
+		x = -3
+		y = 7
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_child_benefits
+		icon = GFX_focus_generic_concessions
+		prerequisite = { 
+			focus = FRA_fortyfive_national_administration_school 
+		}
+		x = -1
+		y = 7
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_nationalize_companies
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { 
+			focus = FRA_fortyfive_execute_guilty_collaborators 
+		}
+		x = 2
+		y = 6
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+			}
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_found_edf
+		icon = GFX_goal_generic_production2
+		prerequisite = { 
+			focus = FRA_fortyfive_nationalize_companies 
+		}
+		x = 1
+		y = 7
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = "EDF"
+				bonus = 1.0
+				uses = 2
+				category = radar_tech
+			}
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_expand_air_france
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { 
+			focus = FRA_fortyfive_nationalize_companies 
+		}
+		x = 3
+		y = 7
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			random_owned_state = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_state = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_draft_the_new_constitution
+		icon = GFX_focus_generic_treaty
+		prerequisite = { 
+			focus = FRA_fortyfive_social_security 
+		}
+		prerequisite = { 
+			focus = FRA_fortyfive_child_benefits
+		}
+		prerequisite = { 
+			focus = FRA_fortyfive_found_edf
+		}
+		prerequisite = { 
+			focus = FRA_fortyfive_expand_air_france
+		}
+		x = 0
+		y = 8
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			# country_event = 
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_the_constitutional_referendum
+		icon = GFX_focus_usa_voter_registration_act
+		prerequisite = { 
+			focus = FRA_fortyfive_draft_the_new_constitution 
+		}
+		x = 0
+		y = 9
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			# country_event = 
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fortyfive_elections_at_last
+		icon = GFX_focus_usa_voter_registration_act
+		prerequisite = { 
+			focus = FRA_fortyfive_the_constitutional_referendum 
+		}
+		x = 0
+		y = 10
+		relative_position_id = FRA_fortyfive_government_of_national_unanimity
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			# country_event = 
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+}

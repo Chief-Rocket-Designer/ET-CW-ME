@@ -1,0 +1,32 @@
+﻿#############################
+### France Events ###########
+#############################
+### HS1San/Senku Ishigami ###
+#############################
+
+add_namespace = my_stuff
+
+########## IGNORE ALL BELOW ##########
+
+country_event = {
+
+	id = my_stuff.1 
+    title = my_stuff.1.t 
+    desc = my_stuff.1.d 
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = my_stuff.1.a 
+		load_focus_tree = etcwme_france_fortyfive_focus
+	}
+	option = { 
+		name = my_stuff.1.b
+		load_focus_tree = etcwme_france_fortyseven_focus
+	}
+	option = { 
+		name = my_stuff.1.c
+		load_focus_tree = etcwme_france_fiftyone_focus
+	}
+	
+}
