@@ -1,0 +1,2839 @@
+#############################
+### France Shared Focuses ####
+#############################
+### HS1San/Senku Ishigami ###
+#############################
+
+#	shared_focus = {
+#		id = ETCWME_FRA_shared
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+### Indochina War ###
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_hanoi_explosion
+	icon = GFX_focus_generic_support_the_left_right
+	x = 11
+	y = 0
+	cost = 5
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_indochina_war_effort
+	icon = GFX_focus_secret_rearmament
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_hanoi_explosion 
+	}
+	x = 0
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_naval_support
+	icon = GFX_goal_generic_navy_battleship
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_indochina_war_effort 
+	}
+	x = -1
+	y = 2
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# add_timed_idea =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_operation_lea
+	icon = GFX_goal_generic_radar
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_indochina_war_effort 
+	}
+	x = 1
+	y = 2
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# add_timed_idea =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_create_the_state_of_vietnam
+	icon = GFX_goal_generic_improve_relations
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_naval_support
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_lea
+	}
+	x = 0
+	y = 3
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_grant_cambodia_autonomy
+	icon = GFX_goal_generic_improve_relations
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_create_the_state_of_vietnam 
+	}
+	x = -1
+	y = 4
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_grant_laos_autonomy
+	icon = GFX_goal_generic_improve_relations
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_create_the_state_of_vietnam 
+	}
+	x = 1
+	y = 4
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_the_vietnamese_national_army
+	icon = GFX_goal_generic_military_sphere
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_grant_cambodia_autonomy
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_grant_laos_autonomy
+	}
+	x = 0
+	y = 5
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_foreign_aid
+	icon = GFX_focus_chi_mission_to_the_us
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_the_vietnamese_national_army
+	}
+	x = -1
+	y = 6
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_de_lattre_line
+	icon = GFX_goal_generic_fortify_city
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_the_vietnamese_national_army
+	}
+	x = 1
+	y = 6
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# forts
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_appoint_salan
+	icon = GFX_focus_chi_army_reform
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_foreign_aid
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_de_lattre_line
+	}
+	x = 0
+	y = 7
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_operation_bretagne
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_appoint_salan
+	}
+	x = -1
+	y = 8
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_operation_lorraine
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_appoint_salan
+	}
+	x = 1
+	y = 8
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_cambodian_independence
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_bretagne
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_lorraine
+	}
+	x = -1
+	y = 9
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_laotian_independence
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_bretagne
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_lorraine
+	}
+	x = 1
+	y = 9
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_operation_camargue
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_cambodian_independence
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_laotian_independence
+	}
+	x = -1
+	y = 10
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_operation_castor
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_cambodian_independence
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_laotian_independence
+	}
+	x = 1
+	y = 10
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_berlin_conference
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_camargue
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_castor
+	}
+	x = 0
+	y = 11
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_geneva_conference
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_berlin_conference
+	}
+	x = 0
+	y = 12
+	relative_position_id = ETCWME_FRA_shared_hanoi_explosion
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+### ECSC ###
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_european_federation_plans
+	icon = GFX_goal_generic_alliance
+	x = 16
+	y = 0
+	cost = 5
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_european_customs_union
+	icon = GFX_goal_generic_positive_trade_relations
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_european_federation_plans 
+	}
+	x = -1
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_european_federation_plans
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_schuman_declaration
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_european_federation_plans 
+	}
+	x = 1
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_european_federation_plans
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_formation_of_the_ecsc
+	icon = GFX_goal_generic_major_alliance
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_european_customs_union
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_schuman_declaration
+	}
+	x = 0
+	y = 2
+	relative_position_id = ETCWME_FRA_shared_european_federation_plans
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_pleven_plan
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_formation_of_the_ecsc
+	}
+	x = 0
+	y = 3
+	relative_position_id = ETCWME_FRA_shared_european_federation_plans
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_european_defense_community
+	icon = GFX_goal_generic_defence
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_pleven_plan
+	}
+	x = 0
+	y = 4
+	relative_position_id = ETCWME_FRA_shared_european_federation_plans
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_ratify_treaty_of_paris
+	icon = GFX_focus_generic_treaty
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_european_defense_community
+	}
+	x = 0
+	y = 5
+	relative_position_id = ETCWME_FRA_shared_european_federation_plans
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_cancel_edc_plans
+	icon = GFX_focus_renounce_the_treaty_of_trianon
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_ratify_treaty_of_paris
+	}
+	x = 0
+	y = 6
+	relative_position_id = ETCWME_FRA_shared_european_federation_plans
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_sign_the_treaty_of_rome
+	icon = GFX_focus_renounce_the_treaty_of_trianon
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_cancel_edc_plans
+	}
+	x = 0
+	y = 7
+	relative_position_id = ETCWME_FRA_shared_european_federation_plans
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+### 4th Republic Economy ###
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_support_marshall_plan
+	icon = GFX_focus_chi_mission_to_the_us
+	x = 23
+	y = 0
+	cost = 5
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_modernize_industrial_equipment
+	icon = GFX_goal_generic_construct_civilian
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_support_marshall_plan 
+	}
+	x = -3
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# tech
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_new_and_efficient_systems
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_modernize_industrial_equipment 
+	}
+	x = -3
+	y = 2
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# tech
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_begin_reconstruction_of_northern_france
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_support_marshall_plan 
+	}
+	x = -1
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# decisions
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_begin_reconstruction_of_southern_france
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_begin_reconstruction_of_northern_france 
+	}
+	x = -1
+	y = 2
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# decisions
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_the_saar_protectorate
+	icon = GFX_focus_CZE_german_puppet
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_support_marshall_plan 
+	}
+	x = 1
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_increase_steel_production
+	icon = GFX_focus_generic_steel
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_the_saar_protectorate 
+	}
+	x = 1
+	y = 2
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# resource
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_international_authority_of_the_ruhr
+	icon = GFX_goal_generic_dangerous_deal
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_support_marshall_plan 
+	}
+	x = 3
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_industrial_dismantling
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_international_authority_of_the_ruhr 
+	}
+	x = 3
+	y = 2
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# factories
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_devalue_the_franc
+	icon = GFX_focus_hol_abandon_the_gold_standard
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_new_and_efficient_systems
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_begin_reconstruction_of_southern_france
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_increase_steel_production
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_industrial_dismantling
+	}
+	x = 0
+	y = 3
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# stability
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_devalue_the_franc_further
+	icon = GFX_focus_hol_abandon_the_gold_standard
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_devalue_the_franc
+	}
+	x = 0
+	y = 4
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# stability
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_combat_budget_deficit
+	icon = GFX_focus_generic_self_management
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_devalue_the_franc_further
+	}
+	x = 0
+	y = 5
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# country_event =
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_limit_hyper_inflation
+	icon = GFX_goal_generic_consumer_goods
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_combat_budget_deficit
+	}
+	x = -2
+	y = 6
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# stability
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_lacq_gas_field
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_combat_budget_deficit
+	}
+	x = 0
+	y = 6
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# stability
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_issue_government_bonds
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_combat_budget_deficit
+	}
+	x = 2
+	y = 6
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+		# stability
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_austerity_measures
+	icon = GFX_goal_generic_consumer_goods
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_limit_hyper_inflation
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_lacq_gas_field
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_issue_government_bonds
+	}
+	x = 0
+	y = 7
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_tax_reform
+	icon = GFX_focus_generic_treaty
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_austerity_measures
+	}
+	x = -1
+	y = 8
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_increase_price_controls
+	icon = GFX_goal_generic_neutrality_focus
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_austerity_measures
+	}
+	x = 1
+	y = 8
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_courant_plan
+	icon = GFX_focus_generic_self_management
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_tax_reform
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_increase_price_controls
+	}
+	x = 0
+	y = 9
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_rural_construction_fund
+	icon = GFX_goal_generic_construction
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_courant_plan
+	}
+	x = -1
+	y = 10
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_introduce_vat
+	icon = GFX_goal_generic_trade
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_courant_plan
+	}
+	x = 1
+	y = 10
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_land_use_planning
+	icon = GFX_goal_generic_construction2
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_rural_construction_fund
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_introduce_vat
+	}
+	x = -2
+	y = 11
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_state_investments
+	icon = GFX_goal_generic_construct_civ_factory
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_rural_construction_fund
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_introduce_vat
+	}
+	x = 0
+	y = 11
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_agricultural_renovation
+	icon = GFX_focus_prc_agrarian_socialism
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_rural_construction_fund
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_introduce_vat
+	}
+	x = 2
+	y = 11
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_parentis_oil_field
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_land_use_planning
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_state_investments
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_agricultural_renovation
+	}
+	x = -2
+	y = 12
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_equipment_modernization
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_land_use_planning
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_state_investments
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_agricultural_renovation
+	}
+	x = 0
+	y = 12
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_tax_company_profits
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_land_use_planning
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_state_investments
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_agricultural_renovation
+	}
+	x = 2
+	y = 12
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_operation_20
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_parentis_oil_field
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_modernize_industrial_equipment
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_tax_company_profits
+	}
+	x = -1
+	y = 12
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_borrow_from_the_bank_of_france
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_parentis_oil_field
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_modernize_industrial_equipment
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_tax_company_profits
+	}
+	x = 1
+	y = 12
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_beg_the_us_for_aid
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_20
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_borrow_from_the_bank_of_france
+	}
+	x = 0
+	y = 13
+	relative_position_id = ETCWME_FRA_shared_support_marshall_plan
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+### Algerian War ###
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_algerian_war
+	icon = GFX_focus_generic_support_the_left_right
+	x = 31
+	y = 0
+	cost = 5
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_mobilize_local_gendarmerie
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_algerian_war
+	}
+	x = -1
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_deploy_the_french_army
+	icon = GFX_goal_generic_allies_build_infantry
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_algerian_war
+	}
+	x = 1
+	y = 1
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_declare_state_of_emergency
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_mobilize_local_gendarmerie
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_deploy_the_french_army
+	}
+	x = 0
+	y = 2
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_land_paratroopers
+	icon = GFX_focus_generic_paratrooper
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_declare_state_of_emergency
+	}
+	x = -2
+	y = 3
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_operation_veronique
+	icon = GFX_goal_generic_army_doctrines
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_declare_state_of_emergency
+	}
+	x = 0
+	y = 3
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_allocate_war_credits
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_declare_state_of_emergency
+	}
+	x = 2
+	y = 3
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_grant_tunisia_autonomy
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_land_paratroopers
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_veronique
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_allocate_war_credits
+	}
+	x = -1
+	y = 4
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_tunisian_independence
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_grant_morocco_autonomy
+	}
+	x = -1
+	y = 5
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_grant_morocco_autonomy
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_land_paratroopers
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_operation_veronique
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_allocate_war_credits
+	}
+	x = 1
+	y = 4
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_moroccan_independence
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_grant_morocco_autonomy
+	}
+	x = 1
+	y = 5
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_mobilize_more_troops
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_tunisian_independence
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_moroccan_independence
+	}
+	x = -1
+	y = 6
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}
+
+shared_focus = {
+
+	id = ETCWME_FRA_shared_increase_algerian_military_spending
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_tunisian_independence
+	}
+	prerequisite = { 
+		focus = ETCWME_FRA_shared_moroccan_independence
+	}
+	x = 1
+	y = 6
+	relative_position_id = ETCWME_FRA_shared_algerian_war
+	cost = 5
+
+	available = {
+
+	}
+	
+	bypass = {
+	
+	}
+	
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+		
+	complete_tooltip = {
+
+	}
+	
+	completion_reward = {
+
+	}
+	
+	ai_will_do = {
+		factor = 5
+	}
+
+}

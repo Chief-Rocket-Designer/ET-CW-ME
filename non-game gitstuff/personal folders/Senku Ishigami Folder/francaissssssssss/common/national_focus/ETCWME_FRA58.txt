@@ -1,0 +1,317 @@
+#############################
+### France 1958 Focuses #####
+#############################
+### HS1San/Senku Ishigami ###
+#############################
+
+focus_tree = {
+	id = etcwme_france_fiftyeight_focus
+	country = {
+		factor = 0
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 1000 }
+
+	#focus = {
+	#	id = FRA_fiftyeight_
+	#	icon = GFX_
+	#	prerequisite = { focus = }
+	#	mutually_exclusive = { focus =  }
+	#	x = -3
+	#	y = 0
+	#	relative_position_id =
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	complete_tooltip = {
+	#
+	#	}
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}
+
+	focus = {
+
+		id = FRA_fiftyeight_saving_france
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 5
+		y = 0
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftyeight_obtain_full_legislative_power
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftyeight_saving_france 
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_fiftyeight_saving_france
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftyeight_disband_the_national_assembly
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftyeight_obtain_full_legislative_power 
+		}
+		x = -1
+		y = 2
+		relative_position_id = FRA_fiftyeight_saving_france
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftyeight_speech_to_the_people
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftyeight_saving_france 
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_fiftyeight_saving_france
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftyeight_vive_de_gaulle
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftyeight_speech_to_the_people 
+		}
+		x = 1
+		y = 2
+		relative_position_id = FRA_fiftyeight_saving_france
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftyeight_draft_the_new_constitution
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftyeight_disband_the_national_assembly
+		}
+		prerequisite = { 
+			focus = FRA_fiftyeight_vive_de_gaulle
+		}
+		x = 0
+		y = 3
+		relative_position_id = FRA_fiftyeight_saving_france
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftyeight_vote_on_the_new_constitution
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftyeight_draft_the_new_constitution
+		}
+		x = 0
+		y = 4
+		relative_position_id = FRA_fiftyeight_saving_france
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+}

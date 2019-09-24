@@ -1,0 +1,568 @@
+############################
+### France 1956 Focuses ####
+############################
+### HS1San/Senku Ishigami ##
+############################
+
+focus_tree = {
+	id = etcwme_france_fiftysix_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = FRA
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 1000 }
+	
+	shared_focus = ETCWME_FRA_shared_european_federation_plans
+	shared_focus = ETCWME_FRA_shared_support_marshall_plan
+	shared_focus = ETCWME_FRA_shared_algerian_war
+
+	#focus = {
+	#	id = FRA_fiftysix_
+	#	icon = GFX_
+	#	prerequisite = { focus = }
+	#	mutually_exclusive = { focus =  }
+	#	x = -3
+	#	y = 0
+	#	relative_position_id =
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	complete_tooltip = {
+	#
+	#	}
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}
+
+	focus = {
+
+		id = FRA_fiftysix_third_term_of_french_fourth_republic
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 5
+		y = 0
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_loi_cadre_defferre
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_third_term_of_french_fourth_republic 
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_national_solidarity_fund
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_third_term_of_french_fourth_republic 
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_a_political_union_with_the_uk
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_loi_cadre_defferre
+		}
+		prerequisite = { 
+			focus = FRA_fiftysix_national_solidarity_fund
+		}
+		x = 0
+		y = 2
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_the_suez_crisis
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_a_political_union_with_the_uk
+		}
+		x = 0
+		y = 3
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_streamline_the_legislative_process
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_the_suez_crisis
+		}
+		x = 0
+		y = 4
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_nato_paris_summit
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_streamline_the_legislative_process
+		}
+		x = -2
+		y = 5
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_establish_insa_lyon
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_streamline_the_legislative_process
+		}
+		x = 0
+		y = 5
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_plutonium_extraction_plant
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_streamline_the_legislative_process
+		}
+		x = 2
+		y = 5
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_labor_laws
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_nato_paris_summit
+		}
+		prerequisite = { 
+			focus = FRA_fiftysix_establish_insa_lyon
+		}
+		prerequisite = { 
+			focus = FRA_fiftysix_plutonium_extraction_plant
+		}
+		x = -1
+		y = 6
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_motor_insurance
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_nato_paris_summit
+		}
+		prerequisite = { 
+			focus = FRA_fiftysix_establish_insa_lyon
+		}
+		prerequisite = { 
+			focus = FRA_fiftysix_plutonium_extraction_plant
+		}
+		x = 1
+		y = 6
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_may_1958_crisis
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_labor_laws
+		}
+		prerequisite = { 
+			focus = FRA_fiftysix_motor_insurance
+		}
+		x = 0
+		y = 7
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 10
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+	focus = {
+
+		id = FRA_fiftysix_bring_back_de_gaulle
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { 
+			focus = FRA_fiftysix_may_1958_crisis
+		}
+		x = 0
+		y = 8
+		relative_position_id = FRA_fiftysix_third_term_of_french_fourth_republic
+		cost = 10
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 4
+		}
+
+	}
+	
+}
