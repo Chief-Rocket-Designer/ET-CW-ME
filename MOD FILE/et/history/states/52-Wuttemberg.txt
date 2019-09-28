@@ -1,4 +1,3 @@
-
 state={
 	id=52
 	name="STATE_52"
@@ -23,19 +22,20 @@ state={
 			industrial_complex = 1
 			air_base = 6
 		}
-		add_core_of = GER
 		
 		1910.1.1 = {
 			owner = GEE
 			add_core_of = GEE
 		}
-		
 		1936.1.1 = {
 			owner = GER
 			add_core_of = GER
+			remove_core_of = GEE
 		}
-
 		1939.1.1 = {
+			owner = GER
+			add_core_of = GER
+			remove_core_of = GEE
 			buildings = {
 				air_base = 10
 			}
@@ -44,6 +44,8 @@ state={
 			owner = WGR
 			add_core_of = DDR
 			add_core_of = WGR
+			remove_core_of = GEE
+			remove_core_of = GER
 		}
 	}
 

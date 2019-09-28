@@ -5,7 +5,6 @@ state={
 		9456 
 	}
 	history={
-		owner = GER
 		buildings = {
 			infrastructure = 8
 			arms_factory = 0
@@ -17,15 +16,22 @@ state={
 			owner = GEE
 			add_core_of = GEE
 		}
-		
 		1936.1.1 = {
 			owner = GER
 			add_core_of = GER
+			remove_core_of = GEE
+		}
+		1939.1.1 = {
+			owner = GER
+			add_core_of = GER
+			remove_core_of = GEE
 		}
 		1949.1.1 = {
 			owner = ENG
 			add_core_of = DDR
 			add_core_of = WGR
+			remove_core_of = GEE
+			remove_core_of = GER
 		}
 		
 	}

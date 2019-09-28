@@ -17,15 +17,22 @@ state={
 			owner = GEE
 			add_core_of = GEE
 		}
-		
 		1936.1.1 = {
 			owner = GER
 			add_core_of = GER
+			remove_core_of = GEE
+		}
+		1939.1.1 = {
+			owner = GER
+			add_core_of = GER
+			remove_core_of = GEE
 		}
 		1949.1.1 = {
 			owner = USA
 			add_core_of = DDR
 			add_core_of = WGR
+			remove_core_of = GEE
+			remove_core_of = GER
 		}
 	}
 	manpower=1000000

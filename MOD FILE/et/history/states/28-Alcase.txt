@@ -1,4 +1,3 @@
-
 state={
 	id=28
 	name="STATE_28" # Alsace-Lorraine
@@ -10,7 +9,6 @@ state={
 	}
 
 	history={
-		owner = FRA
 		#victory_points = { 6529 1 }
 		#victory_points = { 549 1 }
 		victory_points = { 678 5 }
@@ -24,51 +22,56 @@ state={
 
 		}
 		add_core_of = FRA
+		
 		1910.1.1 = {
 			owner = GEE
 			add_core_of = GEE
+			set_state_name = "Reichsland Elsaß-Lothringen"
 			buildings = {
 				industrial_complex = 4
 			}
 		}
-		
 		1936.1.1 = {
 			owner = FRA
-			add_core_of = FRA
+			remove_core_of = GEE
+			reset_state_name = yes
 			buildings = {
 				industrial_complex = 4
+			}
 			549 = {
 				bunker = 10
-
 			}
 			678 = {
 				bunker = 10
-
 			}
 			3629 = {
 				bunker = 10
-
 			}
 			6529 = {
 				bunker = 10
-
 			}
 			9503 = {
 				bunker = 10
-
 			}
 			9559 = {
 				bunker = 10
-
 			}
 			11502 = {
 				bunker = 10
-
-				}
 			}
 		}
-		
 		1939.1.1 = {
+			owner = FRA
+			remove_core_of = GEE
+			reset_state_name = yes
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		1949.1.1 = {
+			owner = FRA
+			remove_core_of = GEE
+			reset_state_name = yes
 			buildings = {
 				industrial_complex = 4
 			}

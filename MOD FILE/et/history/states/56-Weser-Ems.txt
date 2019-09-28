@@ -6,7 +6,6 @@ state={
 	state_category = city
 
 	history={
-		owner = GER
 		victory_points = {
 			241 5 
 		}
@@ -23,7 +22,6 @@ state={
 			fuel_silo = 1
 			241 = {
 				naval_base = 8
-
 			}
 			air_base = 3
 
@@ -33,13 +31,15 @@ state={
 			owner = GEE
 			add_core_of = GEE
 		}
-		
 		1936.1.1 = {
 			owner = GER
 			add_core_of = GER
+			remove_core_of = GEE
 		}
-		
 		1939.1.1 = {
+			owner = GER
+			add_core_of = GER
+			remove_core_of = GEE
 			buildings = {
 				industrial_complex = 4
 				dockyard = 3
@@ -49,6 +49,8 @@ state={
 			owner = WGR
 			add_core_of = DDR
 			add_core_of = WGR
+			remove_core_of = GEE
+			remove_core_of = GER
 		}
 	}
 

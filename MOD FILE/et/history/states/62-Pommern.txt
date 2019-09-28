@@ -1,9 +1,7 @@
-
 state={
 	id=62
 	name="STATE_62"
 	manpower = 1006221
-	
 	
 	state_category = town
 
@@ -11,22 +9,24 @@ state={
 		victory_points = {
 			9388 1
 		}
-		owner = GER
 		buildings = {
 			infrastructure = 6
 			fuel_silo = 1
 		}
+		
 		1910.1.1 = {
 			owner = GEE
 			add_core_of = GEE
 		}
-		
 		1936.1.1 = {
 			owner = GER
 			add_core_of = GER
+			remove_core_of = GEE
 		}
-
 		1939.1.1 = {
+			owner = GER
+			add_core_of = GER
+			remove_core_of = GEE
 			buildings = {
 				air_base = 8
 			}
@@ -35,6 +35,8 @@ state={
 			owner = DDR
 			add_core_of = DDR
 			add_core_of = WGR
+			remove_core_of = GEE
+			remove_core_of = GER
 		}
 	}
 

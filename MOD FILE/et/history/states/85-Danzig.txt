@@ -5,10 +5,6 @@ state={
 	
 	state_category = city
 	history={
-		owner = POL
-		victory_points = {
-			362 10
-		}
 		victory_points = {
 			3295 5
 		}
@@ -21,11 +17,8 @@ state={
 			industrial_complex = 1
 			dockyard = 1
 			air_base = 3
-			362 = {
-				naval_base = 5
-			}
 		}
-		add_core_of = POL
+		
 		1910.1.1 = {
 			owner = GEE
 			add_core_of = GEE
@@ -33,21 +26,33 @@ state={
 				industrial_complex = 4
 			}
 		}
-		
 		1936.1.1 = {
 			owner = POL
 			add_core_of = POL
+			remove_core_of = GEE
 			buildings = {
 				industrial_complex = 4
 			}
 		}
-		
 		1938.3.12 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
 			add_claim_by = GER
+		}
+		1949.1.1 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
 		}
 	}
 
 	provinces={
-		243 279 334 362 389 3295 3324 6347 9263
+		243 279 334 389 3295 3324 6347 9263
 	}
 }
+
+### removed 362

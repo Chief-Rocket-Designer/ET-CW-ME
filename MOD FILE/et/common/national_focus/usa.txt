@@ -9732,6 +9732,7 @@ focus = {
 			}
 	}
 		
+
 #No South America NATO
 		
 
@@ -9791,6 +9792,316 @@ focus = {
 				}
 		}
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Invite Asia
+focus = {
+		id = USA_Invite_Asia
+		icon = GFX_NATO
+		text = " Invite Asia Countries to NATO "
+		x = 3
+		y = 1
+		prerequisite = { focus = USA_warplan_world }
+		relative_position_id = USA_warplan_world
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+			}
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = NATO.50  days = 7 }
+			if = {
+				limit = {
+					has_opinion = {
+						target = AST
+						value = 30
+					}
+					
+					AST = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value = 100
+						}
+					}
+				}
+				AST = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}	
+
+
+			if = {
+				limit = {
+					has_opinion = {
+						target = AST
+						value > 30
+					}
+					
+					AST = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				AST = {
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}	
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = INS
+						value > 30
+					}
+					
+					INS = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				INS = {
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = SVI
+						value > 9
+					}
+					
+					SVI = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 9
+						}
+					}
+				}
+				SVI = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = VIN
+						value > 30
+					}
+					
+					VIN = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				VIN = {
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = SIN
+						value > 30
+					}
+					
+					SIN = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				SIN  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		}
+	}
+focus = {
+		id = USA_Influence_Asia
+		icon = GFX_NATO
+		text = " Spread American Ideals in Asia"
+		x = 6
+		y = 1
+		prerequisite = { focus = USA_Invite_Asia }
+		relative_position_id = USA_Invite_Asia
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+		}
+			
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

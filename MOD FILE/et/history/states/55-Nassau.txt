@@ -1,4 +1,3 @@
-
 state={
 	id=55
 	name="STATE_55"
@@ -7,7 +6,6 @@ state={
 	state_category = large_city
 
 	history={
-		owner = GER
 		buildings = {
 			infrastructure = 7
 			arms_factory = 1
@@ -19,19 +17,20 @@ state={
 		victory_points = {
 			564 3
 		}
-		add_core_of = GER
 		
 		1910.1.1 = {
 			owner = GEE
 			add_core_of = GEE
 		}
-		
 		1936.1.1 = {
 			owner = GER
 			add_core_of = GER
+			remove_core_of = GEE
 		}
-
 		1939.1.1 = {
+			owner = GER
+			add_core_of = GER
+			remove_core_of = GEE
 			buildings = {
 				air_base = 3
 				arms_factory = 4
@@ -41,6 +40,8 @@ state={
 			owner = WGR
 			add_core_of = DDR
 			add_core_of = WGR
+			remove_core_of = GEE
+			remove_core_of = GER
 		}
 	}
 

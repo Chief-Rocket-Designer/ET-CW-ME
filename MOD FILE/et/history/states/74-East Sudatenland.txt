@@ -1,5 +1,4 @@
-state=
-{
+state={
 	id=74
 	name="STATE_74"
 	manpower = 820000
@@ -7,12 +6,10 @@ state=
 	state_category = rural
 	
 	
-	history=
-	{
+	history={
 		victory_points = {
 			3583 5
 		}
-		owner = CZE
 		buildings = {
 			infrastructure = 7
 			arms_factory = 1
@@ -26,22 +23,22 @@ state=
 				industrial_complex = 4
 			}
 		}
-		
 		1936.1.1 = {
 			owner = CZE
-			add_core_of = CZE
+			remove_core_of = AHE
 			buildings = {
 				industrial_complex = 4
 			}
 		}
-
 		1938.9.30 = {
 			owner = GER
-			controller = GER
+			add_core_of = GER
+			remove_core_of = AHE
 		}
 		1949.1.1 = {
 			owner = CZE
-			add_core_of = CZE
+			remove_core_of = AHE
+			remove_core_of = GER
 		}
 	}
 	provinces= {

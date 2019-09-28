@@ -3,10 +3,8 @@ state={
 	name="STATE_86"
 	manpower = 2106500
 	
-	
 	state_category = city
 	history={
-		owner = POL
 		victory_points = {
 			6558 10
 		}
@@ -15,15 +13,12 @@ state={
 			industrial_complex = 1
 			11232 = {
 				bunker = 1
-
 			}
 			9532 = {
 				bunker = 1
-
 			}
 			3381 = {
 				bunker = 1
-
 			}
 			air_base = 3
 		}
@@ -35,17 +30,27 @@ state={
 				industrial_complex = 4
 			}
 		}
-		
 		1936.1.1 = {
 			owner = POL
 			add_core_of = POL
+			remove_core_of = GEE
 			buildings = {
 				industrial_complex = 4
 			}
 		}
-		
 		1938.3.12 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
 			add_claim_by = GER
+		}
+		1949.1.1 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
 		}
 	}
 

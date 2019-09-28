@@ -1,0 +1,36 @@
+add_namespace = NATO
+
+country_event = {
+	id = NATO.101 
+	title = NATO.101.t
+	desc = NATO.101.d
+	picture = GFX_nato
+	
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	
+	
+	option = { 
+		name = NATO.101.a
+		ai_chance = {
+            base = 100
+        }
+		hidden_effect = {
+			USA = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	
+	option = { 
+		name = NATO.101.b
+		ai_chance = {
+            base = 0
+        }
+		hidden_effect = {
+		
+		}
+		
+	}
+}

@@ -1,4 +1,3 @@
-
 state={
 	id=5
 	name="STATE_5"
@@ -12,28 +11,30 @@ state={
 		#victory_points = {
 		#	11386 1
 		#}
-		owner = GER
-		controller = GER
 		
 		buildings = {
 			infrastructure = 6
 		}
-		add_core_of = GER
 		
 		1910.1.1 = {
 			owner = GEE
 			add_core_of = GEE
 		}
-		
 		1936.1.1 = {
 			owner = GER
 			add_core_of = GER
+			remove_core_of = GEE
+		}
+		1939.1.1 = {
+			owner = GER
+			add_core_of = GER
+			remove_core_of = GEE
 		}
 		1949.1.1 = {
 			owner = POL
 			add_core_of = POL
-			add_core_of = GER
-			
+			remove_core_of = GEE
+			remove_core_of = GER
 		}
 	}
 

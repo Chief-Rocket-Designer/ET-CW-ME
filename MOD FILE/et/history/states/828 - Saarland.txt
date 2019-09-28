@@ -1,6 +1,6 @@
 state={
-	id=51
-	name="STATE_51"
+	id=828
+	name="Saarland"		###"STATE_828"
 	manpower = 6144743
 	resources={
 		steel=30 # was: 54
@@ -9,26 +9,14 @@ state={
 	state_category = metropolis
 	
 	history={
-		victory_points = {
-			6469 10 
-		}
-		victory_points = {
-			587 5 
-		}
-		victory_points = {
-			3547 21 
-		}
-		#victory_points = {
-		#	3444 5
-		#}
-		#victory_points = {
-		#	3547 1
-		#}
+		#victory_points = { 9575 3 }
+		victory_points = { 11531 5 }
 		buildings = {
 			infrastructure = 8
 			arms_factory = 3
 			industrial_complex = 2
 			air_base = 3
+
 		}
 		
 		1910.1.1 = {
@@ -42,7 +30,7 @@ state={
 			remove_core_of = GEE
 			set_demilitarized_zone = yes
 		}
-		1939.1.1 = {
+		1939.1.1 ={
 			owner = GER
 			add_core_of = GER
 			remove_core_of = GEE
@@ -63,6 +51,7 @@ state={
 	}
 
 	provinces={
-		529 587 3444 3512 3547 6469 6570 9482 9522 
+		9575 11531 
 	}
+	
 }
