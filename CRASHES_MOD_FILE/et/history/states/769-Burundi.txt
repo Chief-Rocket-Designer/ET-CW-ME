@@ -1,0 +1,39 @@
+state={
+	id=769
+	name="STATE_769" # Burundi
+	
+	state_category = pastoral
+
+	history={
+		add_core_of = BRD
+		victory_points = {
+			2220 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		
+		1910.1.1 = {
+			owner = GEE
+			set_state_name = "Deutsch-Ostafrika"
+		}
+		1936.1.1 = {
+			owner = BEL
+			reset_state_name = yes
+		}
+		1939.1.1 = {
+			owner = BEL
+			reset_state_name = yes
+		}
+		1949.1.1 = {
+			owner = BEL
+			reset_state_name = yes
+		}
+	}
+
+	provinces={
+		2220
+	}
+	manpower=2145731
+	buildings_max_level_factor=1.000
+}

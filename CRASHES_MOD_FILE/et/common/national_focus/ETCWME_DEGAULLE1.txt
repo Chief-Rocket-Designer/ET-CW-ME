@@ -1,0 +1,58 @@
+############################
+### France 1956 Focuses ####
+############################
+### HS1San/Senku Ishigami ##
+############################
+
+focus_tree = {
+	id = etcwme_france_fiftysix_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = FRA
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 1000 }
+	
+	shared_focus = ETCWME_FRA_shared_european_federation_plans
+	shared_focus = ETCWME_FRA_shared_support_marshall_plan
+	shared_focus = ETCWME_FRA_shared_algerian_war
+
+	#focus = {
+	#	id = FRA_fiftysix_
+	#	icon = GFX_
+	#	prerequisite = { focus = }
+	#	mutually_exclusive = { focus =  }
+	#	x = -3
+	#	y = 0
+	#	relative_position_id =
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	complete_tooltip = {
+	#
+	#	}
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}

@@ -1,0 +1,629 @@
+scripted_diplomatic_actions = {
+	etm_invest_in_target_action = {
+		allowed = {
+			always = yes
+		}
+		visible = {
+			any_owned_state = {
+				OR = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = air_base
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = anti_air_building
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = radar_station
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = rocket_site
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = nuclear_reactor
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = fuel_silo
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = Urban_Center
+						size > 0
+						include_locked = yes
+					}
+				}
+			}
+		}
+		selectable = {
+			ROOT = {
+				OR = {
+					NOT = { has_active_mission = etm_investment_mission_1 }
+					AND = {
+						OR = {
+							has_idea = emergent_econom
+							has_idea = large_economy
+							has_idea = expansive_economy
+							has_idea = economic_superpower
+						}
+						NOT = { has_active_mission = etm_investment_mission_2 }
+					}
+					AND = {
+						OR = {
+							has_idea = large_economy
+							has_idea = expansive_economy
+							has_idea = economic_superpower
+						}
+						NOT = { has_active_mission = etm_investment_mission_3 }
+					}
+					AND = {
+						OR = {
+							has_idea = expansive_economy
+							has_idea = economic_superpower
+						}
+						NOT = { has_active_mission = etm_investment_mission_4 }
+					}
+					AND = {
+						has_idea = economic_superpower
+						NOT = { has_active_mission = etm_investment_mission_5 }
+					}
+				}
+			}
+		}
+
+		requires_acceptance = no
+		
+		on_sent_effect = {
+			ROOT = {
+				clear_array = etm_invest_in_target_action_sender_gui_array
+			}
+		}
+
+		complete_effect = {
+			set_temp_variable = { investment_type = ROOT.selected_investment_type }
+			random_owned_state = {
+				limit = {
+					meta_trigger = {
+						text = {
+							free_building_slots = {
+								building = [BUILDING]
+								size > 0
+								include_locked = yes
+							}
+						}
+						BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+					}
+				}
+				ROOT = {
+					if = {
+						limit = {
+							NOT = { has_active_mission = etm_investment_mission_1 }
+						}
+						set_variable = { investment_state_1 = PREV.id }
+						set_variable = { selected_investment_type_1 = selected_investment_type }
+						activate_mission = etm_investment_mission_1
+					}
+					else_if = {
+						limit = {
+							NOT = { has_active_mission = etm_investment_mission_2 }
+						}
+						set_variable = { investment_state_2 = PREV.id }
+						set_variable = { selected_investment_type_2 = selected_investment_type }
+						activate_mission = etm_investment_mission_2
+					}
+					else_if = {
+						limit = {
+							NOT = { has_active_mission = etm_investment_mission_3 }
+						}
+						set_variable = { investment_state_3 = PREV.id }
+						set_variable = { selected_investment_type_3 = selected_investment_type }
+						activate_mission = etm_investment_mission_3
+					}
+					else_if = {
+						limit = {
+							NOT = { has_active_mission = etm_investment_mission_4 }
+						}
+						set_variable = { investment_state_4 = PREV.id }
+						set_variable = { selected_investment_type_4 = selected_investment_type }
+						activate_mission = etm_investment_mission_4
+					}
+					else_if = {
+						limit = {
+							NOT = { has_active_mission = etm_investment_mission_5 }
+						}
+						set_variable = { investment_state_5 = PREV.id }
+						set_variable = { selected_investment_type_5 = selected_investment_type }
+						activate_mission = etm_investment_mission_5
+					}
+					clear_variable = selected_investment_type
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = etm_investment_trade_opinion
+			}
+		}
+
+		# SEND POPUP CUSTOMIZATION
+		# use diplomatic_action as context in scripted gui
+		send_scripted_gui = etm_invest_in_target_action_sender_gui
+		reset_send_effect = {
+			ROOT = {
+				clear_variable = selected_investment_type
+				clear_array = etm_invest_in_target_action_sender_gui_array
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 1 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 2 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 3 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 4 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 5 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 9 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 10 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 11 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 12 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 13 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 14 }
+				add_to_array = { etm_invest_in_target_action_sender_gui_array = 15 }
+				# AI
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					random_list = {
+						8 = { set_variable = { selected_investment_type = 1 } }
+						8 = { set_variable = { selected_investment_type = 2 } }
+						8 = { set_variable = { selected_investment_type = 3 } }
+						8 = { set_variable = { selected_investment_type = 4 } }
+						8 = { set_variable = { selected_investment_type = 5 } }
+						8 = { set_variable = { selected_investment_type = 9 } }
+						8 = { set_variable = { selected_investment_type = 10 } }
+						8 = { set_variable = { selected_investment_type = 11 } }
+						8 = { set_variable = { selected_investment_type = 12 } }
+						8 = { set_variable = { selected_investment_type = 13 } }
+						8 = { set_variable = { selected_investment_type = 14 } }
+						8 = { set_variable = { selected_investment_type = 15 } }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						random_list = {
+							8 = { set_variable = { selected_investment_type = 1 } }
+							8 = { set_variable = { selected_investment_type = 2 } }
+							8 = { set_variable = { selected_investment_type = 3 } }
+							8 = { set_variable = { selected_investment_type = 4 } }
+							8 = { set_variable = { selected_investment_type = 5 } }
+							8 = { set_variable = { selected_investment_type = 9 } }
+							8 = { set_variable = { selected_investment_type = 10 } }
+							8 = { set_variable = { selected_investment_type = 11 } }
+							8 = { set_variable = { selected_investment_type = 12 } }
+							8 = { set_variable = { selected_investment_type = 13 } }
+							8 = { set_variable = { selected_investment_type = 14 } }
+							8 = { set_variable = { selected_investment_type = 15 } }
+						}
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						random_list = {
+							8 = { set_variable = { selected_investment_type = 1 } }
+							8 = { set_variable = { selected_investment_type = 2 } }
+							8 = { set_variable = { selected_investment_type = 3 } }
+							8 = { set_variable = { selected_investment_type = 4 } }
+							8 = { set_variable = { selected_investment_type = 5 } }
+							8 = { set_variable = { selected_investment_type = 9 } }
+							8 = { set_variable = { selected_investment_type = 10 } }
+							8 = { set_variable = { selected_investment_type = 11 } }
+							8 = { set_variable = { selected_investment_type = 12 } }
+							8 = { set_variable = { selected_investment_type = 13 } }
+							8 = { set_variable = { selected_investment_type = 14 } }
+							8 = { set_variable = { selected_investment_type = 15 } }
+						}
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 1 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 2 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 3 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 4 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 5 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 9 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 10 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 11 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 12 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 13 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 14 }
+					}
+					if = {
+						limit = {
+							set_temp_variable = { investment_type = selected_investment_type }
+							PREV = {
+								NOT = {
+									any_owned_state = {
+										meta_trigger = {
+											text = {
+												free_building_slots = {
+													building = [BUILDING]
+													size > 0
+													include_locked = yes
+												}
+											}
+											BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+										}
+									}
+								}
+							}
+						}
+						set_variable = { selected_investment_type = 15 }
+					}
+				}
+			}
+		}
+		can_be_sent = {
+			ROOT = { has_variable = selected_investment_type }
+			set_temp_variable = { investment_type = ROOT.selected_investment_type }
+			any_owned_state = {
+				meta_trigger = {
+					text = {
+						free_building_slots = {
+							building = [BUILDING]
+							size > 0
+							include_locked = yes
+						}
+					}
+					BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+				}
+			}
+			ROOT = {
+				OR = {
+					NOT = { has_active_mission = etm_investment_mission_1 }
+					AND = {
+						OR = {
+							has_idea = emergent_econom
+							has_idea = large_economy
+							has_idea = expansive_economy
+							has_idea = economic_superpower
+						}
+						NOT = { has_active_mission = etm_investment_mission_2 }
+					}
+					AND = {
+						OR = {
+							has_idea = large_economy
+							has_idea = expansive_economy
+							has_idea = economic_superpower
+						}
+						NOT = { has_active_mission = etm_investment_mission_3 }
+					}
+					AND = {
+						OR = {
+							has_idea = expansive_economy
+							has_idea = economic_superpower
+						}
+						NOT = { has_active_mission = etm_investment_mission_4 }
+					}
+					AND = {
+						has_idea = economic_superpower
+						NOT = { has_active_mission = etm_investment_mission_5 }
+					}
+				}
+			}
+		}
+		
+		# PLAYER FEEDBACK ON ACCEPT/REJECT
+		accept_title = ETM_INVEST_IN_TARGET_ACTION_ACCEPT_TITLE
+		accept_description = ETM_INVEST_IN_TARGET_ACTION_ACCEPT_DESC
+		
+		# AI
+		ai_desire = {
+			base = 0
+			modifier = {
+				ROOT = {
+					OR = {
+						is_major = yes
+						AND = {
+							is_major = no
+							num_of_factories > 49
+						}
+					}
+				}
+				is_major = no
+				is_in_faction_with = ROOT
+				add = 2
+			}
+		}
+	}
+}

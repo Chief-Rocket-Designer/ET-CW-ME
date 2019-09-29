@@ -1,0 +1,6 @@
+etm_investment_category = {
+	icon = generic_economy
+	visible = {
+		has_variable = investment_state
+	}
+}

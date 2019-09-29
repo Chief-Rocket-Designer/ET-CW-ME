@@ -1,0 +1,39 @@
+state={
+	id=768
+	name="STATE_768" # Rwanda
+	manpower=1716564
+	buildings_max_level_factor=1.000
+	
+	state_category = pastoral
+
+	history={
+		add_core_of = RWA
+		victory_points = {
+			9962 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		
+		1910.1.1 = {
+			owner = GEE
+			set_state_name = "Deutsch-Ostafrika"
+		}
+		1936.1.1 = {
+			owner = BEL
+			reset_state_name = yes
+		}
+		1939.1.1 = {
+			owner = BEL
+			reset_state_name = yes
+		}
+		1949.1.1 = {
+			owner = BEL
+			reset_state_name = yes
+		}
+	}
+
+	provinces={
+		9962
+	}
+}

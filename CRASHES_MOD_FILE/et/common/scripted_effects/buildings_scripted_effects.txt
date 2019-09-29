@@ -1,0 +1,203 @@
+#Made by @Chief Rocket Designer
+#Authorized for USE in Cold War Iron Curtain Mod as of 7/29/2019 A.D./C.E.
+#Authorized for USE in Extended Timeline Modern Era Mod as of 7/29/2019 A.D./C.E.
+#Authorized for USE in Any Other Mods with the Approval of Chief Rocket Designer
+#By using this code you agree to give credit if requested.
+#---End Authorization
+
+
+
+crash_variable_inisialisation = {
+	set_variable = {
+        var = root_value_economic_crash_vehicles
+        value = 0
+    }
+}
+
+crash_variable_inisialisation = {
+	set_variable = {
+        var = root_value_economic_crash_steel
+        value = 0
+    }
+}
+
+crash_variable_inisialisation = {
+	set_variable = {
+        var = root_value_economic_crash_electronics
+        value = 0
+    }
+}
+
+crash_variable_inisialisation = {
+	set_variable = {
+        var = root_value_economic_crash_oil
+        value = 0
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#MainCode
+
+
+steel_resource_cost_calc = {
+	set_variable = {
+        var = steel_num
+        value = resource@steel
+    }
+	
+	if = {
+        limit = {
+            check_variable = { steel_num < 0 }
+        }
+		
+		add_to_variable = { root_value_economic_crash_steel = 1 } 
+		add_ideas = lack_steel_econ
+		remove_ideas = surplus_steel_econ
+    }
+	
+    else_if = {
+        limit = {
+            check_variable = { steel_num > 0 }
+        }
+		
+		add_to_variable = { root_value_economic_crash_steel = -1 } 
+		add_ideas = surplus_steel_econ
+		remove_ideas = lack_steel_econ
+    }
+    else = {
+
+    }
+}
+
+oil_resource_cost_calc = {
+    set_variable = {
+        var = oil_num
+        value = resource@oil
+    }
+	
+	if = {
+        limit = {
+            check_variable = { oil_num < 0 }
+        }
+		
+		add_to_variable = { root_value_economic_crash_oil = 1 } 
+		add_ideas = lack_oil_econ
+		remove_ideas = surplus_oil_econ
+    }
+    else_if = {
+        limit = {
+            check_variable = { oil_num > 0 }
+        }
+		
+		add_to_variable = { root_value_economic_crash_oil = -1 } 
+		add_ideas = surplus_oil_econ
+		remove_ideas = lack_oil_econ
+    }
+    else = {
+    
+    }
+}
+
+vehicles_resource_cost_calc = {
+	set_variable = {
+        var = vehicles_num
+        value = resource@vehicles
+    }
+	
+    if = {
+        limit = {
+            check_variable = { vehicles_num < 0 }
+        }
+		
+		add_to_variable = { root_value_economic_crash_vehicles = 1 } 
+		add_ideas = lack_vehicles_econ
+		remove_ideas = surplus_vehicles_econ
+    }
+    else_if = {
+        limit = {
+            check_variable = { vehicles_num > 0 }
+        }
+		
+		add_ideas = surplus_vehicles_econ
+		remove_ideas = lack_vehicles_econ
+		add_to_variable = { root_value_economic_crash_vehicles = -1 } 
+    }
+    else = {
+
+    }
+}
+	
+electronics_resource_cost_calc = {
+	set_variable = {
+        var = electronics_num
+        value = resource@electronics
+    }
+	
+    if = {
+        limit = {
+            check_variable = { electronics_num < 0 }
+        }
+		
+		add_ideas = lack_electronics_econ
+		remove_ideas = surplus_electronics_econ
+		add_to_variable = { root_value_economic_crash_electronics = 1 } 
+    }
+    else_if = {
+        limit = {
+            check_variable = { electronics_num > 0 }
+        }
+		
+		add_ideas = surplus_electronics_econ
+		remove_ideas = lack_electronics_econ
+		add_to_variable = { root_value_economic_crash_electronics = -1 } 
+    }
+    else = {
+
+    }
+}
+
+economic_crash_calculator = {
+#Economic_Crash_Calculator
+	if = {
+        limit = {
+            check_variable = { root_value_economic_crash_oil = 1  }
+			check_variable = { root_value_economic_crash_steel = 1  }
+			check_variable = { root_value_economic_crash_vehicles = 1  }
+			check_variable = { root_value_economic_crash_electronics = 1  }
+        }
+		set_variable = {
+			var = economic_crash_true_false
+			value = 1
+		}
+		
+		
+		add_ideas = econ_colp
+		
+	}
+	else = {
+		
+		set_variable = {
+			var = economic_crash_true_false
+			value = 0
+		}
+	
+	
+	
+		remove_ideas = add_ideas = econ_colp
+    }
+}
+
+#GDP/C Calcultor

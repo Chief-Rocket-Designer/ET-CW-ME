@@ -1,0 +1,58 @@
+state={
+	id=85
+	name="STATE_85"
+	manpower = 1080100
+	
+	state_category = city
+	history={
+		victory_points = {
+			3295 5
+		}
+		victory_points = {
+			279 1
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 3
+		}
+		
+		1910.1.1 = {
+			owner = GEE
+			add_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		1936.1.1 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		1938.3.12 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
+			add_claim_by = GER
+		}
+		1949.1.1 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+	}
+
+	provinces={
+		243 279 334 389 3295 3324 6347 9263
+	}
+}
+
+### removed 362

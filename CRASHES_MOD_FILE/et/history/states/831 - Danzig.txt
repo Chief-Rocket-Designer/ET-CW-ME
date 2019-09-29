@@ -1,0 +1,58 @@
+state={
+	id=831
+	name="Danzig"		###"STATE_831"
+	manpower = 480000	### kinda much
+	
+	state_category = city
+	history={
+		victory_points = {
+			362 10
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 3
+			362 = {
+				naval_base = 5
+			}
+		}
+		
+		1910.1.1 = {
+			owner = GEE
+			add_core_of = GEE
+			buildings = {
+				industrial_complex = 1
+			}
+		}
+		1936.1.1 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 1
+			}
+		}
+		1939.1.1 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 1
+			}
+		}
+		1949.1.1 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 1
+			}
+		}
+	}
+
+	provinces={
+		362
+	}
+}

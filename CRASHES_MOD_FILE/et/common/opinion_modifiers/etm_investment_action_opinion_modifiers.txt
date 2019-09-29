@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	etm_investment_trade_opinion = {
+		value = 10
+		trade = yes
+	}
+}

@@ -1,0 +1,565 @@
+focus_tree = { 
+id = Austria
+country = { 
+factor = 0 
+modifier = { 
+add = 200
+tag = AUS 
+} 
+} 
+#Focus for Stomp Out Parliament
+focus = { 
+id = AUS_stompoutparliament
+icon = GFX_goal_tfv_burn_the_royal_portraits
+x = 1
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_pursuecommunism } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+set_political_party= { 
+ideology = communism 
+popularity = 55
+}
+ } 
+
+ } 
+
+#Focus for Technology Sharing
+focus = { 
+id = AUS_technologysharing
+icon = GFX_goal_tfv_generic_tech_sharing
+x = 5
+y = 16
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_collaboratewithothermembers } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Collaborate with other Members
+focus = { 
+id = AUS_collaboratewithothermembers
+icon = GFX_focus_chi_british_cooperation
+x = 5
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_joinnato } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Austrian Neutrality
+focus = { 
+id = AUS_austrianneutrality
+icon = GFX_goal_generic_defence
+x = 7
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_electapresident } 
+mutually_exclusive = { focus = AUS_joinnato } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Elect a President
+focus = { 
+id = AUS_electapresident
+icon = GFX_goal_generic_improve_relations
+x = 6
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_establishelections } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= 20
+ } 
+
+ } 
+
+#Focus for Establish Elections
+focus = { 
+id = AUS_establishelections
+icon = GFX_goal_generic_intelligence_exchange
+x = 6
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_pursuedemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+set_political_party= { 
+ideology = democratic 
+popularity = 55 
+}
+ } 
+
+ } 
+
+#Focus for Pursue Communism
+focus = { 
+id = AUS_pursuecommunism
+icon = GFX_goal_support_communism
+x = 1
+y = 11
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_takeastance } 
+mutually_exclusive = { focus = AUS_pursuedemocracy } 
+mutually_exclusive = { focus = AUS_returntofascism } 
+mutually_exclusive = { focus = AUS_theoldways } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+set_political_party= { 
+ideology = communism 
+popularity = 50 
+}
+ } 
+
+ } 
+
+#Focus for The Old Ways
+focus = { 
+id = AUS_theoldways
+icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+x = 16
+y = 11
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_takeastance } 
+mutually_exclusive = { focus = AUS_pursuecommunism }
+mutually_exclusive = { focus = AUS_pursuedemocracy }
+mutually_exclusive = { focus = AUS_returntofascism }
+ai_will_do = { 
+ factor = 25
+ } 
+completion_reward = { 
+set_political_party= { 
+ideology = neutrality 
+popularity = 50
+}
+ } 
+
+ } 
+
+#Focus for Take a Stance
+focus = { 
+id = AUS_takeastance
+icon = GFX_goal_generic_demand_territory
+x = 8
+y = 10
+cost = 4
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 20
+ } 
+completion_reward = { 
+add_political_power=170
+ } 
+
+ } 
+
+#Focus for Pursue Democracy
+focus = { 
+id = AUS_pursuedemocracy
+icon = GFX_goal_support_democracy
+x = 6
+y = 11
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_takeastance } 
+mutually_exclusive = { focus = AUS_pursuecommunism } 
+mutually_exclusive = { focus = AUS_returntofascism } 
+mutually_exclusive = { focus = AUS_theoldways } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+set_political_party= { 
+ideology = democratic 
+popularity = 50
+}
+ } 
+
+ } 
+
+#Focus for Return to Fascism
+focus = { 
+id = AUS_returntofascism
+icon = GFX_goal_support_fascism
+x = 11
+y = 11
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_takeastance } 
+mutually_exclusive = { focus = AUS_pursuedemocracy }
+mutually_exclusive = { focus = AUS_pursuecommunism }
+mutually_exclusive = { focus = AUS_theoldways }
+ai_will_do = { 
+ factor = 3
+ } 
+completion_reward = { 
+set_political_party= { 
+ideology = fascism 
+popularity = 50
+}
+ } 
+
+ } 
+
+#Focus for Deter the Soviets
+focus = { 
+id = AUS_deterthesoviets
+icon = GFX_focus_attack_soviet
+x = 7
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_austrianneutrality } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Peace With NATO
+focus = { 
+id = AUS_peacewithnato
+icon = GFX_focus_chi_mission_to_the_us
+x = 7
+y = 16
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_deterthesoviets } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Austrian Pride
+focus = { 
+id = AUS_austrianpride
+icon = GFX_focus_generic_strike_at_democracy1
+x = 6
+y = 17
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_peacewithnato focus = AUS_technologysharing } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Join NATO
+focus = { 
+id = AUS_joinnato
+icon = GFX_focus_chi_mission_to_the_us
+x = 5
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_electapresident } 
+mutually_exclusive = { focus = AUS_austrianneutrality } 
+ai_will_do = { 
+ factor = 6
+ } 
+
+ } 
+
+#Focus for Cut Ties with NATO
+focus = { 
+id = AUS_cuttieswithnato
+icon = GFX_focus_attack_britain
+x = 0
+y = 16
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_sovietcollaboration } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Send Top Scientists
+focus = { 
+id = AUS_sendtopscientists
+icon = GFX_focus_generic_socialist_science
+x = 0
+y = 17
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_sovietcollaboration } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Influence Switzerland
+focus = { 
+id = AUS_influenceswitzerland
+icon = GFX_focus_attack_switzerland
+x = 2
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_ourownfaction } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ask for Hungarian Independence
+focus = { 
+id = AUS_askforhungarianindependence
+icon = GFX_focus_generic_strike_at_democracy2
+x = 2
+y = 16
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_influenceswitzerland } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for A Revolutionary Council
+focus = { 
+id = AUS_arevolutionarycouncil
+icon = GFX_focus_generic_soviet_politics
+x = 1
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_stompoutparliament } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Join The Warsaw Pact
+focus = { 
+id = AUS_jointhewarsawpact
+icon = GFX_focus_chi_mission_to_the_soviet_union
+x = 0
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_arevolutionarycouncil } 
+mutually_exclusive = { focus = AUS_ourownfaction } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Free Albania
+focus = { 
+id = AUS_freealbania
+icon = GFX_goal_generic_small_arms
+x = 2
+y = 19
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_strikeitaly } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Yugoslav Question
+focus = { 
+id = AUS_theyugoslavquestion
+icon = GFX_goal_generic_occupy_states_ongoing_war
+x = 2
+y = 17
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_askforhungarianindependence } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Strike Italy
+focus = { 
+id = AUS_strikeitaly
+icon = GFX_focus_attack_italy
+x = 2
+y = 18
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_theyugoslavquestion } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Our Own Faction
+focus = { 
+id = AUS_ourownfaction
+icon = GFX_focus_generic_join_comintern
+x = 2
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_arevolutionarycouncil } 
+mutually_exclusive = { focus = AUS_jointhewarsawpact } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Soviet Collaboration
+focus = { 
+id = AUS_sovietcollaboration
+icon = GFX_focus_prc_agrarian_socialism
+x = 0
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_jointhewarsawpact } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The RED Danube
+focus = { 
+id = AUS_thereddanube
+icon = GFX_goal_support_fourth_int
+x = 1
+y = 20
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_freealbania focus = AUS_sendtopscientists } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Silence other Political Parties
+focus = { 
+id = AUS_silenceotherpoliticalparties
+icon = GFX_goal_generic_political_pressure
+x = 11
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_returntofascism } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for A New Fuhrer
+focus = { 
+id = AUS_anewfuhrer
+icon = GFX_focus_ger_reichskommisariats
+x = 11
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_silenceotherpoliticalparties } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for A Unified German State
+focus = { 
+id = AUS_aunifiedgermanstate
+icon = GFX_goal_molotov_ribbentrop_pact
+x = 11
+y = 16
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_unitethroughtheeast focus = AUS_unitethroughthewest } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Support German Reunification
+focus = { 
+id = AUS_supportgermanreunification
+icon = GFX_goal_generic_military_deal
+x = 11
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_anewfuhrer } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Unite through the West
+focus = { 
+id = AUS_unitethroughthewest
+icon = GFX_focus_chi_mission_to_germany
+x = 10
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_supportgermanreunification } 
+mutually_exclusive = { focus = AUS_unitethroughtheeast } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Unite through the East
+focus = { 
+id = AUS_unitethroughtheeast
+icon = GFX_focus_chi_mission_to_germany
+x = 12
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = AUS_supportgermanreunification } 
+mutually_exclusive = { focus = AUS_unitethroughthewest } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }

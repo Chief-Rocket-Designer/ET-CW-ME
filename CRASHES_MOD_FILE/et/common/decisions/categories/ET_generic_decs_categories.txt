@@ -1,0 +1,21 @@
+ETM_generic_category = {
+	allowed = {
+		
+	}
+	
+	visible = {
+		always = yes
+	}
+}
+
+ETM_space_exploration_category = { 
+
+	allowed = { 
+		has_country_flag = space_exploration_allowed
+	}
+	
+	visible = {
+		has_country_flag = space_exploration_allowed
+	}
+	
+}

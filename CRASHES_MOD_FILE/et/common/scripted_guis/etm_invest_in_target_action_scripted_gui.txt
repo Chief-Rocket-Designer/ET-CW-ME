@@ -1,0 +1,62 @@
+scripted_gui = {
+
+	etm_invest_in_target_action_sender_gui = {
+		context_type = diplomatic_action
+		
+		window_name = "etm_invest_in_target_action_sender_gui"
+		
+		effects = {
+			entry_button_click = {
+				ROOT = {
+					if = {
+						limit = {
+							check_variable = { selected_investment_type = v }
+						}
+						clear_variable = selected_investment_type
+					}
+					else = {
+						set_variable = { selected_investment_type = v }
+					}
+				}
+			}
+		}
+		
+		triggers = {
+			entry_button_click_enabled = {
+				custom_trigger_tooltip = {
+					tooltip = TARGET_HAS_A_STATE_THAT_CAN_CONSTRUCT_THIS_BUILDING
+					any_owned_state = {
+						meta_trigger = {
+							text = {
+								free_building_slots = {
+									building = [BUILDING]
+									size > 0
+									include_locked = yes
+								}
+							}
+							BUILDING = "[This.GetInvestmentTypeName]"
+						}
+					}
+				}
+			}
+			entry_button_overlay_visible = {
+				ROOT = {
+					check_variable = { selected_investment_type = v }
+				}
+			}
+		}
+		
+		properties = {
+			entry_button = {
+				frame = v
+			}
+		}
+		
+		dynamic_lists = {
+			etm_invest_in_target_action_sender_gui_gridbox = {
+				array = ROOT.etm_invest_in_target_action_sender_gui_array
+				entry_container = etm_invest_in_target_action_sender_gui_entry
+			}
+		}
+	}
+}

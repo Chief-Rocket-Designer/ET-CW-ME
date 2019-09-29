@@ -1,0 +1,136 @@
+add_namespace = NATO
+
+country_event = {
+	id = NATO.101 
+	title = NATO.101.t
+	desc = NATO.101.d
+	picture = GFX_nato
+	
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	
+	
+	option = { 
+		name = NATO.101.a
+		ai_chance = {
+            base = 1
+			modifier = { 
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					factor = 100
+				}
+			}
+        }
+		hidden_effect = {
+			USA = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	
+	option = { 
+		name = NATO.101.b
+		ai_chance = {
+            base = 1
+			modifier = { 
+				if = {
+					limit = {
+						OR = {
+							has_ideas = NATO_Ally
+							has_government = communism
+							
+						}
+					}
+					factor = 0
+				}
+			}
+        }
+		hidden_effect = {
+		
+		}
+		
+	}
+}
+
+country_event = {
+	id = NATO.102 
+	title = NATO.102.t
+	desc = NATO.102.d
+	picture = GFX_nato
+	
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	
+	
+	option = { 
+		name = NATO.102.a
+		ai_chance = {
+            base = 1
+			modifier = { 
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					factor = 100
+				}
+			}
+        }
+		hidden_effect = {
+			ROOT= { add_opinion_modifier =  { target = USA modifier = nato_mission_success } }
+			USA= { add_opinion_modifier =  { target = ROOT modifier = nato_mission_success } }
+		}
+	}
+	
+	option = { 
+		name = NATO.102.b
+		ai_chance = {
+            base = 1
+			modifier = { 
+				if = {
+					limit = {
+						has_government = communism
+					}
+					factor = 100
+				}
+			}
+        }
+		hidden_effect = {
+			ROOT= { add_opinion_modifier =  { target = USA modifier = nato_mission_reject } }
+			USA= { add_opinion_modifier =  { target = ROOT modifier = nato_mission_reject } }
+		}
+		
+	}
+	
+	option = { 
+		name = NATO.102.c
+		ai_chance = {
+            base = 1
+			modifier = { 
+				if = {
+					limit = {
+						has_elections = yes
+						democratic > 0.30
+						communism < 0.40
+						NOT = { 
+							has_government = communism
+							has_government = democratic
+						}
+					}
+					factor = 100
+				}
+			}
+        }
+		hidden_effect = {
+			ROOT = {
+				add_ideas = NATO_Ally
+			}
+			ROOT= { add_opinion_modifier =  { target = USA modifier =  } }
+			USA= { add_opinion_modifier =  { target = ROOT modifier = nato_mission_nato_ally } }
+		}
+	}
+	
+}

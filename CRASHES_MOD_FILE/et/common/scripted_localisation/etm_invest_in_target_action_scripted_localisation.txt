@@ -1,0 +1,388 @@
+defined_text = {
+	name = GetInvestmentTypeName
+	
+	text = {
+		trigger = {
+			always = yes
+			set_temp_variable = { investment_type = v }
+		}
+		localization_key = "[This.GetInvestmentTypeNameOtherContext]"
+	}
+}
+
+defined_text = {
+	name = GetInvestmentTypeNameOtherContext
+	
+	text = {
+		trigger = {
+			check_variable = { investment_type = 1 }
+		}
+		localization_key = industrial_complex
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 2 }
+		}
+		localization_key = arms_factory
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 3 }
+		}
+		localization_key = infrastructure
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 4 }
+		}
+		localization_key = dockyard
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 5 }
+		}
+		localization_key = air_base
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 6 }
+		}
+		localization_key = naval_base
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 7 }
+		}
+		localization_key = bunker
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 8 }
+		}
+		localization_key = coastal_bunker
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 9 }
+		}
+		localization_key = anti_air_building
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 10 }
+		}
+		localization_key = synthetic_refinery
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 11 }
+		}
+		localization_key = radar_station
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 12 }
+		}
+		localization_key = rocket_site
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 13 }
+		}
+		localization_key = nuclear_reactor
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 14 }
+		}
+		localization_key = fuel_silo
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 15 }
+		}
+		localization_key = Urban_Center
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 16 }
+		}
+		localization_key = Wall
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 17 }
+		}
+		localization_key = industrial_complex # does not exist yet
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 18 }
+		}
+		localization_key = industrial_complex # does not exist yet
+	}
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetInvestmentTypeDesc
+	
+	text = {
+		trigger = {
+			always = yes
+			set_temp_variable = { investment_type = v }
+		}
+		localization_key = "[This.GetInvestmentTypeDescOtherContext]"
+	}
+}
+
+defined_text = {
+	name = GetInvestmentTypeDescOtherContext
+	
+	text = {
+		trigger = {
+			check_variable = { investment_type = 1 }
+		}
+		localization_key = industrial_complex_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 2 }
+		}
+		localization_key = arms_factory_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 3 }
+		}
+		localization_key = infrastructure_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 4 }
+		}
+		localization_key = dockyard_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 5 }
+		}
+		localization_key = air_base_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 6 }
+		}
+		localization_key = naval_base_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 7 }
+		}
+		localization_key = bunker_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 8 }
+		}
+		localization_key = coastal_bunker_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 9 }
+		}
+		localization_key = anti_air_building_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 10 }
+		}
+		localization_key = synthetic_refinery_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 11 }
+		}
+		localization_key = radar_station_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 12 }
+		}
+		localization_key = rocket_site_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 13 }
+		}
+		localization_key = nuclear_reactor_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 14 }
+		}
+		localization_key = fuel_silo_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 15 }
+		}
+		localization_key = Urban_Center_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 16 }
+		}
+		localization_key = Wall_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 17 }
+		}
+		localization_key = industrial_complex_desc # does not exist yet
+	}
+	text = {
+		trigger = {
+			check_variable = { investment_type = 18 }
+		}
+		localization_key = industrial_complex_desc # does not exist yet
+	}
+	text = {
+		trigger = {
+			always = no
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetInvestmentEntryButtonTooltipDelayed
+	
+	text = {
+		trigger = {
+			check_variable = { selected_investment_type = v }
+		}
+		localization_key = string_etm_invest_in_target_action_entry_button_tt_delayed_deselect
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = string_etm_invest_in_target_action_entry_button_tt_delayed_select
+	}
+}
+
+defined_text = {
+	name = GetInvestmentStateController1
+	
+	text = {
+		trigger = {
+			has_variable = investment_state_1
+			var:investment_state_1 = {
+				controller = {
+					set_temp_variable = { investment_state_controller = THIS.id }
+				}
+			}
+		}
+		localization_key = "[?investment_state_controller.GetName]"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetInvestmentStateController2
+	
+	text = {
+		trigger = {
+			has_variable = investment_state_2
+			var:investment_state_2 = {
+				controller = {
+					set_temp_variable = { investment_state_controller = THIS.id }
+				}
+			}
+		}
+		localization_key = "[?investment_state_controller.GetName]"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetInvestmentStateController3
+	
+	text = {
+		trigger = {
+			has_variable = investment_state_3
+			var:investment_state_3 = {
+				controller = {
+					set_temp_variable = { investment_state_controller = THIS.id }
+				}
+			}
+		}
+		localization_key = "[?investment_state_controller.GetName]"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetInvestmentStateController4
+	
+	text = {
+		trigger = {
+			has_variable = investment_state_4
+			var:investment_state_4 = {
+				controller = {
+					set_temp_variable = { investment_state_controller = THIS.id }
+				}
+			}
+		}
+		localization_key = "[?investment_state_controller.GetName]"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetInvestmentStateController5
+	
+	text = {
+		trigger = {
+			has_variable = investment_state_5
+			var:investment_state_5 = {
+				controller = {
+					set_temp_variable = { investment_state_controller = THIS.id }
+				}
+			}
+		}
+		localization_key = "[?investment_state_controller.GetName]"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = ""
+	}
+}

@@ -1,0 +1,69 @@
+scripted_gui = {
+	open_et_trade_window_info_window = {
+		context_type = player_context
+		
+		window_name = "open_et_trade_window_info_window"
+		parent_window_token = trade_tab
+		
+		visible = {
+			is_ai = no
+		}
+		
+		effects = {
+			open_button_click = {
+				clear_array = et_trade_window_info_array
+				set_variable = { et_trade_window_info_window = 1 }
+				add_to_array = { et_trade_window_info_array = 1 }
+				add_to_array = { et_trade_window_info_array = 2 }
+				add_to_array = { et_trade_window_info_array = 3 }
+				add_to_array = { et_trade_window_info_array = 4 }
+				add_to_array = { et_trade_window_info_array = 5 }
+				add_to_array = { et_trade_window_info_array = 6 }
+				add_to_array = { et_trade_window_info_array = 7 }
+				add_to_array = { et_trade_window_info_array = 8 }
+				add_to_array = { et_trade_window_info_array = 9 }
+				add_to_array = { et_trade_window_info_array = 10 }
+				add_to_array = { et_trade_window_info_array = 11 }
+			}
+			close_button_click = {
+				clear_array = et_trade_window_info_array
+				clear_variable = et_trade_window_info_window
+			}
+		}
+		
+		triggers = {
+			open_button_visible = {
+				NOT = { has_variable = et_trade_window_info_window }
+			}
+			close_button_visible = {
+				has_variable = et_trade_window_info_window
+			}
+		}
+	}
+	
+	et_trade_window_info_window = {
+		context_type = player_context
+		
+		window_name = "et_trade_window_info_window"
+		parent_window_token = trade_tab
+		
+		visible = {
+			is_ai = no
+			check_variable = { et_trade_window_info_window > 0 }
+		}
+		
+		effects = {
+			close_button_click = {
+				clear_array = et_trade_window_info_array
+				clear_variable = et_trade_window_info_window
+			}
+		}
+		
+		dynamic_lists = {
+			et_trade_window_info_gridbox = {
+				array = et_trade_window_info_array
+				entry_container = et_trade_window_info_entry
+			}
+		}
+	}
+}

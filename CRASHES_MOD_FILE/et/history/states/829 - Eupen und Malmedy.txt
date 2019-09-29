@@ -1,0 +1,53 @@
+state={
+	id=829
+	name="Eupen und Malmedy"		###"STATE_829"
+	manpower = 250000				###	kinda much
+	
+	state_category = large_city
+
+	history={
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 4
+			air_base = 1
+
+		}
+		
+		1910.1.1 = {
+			owner = GEE
+			add_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		1936.1.1 = {
+			owner = BEL
+			add_core_of = BEL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		1939.1.1 = {
+			owner = BEL
+			add_core_of = BEL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		1949.1.1 = {
+			owner = BEL
+			add_core_of = BEL
+			remove_core_of = GEE
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+	}
+
+	provinces={
+		3488
+	}
+}

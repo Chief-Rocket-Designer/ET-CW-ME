@@ -1,0 +1,358 @@
+focus_tree = {
+	id = SAU_focus
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 200
+			tag = SAU
+		}
+	}
+	
+	continuous_focus_position = { x = 50 y = 6000 }
+	default = no
+	reset_on_civilwar = no
+	
+	focus = {
+		id = SAU_Find_Oil
+		text = " We have struck Oil! "
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		
+		x = 6
+		y = 0
+		cost = 0
+
+		available_if_capitulated = no
+		
+		available = {
+			date > 1938.1.1 
+		}
+		
+		completion_reward = {
+		country_event = { id = saudi.1  days = 0 }
+			every_owned_state = { 
+				add_resource = {
+					type = oil
+					amount = 80
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SAU_Attract_American_Investors
+		text = " Attract American Investors "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAU_Find_Oil }
+		
+		x = 6
+		y = 1
+		cost = 0
+
+		available_if_capitulated = no
+	
+		completion_reward = {
+			SAU = {
+				add_ideas = usa_saudi_business_ties
+				every_owned_state = { 
+					add_resource = {
+						type = oil
+						amount = 20
+					}
+				}
+				every_owned_state = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 3
+						instant_build = yes
+				
+					}
+					
+					add_building_construction = {
+						type = fuel_silo
+						level = 1
+						instant_build = no
+				
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SAU_Oil_Saudi_Industry
+		text = " Saudi Oil Industry is the best in the world! "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAU_Attract_American_Investors } 
+		
+		x = 6
+		y = 2
+		cost = 0
+
+		available_if_capitulated = no
+	
+	
+		completion_reward = {
+			every_owned_state = { 
+				add_resource = {
+					type = oil
+					amount = 80
+				}
+			}
+			
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 5
+			}
+			
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = SAU_Modern_Saudi_Arabia
+		text = " Saudi Arabia in the Modern World "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAU_Attract_American_Investors } 
+		
+		x = 6
+		y = 2
+		cost = 0
+
+		available_if_capitulated = no
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = SAU_The_Monarchy
+		text = " Saudi Arabian Monarchy "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAU_Modern_Saudi_Arabia }
+		relative_position_id = SAU_Modern_Saudi_Arabia
+		
+		x = -4
+		y = 1
+		cost = 10
+		
+		available = {
+			has_government = neutrality
+		}
+
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+#Democratic Path
+	focus = {
+		id = SAU_Democracy
+		text = " We Should Go Democratic "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAU_The_Monarchy }
+		relative_position_id = SAU_The_Monarchy
+		mutually_exclusive = { focus = SAU_Stay_Monarchist }
+		
+		x = -1
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0
+		}
+
+		
+		available = {
+			has_government = neutrality
+		}
+
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = -0.10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.30
+				}
+		}
+	}
+
+#Monarchist Path
+	focus = {
+		id = SAU_Stay_Monarchist
+		text = " Stay with the Monarchy "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAU_The_Monarchy }
+		relative_position_id = SAU_The_Monarchy
+		mutually_exclusive = { focus = SAU_Democracy }
+		
+		x = 1
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+		available = {
+			has_government = neutrality
+		}
+
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 0.5
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.02
+			}
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = SAU_Authoritarian_Monarchy
+		text = " The House of Saud Rules! "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAU_Stay_Monarchist }
+		relative_position_id = SAU_Stay_Monarchist
+		mutually_exclusive = { focus = SAU_Liberal_Monarchy }
+		
+		x = 2
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 5
+		}
+
+		
+		available = {
+			has_government = neutrality
+		}
+
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 0.5
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.02
+			}
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = SAU_Liberal_Monarchy
+		text = " Elect the the Monarch "
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SAU_The_Monarchy }
+		relative_position_id = SAU_Stay_Monarchist
+		mutually_exclusive = { focus = SAU_Authoritarian_Monarchy }
+		
+		x = 0
+		y = 1
+		cost = 70
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		
+		available = {
+			has_government = neutrality
+		}
+
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_stability = 0.5
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.20
+			}
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.20
+			}
+			SAU = {
+                if = {
+                    limit = {
+                        has_government = neutrality
+                    }
+                    set_politics = {
+                        ruling_party = neutrality
+                        elections_allowed = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_government = fascism
+                    }
+                    set_politics = {
+                        ruling_party = fascism
+                        elections_allowed = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_government = democratic
+                    }
+                    set_politics = {
+                        ruling_party = democratic
+                        elections_allowed = yes
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_government = communism
+                    }
+                    set_politics = {
+                        ruling_party = communism
+                        elections_allowed = yes
+                    }
+                }
+            }
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+	
