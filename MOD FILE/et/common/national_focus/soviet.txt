@@ -3939,10 +3939,116 @@ focus_tree = {
 		}
 	}
 	
+#Political Policy
+	#Communism-Socialism
+		focus = {
+			id = SOV_Khrush_Communism_Question
+			text = "Socialist-Communism Question"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_domestic_affairs_Khrush
+			cost = 1
+			ai_will_do = {
+				factor = 4
+			}
+			prerequisite = {
+				focus = SOV_domestic_affairs_Khrush
+			}
+			x = -6
+			y = 1
+			completion_reward = {
+				
+			}
+		}
+		
+		focus = {
+			id = SOV_ready_yes_communism
+			text = "Communism in our life time"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_Khrush_Communism_Question
+			cost = 10
+			ai_will_do = {
+				factor = 1
+			}
+			prerequisite = {
+				focus = SOV_Khrush_Communism_Question
+			}
+			x = 1
+			y = 1
+			completion_reward = {
+				
+			}
+		}
+		
+		focus = {
+			id = SOV_not_communism_ready
+			text = "The Soviet Union is not ready for Communism"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_Khrush_Communism_Question
+			cost = 10
+			ai_will_do = {
+				factor = 1
+			}
+			prerequisite = {
+				focus = SOV_Khrush_Communism_Question
+			}
+			x = -1
+			y = 1
+			completion_reward = {
+				
+			}
+		}
 	
+		focus = {
+			id = SOV_command_economy_electric
+			text = "The Soviet Union's Electric Economy Experiment"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_ready_yes_communism
+			cost = 15
+			ai_will_do = {
+				factor = 1
+			}
+			prerequisite = {
+				focus = SOV_ready_yes_communism
+			}
+			prerequisite = {
+				focus = SOV_Khrush_Pro_Computer_Econ
+			}
+			x = 3
+			y = 1
+			completion_reward = {
+				modify_building_resources = {
+					building = industrial_complex
+					resource = electronics
+					amount = 1
+				}
+			}
+		}
 	
-	
-	
+	focus = {
+			id = SOV_command_economy_electric_2
+			text = "The Soviet Union's Electric Economy"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_command_economy_electric
+			cost = 15
+			ai_will_do = {
+				factor = 1
+			}
+			prerequisite = {
+				focus = SOV_command_economy_electric
+			}
+			prerequisite = {
+				focus = SOV_command_economy_electric
+			}
+			x = 0
+			y = 1
+			completion_reward = {
+				modify_building_resources = {
+					building = industrial_complex
+					resource = electronics
+					amount = 1
+				}
+			}
+		}
 	
 	
 	

@@ -9864,14 +9864,135 @@ focus = {
 
 
 #Invite Asia
+
+
+
+
+
 focus = {
-		id = USA_Invite_Asia
+		id = USA_Influence_Asia
 		icon = GFX_NATO
-		text = " Invite Asia Countries to NATO "
+		text = " Influence  Asian States"
 		x = 3
 		y = 1
 		prerequisite = { focus = USA_warplan_world }
 		relative_position_id = USA_warplan_world
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+
+
+			
+			
+			
+	
+			KOR  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			TIB  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			BAN  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			BHU  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			PAK  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			NEP  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			RAJ  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			CHI  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			PRC  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			BRM  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			PHI  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			MAL  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			BAN  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			SIA  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			CAM  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			SIN  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			VIN  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			SVI  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			INS  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			AST  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+			
+			NZL  = { 
+				country_event = { id = NATO.102  days = 7 }
+			}
+		}
+	}
+
+
+
+
+
+focus = {
+		id = USA_Invite_Asia
+		icon = GFX_NATO
+		text = " Invite Asia Countries to NATO "
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_Influence_Asia }
+		relative_position_id = USA_Influence_Asia
 		cost = 10
 
 		ai_will_do = {
@@ -9889,14 +10010,14 @@ focus = {
 				limit = {
 					has_opinion = {
 						target = AST
-						value = 30
+						value > 30
 					}
 					
 					AST = {
 						has_war = no
 						has_opinion = {
 							target = USA
-							value = 100
+							value > 100
 						}
 					}
 				}
@@ -10010,33 +10131,348 @@ focus = {
 				}
 			}
 			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			if = {
+				limit = {
+					has_opinion = {
+						target = CAM
+						value > 30
+					}
+					
+					CAM = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				CAM  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
 			
+			
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = CAM
+						value > 30
+					}
+					
+					CAM = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				CAM  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+
+
+			if = {
+				limit = {
+					has_opinion = {
+						target = SIA
+						value > 30
+					}
+					
+					SIA = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				SIA  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = BRM
+						value > 30
+					}
+					
+					BRM = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				BRM  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+
+
+			if = {
+				limit = {
+					has_opinion = {
+						target = MAL
+						value > 30
+					}
+					
+					MAL = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				MAL  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = PHI
+						value > 30
+					}
+					
+					PHI = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				PHI  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = BRM
+						value > 30
+					}
+					
+					BRM = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				BRM  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = CHI
+						value > 30
+					}
+					
+					CHI = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				CHI  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = PRC
+						value > 30
+					}
+					
+					PRC = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				PRC  = { 
+					add_ideas = NATO_Ally
+				}
+			}
+			
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = RAJ
+						value > 30
+					}
+					
+					RAJ = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				RAJ  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = NEP
+						value > 30
+					}
+					
+					NEP = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				NEP  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = PAK
+						value > 30
+					}
+					
+					PAK = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				PAK  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = BHU
+						value > 30
+					}
+					
+					BHU = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				BHU  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = BAN
+						value > 30
+					}
+					
+					BAN = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				BAN  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = TIB
+						value > 30
+					}
+					
+					TIB = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				TIB  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					has_opinion = {
+						target = KOR
+						value > 30
+					}
+					
+					KOR = {
+						has_war = no
+						has_opinion = {
+							target = USA
+							value > 100
+						}
+					}
+				}
+				
+				KOR  = { 
+					country_event = { id = NATO.101  days = 7 }
+				}
+			}
 		}
 	}
 focus = {
