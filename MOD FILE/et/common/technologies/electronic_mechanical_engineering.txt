@@ -1318,6 +1318,11 @@ technologies = {
 			position = { x = 2 y = 11 }
 		}
 		
+		path = {
+			leads_to_tech = jet_engines_2 
+			research_cost_coeff = 1
+		}
+		
 		desc = "JET_ENGINES_SPECIAL"
 
 		on_research_complete = {
@@ -1330,6 +1335,31 @@ technologies = {
 		
 		categories = {
 			rocketry
+			jet_technology
+		}
+	}
+	
+	jet_engines_2 = {
+	
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 4 }
+		}
+		
+		start_year = 1950
+		research_cost = 2
+		
+		desc = "JET_ENGINES_SPECIAL"
+
+		on_research_complete = {
+			custom_effect_tooltip = JET_ENGINES_RESEARCHED
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
 			jet_technology
 		}
 	}
@@ -1395,8 +1425,87 @@ technologies = {
 		}
 
 		path = {
+			leads_to_tech = large_nuclear_reactor 
+			research_cost_coeff = 1
+		}
+		
+		path = {
 			leads_to_tech = nukes 
 			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				tag = USA
+				factor = 4
+			}
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		enable_building = {
+			building = nuclear_reactor
+			level = 1
+		}
+	}
+	
+	large_nuclear_reactor = {
+
+		# can build reactors
+		
+		start_year = 1955
+		research_cost = 5
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 1 y = 14 }
+		}
+
+		path = {
+			leads_to_tech = massive_nuclear_reactor 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = large_nuclear_reactor_2
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				tag = USA
+				factor = 3
+			}
+			modifier = {
+				tag = SOV
+				factor = 2
+			}
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		enable_building = {
+			building = large_nuclear_reactor
+			level = 1
+		}
+	}
+	
+	large_nuclear_reactor_2 = {
+
+		# can build reactors
+		
+		start_year = 1960
+		research_cost = 5
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 17 }
 		}
 		
 		ai_will_do = {
@@ -1412,8 +1521,81 @@ technologies = {
 		}
 		
 		enable_building = {
-			building = nuclear_reactor
+			building = large_nuclear_reactor
+			level = 5
+		}
+	}
+	
+	massive_nuclear_reactor = {
+
+		# can build reactors
+		
+		start_year = 1970
+		research_cost = 5
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 1 y = 22 }
+		}
+		
+		path = {
+			leads_to_tech = massive_nuclear_reactor_2
+			research_cost_coeff = 1
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				tag = USA
+				factor = 2
+			}
+			modifier = {
+				tag = SOV
+				factor = 2
+			}
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		enable_building = {
+			building = massive_nuclear_reactor
 			level = 1
+		}
+	}
+	
+	massive_nuclear_reactor_2 = {
+
+		# can build reactors
+		
+		start_year = 1975
+		research_cost = 5
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 28 }
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				tag = USA
+				factor = 2
+			}
+			modifier = {
+				tag = SOV
+				factor = 2
+			}
+		}
+		
+		categories = {
+			nuclear
+		}
+		
+		enable_building = {
+			building = massive_nuclear_reactor
+			level = 2
 		}
 	}
 

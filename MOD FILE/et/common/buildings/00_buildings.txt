@@ -45,7 +45,7 @@ buildings = {
 		infrastructure_construction_effect = yes
 		show_modifier = yes
 		local_resources_vehicles = -0.1
-        MONTHLY_POPULATION = 0.03
+        MONTHLY_POPULATION = 0.01
 		
 	}
 	
@@ -76,7 +76,7 @@ buildings = {
 		local_resources_rubber = 1
 		local_resources_chromium = 1
 		icon_frame = 1
-		max_level = 20
+		max_level = 90
 		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
@@ -88,7 +88,7 @@ buildings = {
 		base_cost = 1250
 		icon_frame = 5
 		air_base = yes
-		max_level = 10
+		max_level = 30
 		value = 1
 		damage_factor = 0.5
 	}
@@ -102,7 +102,7 @@ buildings = {
 		only_costal = yes
 		is_port = yes
 		icon_frame = 6
-		max_level = 10
+		max_level = 35
 		value = 1
 	}
 
@@ -115,7 +115,7 @@ buildings = {
 		disabled_in_dmz = yes
 		icon_frame = 7
 		land_fort = 1
-		max_level = 10
+		max_level = 30
 		value = 1
 	}
 
@@ -129,7 +129,7 @@ buildings = {
 		only_costal = yes
 		icon_frame = 8
 		naval_fort = 1
-		max_level = 10
+		max_level = 30
 		value = 1
 	}
 
@@ -156,7 +156,7 @@ buildings = {
 		anti_air = yes
 		disabled_in_dmz = yes
 		air_defence = 1
-		max_level = 5 # This is the max unlock level
+		max_level = 15 # This is the max unlock level
 		damage_factor = 0.1
 		value = 1
 	}
@@ -169,7 +169,7 @@ buildings = {
 		local_resources_rubber = 1 # May use local_resources_ + any resource name
 		local_resources_steel = -0.2
 		refinery = yes
-		max_level = 3 # This is the max unlock level
+		max_level = 10 # This is the max unlock level
 		shares_slots = yes
 		value = 5
 		infrastructure_construction_effect = yes
@@ -184,7 +184,7 @@ buildings = {
 		icon_frame = 14
 		#max_level = 1
 		shares_slots = yes
-		value = 5
+		value = 10
 		infrastructure_construction_effect = yes
 		fuel_silo = yes
 		
@@ -198,7 +198,7 @@ buildings = {
 		icon_frame = 11
 		radar = yes
 		#max_level = 0 # max: 5
-		max_level = 6 # This is the max unlock level
+		max_level = 12 # This is the max unlock level
 		damage_factor = 0.5
 		value = 4
 	}
@@ -210,7 +210,7 @@ buildings = {
 		rocket_production = 5
 		rocket_launch_capacity = 4
 		local_resources_electronics = -3
-		max_level = 5
+		max_level = 10
 		shares_slots = yes
 		value = 1
 		infrastructure_construction_effect = yes
@@ -222,10 +222,46 @@ buildings = {
 		icon_frame = 13
 		nuclear_reactor = yes
 		nuclear_production_factor = 1
-		max_level = 4 # This is the max unlock level
+		max_level = 10 # This is the max unlock level
 		local_resources_electronics = -3
 		shares_slots = yes
 		value = 10
 		infrastructure_construction_effect = yes
+	}
+	
+	large_nuclear_reactor = {
+		show_on_map = 1
+		base_cost = 60000
+		icon_frame = 13
+		nuclear_reactor = yes
+		nuclear_production_factor = 5
+		max_level = 5 # This is the max unlock level
+		local_resources_electronics = -6
+		shares_slots = yes
+		value = 10
+		infrastructure_construction_effect = yes
+	}
+	
+	massive_nuclear_reactor = {
+		show_on_map = 1
+		base_cost = 150000
+		icon_frame = 13
+		nuclear_reactor = yes
+		nuclear_production_factor = 20
+		max_level = 2 # This is the max unlock level
+		local_resources_electronics = -10
+		shares_slots = yes
+		value = 10
+		infrastructure_construction_effect = yes
+	}
+	
+	research_center = {
+		show_on_map = 1
+		base_cost = 35000
+		icon_frame = 19
+		max_level = 2 # This is the max unlock level
+		local_resources_electronics = -4
+		shares_slots = yes
+		value = 10
 	}
 }
