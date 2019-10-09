@@ -10475,6 +10475,33 @@ focus = {
 			}
 		}
 	}
+	
+focus = {
+		id = USA_rename_nato_question
+		icon = GFX_NATO
+		text = " The Name of the Alliance " 
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_Invite_Asia }
+		relative_position_id = USA_Invite_Asia
+		cost = 1
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			USA = { 
+				country_event = { id = NATO.28  days = 7 }
+			} 
+		}
+			
+	}
+	
 focus = {
 		id = USA_Influence_Asia
 		icon = GFX_NATO
@@ -10498,7 +10525,6 @@ focus = {
 		}
 			
 	}
-
 
 
 

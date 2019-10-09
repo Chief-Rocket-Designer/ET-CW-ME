@@ -258,9 +258,46 @@ buildings = {
 	research_center = {
 		show_on_map = 1
 		base_cost = 35000
-		icon_frame = 19
-		max_level = 2 # This is the max unlock level
+		icon_frame = 13
+		max_level = 3 # This is the max unlock level
 		local_resources_electronics = -4
+		shares_slots = yes
+		value = 10
+	}
+	
+	large_office_buildings = {
+		show_on_map = 1
+		base_cost = 35000
+		general_production = 1
+		icon_frame = 13
+		max_level = 12 # This is the max unlock level
+		local_resources_electronics = -1
+		shares_slots = yes
+		value = 10
+	}
+	
+	massive_office_buildings = {
+		show_on_map = 1
+		base_cost = 60000
+		general_production = 4
+		icon_frame = 13
+		max_level = 8 # This is the max unlock level
+		local_resources_electronics = -1
+		shares_slots = yes
+		value = 10
+	}
+	
+	skyscraper_buildings = {
+		show_on_map = 1
+		base_cost = 300000
+		general_production = 8
+		icon_frame = 13
+		max_level = 4 # This is the max unlock level
+		local_resources_electronics = -1
+		local_resources_vehicles = -3
+		local_resources_steel = -10
+		local_resources_oil = -3
+		local_resources_chromium = -1
 		shares_slots = yes
 		value = 10
 	}
