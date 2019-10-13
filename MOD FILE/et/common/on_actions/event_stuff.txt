@@ -9,6 +9,10 @@ on_actions = {
 					country_event = { id = start.1 days = 0 }
 				}
 				
+				set_variable = { max_biz_LOB = 25 }
+				set_variable = { max_biz_MOB = 50 }
+				set_variable = { max_biz_SB = 100 }
+				
 			}
 		}   
     }  

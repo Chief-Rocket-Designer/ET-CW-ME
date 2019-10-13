@@ -64,6 +64,8 @@ gdp_effect = {
 	set_variable = { RC_var_national = num_research_center }
 	
 	
+	
+	
 	#Data Pre-Processor
 	set_variable = { num_sr_gui = num_synthetic_refinery }
 	set_variable = { num_uc_gui = num_Urban_Center }
@@ -138,14 +140,93 @@ gdp_effect = {
 	
 	
 	
+	
+#Businesses
+
+	set_variable = { total_business_1 = num_large_office_buildings }
+	set_variable = { total_business_2 = num_massive_office_buildings }
+	set_variable = { total_business_3 = num_skyscraper_buildings }
+
+	multiply_variable = {
+		var = total_business_1
+		value = max_biz_LOB
+	}
+	
+	multiply_variable = {
+		var = total_business_2
+		value = max_biz_MOB
+	}
+	
+	multiply_variable = {
+		var = total_business_3
+		value = max_biz_SB
+	}
+	
+	set_variable = { total_biz_act = total_business_1 }
+	
+	add_to_variable = {
+		var = total_biz_act
+		value = total_business_2
+	}
+	
+	add_to_variable = {
+		var = total_biz_act
+		value = total_business_3
+	}
+	
+	set_variable = { total_biz_act_gui = total_biz_act }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	set_variable = { temp_biz_azt = total_biz_act }
+	
+	
+	divide_variable  = {
+		var = temp_biz_azt
+		value = 2
+	}
+	
 	add_to_variable = {
 		var = national_innovation_wealth
-		value = research_center
+		value = temp_biz_azt
+	}
+	
+	set_variable = { temp_num_research_center = num_research_center }
+	
+	multiply_variable = {
+		var = temp_num_research_center
+		value = 100
+	}
+	
+	add_to_variable = {
+		var = national_innovation_wealth
+		value = num_research_center
 	}
 	
 	add_to_variable = {
 		var = gdp_capita
 		value = national_innovation_wealth
+	}
+	
+	add_to_variable = {
+		var = total_biz_act
+		value = gdp_capita
 	}
 	
 	
