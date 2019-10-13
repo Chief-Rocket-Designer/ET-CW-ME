@@ -216,7 +216,7 @@ gdp_effect = {
 	
 	add_to_variable = {
 		var = national_innovation_wealth
-		value = num_research_center
+		value = temp_num_research_center
 	}
 	
 	add_to_variable = {
@@ -225,8 +225,8 @@ gdp_effect = {
 	}
 	
 	add_to_variable = {
-		var = total_biz_act
-		value = gdp_capita
+		var = gdp_capita
+		value = total_biz_act
 	}
 	
 	
