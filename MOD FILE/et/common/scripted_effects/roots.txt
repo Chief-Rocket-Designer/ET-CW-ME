@@ -41,6 +41,31 @@ gdp_effect = {
 		add_to_variable = { PREV.num_nuclear_reactor = building_level@nuclear_reactor }
 	}
 	
+	set_variable = { num_research_center = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_research_center = building_level@research_center }
+	}
+	
+	set_variable = { num_nuclear_reactor = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_large_office_buildings = building_level@large_office_buildings }
+	}
+	
+	set_variable = { num_nuclear_reactor = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_massive_office_buildings = building_level@massive_office_buildings }
+	}
+	
+	set_variable = { num_nuclear_reactor = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_skyscraper_buildings = building_level@skyscraper_buildings }
+	}
+	
+	set_variable = { RC_var_national = num_research_center }
+	
+	
+	
+	
 	#Data Pre-Processor
 	set_variable = { num_sr_gui = num_synthetic_refinery }
 	set_variable = { num_uc_gui = num_Urban_Center }
@@ -84,14 +109,6 @@ gdp_effect = {
 		value = num_nuclear_reactor
 	}
 	
-	#Realism
-	
-	divide_variable = {
-		var = industry_capability
-		value = 12
-	}
-	
-	
 	set_variable = { pop_total_mod = max_manpower_k }
 	set_variable = { GUI_total_population = pop_total_mod }
 	set_variable = { POP_hundreds_var = pop_total_mod }
@@ -99,8 +116,9 @@ gdp_effect = {
 	#------------
 	divide_variable = {
 		var = POP_hundreds_var
-		value = 10000
+		value = 1000
 	}
+	
 	set_variable = { total_pop_gdp_capita = POP_hundreds_var } 
 	set_variable = { gdp_capita = industry_capability }
 	
@@ -111,205 +129,110 @@ gdp_effect = {
 		add_to_variable = { PREV.national_infrastructure = building_level@infrastructure }
 	}
 	
-	divide_variable = {
-		var = national_infrastructure
-		value = 5
-	}
 	
-	subtract_from_variable = {
-		var = national_infrastructure
-		value = -0.5
-	}
-	
-	round_variable = national_infrastructure
 	
 	add_to_variable = {
 		var = gdp_capita
 		value = national_infrastructure
 	}
+	
+	set_variable = { national_innovation_wealth = 0}
+	
+	
+	
+	
+#Businesses
+
+	set_variable = { total_business_1 = num_large_office_buildings }
+	set_variable = { total_business_2 = num_massive_office_buildings }
+	set_variable = { total_business_3 = num_skyscraper_buildings }
+
+	multiply_variable = {
+		var = total_business_1
+		value = max_biz_LOB
+	}
+	
+	multiply_variable = {
+		var = total_business_2
+		value = max_biz_MOB
+	}
+	
+	multiply_variable = {
+		var = total_business_3
+		value = max_biz_SB
+	}
+	
+	set_variable = { total_biz_act = total_business_1 }
+	
+	add_to_variable = {
+		var = total_biz_act
+		value = total_business_2
+	}
+	
+	add_to_variable = {
+		var = total_biz_act
+		value = total_business_3
+	}
+	
+	set_variable = { total_biz_act_gui = total_biz_act }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	set_variable = { temp_biz_azt = total_biz_act }
+	
+	
+	divide_variable  = {
+		var = temp_biz_azt
+		value = 2
+	}
+	
+	add_to_variable = {
+		var = national_innovation_wealth
+		value = temp_biz_azt
+	}
+	
+	set_variable = { temp_num_research_center = num_research_center }
+	
+	multiply_variable = {
+		var = temp_num_research_center
+		value = 100
+	}
+	
+	add_to_variable = {
+		var = national_innovation_wealth
+		value = temp_num_research_center
+	}
+	
 	add_to_variable = {
 		var = gdp_capita
 		value = national_innovation_wealth
 	}
 	
+	add_to_variable = {
+		var = gdp_capita
+		value = total_biz_act
+	}
+	
 	
 	#TRADE STUFF
 	
-	set_variable = { trade_stats = 0 }
 	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_exported@steel
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_exported@aluminium
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_exported@rubber
-	}
-	
-	add_to_variable = {
-		var = gdp_capita
-		value = resource_exported@tungsten
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_exported@chromium
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_exported@vehicles
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_exported@electronics
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_exported@oil
-	}
-	
-	
-	
-	
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_imported@steel
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_imported@aluminium
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_imported@rubber
-	}
-	
-	add_to_variable = {
-		var = gdp_capita
-		value = resource_imported@tungsten
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_imported@chromium
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_imported@vehicles
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_imported@electronics
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_imported@oil
-	}
-	
-	
-	
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_produced@steel
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_produced@aluminium
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_produced@rubber
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_produced@tungsten
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_produced@chromium
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_produced@vehicles
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_produced@electronics
-	}
-	
-	add_to_variable = {
-		var = trade_stats
-		value = resource_produced@oil
-	}
-	
-	divide_variable = {
-		var = trade_stats
-		value = 2
-	}
-	
-	
-	
-	
-	
-	
-	set_variable = { net_resources_value = resource@steel }
-	
-	add_to_variable = {
-		var = net_resources_value
-		value = resource@aluminium
-	}
-	
-	add_to_variable = {
-		var = net_resources_value
-		value = resource@steel
-	}
-	
-	add_to_variable = {
-		var = net_resources_value
-		value = resource@rubber
-	}
-	
-	add_to_variable = {
-		var = net_resources_value
-		value = resource@tungsten
-	}
-	
-	add_to_variable = {
-		var = net_resources_value
-		value = resource@chromium
-	}
-	
-	add_to_variable = {
-		var = net_resources_value
-		value = resource@vehicles
-	}
-	
-	add_to_variable = {
-		var = net_resources_value
-		value = resource@electronics
-	}
 	
 	
 	

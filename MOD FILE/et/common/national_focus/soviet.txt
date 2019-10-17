@@ -3867,7 +3867,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SOV_Khrushchev_Thaw
 		}
-		x = -8
+		x = -14
 		y = 1
 		completion_reward = {
 		}
@@ -3938,11 +3938,647 @@ focus_tree = {
 			add_ideas = soviet_bureacratic_state
 		}
 	}
+#More Econ Policy
+
+
+	focus = {
+		id = SOV_development_kru
+		text = "Improve Heavy Industry"
+		icon = GFX_transistorfocus
+		relative_position_id = SOV_domestic_affairs_Khrush
+		cost = 15
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_domestic_affairs_Khrush
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = SOV_development_kru_2
+		text = "Improve Light Industry"
+		icon = GFX_transistorfocus
+		relative_position_id = SOV_development_kru
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_development_kru
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			any_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			any_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			any_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			any_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			any_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			any_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			any_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_development_kru_3
+		text = "Soviet Office Management"
+		icon = GFX_transistorfocus
+		relative_position_id = SOV_development_kru_2
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_development_kru_2
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = large_office_buildings
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_development_kru_4
+		text = "Soviet Research Centers"
+		icon = GFX_transistorfocus
+		relative_position_id = SOV_development_kru_2
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_development_kru_2
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			202 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = research_center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			206 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = research_center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			
+			219 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = research_center
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			195 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = research_center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			763 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = research_center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			217 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = research_center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			137 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = research_center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_development_kru_5
+		text = "Soviet Metropolitan Expansion"
+		icon = GFX_transistorfocus
+		relative_position_id = SOV_development_kru_2
+		cost = 12
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_development_kru_2
+		}
+		x = -2
+		y = 1
+		completion_reward = {
+			202 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = massive_office_buildings
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			206 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = massive_office_buildings
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			195 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = massive_office_buildings
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			763 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = massive_office_buildings
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			217 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = massive_office_buildings
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			219 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = skyscraper_buildings
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			137 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = massive_office_buildings
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = SOV_development_kru_6_cities
+		text = "Seven Cities of the Western Soviet Union"
+		icon = GFX_transistorfocus
+		relative_position_id = SOV_development_kru_4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_development_kru_5
+		}
+		prerequisite = {
+			focus = SOV_development_kru_4
+		}
+		prerequisite = {
+			focus = SOV_development_kru_3
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			202 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			206 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			195 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			763 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			217 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			
+			219 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = Urban_Center
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			137 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = Urban_Center
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+	}
 	
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+#Political Policy
+	#Communism-Socialism
+		focus = {
+			id = SOV_Khrush_Communism_Question
+			text = "Socialist-Communism Question"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_domestic_affairs_Khrush
+			cost = 1
+			ai_will_do = {
+				factor = 4
+			}
+			prerequisite = {
+				focus = SOV_domestic_affairs_Khrush
+			}
+			x = -6
+			y = 1
+			completion_reward = {
+				
+			}
+		}
+		
+		focus = {
+			id = SOV_ready_yes_communism
+			text = "Communism in our life time"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_Khrush_Communism_Question
+			cost = 10
+			ai_will_do = {
+				factor = 1
+			}
+			prerequisite = {
+				focus = SOV_Khrush_Communism_Question
+			}
+			x = 1
+			y = 1
+			completion_reward = {
+				
+			}
+		}
+		
+		focus = {
+			id = SOV_not_communism_ready
+			text = "The Soviet Union is not ready for Communism"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_Khrush_Communism_Question
+			cost = 10
+			ai_will_do = {
+				factor = 1
+			}
+			prerequisite = {
+				focus = SOV_Khrush_Communism_Question
+			}
+			x = -1
+			y = 1
+			completion_reward = {
+				
+			}
+		}
+	
+		focus = {
+			id = SOV_command_economy_electric
+			text = "The Soviet Union's Electric Economy Experiment"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_ready_yes_communism
+			cost = 15
+			ai_will_do = {
+				factor = 1
+			}
+			prerequisite = {
+				focus = SOV_ready_yes_communism
+			}
+			prerequisite = {
+				focus = SOV_Khrush_Pro_Computer_Econ
+			}
+			x = 3
+			y = 1
+			completion_reward = {
+				modify_building_resources = {
+					building = industrial_complex
+					resource = electronics
+					amount = 1
+				}
+			}
+		}
+	
+	focus = {
+			id = SOV_command_economy_electric_2
+			text = "The Soviet Union's Electric Economy"
+			icon = GFX_transistorfocus
+			relative_position_id = SOV_command_economy_electric
+			cost = 15
+			ai_will_do = {
+				factor = 1
+			}
+			prerequisite = {
+				focus = SOV_command_economy_electric
+			}
+			prerequisite = {
+				focus = SOV_command_economy_electric
+			}
+			x = 0
+			y = 1
+			completion_reward = {
+				modify_building_resources = {
+					building = industrial_complex
+					resource = electronics
+					amount = 1
+				}
+			}
+		}
 	
 	
 	

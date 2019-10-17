@@ -2036,6 +2036,557 @@ technologies = {
 		}
 	}
 #Modded
+
+	ET_civ_industry = {
+		
+		consumer_goods_factor = -0.01
+		
+		research_cost = 2.5
+		start_year = 1900
+		
+		path = {
+			leads_to_tech = ET_civ_industry_1910
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	ET_civ_industry_1910 = {
+		
+		consumer_goods_factor = -0.01
+		
+		research_cost = 2.5
+		start_year = 1910
+
+		path = {
+			leads_to_tech = better_shipping_1
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = motor_vehicles
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+#New Civilian Techs	
+	motor_vehicles = {
+	
+		path = {
+			leads_to_tech = motor_vehicles_2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1910
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_2 = {
+	
+		path = {
+			leads_to_tech = motor_vehicles_3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1915
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_3 = {
+	
+		path = {
+			leads_to_tech = motor_vehicles_4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1920
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_4 = {
+	
+		path = {
+			leads_to_tech = motor_vehicles_5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1925
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_5 = {
+	
+		path = {
+			leads_to_tech = motor_vehicles_6
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1930
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_6 = {
+	
+	path = {
+			leads_to_tech = motor_vehicles_7
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1935
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 14 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_7 = {
+	
+		path = {
+			leads_to_tech = motor_vehicles_8
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1940
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 16 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_8 = {
+	
+		path = {
+			leads_to_tech = motor_vehicles_9
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1945
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 18 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_9 = {
+		
+		path = {
+			leads_to_tech = motor_vehicles_10
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1955
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 20 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_10 = {
+		
+		research_cost = 2.5
+		start_year = 1960
+		
+		path = {
+			leads_to_tech = motor_vehicles_11
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 22 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_11 = {
+		
+		research_cost = 2.5
+		start_year = 1965
+		
+		path = {
+			leads_to_tech = motor_vehicles_12
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 24 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_12 = {
+		
+		research_cost = 2.5
+		start_year = 1970
+		
+		path = {
+			leads_to_tech = motor_vehicles_13
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 26 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_13 = {
+		
+		research_cost = 2.5
+		start_year = 1975
+		
+		path = {
+			leads_to_tech = motor_vehicles_14
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 28 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_14 = {
+		
+		research_cost = 2.5
+		start_year = 1980
+		
+		path = {
+			leads_to_tech = motor_vehicles_15
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 30 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_15 = {
+		
+		research_cost = 2.5
+		start_year = 1985
+		
+		path = {
+			leads_to_tech = motor_vehicles_16
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 32 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_16= {
+		
+		research_cost = 2.5
+		start_year = 1990
+		
+		path = {
+			leads_to_tech = motor_vehicles_17
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 34 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_17 = {
+		
+		research_cost = 2.5
+		start_year = 1995
+		
+		path = {
+			leads_to_tech = motor_vehicles_18
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 36 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	motor_vehicles_18 = {
+		
+		research_cost = 2.5
+		start_year = 2000
+		
+		path = {
+			leads_to_tech = green_technology
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 38 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	green_technology = {
+		
+		research_cost = 2.5
+		start_year = 2000
+		
+		path = {
+			leads_to_tech = green_technology_2
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 40 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	green_technology_2 = {
+		
+		research_cost = 2.5
+		start_year = 2000
+		
+		
+		
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 42 }
+		}
+		
+		ai_will_do = {
+			factor = 15
+		}
+		categories = {
+			industry
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+#Shipping Tree
 	better_shipping_1 = {
 	
 		production_factory_max_efficiency_factor = 0.30
@@ -2056,7 +2607,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 10 }
+			position = { x = 8 y = 4 }
 		}
 		
 		ai_will_do = {
@@ -2087,7 +2638,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 12 }
+			position = { x = 8 y = 6 }
 		}
 		
 		ai_will_do = {
@@ -2117,7 +2668,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 14 }
+			position = { x = 8 y = 8 }
 		}
 		
 		ai_will_do = {
@@ -2147,7 +2698,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 16 }
+			position = { x = 8 y = 10 }
 		}
 		
 		ai_will_do = {
@@ -2172,7 +2723,7 @@ technologies = {
 		
 		folder = {
 			name = industry_folder
-			position = { x = 3 y = 18 }
+			position = { x = 8 y = 12 }
 		}
 		
 		ai_will_do = {
