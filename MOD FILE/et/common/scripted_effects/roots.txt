@@ -46,17 +46,17 @@ gdp_effect = {
 		add_to_variable = { PREV.num_research_center = building_level@research_center }
 	}
 	
-	set_variable = { num_nuclear_reactor = 0}
+	set_variable = { num_large_office_buildings = 0}
 	every_owned_state = {
 		add_to_variable = { PREV.num_large_office_buildings = building_level@large_office_buildings }
 	}
 	
-	set_variable = { num_nuclear_reactor = 0}
+	set_variable = { num_massive_office_buildings = 0}
 	every_owned_state = {
 		add_to_variable = { PREV.num_massive_office_buildings = building_level@massive_office_buildings }
 	}
 	
-	set_variable = { num_nuclear_reactor = 0}
+	set_variable = { num_skyscraper_buildings = 0}
 	every_owned_state = {
 		add_to_variable = { PREV.num_skyscraper_buildings = building_level@skyscraper_buildings }
 	}
@@ -78,7 +78,7 @@ gdp_effect = {
 	
 	#Data Processor
 	set_variable = { industry_capability = 0}
-	
+	set_variable = { gdp_capita = 0 }
 	add_to_variable = {
 		var = industry_capability
 		value = num_Urban_Center
@@ -146,6 +146,7 @@ gdp_effect = {
 	set_variable = { total_business_1 = num_large_office_buildings }
 	set_variable = { total_business_2 = num_massive_office_buildings }
 	set_variable = { total_business_3 = num_skyscraper_buildings }
+
 
 	multiply_variable = {
 		var = total_business_1
