@@ -9872,7 +9872,7 @@ focus = {
 focus = {
 		id = USA_Influence_Asia
 		icon = GFX_NATO
-		text = " Influence  Asian States"
+		text = " Influence Asian States"
 		x = 3
 		y = 1
 		prerequisite = { focus = USA_warplan_world }
@@ -10501,32 +10501,6 @@ focus = {
 		}
 			
 	}
-	
-focus = {
-		id = USA_Influence_Asia
-		icon = GFX_NATO
-		text = " Spread American Ideals in Asia"
-		x = 6
-		y = 1
-		prerequisite = { focus = USA_Invite_Asia }
-		relative_position_id = USA_Invite_Asia
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-		
-		}
-			
-	}
-
-
 
 
 

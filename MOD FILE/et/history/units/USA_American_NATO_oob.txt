@@ -1,4 +1,4 @@
-division_template = {
+﻿division_template = {
 	name = "Armor Division"  	# 7th Cavalry (Mech.) Brigade, precursor to 1st Armored Div.
 
 	division_names_group = USA_CAV_01		# Brigade level irregular unit, so no default names
