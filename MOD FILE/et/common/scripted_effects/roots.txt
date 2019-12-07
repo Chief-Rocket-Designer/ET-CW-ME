@@ -41,10 +41,6 @@ gdp_effect = {
 		add_to_variable = { PREV.num_nuclear_reactor = building_level@nuclear_reactor }
 	}
 	
-	set_variable = { num_research_center = 0}
-	every_owned_state = {
-		add_to_variable = { PREV.num_research_center = building_level@research_center }
-	}
 	
 	set_variable = { num_large_office_buildings = 0}
 	every_owned_state = {
@@ -61,7 +57,7 @@ gdp_effect = {
 		add_to_variable = { PREV.num_skyscraper_buildings = building_level@skyscraper_buildings }
 	}
 	
-	set_variable = { RC_var_national = num_research_center }
+	
 	
 	
 	
@@ -206,19 +202,8 @@ gdp_effect = {
 	add_to_variable = {
 		var = national_innovation_wealth
 		value = temp_biz_azt
-	}
+	}	
 	
-	set_variable = { temp_num_research_center = num_research_center }
-	
-	multiply_variable = {
-		var = temp_num_research_center
-		value = 100
-	}
-	
-	add_to_variable = {
-		var = national_innovation_wealth
-		value = temp_num_research_center
-	}
 	
 	add_to_variable = {
 		var = gdp_capita

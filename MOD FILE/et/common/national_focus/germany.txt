@@ -2913,99 +2913,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_turkey_friend
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = GER_ussr_war_goal }
-		prerequisite = { focus = GER_italy_ally }
-
-
-		available = { 
-			is_puppet = no 
-			NOT = { has_war_with = TUR }
-			TUR = {
-				exists = yes
-				is_puppet = no
-			}
-
-			TUR = {
-				custom_trigger_tooltip = {
-					tooltip = GER_alone_or_peace_faction_tt
-					is_alone_or_in_faction_at_peace_with_GER = yes
-				}
-			}
-		}
-
-		#bypass = {
-		#	OR = {
-		#		TUR = { is_in_faction_with = GER }
-		#		NOT = { country_exists = TUR }
-		#	}
-		#}
-		x = 0
-		y = 2
-		relative_position_id = GER_ussr_war_goal
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}	
-
-		available_if_capitulated = no
-		completion_reward = {
-			TUR = {
-				add_opinion_modifier = { target = GER modifier = ger_tur_diplomacy_focus }
-				if = {
-					limit = {
-						TUR = {
-							is_ai = yes
-							NOT = {
-								is_in_faction = yes
-							}
-							NOT = {
-								is_puppet = yes
-							}
-							has_government = ROOT
-						}
-						GER = { is_faction_leader = yes }
-					}
-					TUR = {
-						country_event = generic.5
-					}
-					add_ai_strategy = {
-						type = alliance
-						id = "GER"
-						value = 200
-					}
-				}
-				if = {
-					limit = {
-						GER = {
-							has_government = fascism
-						}
-					}
-					add_timed_idea = { idea = fascist_influence days = 1095 }
-				}
-				if = {
-					limit = {
-						GER = {
-							has_government = communism
-						}
-					}
-					add_timed_idea = { idea = communist_influence days = 1095 }
-				}
-				if = {
-					limit = {
-						GER = {
-							has_government = democratic
-						}
-					}
-					add_timed_idea = { idea = democratic_influence days = 1095 }
-				}
-				country_event = { id = generic.1 }
-			}
-		}
-	}
-
-	focus = {
 		id = GER_anschluss
 		icon = GFX_goal_anschluss
 		prerequisite = { focus = GER_rhineland }
@@ -8632,4 +8539,163 @@ focus_tree = {
 			}
 		}
 	}
+	
+#Modded Section -----------------------------------------------------------------------------------------------------------------------------------------------
+		focus = {
+		id = GER_turkey_friend
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = GER_ussr_war_goal }
+		prerequisite = { focus = GER_italy_ally }
+
+
+		available = { 
+			is_puppet = no 
+			SOV = {
+				exists = no
+			}
+
+			GER = {
+				
+			}
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = GER_ussr_war_goal
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+
+		available_if_capitulated = no
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

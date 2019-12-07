@@ -254,15 +254,15 @@ buildings = {
 		infrastructure_construction_effect = yes
 	}
 	
-	research_center = {
-		show_on_map = 1
-		base_cost = 35000
-		icon_frame = 13
-		max_level = 3 # This is the max unlock level
-		local_resources_electronics = -4
-		shares_slots = yes
-		value = 10
-	}
+	#research_center = {
+	#	show_on_map = 1
+	#	base_cost = 35000
+	#	icon_frame = 13
+	#	max_level = 3 # This is the max unlock level
+	#	local_resources_electronics = -4
+	#	shares_slots = yes
+	#	value = 10
+	#}
 	
 	large_office_buildings = {
 		show_on_map = 1

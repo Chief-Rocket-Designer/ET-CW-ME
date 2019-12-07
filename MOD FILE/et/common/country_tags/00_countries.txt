@@ -198,6 +198,10 @@ ASA = "countries/Appalacian_Militia.txt"
 ASG = "countries/Anti_Soviet_Great.txt"
 ASW = "countries/Anti_Soviet_Western.txt" 
 ASN = "countries/Anti_Soviet_New_England.txt"
+EUR = "EuropeanUnion.txt
+GWR = "GermanWorkersRepublic.txt"
+KAL = "Kaliningrad.txt"
+CRI = "Crimea.txt"
 
 
 
