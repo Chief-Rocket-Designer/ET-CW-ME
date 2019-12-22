@@ -1,68 +1,33 @@
 gdp_effect = {
 	#Data Aquisition
 	#
-	set_variable = { num_Urban_Center = 0}
+	set_variable = { num_Urban_Center = 0 }
+	set_variable = { num_industry_complx = 0 }
+	set_variable = { num_arms_factry = 0 }
+	set_variable = { num_dockyard = 0 }
+	set_variable = { num_synthetic_refinery = 0 }
+	set_variable = { num_fuel_silo = 0 }
+	set_variable = { num_rocket_site = 0 }
+	set_variable = { num_nuclear_reactor = 0 }
+	set_variable = { num_large_office_buildings = 0 }
+	set_variable = { num_massive_office_buildings = 0 }
+	set_variable = { num_skyscraper_buildings = 0 }
+	
 	every_owned_state = {
 		add_to_variable = { PREV.num_Urban_Center = building_level@Urban_Center }
-	}
-	#
-	set_variable = { num_industry_complx = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_industry_complx = building_level@industrial_complex }
-	}
-	#
-	set_variable = { num_arms_factry = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_arms_factry = building_level@arms_factory }
-	}
-	#
-	set_variable = { num_dockyard = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_dockyard = building_level@dockyard }
-	}
-	#
-	set_variable = { num_synthetic_refinery = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_synthetic_refinery = building_level@synthetic_refinery }
-	}
-	#
-	set_variable = { num_fuel_silo = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_fuel_silo = building_level@fuel_silo }
-	}
-	#
-	set_variable = { num_rocket_site = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_rocket_site = building_level@rocket_site }
-	}
-	#
-	set_variable = { num_nuclear_reactor = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_nuclear_reactor = building_level@nuclear_reactor }
-	}
-	
-	
-	set_variable = { num_large_office_buildings = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_large_office_buildings = building_level@large_office_buildings }
-	}
-	
-	set_variable = { num_massive_office_buildings = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_massive_office_buildings = building_level@massive_office_buildings }
-	}
-	
-	set_variable = { num_skyscraper_buildings = 0}
-	every_owned_state = {
 		add_to_variable = { PREV.num_skyscraper_buildings = building_level@skyscraper_buildings }
 	}
 	
-	
-	
-	
-	
-	
-	#Data Pre-Processor
+	# Data Pre-Processor
 	set_variable = { num_sr_gui = num_synthetic_refinery }
 	set_variable = { num_uc_gui = num_Urban_Center }
 	set_variable = { num_fs_gui = num_fuel_silo}
@@ -72,39 +37,33 @@ gdp_effect = {
 	set_variable = { num_ic_gui = num_industry_complx }
 	set_variable = { num_dy_gui = num_dockyard }
 	
-	#Data Processor
-	set_variable = { industry_capability = 0}
+	# Data Processor
+	set_variable = { industry_capability = 0 }
 	set_variable = { gdp_capita = 0 }
 	add_to_variable = {
 		var = industry_capability
 		value = num_Urban_Center
 	}
-	
 	add_to_variable = {
 		var = industry_capability
 		value = num_arms_factry
 	}
-	
 	add_to_variable = {
 		var = industry_capability
 		value = num_industry_complx
 	}
-	
 	add_to_variable = {
 		var = industry_capability
 		value = num_dockyard
 	}
-	
 	add_to_variable = {
 		var = industry_capability
 		value = num_synthetic_refinery
 	}
-	
 	add_to_variable = {
 		var = industry_capability
 		value = num_nuclear_reactor
 	}
-	
 	set_variable = { pop_total_mod = max_manpower_k }
 	set_variable = { GUI_total_population = pop_total_mod }
 	set_variable = { POP_hundreds_var = pop_total_mod }
@@ -114,146 +73,67 @@ gdp_effect = {
 		var = POP_hundreds_var
 		value = 1000
 	}
-	
 	set_variable = { total_pop_gdp_capita = POP_hundreds_var } 
 	set_variable = { gdp_capita = industry_capability }
-	
 	#------------
 	
-	set_variable = { national_infrastructure = 0}
+	set_variable = { national_infrastructure = 0 }
 	every_owned_state = {
 		add_to_variable = { PREV.national_infrastructure = building_level@infrastructure }
 	}
-	
-	
-	
 	add_to_variable = {
 		var = gdp_capita
 		value = national_infrastructure
 	}
+	set_variable = { national_innovation_wealth = 0 }
 	
-	set_variable = { national_innovation_wealth = 0}
-	
-	
-	
-	
-#Businesses
-
+	# Businesses
 	set_variable = { total_business_1 = num_large_office_buildings }
 	set_variable = { total_business_2 = num_massive_office_buildings }
 	set_variable = { total_business_3 = num_skyscraper_buildings }
-
-
 	multiply_variable = {
 		var = total_business_1
 		value = max_biz_LOB
 	}
-	
 	multiply_variable = {
 		var = total_business_2
 		value = max_biz_MOB
 	}
-	
 	multiply_variable = {
 		var = total_business_3
 		value = max_biz_SB
 	}
-	
 	set_variable = { total_biz_act = total_business_1 }
-	
 	add_to_variable = {
 		var = total_biz_act
 		value = total_business_2
 	}
-	
 	add_to_variable = {
 		var = total_biz_act
 		value = total_business_3
 	}
-	
 	set_variable = { total_biz_act_gui = total_biz_act }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	set_variable = { temp_biz_azt = total_biz_act }
-	
 	
 	divide_variable  = {
 		var = temp_biz_azt
 		value = 2
 	}
-	
 	add_to_variable = {
 		var = national_innovation_wealth
 		value = temp_biz_azt
 	}	
-	
-	
 	add_to_variable = {
 		var = gdp_capita
 		value = national_innovation_wealth
 	}
-	
 	add_to_variable = {
 		var = gdp_capita
 		value = total_biz_act
 	}
 	
-	
 	#TRADE STUFF
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	divide_variable = {
 		var = gdp_capita
@@ -266,9 +146,4 @@ gdp_effect = {
 	}
 	set_variable = { num_gdp_capita_gui = gdp_capita }
 	set_variable = { industry_capability_gui = industry_capability }
-	
-	
-	
-	
-	
 }
