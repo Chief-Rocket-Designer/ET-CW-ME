@@ -1,0 +1,40 @@
+WGR_reunification = {
+
+	WGR_german_reunification = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = WGR
+		}
+
+		available = {
+			DDR = {
+				exists = no
+			}
+			any_state = {
+				is_core_of = WGR
+				is_owned_by = WGR
+				
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			WGR = {
+				has_government = democratic
+			}
+		}
+
+		complete_effect = {
+			WGR = {
+				set_cosmetic_tag = UGR_unified
+			}
+		}
+	}
+}

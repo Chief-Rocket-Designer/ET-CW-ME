@@ -1,0 +1,4 @@
+graphical_culture = western_european_gfx
+graphical_culture_2d = western_european_2d
+
+color = rgb { 66 66 66 } ### HSV { 0.1 0.15 0.4 } <-- thats the color of Germany, but its awful to look at it while having this fancy WGR color

@@ -1,0 +1,32 @@
+state={
+	id=800
+	name="Rinland"
+	provinces={
+		3530 6542 6568 6712 11640 
+	}
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 8
+
+		}
+		1910.1.1 = {
+			owner = GEE
+			add_core_of = GEE
+		}
+		
+		1936.1.1 = {
+			owner = GER
+			add_core_of = GER
+			set_demilitarized_zone = yes
+		}
+		1949.1.1 = {
+			owner = WGR
+			add_core_of = DDR
+			add_core_of = WGR
+		}
+	}
+	manpower=123220
+	buildings_max_level_factor=1.000
+	state_category = town
+}

@@ -1,0 +1,371 @@
+etm_investment_category = {
+	etm_investment_mission_1 = {
+		icon = generic_industry
+		allowed = {
+			always = no
+		}
+		visible = {
+			has_variable = investment_state_1
+		}
+		
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 150
+		
+		highlight_states = {
+			state = var:ROOT.investment_state_1
+		}
+		
+		complete_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_1 }
+			var:investment_state_1 = {
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_COMPLETE_TT
+				controller = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = etm_investment_trade_opinion
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_1
+				clear_variable = investment_state_1
+				remove_mission = etm_investment_mission_1
+			}
+		}
+		timeout_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_1 }
+			var:investment_state_1 = {
+				add_extra_state_shared_building_slots = 1
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_TIMEOUT_TT
+				hidden_effect = {
+					meta_effect = {
+						text = {
+							add_building_construction = {
+								type = [BUILDING]
+								level = 1
+								instant_build = yes
+							}
+						}
+						BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_1
+				clear_variable = investment_state_1
+				remove_mission = etm_investment_mission_1
+				activate_mission = etm_investment_mission_1
+				remove_mission = etm_investment_mission_1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				var:investment_state_1 = {
+					CONTROLLER = {
+						has_war_with = ROOT
+					}
+				}
+				add = 200
+			}
+		}
+	}
+	
+	etm_investment_mission_2 = {
+		icon = generic_industry
+		allowed = {
+			always = no
+		}
+		visible = {
+			has_variable = investment_state_2
+		}
+		
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 150
+		
+		highlight_states = {
+			state = var:ROOT.investment_state_2
+		}
+		
+		complete_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_2 }
+			var:investment_state_2 = {
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_COMPLETE_TT
+				controller = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = etm_investment_trade_opinion
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_2
+				clear_variable = investment_state_2
+				remove_mission = etm_investment_mission_2
+			}
+		}
+		timeout_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_2 }
+			var:investment_state_2 = {
+				add_extra_state_shared_building_slots = 1
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_TIMEOUT_TT
+				hidden_effect = {
+					meta_effect = {
+						text = {
+							add_building_construction = {
+								type = [BUILDING]
+								level = 1
+								instant_build = yes
+							}
+						}
+						BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_2
+				clear_variable = investment_state_2
+				remove_mission = etm_investment_mission_2
+				activate_mission = etm_investment_mission_2
+				remove_mission = etm_investment_mission_2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				var:investment_state_2 = {
+					CONTROLLER = {
+						has_war_with = ROOT
+					}
+				}
+				add = 200
+			}
+		}
+	}
+	
+	etm_investment_mission_3 = {
+		icon = generic_industry
+		allowed = {
+			always = no
+		}
+		visible = {
+			has_variable = investment_state_3
+		}
+		
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 150
+		
+		highlight_states = {
+			state = var:ROOT.investment_state_3
+		}
+		
+		complete_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_3 }
+			var:investment_state_3 = {
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_COMPLETE_TT
+				controller = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = etm_investment_trade_opinion
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_3
+				clear_variable = investment_state_3
+				remove_mission = etm_investment_mission_3
+			}
+		}
+		timeout_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_3 }
+			var:investment_state_3 = {
+				add_extra_state_shared_building_slots = 1
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_TIMEOUT_TT
+				hidden_effect = {
+					meta_effect = {
+						text = {
+							add_building_construction = {
+								type = [BUILDING]
+								level = 1
+								instant_build = yes
+							}
+						}
+						BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_3
+				clear_variable = investment_state_3
+				remove_mission = etm_investment_mission_3
+				activate_mission = etm_investment_mission_3
+				remove_mission = etm_investment_mission_3
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				var:investment_state_3 = {
+					CONTROLLER = {
+						has_war_with = ROOT
+					}
+				}
+				add = 200
+			}
+		}
+	}
+	
+	etm_investment_mission_4 = {
+		icon = generic_industry
+		allowed = {
+			always = no
+		}
+		visible = {
+			has_variable = investment_state_4
+		}
+		
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 150
+		
+		highlight_states = {
+			state = var:ROOT.investment_state_4
+		}
+		
+		complete_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_4 }
+			var:investment_state_4 = {
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_COMPLETE_TT
+				controller = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = etm_investment_trade_opinion
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_4
+				clear_variable = investment_state_4
+				remove_mission = etm_investment_mission_4
+			}
+		}
+		timeout_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_4 }
+			var:investment_state_4 = {
+				add_extra_state_shared_building_slots = 1
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_TIMEOUT_TT
+				hidden_effect = {
+					meta_effect = {
+						text = {
+							add_building_construction = {
+								type = [BUILDING]
+								level = 1
+								instant_build = yes
+							}
+						}
+						BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_4
+				clear_variable = investment_state_4
+				remove_mission = etm_investment_mission_4
+				activate_mission = etm_investment_mission_4
+				remove_mission = etm_investment_mission_4
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				var:investment_state_4 = {
+					CONTROLLER = {
+						has_war_with = ROOT
+					}
+				}
+				add = 200
+			}
+		}
+	}
+	
+	etm_investment_mission_5 = {
+		icon = generic_industry
+		allowed = {
+			always = no
+		}
+		visible = {
+			has_variable = investment_state_5
+		}
+		
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 150
+		
+		highlight_states = {
+			state = var:ROOT.investment_state_5
+		}
+		
+		complete_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_5 }
+			var:investment_state_5 = {
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_COMPLETE_TT
+				controller = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = etm_investment_trade_opinion
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_5
+				clear_variable = investment_state_5
+				remove_mission = etm_investment_mission_5
+			}
+		}
+		timeout_effect = {
+			set_temp_variable = { investment_type = selected_investment_type_5 }
+			var:investment_state_5 = {
+				add_extra_state_shared_building_slots = 1
+				custom_effect_tooltip = ETM_INVESTMENT_MISSION_TIMEOUT_TT
+				hidden_effect = {
+					meta_effect = {
+						text = {
+							add_building_construction = {
+								type = [BUILDING]
+								level = 1
+								instant_build = yes
+							}
+						}
+						BUILDING = "[This.GetInvestmentTypeNameOtherContext]"
+					}
+				}
+			}
+			hidden_effect = {
+				clear_variable = selected_investment_type_5
+				clear_variable = investment_state_5
+				remove_mission = etm_investment_mission_5
+				activate_mission = etm_investment_mission_5
+				remove_mission = etm_investment_mission_5
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				var:investment_state_5 = {
+					CONTROLLER = {
+						has_war_with = ROOT
+					}
+				}
+				add = 200
+			}
+		}
+	}
+}

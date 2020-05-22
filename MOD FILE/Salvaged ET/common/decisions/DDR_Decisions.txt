@@ -1,0 +1,413 @@
+DDR_Politics_category = {
+	German_Empire_Auferstanden_aus_Ruinen = {
+		
+		icon = generic_army_support
+				
+			
+		cost = 500
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_completed_focus = Creation_Of_DDR
+			
+			}
+		
+		modifier = {
+			communism_drift = -0.05
+			fascism_drift = -0.05
+			democratic_drift = -0.05
+			neutrality_drift = 0.10
+		}
+		
+		days_remove = 90
+	
+	}
+}
+	
+
+
+DDR_Stasi_Foreign_category = {
+	DDR_Informants_East_Berlin = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			has_completed_focus = Stasi_Foreign_Affairs
+			
+			}
+		available = {
+			has_completed_focus = Stasi_Internal_Affairs
+			
+			}
+	
+		complete_effect = {
+			country_event = ss_recruitment_event.1
+		}
+	}
+	
+	DDR_Informants_East_Germany = {
+		
+		icon = generic_army_support
+		
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			has_completed_focus = Stasi_Foreign_Affairs
+			
+			}
+		available = {
+			has_completed_focus = Stasi_Internal_Affairs
+			
+			}
+		
+		complete_effect = {
+			country_event = ss_recruitment_event.1
+		}
+	}
+	DDR_Spies_West_Germany = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = DDR_Spy_on_West_German_Politicans
+			
+			}
+		complete_effect = {
+			country_event = ss_recruitment_event.1
+		}
+	}
+	DDR_Spies_NATO = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = DDR_Spy_on_NATO_Politicians
+			
+			}
+		
+		complete_effect = {
+			country_event = ss_recruitment_event.1
+			
+		}
+	}
+	
+}
+DDR_Stasi_Interior_category = {
+	Stasi_Interior_Informants = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 4000
+		}
+		available = {
+			has_completed_focus = Stasi_Internal_Affairs
+			
+			}
+		
+		complete_effect = {
+			add_manpower = 100000
+			add_stability = 0.25
+		}
+	}
+	
+	Crack_down_on_protest = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = Stasi_Internal_Affairs
+			
+			}
+		
+		complete_effect = {
+			add_stability = 0.05
+			
+		}
+		days_remove = 90
+	}
+	DDR_Create_Surveillance_Directorate = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = Stasi_Internal_Affairs
+			
+			}
+		
+		complete_effect = {
+			add_stability = 0.15
+		}
+	}
+	DDR_Setup_Re-Education_Centers = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = DDR_Re_Education
+			
+			}
+		modifier = {
+			communism_drift = 0.05
+			fascism_drift = -0.03
+			democratic_drift = -0.02
+			neutrality_drift = -0.01
+		}
+		
+		days_remove = 90
+	
+		
+		cost = 30
+	}
+	DDR_Arrest_Poptential_and_Confirmed_Risks = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		days_remove = 90
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = DDR_Arrest_Enemies_of_the_People
+			
+			}
+		
+		modifier = {
+			communism_drift = 0.05
+			fascism_drift = -0.03
+			democratic_drift = -0.02
+			neutrality_drift = -0.01
+		}
+	
+		days_remove = 90
+		cost = 30
+	}
+	DDR_Integrate_Former_Gestapo_and_NKVD_Members_Into_Stasi = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = Recruit_Former_Gestapo
+				}
+
+		modifier = {
+			communism_drift = 0.05
+			fascism_drift = -0.03
+			democratic_drift = -0.02
+			neutrality_drift = -0.01
+		}
+	
+		days_remove = 90
+	
+		
+		cost = 300
+		complete_effect = {
+			add_stability = 0.10
+			add_command_power = 20
+			add_manpower = 10000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+					}
+				}
+		}
+
+
+	DDR_Create_Stasi_Archives = {
+
+		icon = generic_army_support
+				
+			
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			has_completed_focus = Create_Stasi_Archives_on_DDR_Citizens
+			
+			}
+		
+		
+		complete_effect = {
+			add_stability = 0.15
+		}
+	}
+}
+		
+		
+		
+
+DDR_Nationale_Volkesarmee_category = {
+	Buy_Munitions_From_Soviets = {
+
+		icon = GFX_DDR_shield #--->add smaller version of seal
+				
+		available = {
+			NOT = { date < 1956.3.1}
+			}
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_stability = 0.10
+			add_command_power = 20
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 100000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1000
+			}
+			
+	}
+}
+	Buy_Munitions_From_Soviets_2 = {
+
+		icon = GFX_DDR_shield
+				
+		available = {
+			NOT = { date < 1970.3.1}
+			}
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_stability = 0.10
+			add_command_power = 20
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 100000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1000
+			}
+			
+	}
+}
+	Buy_Munitions_From_Soviets_3 = {
+
+		icon = GFX_DDR_shield
+				
+		available = {
+			NOT = { date < 1985.3.1}
+			}
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_stability = 0.10
+			add_command_power = 20
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 100000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = mechanized_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1000
+			}
+			
+	}
+
+
+}

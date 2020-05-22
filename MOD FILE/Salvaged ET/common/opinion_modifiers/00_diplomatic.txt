@@ -1,0 +1,37 @@
+opinion_modifiers = {
+	
+	faction_traitor = {
+		value = -75
+	}
+	
+	faction_traitor_trade = {
+		trade = yes
+		value = -40
+	}
+	
+	our_liberators = {
+		value = 40
+		months = 18
+		decay = 1
+	}
+	
+	missile_friend = {
+		value = 75
+	}
+	
+	missile_threat = {
+		value = -75
+	}
+	Western_Aproach = {
+		value = 20
+	}
+	missile_traitor = {
+		value = -100
+	}
+	hotline = {
+		value = 20
+	}
+	berlin_wall = {
+		value = -100
+	}
+}

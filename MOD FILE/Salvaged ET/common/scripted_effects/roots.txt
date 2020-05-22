@@ -1,0 +1,114 @@
+gdp_effect = {
+	#Data Aquisition
+	#
+	set_variable = { num_Urban_Center = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_Urban_Center = building_level@Urban_Center }
+	}
+	#
+	set_variable = { num_industry_complx = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_industry_complx = building_level@industrial_complex }
+	}
+	#
+	set_variable = { num_arms_factry = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_arms_factry = building_level@arms_factory }
+	}
+	#
+	set_variable = { num_dockyard = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_dockyard = building_level@dockyard }
+	}
+	#
+	set_variable = { num_synthetic_refinery = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_synthetic_refinery = building_level@synthetic_refinery }
+	}
+	#
+	set_variable = { num_fuel_silo = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_fuel_silo = building_level@fuel_silo }
+	}
+	#
+	set_variable = { num_rocket_site = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_rocket_site = building_level@rocket_site }
+	}
+	#
+	set_variable = { num_nuclear_reactor = 0}
+	every_owned_state = {
+		add_to_variable = { PREV.num_nuclear_reactor = building_level@nuclear_reactor }
+	}
+	
+	#Data Pre-Processor
+	set_variable = { num_sr_gui = num_synthetic_refinery }
+	set_variable = { num_uc_gui = num_Urban_Center }
+	set_variable = { num_fs_gui = num_fuel_silo}
+	set_variable = { num_nr_gui = num_nuclear_reactor }
+	set_variable = { num_rs_gui = num_rocket_site }
+	set_variable = { num_af_gui = num_arms_factry }
+	set_variable = { num_ic_gui = num_industry_complx }
+	set_variable = { num_dy_gui = num_dockyard }
+	
+	#Data Processor
+	set_variable = { industry_capability = 0}
+	
+	add_to_variable = {
+		var = industry_capability
+		value = num_Urban_Center
+	}
+	
+	add_to_variable = {
+		var = industry_capability
+		value = num_arms_factry
+	}
+	
+	add_to_variable = {
+		var = industry_capability
+		value = num_industry_complx
+	}
+	
+	add_to_variable = {
+		var = industry_capability
+		value = num_dockyard
+	}
+	
+	add_to_variable = {
+		var = industry_capability
+		value = num_synthetic_refinery
+	}
+	
+	add_to_variable = {
+		var = industry_capability
+		value = num_nuclear_reactor
+	}
+	set_variable = { pop_total_mod = max_manpower_k }
+	set_variable = { GUI_total_population = pop_total_mod }
+	set_variable = { POP_hundreds_var = pop_total_mod }
+	
+	#------------
+	divide_variable = {
+		var = POP_hundreds_var
+		value = 10000
+	}
+	set_variable = { total_pop_gdp_capita = POP_hundreds_var } 
+	set_variable = { gdp_capita = industry_capability }
+	#------------
+	divide_variable = {
+		var = gdp_capita
+		value = total_pop_gdp_capita
+	}
+	set_variable = { national_gdp_changes = national_gdp_changes }
+	add_to_variable = {
+		var = gdp_capita
+		value = national_gdp_changes
+	}
+	set_variable = { num_gdp_capita_gui = gdp_capita }
+	set_variable = { industry_capability_gui = industry_capability }
+	
+	
+	
+	
+	
+}

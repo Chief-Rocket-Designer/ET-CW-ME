@@ -1,0 +1,24 @@
+dictatorship_stuff = {
+	every_country = { 
+		limit = { 
+			has_government = fascism
+			has_elections = no
+		}
+		add_ideas = national_dictatorship
+	}
+	
+	every_country = { 
+		limit = { 
+			has_government = islamic
+			has_elections = no
+		}
+		add_ideas = national_dictatorship
+	}
+	
+	every_country = { 
+		limit = { 
+			has_elections = yes
+		}
+		remove_ideas = national_dictatorship
+	}
+}

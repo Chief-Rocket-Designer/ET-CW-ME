@@ -1,0 +1,31 @@
+state={
+	id=824 #### EVERY NEW STATE NEEDS TO HAVE GOT AN ID WHICH IS HIGHER THAN 787 (currently), you can use every id which hasnt been used yet by Paradox, the used can be found in "history/states/..." --> each file shows a number --> these numbers cannot be used again, but i think you are smart enough to get this
+	name="Dallas" #### --> is responsible for the state name, you can write that down in any file; SYNTAX: STATE_[ID]:0 "name"
+	resources={
+	}
+	
+	state_category = megalopolis
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 8
+			arms_factory = 1
+			industrial_complex = 8
+			Urban_Center = 2
+			dockyard = 0
+			air_base = 10
+		}
+		add_core_of = USA
+		victory_points = {  ############ ATTENTION: if you create a new state and you have got a province like "3878" which is a VICTORY_POINT and also used for a "NAVAL_BASE", dont forget to remove these relations in the other file
+			3960 10.0 
+		}
+
+	}
+
+	provinces={ ### just remove all unwanted provinces from the other file (if you have copied this)
+		3960
+	}
+	manpower = 260000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,27 @@
+state={
+	id=799
+	name="Guantanamo"
+	provinces={
+		1550 
+	}
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 8
+			arms_factory = 0
+			industrial_complex = 1
+			air_base = 4
+			1550 = {
+				naval_base = 6
+
+			}
+
+		}
+		add_core_of = CUB
+		add_core_of = USA
+
+	}
+	manpower=30000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

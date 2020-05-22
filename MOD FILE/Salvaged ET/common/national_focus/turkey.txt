@@ -1,0 +1,1310 @@
+focus_tree = {
+	id = turkey
+	country = {
+		factor = 0
+		modifier = {
+			add = 200
+			tag = TUR
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	default = no
+	focus = {
+		id = harbiye
+		text = "Harbiye"
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		x = 5
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					if = {
+							limit = {
+									has_idea = neutrality_idea
+								}
+							remove_ideas = neutrality_idea
+						}
+					add_ideas = militarism_focus
+					army_experience = 20
+					set_rule = {
+							can_send_volunteers = yes
+						}
+				}
+
+	}
+	focus = {
+		id = Turkish_Navy
+		text = "Turkish Navy"
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		x = 0
+		y = 0
+			available_if_capitulated = yes
+			available = {
+					any_state = {
+							is_coastal = yes
+							is_controlled_by = ROOT
+						}
+				}
+			complete_tooltip = {
+					navy_experience = 25
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+				}
+			completion_reward = {
+					navy_experience = 25
+					if = {
+							limit = {
+									NOT = {
+											any_owned_state = {
+													dockyard > 0
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+									any_owned_state = {
+											is_coastal = yes
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											is_coastal = yes
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									any_owned_state = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											dockyard > 0
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+							set_country_flag = naval_effort_built
+						}
+					if = {
+							limit = {
+									NOT = {
+											has_country_flag = naval_effort_built
+										}
+									NOT = {
+											any_owned_state = {
+													free_building_slots = {
+															building = dockyard
+															size > 2
+															include_locked = yes
+														}
+												}
+										}
+								}
+							random_state = {
+									limit = {
+											controller = {
+													tag = ROOT
+												}
+											free_building_slots = {
+													building = dockyard
+													size > 2
+													include_locked = yes
+												}
+										}
+									add_extra_state_shared_building_slots = 3
+									add_building_construction = {
+											type = dockyard
+											level = 3
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = marshall_plan_economic_aid
+		text = "Marshall Plan"
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10
+		mutually_exclusive = {
+			focus = socialist_promises
+		}
+		x = 12
+		y = 0
+		
+		available = {
+			USA = {
+				has_completed_focus =  USA_Marshall_Plan
+				}
+			}
+			
+			available_if_capitulated = yes
+			completion_reward = {
+					add_timed_idea = {
+							idea = democratic_influence
+							days = 720
+						}
+				}
+
+	}
+	focus = {
+		id = socialist_promises
+		text = "Socialist Promises"
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		mutually_exclusive = {
+			focus = marshall_plan_economic_aid
+		}
+		x = 9
+		y = 0
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 200
+				}
+
+	}
+	focus = {
+		id = foreign_policy
+		text = "Foreign_Policy"
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		x = 24
+		y = -1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 25
+				}
+
+	}
+	focus = {
+		id = air_force
+		text = "Expand Turkish Airforce"
+		icon = GFX_goal_generic_build_airforce
+		cost = 10
+		x = 2
+		y = 0
+			available_if_capitulated = yes
+			complete_tooltip = {
+					air_experience = 25
+					if = {
+							limit = {
+									has_country_flag = aviation_effort_AB
+								}
+							add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 1.0
+							uses = 1
+							category = air_doctrine
+						}
+				}
+			completion_reward = {
+					air_experience = 25
+					if = {
+							limit = {
+									capital_scope = {
+											NOT = {
+													free_building_slots = {
+															building = air_base
+															size > 1
+														}
+												}
+										}
+								}
+							random_owned_controlled_state = {
+									limit = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					if = {
+							limit = {
+									capital_scope = {
+											free_building_slots = {
+													building = air_base
+													size > 1
+												}
+										}
+								}
+							capital_scope = {
+									add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									ROOT = {
+											set_country_flag = aviation_effort_AB
+										}
+								}
+						}
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 1.0
+							uses = 1
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_Destoyers
+		text = "Destroyer_Effort"
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = {
+			focus = Turkish_Navy
+		}
+		x = 0
+		y = 1
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = dd_bonus
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							category = dd_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_submarine_effort
+		text = "Submarine Effort"
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10
+		prerequisite = {
+			focus = TUR_Destoyers
+		}
+		x = 0
+		y = 2
+			available_if_capitulated = yes
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0
+							all_owned_state = {
+									OR = {
+											is_coastal = no
+											dockyard < 1
+										}
+								}
+						}
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = ss_bonus
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							category = ss_tech
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_CAS_effort
+		text = "Close Air Support Research"
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10
+		prerequisite = {
+			focus = air_force
+		}
+		x = 2
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = CAS_bonus
+							bonus = 1.0
+							ahead_reduction = 2
+							uses = 1
+							category = cas_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = bomber_effort
+		text = "Bomber Research"
+		icon = GFX_goal_generic_air_bomber
+		cost = 10
+		prerequisite = {
+			focus = TUR_CAS_effort
+		}
+		x = 2
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = bomber_bonus
+							bonus = 1.0
+							uses = 2
+							technology = strategic_bomber1
+							technology = strategic_bomber2
+							technology = strategic_bomber3
+							category = tactical_bomber
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_rocket_effort
+		text = "Rocket Projects"
+		icon = GFX_focus_rocketry
+		cost = 10
+		prerequisite = {
+			focus = TUR_submarine_effort
+		}
+		prerequisite = {
+			focus = bomber_effort
+		}
+		x = 1
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 1.0
+							uses = 2
+							category = rocketry
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_ICBM_SUB
+		text = "Ballistic Missile Submarines"
+		icon = GFX_focus_rocketry
+		cost = 10
+		prerequisite = {
+			focus = TUR_rocket_effort
+		}
+		x = 1
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 1.0
+							uses = 2
+							category = rocketry
+						}
+				}
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 0.25
+							always = yes
+						}
+				}
+
+	}
+	
+	focus = {
+		id = weapon_effort
+		text = "Weapon Development"
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		prerequisite = {
+			focus = harbiye
+		}
+		x = 4
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							bonus = 1.0
+							uses = 2
+							category = infantry_weapons
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_doctrine_effort
+		text = "Doctrine Effort"
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = weapon_effort
+		}
+		x = 4
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 1.0
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = tank_designs
+		text = "Turkish Tank Development"
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		prerequisite = {
+			focus = harbiye
+		}
+		x = 6
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 1.0
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = new_tactics
+		text = "New Tactics"
+		icon = GFX_focus_generic_license_production
+		cost = 10
+		prerequisite = {
+			focus = tank_designs
+		}
+		x = 6
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					army_experience = 5
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 1.0
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_int
+		text = "National Intelligence Service"
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = new_tactics
+		}
+		x = 6
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = covert_ops
+		text = "Covert Ops"
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = TUR_int
+		}
+		x = 5
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_tech_bonus = {
+							name = secret_bonus
+							bonus = 1.0
+							uses = 2
+							category = electronics
+						}
+				}
+
+	}
+	focus = {
+		id = tea_industry
+		text = "Tea Industry"
+		icon = GFX_focus_generic_industry_2
+		cost = 10
+		prerequisite = {
+			focus = socialist_promises
+		}
+		x = 9
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					341 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = textile_factory
+		text = "Textile Industry"
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		prerequisite = {
+			focus = tea_industry
+		}
+		x = 9
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					341 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = olive_oil_industry
+		text = "Olive Oil Industry"
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = textile_factory
+		}
+		x = 9
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					339 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = anti_communist_propaganda
+		text = "Anti-Communism"
+		icon = GFX_focus_attack_soviet
+		cost = 10
+		prerequisite = {
+			focus = marshall_plan_economic_aid
+		}
+		x = 12
+		y = 1
+			available_if_capitulated = yes
+			completion_reward = {
+					add_country_leader_trait = anti_communist
+				}
+			completion_reward = {
+					add_country_leader_trait = dealbroker
+				}
+
+	}
+	focus = {
+		id = civilian_investment
+		text = "Civilian Investment"
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = anti_communist_propaganda
+		}
+		x = 11
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					49 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = infrastructure_investment
+		text = "Infrastructure Effort"
+		icon = GFX_goal_generic_construction
+		cost = 10
+		prerequisite = {
+			focus = anti_communist_propaganda
+		}
+		x = 13
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					341 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = american_supermarkets
+		text = "American Supermarkets"
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 10
+		prerequisite = {
+			focus = infrastructure_investment
+		}
+		prerequisite = {
+			focus = civilian_investment
+		}
+		
+		available = {
+			USA = {
+				has_completed_focus = USA_1950_Boom_Economy
+				}
+			}
+		x = 12
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					341 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = capitalist_economy
+		text = "Capitalism"
+		icon = GFX_focus_mex_privatisation
+		cost = 10
+		prerequisite = {
+			focus = american_supermarkets
+		}
+		x = 12
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					every_owned_state = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 3
+									instant_build = yes
+								}
+						}
+			
+			
+					341 = {
+							add_building_construction = {
+									type = Urban_Center
+									level = 1
+									instant_build = yes
+								}
+						}
+			
+			
+			
+					49 = {
+							add_building_construction = {
+									type = Urban_Center
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = turkish_strait_crisis
+		text = "Straits Crisis"
+		icon = GFX_focus_generic_coastal_fort
+		cost = 10
+		prerequisite = {
+			focus = foreign_policy
+		}
+		x = 24
+		y = 1
+
+	}
+	focus = {
+		id = iraqi_kurd_problem
+		text = "Iraq and the Kurds Problem"
+		icon = GFX_focus_prc_infiltration
+		cost = 10
+		prerequisite = {
+			focus = turkish_strait_crisis
+		}
+		x = 22
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_war_support = 0.2
+				}
+
+	}
+	focus = {
+		id = operation_in_iraq
+		text = "Operation In Iraq"
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = iraqi_kurd_problem
+		}
+		mutually_exclusive = {
+			focus = political_solution
+		}
+		x = 20
+		y = 3
+			available_if_capitulated = no
+			completion_reward = {
+					create_wargoal = {
+							type = puppet_wargoal_focus
+							target = IRQ
+							expire = 4
+						}
+				}
+
+	}
+	focus = {
+		id = political_solution
+		text = "Political Solution"
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = iraqi_kurd_problem
+		}
+		mutually_exclusive = {
+			focus = operation_in_iraq
+		}
+		x = 22
+		y = 3
+			available_if_capitulated = no
+			completion_reward = {
+					add_political_power = 100
+					IRQ = {
+						add_political_power = 50
+						}
+				}
+
+	}
+	focus = {
+		id = TUR_join_nato
+		text = "Join NATO"
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		prerequisite = {
+			focus = turkish_strait_crisis
+		}
+		mutually_exclusive = {
+			focus = remain_indepent
+		}
+		x = 24
+		y = 2
+			available_if_capitulated = yes
+			available = {
+					NOT = {
+							has_war_with = USA
+						}
+					is_subject = no
+					is_in_faction = no
+				}
+			completion_reward = {
+					army_experience = 100
+					add_ideas = USA_the_pentagon
+					add_ideas = USA_department_of_defense
+					add_ideas = USA_airborne_divisions
+					add_ideas = USA_army_of_the_united_states
+					add_ideas = USA_womens_armed_service_integration_act
+					add_ideas = USA_us_air_force
+					USA = {
+							add_to_faction = TUR
+						}
+				}
+
+	}
+	focus = {
+		id = remain_indepent
+		text = "Remain Indepent"
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = turkish_strait_crisis
+		}
+		mutually_exclusive = {
+			focus = TUR_join_nato
+		}
+		x = 26
+		y = 2
+			available_if_capitulated = yes
+			completion_reward = {
+					add_political_power = 200
+				}
+
+	}
+	focus = {
+		id = ties_with_uk
+		text = "Ties With UK"
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10
+		prerequisite = {
+			focus = TUR_join_nato
+			focus = remain_indepent
+		}
+		x = 24
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_opinion_modifier = {
+							target = ENG
+							modifier = POL_draw_closer_to_britain
+						}
+					ENG = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = POL_draw_closer_to_britain
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = Cyprus_Agreement
+		text = "Cyprus Agreement"
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = ties_with_uk
+		}
+		x = 24
+		y = 4
+			available_if_capitulated = yes
+			completion_reward = {
+					add_state_core = 11984
+				}
+			completion_reward = {
+					TUR = {
+							transfer_state = 11984
+						}
+				}
+
+	}
+	focus = {
+		id = ties_with_iran
+		text = "Ties With Iran"
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = TUR_join_nato
+			focus = remain_indepent
+		}
+		x = 26
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_opinion_modifier = {
+							target = PER
+							modifier = medium_increase
+						}
+					PER = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = medium_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = iran_alliance
+		text = "Tabriz Alliance"
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = ties_with_iran
+		}
+		x = 26
+		y = 4
+			available_if_capitulated = no
+		completion_reward = {
+			diplomatic_relation = {
+				country = PER
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+
+	}
+	focus = {
+		id = investigation_commission
+		text = "Investigation Commission"
+		icon = GFX_focus_usa_voter_registration_act
+		cost = 10
+		prerequisite = {
+			focus = covert_ops
+		}
+		x = 5
+		y = 5
+			available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+		}
+	}
+	focus = {
+		id = syndicalism
+		text = "Socialist State"
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10
+		prerequisite = {
+			focus = DEV_SOL
+		}
+		x = 2
+		y = 10
+			available_if_capitulated = yes
+		completion_reward = {
+			set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+		}
+	}
+	focus = {
+		id = join_warsaw_pact
+		text = "Join Warsaw Pact"
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10
+		prerequisite = {
+			focus = syndicalism
+		}
+		x = 2
+		y = 11
+			available_if_capitulated = yes
+			available = {
+					has_government = communism
+					NOT = {
+							has_war_with = SOV
+						}
+					is_subject = no
+					is_in_faction = no
+				}
+			completion_reward = {
+					army_experience = 500
+					navy_experience = 500
+					air_experience = 500
+					add_ideas = nkvd
+					add_ideas = partisan_suppression_focus
+					add_ideas = SOV_collectivist_propaganda
+					add_ideas = workers_culture
+					add_ideas = peoples_commissariat_focus
+					add_ideas = idea_political_correctness
+					add_ideas = political_commissars_focus
+					add_ideas = internationalism
+				#	add_autonomy = TUR
+				#	1000 = add_manpower
+				#	50000 = add_ideas
+				#	= = militarism_focus
+					SOV = {
+							add_to_faction = TUR
+						}
+				}
+
+	}
+	focus = {
+		id = ties_with_egypt
+		text = "Ties With Egypt"
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = TUR_join_nato
+			focus = remain_indepent
+		}
+		x = 28
+		y = 3
+			available_if_capitulated = yes
+			completion_reward = {
+					add_opinion_modifier = {
+							target = EGY
+							modifier = medium_increase
+						}
+					EGY = {
+							add_opinion_modifier = {
+									target = ROOT
+									modifier = medium_increase
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = coup_turkey
+		text = "27 May Coup"
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = investigation_commission
+		}
+		x = 5
+		y = 6
+
+	}
+	focus = {
+		id = new_constitution
+		text = "New Constitution"
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = coup_turkey
+		}
+		x = 5
+		y = 7
+
+	}
+	focus = {
+		id = support_left
+		text = "Support Leftist Groups"
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10
+		prerequisite = {
+			focus = new_constitution
+		}
+		mutually_exclusive = {
+			focus = remain_neutral
+			focus = support_right
+		}
+		x = 2
+		y = 8
+
+	}
+	focus = {
+		id = remain_neutral
+		text = "Remain Neutral"
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = new_constitution
+		}
+		mutually_exclusive = {
+			focus = support_left
+			focus = support_right
+		}
+		x = 5
+		y = 8
+
+	}
+	focus = {
+		id = support_right
+		text = "Support Rightist Groups"
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = new_constitution
+		}
+		mutually_exclusive = {
+			focus = remain_neutral
+			focus = support_left
+		}
+		x = 8
+		y = 8
+
+	}
+	focus = {
+		id = fascist_arm_support
+		text = "Fascist Arm in Factories"
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = support_right
+		}
+		x = 8
+		y = 9
+
+	}
+	focus = {
+		id = DEV_SOL
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10
+		prerequisite = {
+			focus = support_left
+		}
+		prerequisite = {
+			focus = support_left
+		}
+		x = 2
+		y = 9
+
+	}
+	focus = {
+		id = fascist_imperialism
+		text = "Imperialism"
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = fascist_arm_support
+		}
+		x = 8
+		y = 10
+
+	}
+	focus = {
+		id = attack_syria
+		text = "Destroy Syria"
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = fascist_imperialism
+		}
+		x = 7
+		y = 11
+
+	}
+	focus = {
+		id = attack_iran
+		text = "Attack Iran"
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = fascist_imperialism
+		}
+		x = 9
+		y = 11
+
+	}
+	focus = {
+		id = attack_iraq
+		text = "Punish Iraq"
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = attack_syria
+			focus = attack_syria
+			focus = attack_iran
+		}
+		x = 8
+		y = 12
+
+	}
+	focus = {
+		id = Democracy_Again
+		text = "Democracy Again"
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = remain_neutral
+		}
+		x = 5
+		y = 9
+
+	}
+	focus = {
+		id = focus_ecevit
+		text ="Prime Minister Inonu"
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = Democracy_Again
+		}
+		x = 4
+		y = 10
+
+	}
+	focus = {
+		id = Premier_Demirel
+		text = "Prime Minister Demirel"
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		prerequisite = {
+			focus = Democracy_Again
+		}
+		x = 6
+		y = 10
+
+	}
+}

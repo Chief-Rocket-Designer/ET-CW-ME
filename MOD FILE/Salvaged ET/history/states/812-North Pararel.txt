@@ -1,0 +1,29 @@
+state={
+	id=812
+	name="North Pararel"
+	provinces={
+		4004 11958 
+	}
+	history={
+		owner = JAP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		
+		add_claim_by = PRK
+		add_core_of = KOR
+		1949.1.1 = {
+			owner = SOV
+
+		}
+		1960.1.1 = {
+			owner = KOR
+
+		}
+	}
+	manpower=30000
+	buildings_max_level_factor=1.000
+	state_category=town
+}
